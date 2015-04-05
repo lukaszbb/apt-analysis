@@ -1,0 +1,1391 @@
+www.fidelissecurity.com 
+www.threatgeek.com 
+ @FidSecSys 
++1800.652.4020 
+
+Fidelis Threat Advisory #1014 
+Bots,	  Machines,	  and	  the	  Matrix 
+
+ 
+
+Dec 12, 2014 
+
+Document Status: 
+Last Revised:  
+
+1.0 
+2014-12-11 
+
+ 
+
+ 
+
+ 
+Executive Summary 
+In the recent past, a Fidelis XPS user reported seeing detections of what appeared to be botnet-related 
+malware. While that customer was protected, we at General Dynamics Fidelis Cybersecurity Solutions 
+decided to take a closer look. The analysis of the malicious code revealed that it appeared to be 
+Andromeda but the delivery infrastructure looked interesting. Further telemetry from our sensors showed 
+that this server in China was also hosting and distributing many other malicious specimens. Analysis of 
+the data revealed a pattern in the filenames. Our analysts used this pattern to discover other systems 
+distributed across the globe serving up various botnet malware, so far assumed to be used in distinct 
+campaigns but clearly related in this case: 
+
+-  Andromeda 
+-  Beta Bot 
+-  Neutrino Bot 
+-  NgrBot/DorkBot 
+
+Analysis also showed how attackers continue to benefit from the use of globally-distributed hosting 
+providers to perform their malicious activities. Further, the analysis revealed how attackers are hosting 
+and distributing identical copies of the malware from servers in different countries including China, 
+Poland, Russia, and the United States. 
+For the period of time researched in this activity, we observed the following targeted sectors in the US: 
+
+-  Manufacturing / Biotechnology & Drugs 
+-  Professional Services / Engineering 
+- 
+-  Government / State  
+
+Information Technology / Telecommunications 
+
+Note that our footprint is largely in the Enterprise space and it is possible that we’re seeing spillover from 
+wider campaigns.  
+This document uncovers various servers hosting Bots and other related malware, provides a triage 
+analysis of various pieces of malware hosted by these malicious servers, and provides indicators that 
+network defenders can use to protect their networks.   
+
+ 
+Users are granted permission to copy and/or distribute this document in its original electronic form and print copies for personal use. This document 
+cannot be modified or converted to any other electronic or machine-readable form in whole or in part without prior written approval of Fidelis Security 
+Systems, Inc. 
+ 
+While we have done our best to ensure that the material found in this document is accurate, Fidelis Security Systems, Inc. makes no guarantee that 
+the information contained herein is error free. 
+ 
+Copyright © 2014 General Dynamics Fidelis Cybersecurity Solutions 
+Threat Advisory #1014 
+Page 1 of 16 
+
+ 
+Rev. 2014-12-12 
+Bots, Machines, and the Matrix 
+
+www.fidelissecurity.com 
+www.threatgeek.com 
+ @FidSecSys 
++1800.652.4020 
+
+Threat Overview 
+The threat activity observed in the past weeks against various targets in our customer base has shown 
+patterns that allowed us to discover multiple servers hosting and distributing malicious software (Bots).  
+As it is known by the network defenders and the security community, it is important to defend against 
+these attacks since systems infected with these malicious specimens could be used for credential theft, 
+Distributed Denial of Service Attacks, spreading malware, lateral propagation, etc. This is of great concern 
+as the first stage attack continues to bypass network security defenses infecting user’s computers that 
+beacon to malicious servers to download or create the second stage malware into the victim systems.    
+Some of the main Bot types of malware detected through this research include: 
+
+-­‐  Andromeda  
+
+Andromeda is a modular bot that downloads modules and updates from its command and control 
+(C&C) server during execution. The malware has both anti-VM and anti-reversing features. Its 
+code is obfuscated to make it more difficult for malware reverse engineers to analyze and 
+antivirus tools to detect.  
+ 
+Andromeda bot features include: self-propagation, injection into trusted processes to hide itself, 
+network traffic encryption, download and installation of files/malware, form grabber, keylogger, 
+ring3 rootkit, proxy, etc. Features like form grabber, rootkit, and proxy are delivered to the 
+malware in the form of modules that are then loaded into the victim system after the malware 
+makes a connection with its C&C. It appears that in 2012, some of the modules were sold for 
+$500 (form grabber), $300 (Ring3 rootkit), and $200 (keylogger). 
+ 
+
+-­‐  DorkBot/NgrBot 
+
+DorkBot is a modified IRCBot that is very similar in features to NgrBot. DorkBot has a loader and 
+a module. The bot includes the following features: process injection, hard drive wiping, etc. 
+Different from NgrBot, DorkBot uses modified IRC commands. Some of the commands supported 
+include: !die, !dl, !http.inj, !logins, !rc,!speed, !ssyn, !stop, !up, and !udp. 
+ 
+NgrBot can also be remotely controlled via Internet-Relay-Chat (IRC) protocol. It has capabilities 
+to join different IRC channels to perform various attacks according to the IRC-based commands 
+from the C&C server. Its code is obfuscated to make it more difficult for malware reverse 
+engineers to analyze and antivirus tools to detect.  
+ 
+NgrBot features include: self-propagation (e.g. through USB removable drives, social networking 
+sites, and messaging clients), process injection, hard drive wiping, blocking access to multiple 
+antivirus/security vendor websites, denial of service attacks, credentials stealing (usernames and 
+passwords), download and execute file, etc. Some of the commands supported are:  ~pu, ~dw, 
+~http.inj, ~logins, ~rc, ~speed, ~ssyn, ~stop, and ~udp.  
+ 
+
+It is said that Beta bot started out as an HTTP bot. The Bot is also known by some security 
+vendors as ‘Trojan.Neurevt’. Its code is obfuscated to make it more difficult for malware reverse 
+engineers to analyze and antivirus tools to detect.  
+ 
+Beta bot features include: anti-VM and anti-reversing, self-propagation, rootkit, process injection, 
+blocking access to multiple antivirus/security vendor websites, AV-disabling, form grabbing, 
+download and execution of files, termination of competing malware communications by 
+terminating their processes or blocking their code injections, and denial of service. It appears that 
+
+-­‐  Beta Bot 
+
+ 
+Copyright © 2014 General Dynamics Fidelis Cybersecurity Solutions 
+Threat Advisory #1014 
+Page 2 of 16 
+
+Rev. 1.1 2014-12-12 
+      Bots, Machines, and the Matrix 
+
+www.fidelissecurity.com 
+www.threatgeek.com 
+ @FidSecSys 
++1800.652.4020 
+
+in May 2013, the pre-built bot could be purchase for $320-$500, and $20 for variant rebuilds for 
+those requiring configuration changes. According to online research, Beta Bot sales are being 
+handled by “Lord Huron,” although “betamonkey” appears to be the author. The following image 
+was found during online research: 
+ 
+
+ 
+
+ 
+
+-­‐  Neutrino 
+
+The Neutrino bot was advertised as an HTTP stress-testing tool. It has some of the following 
+features: anti-VM and anti-reversing/debugging, denial of service (HTTP/TCP/UDP flood), 
+keylogger, command shell, credential stealing, self-spreading, etc. It appears at some point the 
+bot was sold for $550 (Builder), $200 (Full set including Bot and Admin Panel), and $20 (Update). 
+Online research revealed the following contact information for this bot: n3utrino@kaddafi[.]me / 
+n3utrino@xmpp[.]jp / n3utrino.blog[.]com. The following images were found during online 
+research: 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Copyright © 2014 General Dynamics Fidelis Cybersecurity Solutions 
+Threat Advisory #1014 
+Page 3 of 16 
+
+Rev. 1.1 2014-12-12 
+      Bots, Machines, and the Matrix 
+
+The following table provides information about some of the servers hosting and distributing malware and 
+some of the filename patterns discovered: 
+
+www.fidelissecurity.com 
+www.threatgeek.com 
+ @FidSecSys 
++1800.652.4020 
+
+Last	  Observed	  
+December	  2014	  
+
+IP	  
+
+121.11.83[.]7	  
+
+Location	  
+China	  
+
+December	  2014	  
+
+155.133.18[.]45	  
+
+Poland	  
+
+December	  2014	  
+
+54.69.90[.]62	  
+
+US	  
+
+(Amazon)	  
+
+November	  2014	  
+
+117.21.191[.]47	  
+
+China	  
+
+November	  2014	  
+
+121.14.212[.]184	  
+
+China	  
+
+November	  2014	  
+
+155.133.18[.]44	  
+
+Poland	  
+
+	  
+
+	  
+
+	  
+
+Filename	  Pattern	  	  
+
+and[2_digits][single	  character][2_digits].exe	  
+bet[2_digits][single	  character][2_digits].exe	  
+ng[2_digits][single	  character][2_digits].exe	  
+nut[2_digits][single	  character][2_digits].exe	  
+	  
+bet[2_digits][single	  character][2_digits].exe	  
+bnew[2_digits][single	  character][2_digits].exe	  
+ng[2_digits][single	  character][2_digits].exe	  
+nut[2_digits][single	  character][2_digits].exe	  
+	  
+[3_digits][single	  character][1_digit].exe	  
+[2_digits][single	  character][1_digit].exe	  
+	  
+and[2_digits][single	  character][2_digits].exe	  
+bet[2_digits][single	  character][2_digits].exe	  
+bnew[2_digits][single	  character][2_digits].exe	  
+dq[2_digits][single	  character][2_digits].exe	  
+dqnew[2_digits][single	  character][2_digits].exe	  
+ng[2_digits][single	  character][2_digits].exe	  
+nut[2_digits][single	  character][2_digits].exe	  
+	  
+and[2_digits][single	  character][2_digits].exe	  
+and[single	  character][1_digit].exe	  
+bet[2_digits][single	  character][2_digits].exe	  
+bet[1_or_2_digits].exe	  
+bet[single	  character][1_digit].exe	  
+ng[2_digits][single	  character][2_digits].exe	  
+nut[2_digits][single	  character][2_digits].exe	  
+	  
+and[2_digits][single	  character][2_digits].exe	  
+and[2_digits].exe	  
+and[2_digits][single	  character].exe	  
+bet[2_digits][single	  character][2_digits].exe	  
+bet[2_digits].exe	  
+ng[2_digits][single	  character][2_digits].exe	  
+ng[2_digits].exe	  
+nut[2_digits][single	  character][2_digits].exe	  
+nut[2_digits].exe	  
+nut[2_digits][single	  character].exe	  
+zpm[2_digits][single	  character].exe	  
+	  
+3307[2_digits][single	  character][2_digits].exe	  
+and[2_digits][single	  character][2_digits].exe	  
+bet[2_digits][single	  character][2_digits].exe	  
+bnew[2_digits][single	  character][2_digits].exe	  
+	  
+	  
+
+ 
+Copyright © 2014 General Dynamics Fidelis Cybersecurity Solutions 
+Threat Advisory #1014 
+Page 4 of 16 
+
+Rev. 1.1 2014-12-12 
+      Bots, Machines, and the Matrix 
+
+www.fidelissecurity.com 
+www.threatgeek.com 
+ @FidSecSys 
++1800.652.4020 
+
+	  
+November	  2014	  
+
+	  
+54.68.121[.]73	  
+
+November	  2014	  
+
+54.68.194[.]154	  
+
+November	  2014	  
+
+54.69.90[.]62	  
+
+	  
+US	  
+
+(Amazon)	  
+
+US	  
+
+(Amazon)	  
+
+US	  
+
+(Amazon)	  
+
+October	  2014	  
+
+119.1.109[.]44	  
+
+China	  
+
+October	  2014	  
+
+158.255.1[.]241	  
+
+Russia	  
+
+October	  2014	  
+
+54.191.142[.]124	  
+
+US	  
+
+(Amazon)	  
+
+	  
+and[2_digits][single	  character][2_digits].exe	  
+bet[2_digits][single	  character][2_digits].exe	  
+bnew[2_digits][single	  character][2_digits].exe	  
+ng[2_digits][single	  character][2_digits].exe	  
+nut[2_digits][single	  character][2_digits].exe	  
+	  
+and[2_digits][single	  character][2_digits].exe	  
+bet[2_digits][single	  character][2_digits].exe	  
+ng[2_digits][single	  character][2_digits].exe	  
+nut[2_digits][single	  character][2_digits].exe	  
+	  
+3307[2_digits][single	  character][2_digits].exe	  
+and[2_digits][single	  character][2_digits].exe	  
+bet[2_digits][single	  character][2_digits].exe	  
+bnew[2_digits][single	  character][2_digits].exe	  
+ng[2_digits][single	  character][2_digits].exe	  
+	  
+and[2_digits][single	  character][2_digits].exe	  
+and[2_digits].exe	  
+bet[2_digits][single	  character].exe	  
+bet[2_digits].exe	  
+ng[2_digits][single	  character][2_digits].exe	  
+nut[2_digits].exe	  
+	  
+and[2_digits].exe	  
+ng[2_digits]exe	  
+nut[2_digits][single	  character][2_digits].exe	  
+nut[2_digits].exe	  
+	  
+bnew[2_digits].exe	  
+ng[2_digits].exe	  
+nut[2_digits].exe	  
+zpm[2_digits].exe	  
+	  
+
+ 
+ 
+ 
+ 
+ 
+ 
+The following table provides information about the relationship between the malicious servers, detection 
+names by antivirus tools, and vertical market affected (based on unique hashes and detections): 
+
+IP	  
+
+121.11.83[.]7	  
+
+Generic	  AV	  detection	  
+
+Location	  
+China	   Worm.Win32.Ngrbot	  
+Worm.Win32.Dorkbot	  
+
+ 
+Copyright © 2014 General Dynamics Fidelis Cybersecurity Solutions 
+Threat Advisory #1014 
+Page 5 of 16 
+
+Vertical	  Market/Specialization	  
+
+Professional	  Services/Engineering	  
+
+Rev. 1.1 2014-12-12 
+      Bots, Machines, and the Matrix 
+
+www.fidelissecurity.com 
+www.threatgeek.com 
+ @FidSecSys 
++1800.652.4020 
+
+	  
+
+	  
+
+Manufacturing/Healthcare	  
+
+Manufacturing/Healthcare/Government	  
+
+	  
+
+Government	  
+
+155.133.18[.]45	  
+
+Poland	  
+
+54.69.90[.]62	  
+
+US	  
+
+(Amazon)	  
+
+117.21.191[.]47	  
+
+China	  
+
+121.14.212[.]184	  
+
+China	  
+
+155.133.18[.]44	  
+
+Poland	  
+
+54.68.121[.]73	  
+
+US	  
+
+(Amazon)	  
+
+Backdoor.Win32.Ruskill	  
+Trojan.Win32.Yakes	  
+Trojan.Win32.Munchies	  
+	  
+Backdoor.Win32.Androm	  
+Trojan.Win32.Lethic	  
+Trojan.Win32.Inject	  
+Trojan.Win32.Munchies	  
+Trojan.Win32.Yakes	  
+Backdoor.Win32.Androm	  
+Worm.Win32.Ngrbot	  
+Worm.Win32.Dorkbot	  
+Backdoor.Win32.Ruskill	  
+Trojan.Win32.Lethic	  
+Trojan.Win32.Yakes	  
+Trojan.Win32.Munchies	  
+	  
+Backdoor.Win32.Androm	  
+Trojan.Win32.Betabot	  
+Worm.Win32.Dorkbot	  
+Backdoor.Win32.Ruskill	  
+Trojan.Win32.Neurevt	  
+Worm.Win32.Ngrbot	  
+Trojan-­‐Spy.Win32.SpyEyes	  
+Trojan-­‐Spy.Win32.Zbot	  
+Backdoor.Win32.Azbreg	  
+Trojan.Win32.Badur	  
+Trojan.Win32.Inject	  
+Trojan.Win32.Sharik	  
+Trojan.Win32.Yakes	  
+Trojan-­‐
+Downloader.Win32.Agent	  
+Trojan-­‐
+Dropper.Win32.Injector	  
+	  
+Backdoor.Win32.Androm	  
+Worm.Win32.Ngrbot	  
+Backdoor.Win32.Ruskill	  
+Trojan.Win32.Badur	  
+Trojan.Win32.Inject	  
+Trojan.Win32.Yakes	  
+Trojan.Win32.Sysn	  
+	  
+Backdoor.Win32.Androm	  
+Worm.Win32.Ngrbot	  
+Trojan.Win32.Badur	  
+Trojan.Win32.Yakes	  
+	  
+Backdoor.Win32.Androm	  
+Trojan.Proxy.Win32.Lethic	  
+Worm.Win32.Ngrbot	  
+
+ 
+Copyright © 2014 General Dynamics Fidelis Cybersecurity Solutions 
+Threat Advisory #1014 
+Page 6 of 16 
+
+Rev. 1.1 2014-12-12 
+      Bots, Machines, and the Matrix 
+
+www.fidelissecurity.com 
+www.threatgeek.com 
+ @FidSecSys 
++1800.652.4020 
+
+54.68.194[.]154	  
+
+US	  
+
+(Amazon)	  
+
+	  
+
+	  
+119.1.109[.]44	  
+
+	  
+
+	  
+
+China	  
+
+158.255.1[.]241	  
+
+Russia	  
+
+54.191.142[.]124	  
+
+US	  
+
+(Amazon)	  
+
+Trojan.Win32.Badur	  
+Trojan.Win32.Inject	  
+	  
+Backdoor.Win32.Androm	  
+Backdoor.Win32.Ruskill	  
+Trojan.Win32.Yakes	  
+	  
+	  
+
+	  
+Backdoor.Win32.Androm	  
+Worm.Win32.Ngrbot	  
+Backdoor.Win32.Ruskill	  
+Trojan.Win32.Badur	  
+Trojan.Win32.Yakes	  
+	  
+Backdoor.Win32.Androm	  
+Worm.Win32.Ngrbot	  
+Trojan.Win32.Badur	  
+Trojan.Win32.Yakes	  
+	  
+Backdoor.Win32.Androm	  
+Worm.Win32.Ngrbot	  
+Trojan.Win32.Badur	  
+Worm.Win32.Hamweq	  
+Trojan.Win32.Sysn	  
+	  
+
+	  
+
+	  
+	  
+	  
+	  
+
+Government	  
+
+	  
+
+Risk Assessment 
+A bot malware has features like anti-reversing, credential stealing/keystroke logging/form grabbing, DNS 
+changer, process injection, antivirus process killing, blocking of security related websites, backdoor, and 
+others. They also have features to spread themselves through USB removable drives, social networking 
+sites, and messaging clients. In addition, they could also infiltrate the network when the victim user visits 
+a website hosting a browser exploit.  
+Once the attacker gains control, the infected system could be used to launch Distributed Denial of Service 
+attacks, spread the bot to other victims, download more advanced malware to perform lateral 
+propagation, etc. The attackers (Bot Masters/Herders) could also rent their botnets to other 
+cybercriminals.  
+Indicators and Mitigation Strategies 
+This section presents information about some of the servers we have observed hosting and distributing 
+malware, filename patterns, as well as a triage analysis of various pieces of malware observed delivered 
+by these servers 
+-  Servers observed hosting and distributing malware: 
+
+ 
+
+121.11.83[.]7	  
+155.133.18[.]44	  
+54.191.142[.]124	  
+
+121.14.212[.]184	  
+155.133.18[.]45	  
+54.68.121[.]73	  
+
+119.1.109[.]44	  
+158.255.1[.]241	  
+54.68.194[.]154	  
+
+117.21.191[.]47	  
+217.23.6[.]112	  
+54.69.90[.]62	  
+
+ 
+Copyright © 2014 General Dynamics Fidelis Cybersecurity Solutions 
+Threat Advisory #1014 
+Page 7 of 16 
+
+Rev. 1.1 2014-12-12 
+      Bots, Machines, and the Matrix 
+
+77.87.79[.]128	  
+
+	  
+
+	  
+
+www.fidelissecurity.com 
+www.threatgeek.com 
+ @FidSecSys 
++1800.652.4020 
+	  
+
+-  Some of the filename patterns observed: 
+
+ 
+
+ 
+
+121.11.83[.]7/and40a70.exe	   121.11.83[.]7/bet40a71.exe	  
+155.133.18[.]45/37a1.exe	  
+155.133.18[.]45/109a7.exe	  
+121.14.212[.]184/ng33.exe	  
+217.23.6[.]112/98.exe	  
+121.11.83[.]7/nut40a71.exe	   54.69.90[.]62/dqnew40a81.exe	   119.1.109[.]44/and33.exe	  
+217.23.6[.]112/330740x.exe	   77.87.79[.]128/37extra.exe	  
+158.255.1[.]241/ng38a.exe	  
+
+121.11.83[.]7/ng40a71.exe	  
+54.69.90[.]62/bnew40a71.exe	  
+155.133.18[.]45/62.exe	  
+155.133.18[.]45/141a1.exe	  
+54.69.90[.]62/bnew40a85.exe	  
+
+54.69.90[.]62/330740a71.exe	  
+155.133.18[.]45/51a5.exe	  
+121.14.212[.]184/zpm39a.exe	  
+54.191.142[.]124/zpm37.exe	  
+
+ 
+
+-  Triage analysis of various pieces of malware observed delivered by servers mentioned in this 
+
+report: (Please note that the activity in this section has been recorded per initial file infection and not individually per file 
+downloaded and executed by the initial malware under investigation)  
+
+ 
+
+o  Andromeda 
+
+MD5: 036eb11a5751c77bc65006769921c8e5 
+ 
+This file was observed hosted in the following servers: 
+ 
+1.  119.1.109[.]44/and37.exe (China) 
+2.  121.14.212[.]184/and37.exe (China) 
+3.  54.68.121[.]73/and37.exe (US) 
+File information: 
+File Name:  and37.exe 
+File Size:  118784 bytes 
+MD5:        036eb11a5751c77bc65006769921c8e5 
+SHA1:       c6966d9557a9d5ffbbcd7866d45eddff30a9fd99 
+PE Time:    0x5431A1E4 [Sun Oct 05 19:54:12 2014 UTC] 
+PEID Sig:   Microsoft Visual C++ 8 
+Sections (4): 
+  Name      Entropy  MD5 
+  .text     6.48     851019d9ac5c3c1853a62535bb42fe25 
+  .rdata    5.48     5e0faee1b5962f3b0e7ef0cd07b07d90 
+  .data     4.99     87595d36a05bbbfdab643e78f1b1dad4 
+  .rsrc     6.59     5923da4653b7fcb4ee9062367873a2ed 
+The malware appears to implement anti-reversing techniques preventing its executing 
+inside a virtual machine environment (VME). This malware is believed to be a variant 
+from the ‘Andromeda Bot’ malware family. 
+When the file was executed in a Windows 7 system, the following activity was observed: 
+ 
+Domain:  
+Resolved IP:  
+ 
+POST request:   
+GET request: 
+ 
+File downloaded:  
+Full path and name: 
+Process injection:  
+ 
+
+a2kiaymoster14902[.]com 
+121.14.212[.]248 (China) 
+/bla02/gate.php 
+54.69.90[.]62/and40a90.exe (US) 
+b62391f3f7cbdea02763614f60f3930f (msitygyd.exe) 
+C:\ProgramData\msitygyd.exe 
+C:\Windows\SysWOW64\msiexec.exe 
+
+ 
+Copyright © 2014 General Dynamics Fidelis Cybersecurity Solutions 
+Threat Advisory #1014 
+Page 8 of 16 
+
+Rev. 1.1 2014-12-12 
+      Bots, Machines, and the Matrix 
+
+www.fidelissecurity.com 
+www.threatgeek.com 
+ @FidSecSys 
++1800.652.4020 
+
+ 
+
+o  Beta Bot 
+
+MD5: 9e8b203f487dfa85dd47e32b3d24e24e 
+ 
+This file was observed hosted in the following servers: 
+ 
+1.  117.21.191.47/betw9.exe (China) 
+2.  54.191.142.124/bet4.exe (US) 
+File information: 
+File Name:  betw9.exe 
+File Size:  379904 bytes 
+MD5:        9e8b203f487dfa85dd47e32b3d24e24e 
+SHA1:       de6a4d53b5265f8cddf08271d17d845f58107e82 
+PE Time:    0x5414994B [Sat Sep 13 19:21:47 2014 UTC] 
+PEID Sig:   Microsoft Visual C++ 8 
+Sections (4): 
+  Name      Entropy  MD5 
+  .text     6.47     4e347b4bb29e39a97c5803db1ee53321 
+  .rdata    1.99     692d4fc093dc013fa7d86bee7b85c0f9 
+  .data     4.22     52daa66602eb4a3aa8effd3a287efbf7 
+  .rsrc     6.1      9b2a41b9bc48ccff04effe10bb0fb839 
+  .rsrc     6.59     5923da4653b7fcb4ee9062367873a2ed 
+The malware did not appear to implement anti-reversing techniques and properly 
+executed inside a VME. This malware is believed to be a variant from the ‘Beta Bot’ 
+malware family. 
+When the file was executed in a Windows XP system, the following activity was 
+observed: 
+ 
+Domain:  
+Resolved IP:  
+ 
+POST request:   
+GET request: 
+ 
+File downloaded:  
+Full path and name:  %TEMP%\mxbrwtqjjvk.exe 
+ 
+ 
+GET request: 
+File downloaded:  
+Full path and name:  %TEMP%\cmqgvyqtpkh.exe 
+ 
+Made a copy itself to:  %CommonProgramFiles%\CreativeAudio\ldhkkangs.exe 
+Hash of file copy: 
+ 
+Registry entrenchment: 
+ 
+ 
+ 
+ 
+ 
+
+b.9thegamejuststarted14k9[.]com 
+116.255.202[.]74 (China) 
+/direct/mail/order.php?id=9156969 
+121.14.212[.]184/ng40a54.exe (China) 
+fe8c978f05f3a83af7c8905f94f71213 (mxbrwtqjjvk.exe) 
+
+121.14.212[.]184/and40a54.exe (China) 
+7599016887b4d6c0e3bc2ecda983161f (cmqgvyqtpkh.exe) 
+
+ 
+
+Key: 
+Value Name:  CreativeAudio 
+Value Data: 
+
+9e8b203f487dfa85dd47e32b3d24e24e 
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run 
+
+C:\Program Files\Common Files\CreativeAudio\ldhkkangs.exe 
+
+ 
+
+Key: 
+Value Name:  CreativeAudio 
+Value Data: 
+
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run 
+
+C:\Program Files\Common Files\CreativeAudio\ldhkkangs.exe 
+
+ 
+ 
+ 
+
+ 
+Copyright © 2014 General Dynamics Fidelis Cybersecurity Solutions 
+Threat Advisory #1014 
+Page 9 of 16 
+
+Rev. 1.1 2014-12-12 
+      Bots, Machines, and the Matrix 
+
+www.fidelissecurity.com 
+www.threatgeek.com 
+ @FidSecSys 
++1800.652.4020 
+
+C:\Program Files\Internet Explorer\iexplore.exe 
+
+Process Injection: 
+ 
+Screenshot of the registry activity: 
+ 
+
+ 
+Screenshot showing a handle of the malware in the “iexplorer.exe” process: 
+ 
+
+ 
+
+ 
+
+o  Neutrino Bot 
+
+ 
+
+MD5: 463f7191363d0391add327c1270d7fe6 
+ 
+This file was observed hosted in the following servers: 
+ 
+1.  121.14.212[.]184/nut40a52.exe (China) 
+2.  155.133.18[.]45/nut40a52.exe (Poland) 
+ 
+File information: 
+File Name:  nut40a52.exe 
+File Size:  145408 bytes 
+MD5:        463f7191363d0391add327c1270d7fe6 
+SHA1:       a87c5b6a588ef4b351ce1a3a0fe2b035e685e96c 
+PE Time:    0x546D0881 [Wed Nov 19 21:15:45 2014 UTC] 
+PEID Sig:   Microsoft Visual C++ 8 
+Sections (4): 
+  Name      Entropy  MD5 
+  .text     6.65     6fe50af0b54ed30227099ea6b9e7178b 
+  .rdata    5.54     43ff7c660e83eeff9a7db4abf0ceab04 
+  .data     5.74     e19f755461a13879499bd1e8e7471807 
+  .rsrc     7.66     399357dac81db1ae19c69e8a2b7e5311 
+The malware appears to implement anti-reversing techniques preventing it from properly 
+executing inside a VME. In a bare-metal system, the malware worked properly. This 
+malware is believed to be a variant from the ‘Neutrino Bot’ malware family. 
+When the file was executed in a Windows 7 system, the following activity was observed: 
+Domain:  
+ 
+Resolved IP:  
+ 
+POST request:   
+ 
+ 
+
+  nutqlfkq123a10[.]com 
+  121.61.118[.]140 (China) 
+  /newfiz3/tasks.php 
+  ping=1 
+
+Data: 
+
+ 
+Copyright © 2014 General Dynamics Fidelis Cybersecurity Solutions 
+Threat Advisory #1014 
+Page 10 of 16 
+
+Rev. 1.1 2014-12-12 
+      Bots, Machines, and the Matrix 
+
+www.fidelissecurity.com 
+www.threatgeek.com 
+ @FidSecSys 
++1800.652.4020 
+
+Server response: pong 
+
+ 
+POST request:   
+ 
+ 
+
+Data: 
+
+  /newfiz3/tasks.php 
+  getcmd=1&uid=[removed]&os=Win+7+Enterprise+(x64) 
+  &av=Symantec+Endpoint+Protection&nat=yes&version=3.2.1 
+  &serial=[removed]&quality=0 
+  /newfiz3/tasks.php 
+  taskexec=1&task_id=1416470040933917 
+
+ 
+ 
+
+Data: 
+
+463f7191363d0391add327c1270d7fe6 
+
+C:\ProgramData\bett2f00\hemxccape.exe 
+9cf7d079713fdf715131e16b144d3f52 
+
+54.69.90[.]62/330740a91.exe 
+b21e4c8f73151d7b0294a3974fe44421 
+330740a91.exe 
+
+POST request:   
+ 
+ 
+   
+GET request: 
+ 
+File downloaded:  
+Full name: 
+ 
+ 
+Made a copy itself to:  %APPDATA%\Roaming\WIN-S0MT3UJUS2O\splwow64.exe 
+Hash of file copied: 
+ 
+Created file: 
+File hash: 
+ 
+Created file: 
+File hash: 
+ 
+Created file: 
+File hash: 
+ 
+Created file: 
+File hash: 
+ 
+USB drive infection: 
+ 
+ 
+ 
+ 
+
+C:\ProgramData\msitygyd.exe 
+2983d957d4cdd9293682cfaf21147d07 
+
+%TEMP%\7403542.exe 
+72380a9fcf7486bb731606d4f4c13f27 
+
+%TEMP%\7395367.exe 
+f220f0a48885bafc29b31fb7228cc4bb 
+
+Created file: 
+Full path and name: 
+File contents: 
+
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+
+ 
+
+ 
+
+ 
+
+c1fa3e4ee1e2e5b088bc657b0b5a3b8e 
+[USB_DRIVE]\autorun.inf 
+ 
+[autorun] 
+OPEN=WinSystemKB001.exe 
+action=Run 
+ 
+463f7191363d0391add327c1270d7fe6  
+[USB_DRIVE]\WinSystemKB001.exe  
+This is a copy of original file executed. 
+
+Created file: 
+Full path and name: 
+
+ 
+
+Note: 
+ 
+
+Registry entrenchment: 
+ 
+ 
+ 
+ 
+ 
+
+Key: 
+Value Name:  A38973873873 
+Value Data: 
+
+ 
+
+HKCU\Software\Microsoft\Windows\CurrentVersion\Run 
+
+C:\ProgramData\bett2f00\hemxccape.exe 
+
+ 
+
+Key: 
+Value Name: 
+Value Data: 
+Key: 
+Value Name: 
+
+ 
+
+HKCU\Software\Microsoft\Windows\CurrentVersion\Run 
+splwow64.exe 
+%APPDATA%\Roaming\WIN-S0MT3UJUS2O\splwow64.exe 
+
+HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer\Run 
+172157644 
+
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+
+ 
+Copyright © 2014 General Dynamics Fidelis Cybersecurity Solutions 
+Threat Advisory #1014 
+Page 11 of 16 
+
+Rev. 1.1 2014-12-12 
+      Bots, Machines, and the Matrix 
+
+www.fidelissecurity.com 
+www.threatgeek.com 
+ @FidSecSys 
++1800.652.4020 
+
+Value Data: 
+
+C:\ProgramData\msitygyd.exe 
+
+ 
+ 
+Process Injection: 
+ 
+Screenshot showing a handle of the malware in the “WerFault.exe” process: 
+ 
+
+C:\Windows\SysWOW64\WerFault.exe 
+
+ 
+Screenshot of related processes running in the victim system: 
+ 
+
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+o  Andromeda Bot 
+
+MD5: 13475d0fdba8dc7a648b57b10e8296d5 
+ 
+This file was observed hosted in the following servers: 
+ 
+1.  117.21.191[.]47/and40a37.exe (China) 
+2.  54.68.121[.]73/and40a37.exe (US) 
+ 
+File information: 
+File Name:  and40a37.exe 
+File Size:  122368 bytes 
+MD5:        13475d0fdba8dc7a648b57b10e8296d5 
+SHA1:       feed5337c0a3b1fd55c78a976fbd5388512a22e1 
+PE Time:    0x54636BD2 [Wed Nov 12 14:16:50 2014 UTC] 
+PEID Sig:   Microsoft Visual C++ 8 
+Sections (4): 
+  Name      Entropy  MD5 
+  .text     6.42     c93f36300bb882b4671b7ef0a8bd4fba 
+  .rdata    5.43     55af9f1d8e50e49fdf10742179486281 
+
+ 
+Copyright © 2014 General Dynamics Fidelis Cybersecurity Solutions 
+Threat Advisory #1014 
+Page 12 of 16 
+
+Rev. 1.1 2014-12-12 
+      Bots, Machines, and the Matrix 
+
+www.fidelissecurity.com 
+www.threatgeek.com 
+ @FidSecSys 
++1800.652.4020 
+
+  a2kiaymoster14902[.]com 
+  121.14.212[.]248 (China) 
+  /bla02/gate.php 
+
+  .data     5.32     1b24669aa9245cef2358a9d76dab97be 
+  .rsrc     6.94     4f0f11c52935735aa0e65f04b95ed208 
+The malware appears to implement anti-reversing techniques preventing it from properly 
+executing inside a VME. In a bare-metal system, the malware worked properly. This 
+malware is believed to be a variant from the ‘Andromeda Bot’ malware family. 
+When the file was executed in a Windows 7 system, the following activity was observed: 
+ 
+Domain:  
+Resolved IP:  
+ 
+POST request:   
+ 
+Made a copy itself to:  C:\ProgramData\msitygyd.exe 
+Hash of file copied: 
+ 
+ 
+ 
+Registry entrenchment: 
+ 
+ 
+ 
+ 
+
+HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer\Run\ 
+172157644 
+C:\ProgramData\msitygyd.exe 
+
+13475d0fdba8dc7a648b57b10e8296d5 
+
+Key: 
+Value name: 
+Value data: 
+
+ 
+
+ 
+
+Key: 
+Value name: 
+Value data: 
+
+C:\Windows\SysWOW64\msiexec.exe 
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\ 
+CurrentVersion\Policies\Explorer\Run 
+172157644 
+C:\ProgramData\msitygyd.exe 
+
+ 
+ 
+ 
+Process Injection: 
+ 
+ 
+ 
+ 
+The malware appears to have rootkit functionality. The hidden “WinDefend” service points 
+to the following DLL: “C:\Program Files (x86)\Windows Defender\mpsvc.dll”. The system 
+was found to have a valid “mpsvc.dll” file under the “C:\Program Files\Windows 
+Defender\” directory. The following screenshot show GMER detecting the hidden service: 
+ 
+
+ 
+
+ 
+
+The following is a summary of all the domains and IPs observed during the analysis of the 
+selected malware: 
+ 
+
+o  a2kiaymoster14902[.]com - 121.14.212[.]248 (China) 
+
+ 
+Copyright © 2014 General Dynamics Fidelis Cybersecurity Solutions 
+Threat Advisory #1014 
+Page 13 of 16 
+
+Rev. 1.1 2014-12-12 
+      Bots, Machines, and the Matrix 
+
+www.fidelissecurity.com 
+www.threatgeek.com 
+ @FidSecSys 
++1800.652.4020 
+
+o  54.69.90[.]62/and40a90.exe (US) 
+o  b.9thegamejuststarted14k9[.]com - 116.255.202[.]74 (China) 
+o  121.14.212[.]184/ng40a54.exe / 121.14.212[.]184/and40a54.exe (China) 
+o  nutqlfkq123a10[.]com - 121.61.118[.]140 (China) 
+
+For information about hashes related to this activity, please look at the spreadsheet enclosed with this 
+report which contains relationships between servers and hashes.  
+Further Analysis And Correlation 
+The following diagram illustrates the relationship between some of the malicious servers, malware 
+hosted/distributed, and vertical markets: 
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+Copyright © 2014 General Dynamics Fidelis Cybersecurity Solutions 
+Threat Advisory #1014 
+Page 14 of 16 
+
+Rev. 1.1 2014-12-12 
+      Bots, Machines, and the Matrix 
+
+www.fidelissecurity.com 
+www.threatgeek.com 
+ @FidSecSys 
++1800.652.4020 
+
+ 
+ 
+ 
+The following diagram is based on the analysis/execution of some of the malware hosted and distributed 
+by the malicious servers. It illustrates the relationship between some of the malicious servers, locations, 
+malware hosted/distributed, and malicious servers to which the malware beacons to with POST requests 
+and to download additional malware:  
+
+ 
+
+The Fidelis Take 
+This paper highlights campaigns that has compromised systems at significant enterprises worldwide, 
+utilizing various bot malware. We are publishing these indicators so others in the security research 
+community can monitor for this activity and potentially correlate against other campaigns and tools that 
+are being investigated.  
+General Dynamics Fidelis’ advanced threat defense product, Fidelis XPS™, detects all of the activity 
+documented in this paper. Further, we will continue to follow this specific activity and actively monitor the 
+ever-evolving threat landscape for the latest threats to our customers’ security. 
+ 
+
+ 
+
+ 
+Copyright © 2014 General Dynamics Fidelis Cybersecurity Solutions 
+Threat Advisory #1014 
+Page 15 of 16 
+
+Rev. 1.1 2014-12-12 
+      Bots, Machines, and the Matrix 
+
+www.fidelissecurity.com 
+www.threatgeek.com 
+ @FidSecSys 
++1800.652.4020 
+
+References 
+1.  Neutrino Bot (aka MS:Win32/Kasidet), June 2014: 
+
+http://malware.dontneedcoffee.com/2014/06/neutrino-bot-aka-kasidet.html  
+ 
+
+2.  Renting a Zombie Farm: Botnets and the Hacker Economy, August 2014: 
+
+http://www.symantec.com/connect/blogs/renting-zombie-farm-botnets-and-hacker-economy  
+ 
+
+3.  DorkBot, a Twin Botnet of NgrBot, August 2014: http://blog.fortinet.com/post/dorkbot-a-twin-botnet-of-
+
+ngrbot  
+ 
+
+andromeda-botnet  
+ 
+
+4.  Big Box LatAm Hack (1st part - Betabot), January 2014: 
+
+http://securelist.com/blog/research/58213/big-box-latam-hack-1st-part-betabot/  
+ 
+
+5.  A Good Look at the Andromeda Botnet, April 2014: https://blog.fortinet.com/post/a-good-look-at-the-
+
+6.  CVE-2013-2729 and Andromeda 2.9 - A Massive HSBC themed email campaign, June 2014: 
+http://stopmalvertising.com/spam-scams/cve-2013-2729-and-andromeda-2.9-a-massive-hsbc-
+themed-email-campaign/andromeda-botnet.html  
+ 
+
+7.  Beta Bot – A Code Review, November 2013: http://www.arbornetworks.com/asert/2013/11/beta-bot-
+
+a-code-review/  
+
+a-ddos-malware-odyssey/  
+ 
+
+8.  Athena, A DDoS Malware Odyssey, Nov 2013: http://www.arbornetworks.com/asert/2013/11/athena-
+
+9.  Andromeda Botnet Gets an Update, July 2013: http://blog.trendmicro.com/trendlabs-security-
+
+intelligence/andromeda-botnet-gets-an-update/  
+ 
+
+commercial-trojan-inth3wild-meet-beta-bot/  
+
+10. New Commercial Trojan #INTH3WILD: Meet Beta Bot, May 2013: https://blogs.rsa.com/new-
+
+11. A new bot on the market: Beta Bot, May 2013: https://blog.gdatasoftware.com/blog/article/a-new-bot-
+
+on-the-market-beta-bot.html  
+
+12. Andromeda Botnet Resurfaces, March 2013: http://blog.trendmicro.com/trendlabs-security-
+
+intelligence/andromeda-botnet-resurfaces/  
+
+13. Fooled by Andromeda, March 2013: http://www.0xebfe.net/blog/2013/03/30/fooled-by-andromeda/  
+
+14. Botnets Die Hard - Owned and Operated – Defcon 20: July 2012: 
+
+https://www.defcon.org/images/defcon-20/dc-20-presentations/Sood-Enbody/DEFCON-20-Sood-
+Enbody-Botnets-Die-Hard.PDF.pdf  
+
+15. A Chat With NGR Bot, June 2012: http://resources.infosecinstitute.com/ngr-rootkit/  
+
+16. Analysis of ngrBot, August 2011: http://stopmalvertising.com/rootkits/analysis-of-ngrbot.html  
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Copyright © 2014 General Dynamics Fidelis Cybersecurity Solutions 
+Threat Advisory #1014 
+Page 16 of 16 
+
+Rev. 1.1 2014-12-12 
+      Bots, Machines, and the Matrix 
+
+

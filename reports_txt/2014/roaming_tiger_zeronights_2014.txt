@@ -1,0 +1,305 @@
+Roaming tiger 
+
+Anton Cherepanov 
+cherepanov@eset.sk  
+
+Intro 
+
+In 2014 ESET observed similar attacks in Russia and CIS countries: 
+Belarus, Kazakhstan, Kyrgyzstan, Tajikistan, Ukraine and Uzbekistan 
+ 
+Similarities: 
+• Same infection vectors 
+• Use of RTF exploits since autumn of 2014 
+• Same malware families are used in attacks 
+• Purpose is to steal data 
+
+Roaming tiger group 
+
+Characteristics of “Roaming tiger”: 
+• High profile victims in Russia 
+• Use of RTF vulnerabilities (CVE-2012-0158 and CVE-2014-1761) 
+• Win32/Korplug (aka PlugX RAT) 
+• Win32/Farfli.BEK (aka Gh0st RAT)  
+
+RTF exploits 
+
+CVE-2014-1761 copied from the same template: 
+
+CVE-2014-1761 is poorly implemented 
+
+First stage shellcode can’t find second stage shellcode “p!11”-marker: 
+
+Examples of decoy documents 1/5 
+
+Examples of decoy documents 2/5 
+
+Examples of decoy documents 3/5 
+
+Examples of decoy documents 4/5 
+
+Examples of decoy documents 5/5 
+
+Win32/Korplug tricks: DLL Side-loading 
+
+Digitally signed 
+
+executable 
+
+DLL file 
+
+File with raw 
+
+code 
+
+Win32/Farfli.BEK tricks: UAC bypass 
+
+Step 1: 
+• Hook ntdll.NtQueryDirectoryFile inside explorer.exe 
+Step 2: 
+• Copy previously dropped DLL to following locations: 
+
+a) %WINDIR%\system32\wbem\loadperf.dll (WinXP) 
+b) %WINDIR%\system32\migwiz\wdscore.dll (Vista+) 
+• Execute wmiadap.exe(WinXP) or migwiz.exe(Vista+) 
+
+Win32/Farfli.BEK tricks: Persistence 1/2 
+
+Win32/Farfli.BEK drops following files: 
+• %WINDIR%\AppPatch\msimain.mui – raw code 
+• %WINDIR%\AppPatch\AcProtect.dll 
+ 
+Drops Shim DataBase & registers it: 
+• %WINDIR%\AppPatch\Custom\%GUID%.sdb 
+
+Win32/Farfli.BEK tricks: Persistence 2/2 
+
+EMET-style sdb (output generated using sdb-explorer by Jon Erickson): 
+ 
+
+47c TAG 7004 - SHIM 
+ 
+ 
+
+44e TAG 7001 - DATABASE 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<skipped> 
+ 
+ 
+ 
+<skipped> 
+
+4d4 TAG 7007 - EXE 
+ 
+ 
+
+454 TAG 4023 - OS_PLATFORM 
+45a TAG 6001 - NAME: AcProtect_Database 
+460 TAG 9007 - DATABASE_ID: {F8C4CC07-6DC4-418F-B72B-304FCDB64052} NON-STANDARD 
+476 TAG 7002 - LIBRARY 
+ 
+ 
+ 
+48e TAG 7007 - EXE 
+ 
+ 
+
+494 TAG 6001 - NAME: twunk_32.exe 
+49a TAG 6006 - APP_NAME: AcProtect_Apps 
+
+482 TAG 6001 - NAME: AcProtect_Shim 
+488 TAG 600a - DLLFILE 
+
+4da TAG 6001 - NAME: explorer.exe 
+4e0 TAG 6006 - APP_NAME: AcProtect_Apps 
+
+Used C&C servers 1/2 
+
+Server 
+
+IP address 
+
+adobeflashupdate.dynu.com 
+
+122.10.92.14 
+
+checkpdate.youdontcare.com 
+
+122.10.118.129 
+
+csrss.dnsedc.com 
+
+dotkang.vicp.net 
+
+dwm.dnsedc.com 
+
+fsvts.vicp.net 
+
+futuresgolda.com 
+
+gf.arabidc.com 
+
+kkts.yeshopea.com 
+
+nativeame2.jkub.com 
+
+news.bfinancea.net 
+
+systemupdate5.dtdns.net 
+
+googlenewsup.net 
+
+122.10.118.131 
+
+122.10.118.131 
+
+122.10.118.131 
+
+122.10.83.51 
+
+103.225.196.140 
+
+103.225.196.140 
+
+122.10.118.129 
+
+Location 
+
+Hong Kong 
+
+Hong Kong 
+
+Hong Kong 
+
+Hong Kong 
+
+Hong Kong 
+
+Hong Kong 
+
+Hong Kong 
+
+Hong Kong 
+
+Hong Kong 
+
+Used C&C servers 2/2 
+
+Server 
+
+IP address 
+
+Location 
+
+spacecorp.sizn-ru.com 
+
+niisvt.f3322.org 
+
+note.wikaba.com 
+
+122.10.83.62,103.20.222.170 
+
+122.10.83.62 
+
+systemupdate1.suroot.com 
+
+122.10.92.15 
+
+systemupdate1.suroot.com 
+
+122.10.92.15 
+
+systemupdate3.suroot.com 
+
+vk.newsupdatea.net 
+
+123.254.109.166 
+
+www.dnsqaz.com 
+
+www.sizn-ru.com  
+
+122.10.83.62 
+
+122.10.83.62, 122.112.2.14 
+
+yahoomessenger.flnet.org 
+
+122.10.92.15 
+
+transactiona.com 
+
+122.10.92.14 
+
+systemupdate2.etowns.net 
+
+122.10.92.14 
+
+adobeupdate1.dtdns.net 
+
+122.10.92.15 
+
+Hong Kong 
+
+Hong Kong 
+
+Hong Kong 
+
+Hong Kong 
+
+Hong Kong 
+
+Hong Kong 
+
+Hong Kong 
+
+Hong Kong 
+
+Hong Kong 
+
+Hong Kong 
+
+Hong Kong 
+
+Domains information 
+
+Updated Date: 2014-07-28 17:17:48Z 
+Creation Date: 2014-07-28 17:17:48Z 
+ 
+Registrant Name: liu qiuping 
+Registrant Organization: huajiyoutian 
+Registrant City: Beijing 
+Registrant State/Province: BJ 
+Registrant Postal Code: 100191 
+Registrant Country: CN 
+Registrant Email: yuminga1@126.com 
+
+Conclusions 
+
+• We are observing attacks in Russia and CIS countries 
+• Tip of the iceberg: just one group 
+ 
+Steps taken: 
+• Composed IoC 
+• Contacted CERTs 
+ 
+ 
+
+Credits 
+
+Special thanks to Cedric Gilbert 
+
+cherepanov@eset.sk 
+
+ 
+
+

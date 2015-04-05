@@ -1,0 +1,942 @@
+2Q Report on  
+Targeted Attack Campaigns 
+
+Contents
+
+Introduction ...........................................................................................................................................4
+
+Campaigns Observed in 2Q ................................................................................................................5
+
+Targeted Attack Campaigns Profiling  ..................................................................................5
+
+Affected Industry Sectors .......................................................................................................6
+
+Affected Regions ......................................................................................................................6
+
+Attachments Used In Targeted Attacks ................................................................................7
+
+C&C Statistics ...........................................................................................................................7
+
+Feature: EvilGrab Campaign Targets Diplomatic Agencies ..........................................................8
+
+Targets ........................................................................................................................................8
+
+Attack Vectors ...........................................................................................................................9
+
+Exploits, Payloads, and Decoy Documents ..........................................................................9
+
+DLL Preloading Using the Windows Shell and Fax Server ...............................................9
+
+2
+
+Other Autorun Behaviors .....................................................................................................10
+
+Stealth Operation....................................................................................................................10
+
+Registry Storage ......................................................................................................................11
+
+Media Grabbing ......................................................................................................................11
+
+User Credential Theft ............................................................................................................11
+
+Tencent QQ Memory Reading: ............................................................................................13
+
+Key Logging ............................................................................................................................13
+
+Command & Control Servers ...............................................................................................14
+
+Backdoor Activity ...................................................................................................................15
+
+Trend Micro Recommendations .......................................................................................................21
+
+References ............................................................................................................................................22
+
+3
+
+Introduction
+
+Highly targeted attacks refer to a category of  threats that pertain to intrusions by threat actors 
+or attackers. These attackers aggressively pursue and compromise chosen targets in order to 
+steal  sensitive  information.  These  are  not  conducted  through  separate  attacks;  rather,  they 
+comprise of  a series of  attempts over time to get deeper and deeper into a target’s network. 
+Each attempt may either succeed or fail, but the overall goal is to penetrate the target’s network 
+and  acquire  information.  Malware  is  typically  used  as  an  attack  vector,  but  the  real  threat 
+involves human operators who adapt, adjust, and improve their methods based on the victim’s 
+defenses.
+
+Enterprises should consider targeted attacks a high-priority threat because of  the considerable 
+damage they incur. The human and systemic weaknesses that allow an attacker to compromise 
+an organization can be minimized and mitigated with correct practices and solutions. However, 
+these same weaknesses can never be fully resolved.
+
+Trend Micro monitors the targeted attack landscape in order to identify ongoing campaigns and 
+provide additional threat intelligence useful for identifying the existence of  these campaigns 
+in  an  enterprise  network.  This  quarterly  report  presents  the  targeted  attack  campaigns 
+observed and mitigated by Trend Micro based on reported customer cases, as well as our own 
+independently gathered data.
+
+4
+
+Campaigns Observed in 2Q
+
+Targeted Attack Campaigns Profiling 
+
+We encountered a variety of  targeted campaigns in the second quarter of  the year. 
+These include the following:
+
+•  IXESHE.  The  IXESHE  campaign  is  known  for  targeting  East  Asian 
+governments,  electronics  manufacturers,  and  telecommunications  firms.  We 
+released a white paper discussing this campaign.1 IXESHE has been active since 
+2012.
+
+•  ELISE. This recently discovered campaign also targets government agencies 
+in  the  Asia  Pacific  region.  It  is  called  ELISE  after  certain  strings  found 
+in  its  unpacked  code.  (We  detect  the  malware  used  by  this  campaign  as  
+BKDR_ELISE.)
+
+•  ZEGOST. This family of  backdoors (aka HTTP Tunnel) is Chinese in origin 
+
+and was used in attacks against Asian government organizations.
+
+•  BEEBUS/MUTTER. This is a targeted campaign believed to be associated 
+with  the  Comment  Crew  attacker  group  because  of   the  use  of   encrypted/
+obfuscated HTML comments to hide their C&C transactions.
+
+•  TravNet. This campaign made use of  a malware family identified as NetTraveler 
+based on the strings found in the malware code. The malware is detected as  
+BKDR_TRAVLAR.
+
+5
+
+Affected Industry Sectors
+
+Our data indicates that the majority of  targeted attack victims are various government 
+agencies. Targeted firms from the technology sector include telecommunication firms, 
+Internet service providers, and software companies. The financial services sector and 
+the aerospace industry were also targeted this quarter.
+
+Targeted attacks discovered by industry
+
+Affected Regions
+
+The targeted attacks that we analyzed were heavily concentrated in Asia, particularly 
+Taiwan and Japan.
+
+Targeted attacks discovered by region
+
+6
+
+Attachments Used In Targeted Attacks
+
+Based on our findings, the most common type of  email attachment type used in targeted 
+attacks were file archives of  various forms. When uncompressed, these archives typically 
+contain the malicious payload itself, which the user may then run directly. Alternately, 
+they may also contain a .DOC file that contains exploit code. RTF files made up the 
+second most common file type.
+
+File types used in targeted attacks
+
+Frequently, the .EXE files we see are made to appear as ordinary documents or folders 
+using appropriately chosen icons. In addition, we also saw an increased use of  files that 
+make use of  right-to-left override (RTLO) in Unicode. 
+
+C&C Statistics
+
+We were also able to monitor the activity of  various C&C servers related to targeted 
+attacks. By volume of  C&C server activity, the following countries ranked as follows:
+
+1
+2
+3
+4
+5
+6
+
+7
+8
+
+9
+10
+
+Australia
+
+South Korea
+Germany
+
+Japan
+Italy
+Taiwan
+India
+United States
+Vietnam
+Netherlands
+Others
+
+32%
+15%
+9%
+7%
+6%
+
+5%
+4%
+3%
+2%
+2%
+15%
+
+8
+
+3
+
+7
+
+9
+
+42
+
+1
+
+Volume percent of  C&C server activity per country
+
+7
+
+Feature: EvilGrab Campaign Targets Diplomatic Agencies
+
+In this report, we will provide a detailed analysis of  the EvilGrab campaign. This campaign 
+was first found targeting certain Asian and European governments. Its name is derived from 
+its behavior of  grabbing audio, video, and screenshots from affected machines.
+
+Currently, the malware used by EvilGrab belongs to one of  three malware families:
+
+•  BKDR_HGDER
+
+•  BKDR_EVILOGE
+
+•  BKDR_NVICM
+
+Targets
+
+Our research indicates that EvilGrab activity is most prevalent in China and Japan, 
+although it is also present in other parts of  the world. Government organizations were, 
+by far, the most affected by EvilGrab. This geolocation is based on the IP addresses of  
+the victims. Therefore, foreign institutions within China would be identified as coming 
+from China; the same would hold true for all countries. EvilGrab was also found in the 
+United States, Canada, France, Spain, and Australia, among others.
+
+1
+2
+3
+4
+5
+
+China
+Japan
+South Africa
+Thailand
+Canada
+Others
+
+5
+
+36%
+18%
+3%
+2%
+2%
+39%
+
+1
+
+2
+
+4
+
+3
+
+Map of  top affected countries by targeted attacks
+
+1
+2
+3
+4
+
+GOVERNMENT
+NON-GOVERNMENT ORGANIZATIONS
+MILITARY
+ONLINE MEDIA
+
+89%
+7%
+3%
+1%
+
+Sectors affected by targeted attacks
+
+8
+
+Attack Vectors
+
+Research indicates that EvilGrab is primarily distributed through spear-phishing emails 
+with malicious attachments that exploit various vulnerabilities to run malicious code. 
+Among the attachment types are:
+
+•  Microsoft® Excel® spreadsheets (CVE-2012-0158 and CVE-2012-2543)
+
+•  PDFs (CVE-2013-0640)
+
+•  Microsoft® Word® documents (CVE-2012-0158) 
+
+A .RAR file with a folder named thumbs.db was also seen containing malicious code. 
+By  using  this  name,  the  intention  was  to  disguise  itself   as  the  Windows  thumbnail 
+cache. A shortcut file (.LNK) was also seen in the .RAR file, which used a folder icon 
+to make users believe it was another folder. In reality, running the .LNK file executes 
+the malware. In addition, the .RAR file contains a desktop.ini file in order to change the 
+thumbs.db folder icon into the icon of  the Windows thumbnail cache.
+
+Exploits, Payloads, and Decoy Documents
+
+The EvilGrab campaign’s use of  exploits, payloads, and decoy documents is similar to 
+the Taidoor campaign in 2012.2 The primary difference is that EvilGrab variants have 
+multiple layers of  shellcode. In addition, some variants copy the file name and use it as 
+the decoy document file name. Other variants overwrite the exploit document with the 
+contents of  the decoy document.
+
+As noted above, some variants also use disguised folders and shortcuts and do not use 
+exploits to run their code.
+
+DLL Preloading Using the Windows Shell and Fax Server
+
+DLL preloading is a vulnerability that has been documented for over three years.3 The 
+EvilGrab campaign makes use of this vulnerability for its AutoRun routine.
+
+Whenever it is run, the Windows shell (explorer.exe) loads a component of  the fax server 
+in  Windows,  fxsst.dll.  This  is  normally  located  in  the  System32  folder.  Whenever  an 
+instance of  explorer.exe is launched (i.e., at every system startup), the system searches for 
+the said .DLL file and loads it.
+
+EvilGrab drops one of  its .DLL components in the Windows folder, where explorer.
+exe is also located. The malicious .DLL (also named fxsst.dll) is loaded instead of  the 
+legitimate copy. It also serves as the loader of  the main backdoor.
+
+9
+
+While DLL preloading has been used by other malware in the past, it is less common 
+to see it specifically target explorer.exe. Other malware families that use this vulnerability 
+typically target executable files outside of  Windows; EvilGrab targets a part of  Windows 
+itself.
+
+Other Autorun Behaviors
+
+In addition to the above behavior, EvilGrab also creates the following registry entry to 
+enable its automatic execution at every system startup:
+
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run
+UKey = “%Application Data%\360\Live360.exe”
+
+The  file  %Application  Data%\360\Live360.exe  is  a  copy  of   one  of   the  malware 
+components. It also creates a shortcut under the Startup folder in the Start menu:
+
+• 
+
+IEChecker.lnk
+
+•  Target: “%UserProfile%\IEChecker.exe” –L
+
+• 
+
+Icon: %Full path of  Iexplorer.exe% (This uses the Internet Explorer icon 
+and disguise itself as part of  Internet Explorer.)
+
+The above file is also a copy of one of  the malicious components.
+
+Stealth Operation
+
+EvilGrab has three primary components: one .EXE file and two .DLL files. The .EXE 
+file acts as the installer for all of  the EvilGrab components. One of  the .DLL files 
+serves as a loader for the other .DLL file, which is the main backdoor component. 
+Some variants of  EvilGrab delete the .EXE file after installation to cover its tracks more 
+effectively. As noted earlier, the loader file is named fxsst.dll. However, examination of  
+its header states that its actual file name is supposed to be svchost.dll.
+
+These components are also encrypted and saved in the registry. To add stealth to its 
+backdoor routines, it uses a legitimate process context’s memory space to inject the 
+main backdoor.
+
+10
+
+By default, this backdoor injects itself  into the svchost.exe or winlogon.exe process. It also 
+checks  if   certain  processes  related  to  certain  security  products  are  running  on  the 
+affected system. The specific processes targeted are:
+
+•  avp.exe
+
+•  klwtblfs.exe
+
+• 
+
+starter.exe
+
+•  wmifw.exe
+
+Other variants of  this malware also check if  other security products are present. It is 
+not clear why EvilGrab specifically targets these products. However, it is possible that 
+the attackers determined that targets for this campaign are likely running these products.
+
+Registry Storage
+
+EvilGrab stores its components in the following registry entries:
+
+HKCU\Software\rar and/or HKLM\SOFTWARE\rar
+data = {Encrypted copy of the main backdoor DLL}
+s = {Encrypted copy of the loader DLL}
+e = {Encrypted string which points to the full path of  
+
+the installer EXE}
+
+ 
+
+ 
+
+Media Grabbing
+
+To capture video, EvilGrab creates a capture window with the class name of  ESET. 
+It uses the Sample Grabber filter (part of  the DirectShow technology in Windows) to 
+directly perform grabbing.4 It also uses Wave APIs to capture audio.5
+
+User Credential Theft
+
+EvilGrab steals user credentials related to the following applications and/or protocols:
+
+•  HTTP 
+
+•  HTTPMail 
+
+• 
+
+• 
+
+IMAP 
+
+Internet Explorer (IE)
+
+•  Microsoft Outlook 
+
+11
+
+•  MSN
+
+•  POP3 
+
+•  Protected Storage 
+
+•  SMTP 
+
+•  Windows Messaging
+
+EvilGrab steals these credentials by parsing the following registry keys: 
+
+	
+
+ 
+
+	
+
+ 
+
+Windows	Messaging	Subsystem\Profiles
+
+• HKCU\Software\Microsoft\Windows NT\CurrentVersion\ 
+•	HKCU\Software\Microsoft\Windows	Messaging	Subsystem\Profiles
+• HKCU\Software\Microsoft\Internet Account Manager\Accounts
+•	HKCU\Software\Microsoft\Office\Outlook\ 
+
+OMI Account Manager\Accounts
+
+It queries the above keys for related values that correspond to the applications and 
+protocols listed earlier. The values are then decrypted using the system library pstorec.dll.
+
+It also steals login credential from IE autocomplete entries. It does this by first parsing 
+the index.dat files in the IE History folder. It then collects autocomplete entries from 
+the following registry key:
+
+HKCU\Software\Microsoft\Internet Explorer\IntelliForms\Storage2
+
+It then initiates a brute force attack on encrypted credentials using the CryptUnprotectData 
+API. However, it will only try to steal passwords from IE’s password-protected sites 
+and MSN Explorer Signup if  kav.exe (related to a security product) is not running in the 
+system.
+
+12
+
+Tencent QQ Memory Reading
+
+If  the active window is Tencent QQ (specifically, QQ2009 through QQ2012), EvilGrab 
+will attempt to steal information by directly reading the process’s memory and checking 
+if  the class name of  the focused window is not named “EDIT.”
+
+The contents of  the process’s memory are then saved onto the system’s hard drive as 
+%UserProfile%\users.bin. It is then sent back to the backdoor’s C&C server. The file on 
+the hard drive is encrypted; specifically, the data is XORed with the key 0x66.
+
+Key Logging
+
+EvilGrab also possesses keylogging capabilities. The logged keystrokes are then sent 
+back to the C&C and saved to %User Profile%\users.bin. The file on the hard drive is 
+encrypted; specifically, the data is XORed with the key 0x66.
+
+13
+
+Command & Control Servers
+
+Each backdoor has one to three C&C servers in its code. Some of  C&C servers that we 
+have seen from our accumulated data are as follows:
+
+•  112.121.182.150
+
+•  113.10.246.46
+
+•  113.10.190.55
+
+•  202.130.112.231
+
+•  micoosofts.com
+
+•  qtds1979 .3322. org
+
+•  qtds1979.gicp.net
+
+• 
+
+• 
+
+server1. micoosofts. com
+
+sxl1979. gicp. net
+
+•  webmonder. gicp. net
+
+•  webposter. gicp. net
+
+•  www . yahooip . net
+
+•  www . yahooprotect . com
+
+•  www . yahooprotect . net
+
+•  yacooll . com
+
+•  yahooip . net
+
+•  yahooprotect . com
+
+14
+
+Backdoor Activity
+
+To  start  its  connection  to  its  C&C  server,  the  backdoor  component  will  first  send 
+5-bytes (\x01\x00\x00\x00\x33). The C&C will reply if  it accepts the connection. 
+The backdoor then replies with a beacon message, the contents of  which are as follows:
+
+Description
+
+Sample value (referring to sample 
+
+packet illustrated below)
+
+Size of internal buffer
+
+<%d> =xFFC (4092)
+
+Hardcoded 0xA0
+
+<%c> = xA0
+
+Backdoor identifier 1
+
+<%s> = "RB0318"
+
+Host IP
+
+Host port
+
+OS version
+
+Hostname
+
+User name
+
+<%s> = "111.222.123.132"
+
+<%d> = 432 (1074.)
+
+<%s> = "OSVERSION"
+
+<%s> = "HOSTNAME"
+
+<%s> = "USERNAME"
+
+Camera device detected
+
+<%s> = "No"
+
+Date time
+
+<%s> = "0Ìì0Ð¡Ê±0•Ö0Ãë"
+
+Presence of removable drive
+
+<%s> = "No"
+
+Backdoor identifier 2
+
+<%s> = "V2010-v24"
+
+Process ID of the process where the 
+backdoor is injected
+
+<%d> = 21C (540.)
+
+Hardcoded 0x00
+
+<%d> = 0
+
+15
+
+Either  backdoor  identifier  1  or  backdoor  identifier  2  acts  as  the  campaign  code  or 
+marker  for  EvilGrab  campaigns,  which  is  recognizable  by  the  C&C  server  and/or 
+attacker. Some of  the identifiers we saw in backdoor identifier 1 are:
+
+•  006
+
+•  007
+
+•  0401
+
+•  072002
+
+•  3k-Ja-0606
+
+•  3k-jp01
+
+•  4k-lyt25
+
+•  88j
+
+•  e-0924
+
+•  LJ0626
+
+•  RB0318
+
+Some of  the identifiers seen in our accumulated data in backdoor identifier 2 are as 
+follows:
+
+•  V2010-v16
+
+•  V2010-v24
+
+We noted a correlation between the MZ/PE headers of  variants and the strings in 
+backdoor  identifier  2.  Variants  with  a  V2010-v24  identifier  have  a  proper  MZ/PE 
+header; variants with a V2010-v16 header have portions of  their header overwritten with 
+JPEG strings. These variants require a loader component to load them into memory in 
+order to be executed.
+
+16
+
+Below is a sample packet sent at the beginning of the connection:
+
+Code snapshot
+
+EvilGrab variants possess a wide variety of  possible backdoor commands. The table 
+below lists its possible commands:
+
+Command code
+
+Description
+
+x82
+
+x83
+
+x85
+
+x86
+
+x87
+
+x88
+
+x89
+
+x8A
+
+x8B
+
+x8C
+
+x8E
+
+x8F
+
+x90
+
+Enumerate drives and their drive types
+
+File listing with file's last modification date, file 
+attribute and file size
+
+Execute downloaded file
+
+Set file pointer of specific file
+
+Close file handles
+
+Load .DLL
+
+Create directory
+
+Delete file
+
+Delete directory tree
+
+Get file time stamps of a specific file
+
+Either runs an executable, loads a DLL or open 
+a file
+
+Move/Rename a file
+
+Steal login credentials 
+
+17
+
+Command code
+
+Description
+
+x92
+
+x93
+
+x94
+
+x99
+
+x9A - x9B
+
+x9C
+
+x9D, x9F
+
+xB0
+
+xB1
+
+xB2
+
+xB4
+
+xB5
+
+xB7
+
+xB9
+
+xBA
+
+xBB
+
+xBC
+
+Create remote shell
+
+Write to file 
+
+Close thread that created remote shell
+
+Send message to a certain window
+
+Related to change a specific window's show 
+state
+
+Change window text of certain window
+
+Synthesize key strokes (i.e. right menu, shift) 
+
+Triggers sending of accumulated stolen 
+information
+
+Modify registry entry value
+
+Delete a value from registry
+
+Modify registry
+
+Create registry entry
+
+Delete registry key
+
+Get service listing info (service name, service 
+type, service status, service setting)
+
+Change service status
+
+Change optional parameters of certain services
+
+Create service
+
+18
+
+Command code
+
+Description
+
+Get TCP & UDP network connections
+
+Get process listing
+
+Terminate process
+
+Get CPU info, Windows and System32 folder, 
+hostname, user name, clipboard contents
+
+Delete its files and registries from the system 
+(uninstall itself)
+
+xBD
+
+xBE
+
+xBF
+
+xC0
+
+xC1
+
+xE2- xE3
+
+Related to stealing desktop screenshots
+
+xE5
+
+xE6 
+
+xE9
+
+xEB
+
+xEC
+
+xEE
+
+xF0
+
+xF2
+
+Get desktop screenshot
+
+Get file listing
+
+Connect to other network
+
+Set mouse event
+
+Start capture window for media grabbing
+
+Media capture related
+
+Start audio recording
+
+Search for certain files and steal file content 
+
+19
+
+This captured packet shows sample backdoor commands and replies: 
+
+Backdoor command xC0: Get CPU info, Windows and System32 
+
+folder, hostname, user name and clipboard content
+
+Backdoor command x82: Get drive listings and types
+
+These  capabilities  can  be  used  for  both  lateral  movement  within  a  compromised 
+organization and to steal information. EvilGrab steals internal user names and passwords 
+as well as logs keystrokes. Credentials stolen this way can be used to move within the 
+confines of  the organization’s network. 
+
+EvilGrab possesses a wide variety of  information theft capabilities. It can grab audio 
+and  video  files  directly  from  devices  attached  on  the  system  (i.e.  microphone  and 
+camera). In addition, EvilGrab can upload files from the affected system to remote 
+servers. EvilGrab possesses a full range of  capabilities that is expected in malware used 
+in targeted attacks against organizations.
+
+20
+
+Trend Micro Recommendations
+
+Targeted attacks pose a challenge to traditional signature-based security solutions. To deal with 
+these type of  threats, employ solutions that include network monitoring to detect and analyze 
+incoming threats, as well as any outgoing communication with attacking parties.
+
+Products like Trend Micro™ Deep Discovery™ are capable of  mitigating the risks from these 
+threats. One component of  Deep Discovery, the Deep Discovery Inspector, provides network 
+threat detection, custom sandboxing, and real-time analysis and reporting. 
+
+The second component, Deep Discovery Advisor, provides sandbox analysis of  known and 
+unknown threats that augments the capabilities of  existing products like endpoint solution and 
+email/web gateways. It also provides visibility to network-wide security events.
+
+The capabilities provided by solutions like Deep Discovery are necessary to provide a unified, 
+comprehensive view of  the threats an organization faces. This information can then be used 
+by an organization to create appropriate and proportional responses to properly protect an 
+organization’s network.
+
+21
+
+References
+
+Sancho, David; Dela Torre, Jessa; Bakuei, Matsukawa; Villeneuve, Nart; and McArdle, Robert. (2013). Trend 
+
+1 
+Micro Incorporated Research Paper. “IXESHE: An APT Campaign.” Last accesed August 30, 2013. http://www.trendmicro.
+com/cloud-content/us/pdfs/security-intelligence/white-papers/wp_ixeshe.pdf
+
+Trend Micro Incorporated. (2013). Trend Micro Incorporated Research Paper “The Taidoor Campaign: An In-Depth 
+
+2 
+Analysis.” Last accessed August 30, 2013. http://www.trendmicro.com/cloud-content/us/pdfs/security-intelligence/
+white-papers/wp_the_taidoor_campaign.pdf
+
+Security TechCenter. (November 13, 2012). Microsoft Security Advisory. “Microsoft Security Advisory (2269637): 
+
+3 
+Insecure Library Loading Could Allow Remote Code Execution” Last accessed August 30, 2013. http://technet.
+microsoft.com/en-us/security/advisory/2269637
+
+4 
+http://msdn.microsoft.com/en-us/library/windows/desktop/dd407288(v=vs.85).aspx
+
+Microsoft. (2013). Windows Dev Center - Desktop. “Using the Sample Grabber.” Last accessed August 30, 2013. 
+
+5 
+accessed August 30, 2013. http://msdn.microsoft.com/en-us/library/aa446573.aspx#waveinout_topic_006
+
+Microsoft. (2013). Developer Network. “Recording and Playing Sound with the Waveform Audio Interface.” Last 
+
+22
+
+Trend  Micro  Incorporated,  a  global  leader  in  security  software,  strives  to  make  the 
+world safe for exchanging digital information. Our innovative solutions for consumers, 
+businesses  and  governments  provide  layered  content  security  to  protect  information 
+on mobile devices, endpoints, gateways, servers and the cloud. All of our solutions are 
+powered by cloud-based global threat intelligence, the Trend Micro™ Smart Protection 
+Network™, and are supported by over 1,200 threat experts around the globe. For more 
+information, visit www.trendmicro.com.
+
+©2013  by Trend  Micro,  Incorporated. All  rights  reserved. Trend  Micro  and  the Trend 
+Micro t-ball logo are trademarks or registered trademarks of Trend Micro, Incorporated. 
+All other product or company names may be trademarks or registered trademarks of 
+their owners.
+
+

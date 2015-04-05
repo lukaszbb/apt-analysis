@@ -1,0 +1,950 @@
+ 
+
+ 
+
+ 
+www.fidelissecurity.com 
+www.threatgeek.com 
+ @FidSecSys 
++1800.652.4020 
+
+Fidelis Threat Advisory #1010 
+"njRAT", The Saga Continues 
+
+ 
+ 
+
+ 
+
+ 
+ 
+
+December 2, 2013 
+
+Document Status:  FINAL 
+
+Last Revised:  2013-12-02 
+
+ 
+ 
+ 
+ 
+Executive Summary 
+In June 2013, we released a paper containing information about the njRAT malware that included 
+its functionality, indicators of compromise, and campaign codes used on the variants we had 
+identified. (http://www.fidelissecurity.com/threatadvisory). 
+To this day, we continue to observe waves of blunt phishing attacks from compromised hosts in 
+the Middle East, showing threat actors using multiple tools (including njRAT, AdwindRAT, Xtreme 
+RAT, and H-Worm) in clustered phishing attacks against the same targets.  Some of these 
+attacks continue to target the U.S. telecommunications sector with threat actors sending phishing 
+emails using business-oriented lures containing the aforementioned tools or links to websites that 
+serve these tools.  
+Additionally, we continue to directly observe significant activity from threat actors sending 
+commands to the victim systems in the Middle East.  
+Further, we are observing attackers using the following obfuscators to make detection of this 
+malware specimen more difficult for security analysts:  
+
+.NetShrink (http://www.pelock.com/products/netshrink) 
+
+-­‐ 
+-­‐  Confuser v1.9.0.0 (http://confuser.codeplex.com/) 
+-­‐ 
+
+.NET Reactor (http://www.eziriz.com/) 
+
+This document provides details of the njRAT campaign codes used, versions, ports, and CnC 
+nodes currently observed sending commands to victim systems. It’s also clear that threat actors 
+are actively using the following version of njRAT: 0.3.6, 0.4.1a, 0.5.0E, 0.6.4. 
+Threat Overview 
+"njRAT" is a robust remote access trojan (RAT) which upon reaching and infecting an end-point, 
+allows the attacker to have full control over the victim system. Among other things, with this 
+access, the attacker could start scanning other systems in the victim network to perform lateral 
+movement.   
+
+ 
+Users are granted permission to copy and/or distribute this document in its original electronic form and print copies for personal use. This 
+document cannot be modified or converted to any other electronic or machine-readable form in whole or in part without prior written 
+approval of General Dynamics Fidelis Cybersecurity Solutions, Inc. 
+ 
+While we have done our best to ensure that the material found in this document is accurate, General Dynamics Fidelis Cybersecurity 
+Solutions, Inc. makes no guarantee that the information contained herein is error free. 
+ 
+Copyright © 2013 General Dynamics Fidelis Cybersecurity Solutions 
+Threat Advisory #1010 
+
+Rev. 2013-12-02 
+“njRAT”, The Saga Continues 
+
+Page 1 of 6 
+
+ 
+www.fidelissecurity.com 
+www.threatgeek.com 
+ @FidSecSys 
++1800.652.4020 
+
+ 
+
+ 
+
+Indicators and Mitigation Strategies 
+The following table contains information about the observed CnC nodes, ports, campaign codes, 
+and njRAT versions: 
+
+CnC 
+
+Port 
+
+CnC GeoLocation 
+
+105.129.18.216 
+
+1177 
+
+Morocco 
+
+105.157.2.178 
+
+1177  Morocco 
+
+108.62.213.238 
+
+1177  Phoenix, AZ, United 
+
+States 
+
+Campaign Code 
+(Base64 encoded) 
+SGFja2VkIEJ5IEPDoH
+BpaVRvc184NEFERTA
+yRA== 
+S3J5c3RhbF84NEFER
+TAyRA== 
+QkJNIFBJTl8xQ0NDRj
+Y5Ng== 
+
+Version 
+
+Campaign Code 
+(Base64 decoded) 
+Hacked By 
+CÃ piiTos_84ADE0
+2D 
+Krystal_84ADE02D  0.5.0E 
+
+0.6.4 
+
+BBM 
+PIN_1CCCF696 
+
+108.62.213.67 
+
+1177  Phoenix, AZ, United 
+
+States 
+
+QkJNIFBJTl8xQ0NDRj
+Y5Ng== 
+
+BBM 
+PIN_1CCCF696 
+
+1177  Melbourne, Australia  am5vbjlfQTY3QzdDMD
+
+jnon9_A67C7C01 
+
+0.6.4 
+
+0.6.4 
+
+0.6.4 
+
+0.5.0E 
+
+0.6.4 
+
+0.6.4 
+
+0.5.0E 
+
+0.6.4 
+
+0.6.4 
+
+0.6.4 
+
+0.6.4 
+
+0.6.4 
+
+0.6.4 
+
+122.151.223.20
+3 
+145.255.78.228 
+
+1177  Muscat, Oman 
+
+149.200.131.81 
+
+1177  Jordan 
+
+149.200.224.19
+6 
+159.0.83.175 
+
+1177  Jordan 
+
+100 
+
+Khobar, Saudi 
+Arabia 
+
+178.238.189.53 
+
+1177  Amman, Jordan 
+
+188.121.234.17 
+
+1177  Paris, France 
+
+188.121.236.87 
+
+1177  Paris, France 
+
+188.121.242.49 
+
+1177  Paris, France 
+
+188.50.60.154 
+
+1177  Jiddah, Saudi 
+
+Arabia 
+
+E= 
+WHhYX1h4WF8yMEJG
+MDgzQg== 
+SGFjS2VkX0RFNkEyM
+ENB 
+SGFjS2VkX0RFNkEyM
+ENB 
+SGFjS2VkXzI0NjlFQTI5  HacKed_2469EA2
+
+XxX_XxX_20BF08
+3B 
+HacKed_DE6A20C
+A 
+HacKed_DE6A20C
+A 
+
+9 
+
+QkJNIFBJTl8xQ0NDRj
+Y5Ng== 
+SGFjS2VkX0I0MkY4Nj
+Az 
+SGFjS2VkX0I0MkY4Nj
+Az 
+SGFjS2VkX0I0MkY4Nj
+Az 
+d2luMzJfMzRDOEM5Q
+kY= 
+
+BBM 
+PIN_1CCCF696 
+HacKed_B42F860
+3 
+HacKed_B42F860
+3 
+HacKed_B42F860
+3 
+win32_34C8C9BF 
+
+188.51.30.43 
+
+1177  Jiddah, Saudi 
+
+Arabia 
+
+SGFjS2VkXzRDMTBD
+RTND 
+
+HacKed_4C10CE3
+C 
+
+188.51.69.179 
+
+1177  Jiddah, Saudi 
+
+Arabia 
+
+SGFjS2VkXzc2MTQ4Qj
+VG 
+
+HacKed_76148B5
+F 
+
+0.5.0E 
+
+188.53.13.164 
+
+1177  Riyadh, Saudi 
+
+TXIuRk9YX0VGRTE3Q Mr.FOX_EFE17AA 
+
+0.4.1a 
+
+ 
+Copyright © 2013 General Dynamics Fidelis Cybersecurity Solutions 
+Threat Advisory #1010 
+
+Page 2 of 6 
+
+Rev. 2013-12-02 
+“njRAT”, The Saga Continues 
+
+ 
+
+ 
+
+Arabia 
+
+UE= 
+
+ 
+www.fidelissecurity.com 
+www.threatgeek.com 
+ @FidSecSys 
++1800.652.4020 
+
+188.55.10.93 
+
+1177  Jiddah, Saudi 
+
+Arabia 
+
+SGFjS2VkX0YyNjE4MT
+hG 
+
+HacKed_F261818F  0.5.0E 
+
+188.66.233.10 
+
+192  Muscat, Oman 
+
+197.1.104.120 
+
+1177 
+
+Tunisia 
+
+197.200.4.207 
+
+1177  Algeria 
+
+197.205.71.16 
+
+1177  Algeria 
+
+197.205.81.38 
+
+1177  Algeria 
+
+197.39.177.138 
+
+1177 
+
+197.39.229.96 
+
+1177 
+
+Egypt 
+
+Egypt 
+
+37.106.93.153 
+
+1177  Riyadh, Saudi 
+
+Arabia 
+
+37.16.55.155 
+
+1177  Saudi Arabia 
+
+37.200.239.243 
+
+1177  Oman 
+
+37.238.194.107 
+
+1177 
+
+Iraq 
+
+SC1Xb3JtXzU4MzMzM
+TFD 
+YnkgYW5nbGUxMF8y
+NDMzM0Q2Qg== 
+
+SGFjS2VkXzVFNjM3Q
+TM0 
+SGFjS2VkXzVFNjM3Q
+TM0 
+SGFjS2VkXzVFNjM3Q
+TM0 
+4paRIE5lVyBVc2VS4pa
+RIF83RTFFQUFCNw=
+= 
+4paRIE5lVyBVc2VS4pa
+RIF9GRTQwOEVFRQ=
+= 
+2KfZhNi52YrYryDYudm
+A2YDZitiv2YrZhiDZhdi5
+2KfZg9mFX0Y4REJDO
+UMz 
+
+2LHZiNin2KrYsV9DNk
+U4NTI4NA== 
+VFRUVF81MEMwNDY
+wNA== 
+2YLZhtin2LUg2KjYutiv2
+KfYr18yNDMzM0Q2Qg
+== 
+
+37.238.233.102 
+
+1177 
+
+Iraq 
+
+SGFjS2VkX0I4MTkzOT
+Ey 
+
+H-
+Worm_5833311C 
+by 
+angle10_24333D6
+B 
+HacKed_5E637A3
+4 
+HacKed_5E637A3
+4 
+HacKed_5E637A3
+4 
+ NeW UseR 
+_7E1EAAB7 
+
+ NeW UseR 
+_FE408EEE 
+
+0.5.0E 
+
+0.6.4 
+
+0.6.4 
+
+0.6.4 
+
+0.6.4 
+
+0.4.1a 
+
+0.4.1a 
+
+0.4.1a 
+
+ نﻥﯾﻳدﺩﯾﻳــﻋ دﺩﯾﻳﻌﻟاﺍ
+مﻡﻛﺎﻌﻣ_F8DBC9C3 
+
+رﺭﺗاﺍوﻭرﺭ_C6E85284 
+
+0.5.0E 
+
+TTTT_50C04604 
+
+0.5.0E 
+
+0.6.4 
+
+(0xD982D986D8A7
+D8B520D8A8D8B
+AD8AFD8A7D8AF)
+_24333D6B 
+ 
+Potential HEX-2-
+String: دﺩاﺍﺪﻐﺑ صﺹﺎﻨﻗ 
+ 
+Potential 
+translation to 
+English: "Baghdad 
+Sniper" 
+HacKed_B8193912  0.5.0E 
+
+41.103.74.108 
+
+1177  Ouled Yaïch, Algeria  dmljdGltXzI0MzMzRDZ
+
+C 
+
+victim_24333D6B 
+
+0.6.4 
+
+ 
+Copyright © 2013 General Dynamics Fidelis Cybersecurity Solutions 
+Threat Advisory #1010 
+
+Page 3 of 6 
+
+Rev. 2013-12-02 
+“njRAT”, The Saga Continues 
+
+ 
+
+ 
+
+41.104.68.83 
+
+1177  Algeria 
+
+41.107.233.206 
+
+1177  Algeria 
+
+41.230.233.96 
+
+1177  Safaqis, Tunisia 
+
+41.237.75.126 
+
+1177  Cairo, Egypt 
+
+dmljdGltXzI0MzMzRDZ
+C 
+MjAxM18xRUYwNzBE
+NA== 
+SGFjS2VkXzRBQjAwN
+EQ4 
+2YfZh9mH2YcgXzI0Mz
+MzRDZC 
+
+41.251.165.158 
+
+1177  Casablanca, 
+
+Morocco 
+
+REE3aWFfNjBEMDUw
+QzM= 
+
+41.252.201.131 
+
+1177 
+
+Libya 
+
+41.252.227.78 
+
+1177 
+
+41.35.161.186 
+
+1177 
+
+41.35.182.232 
+
+1177 
+
+41.35.193.145 
+
+1177 
+
+Benghazi, Libya 
+
+Cairo, Egypt 
+
+Alexandria, Egypt 
+
+Mansoura, Egypt 
+
+46.20.37.177 
+
+1177  Germany 
+
+5.0.236.136 
+
+5.0.42.144 
+
+1177  Syrian Arab 
+
+Republic 
+
+1177  Syrian Arab 
+
+Republic 
+
+5.21.235.105 
+
+1177  Oman 
+
+5.245.30.151 
+
+1177  Saudi Arabia 
+
+4pyrLS3il48g4pyYSM6s
+Y2tlxqbinJgg4pePLS3in
+KtfNDQ1RUJDMjc= 
+4pyrLS3il48g4pyYSM6s
+Y2tlxqbinJgg4pePLS3in
+KtfNDQ1RUJDMjc= 
+WFhYWFhYWFhYWFh
+YWFhYWFhYWFhYX0
+U2NTYxNkEz 
+WFhYWFhYWFhYWFh
+YWFhYWFhYWFhYX0
+JDMkY0NjY5 
+WFhYWFhYWFhYWFh
+YWFhYWFhYWFhYXz
+VFRUQyREY5 
+RGVhZGx5IEhhY2tlcl9
+CMEM3MkY5MA== 
+SGFjS2VkX0E2OTlER
+TU4 
+
+aGhoaGhoaGhoaWtra2
+traywsX0ZDQUZDNDB
+F 
+amVuc2lpaV8xQzAyQ
+UNBNQ== 
+2LPZgNmA2YDZgNmA
+2YDZgNmE2KfZhSBA
+
+ 
+www.fidelissecurity.com 
+www.threatgeek.com 
+ @FidSecSys 
++1800.652.4020 
+
+victim_24333D6B 
+
+0.6.4 
+
+2013_1EF070D4 
+
+0.4.1a 
+
+HacKed_4AB004D
+8 
+(0xD987D987D987
+D98720)_24333D6
+B 
+ 
+Potential HEX-2-
+String: ﮫﻪﮭﻬﮭﻬھﮪﮬﻫ  
+ 
+Potential 
+translation to 
+English: "Haha" 
+DA7ia_60D050C3 
+
+✫--● ✘HάckeƦ✘ ●--
+✫_445EBC27 
+
+✫--● ✘HάckeƦ✘ ●--
+✫_445EBC27 
+
+XXXXXXXXXXXXX
+XXXXXXXX_E656
+16A3 
+XXXXXXXXXXXXX
+XXXXXXXX_BC2F
+4669 
+XXXXXXXXXXXXX
+XXXXXXXX_5EED
+2DF9 
+Deadly 
+Hacker_B0C72F90 
+HacKed_A699DE5
+8 
+
+0.5.0E 
+
+0.6.4 
+
+0.5.0E 
+
+0.6.4 
+
+0.6.4 
+
+0.5.0E 
+
+0.5.0E 
+
+0.5.0E 
+
+0.6.4 
+
+0.5.0E 
+
+hhhhhhhhhikkkkkk,
+,_FCAFC40E 
+
+0.6.4 
+
+jensiii_1C02ACA5 
+
+0.5.0E 
+
+مﻡﻼـــــــ 
+@@_C6F05B1E 
+
+0.5.0E 
+
+ 
+Copyright © 2013 General Dynamics Fidelis Cybersecurity Solutions 
+Threat Advisory #1010 
+
+Page 4 of 6 
+
+Rev. 2013-12-02 
+“njRAT”, The Saga Continues 
+
+ 
+
+ 
+
+77.30.214.106 
+
+87 
+
+Riyadh, Saudi 
+Arabia 
+
+78.155.90.73 
+
+1177  Syrian Arab 
+
+Republic 
+
+QF9DNkYwNUIxRQ== 
+bW9oYW1tYWRfQUUy
+MDAwMkU= 
+
+Vi5JLlBfNDY1NTFCNT
+g= 
+
+ 
+www.fidelissecurity.com 
+www.threatgeek.com 
+ @FidSecSys 
++1800.652.4020 
+
+mohammad_AE20
+002E 
+
+0.5.0E 
+
+V.I.P_46551B58 
+
+0.5.0E 
+
+79.124.66.146 
+
+1177  Bulgaria 
+
+SGFjXzZFREVEODc5 
+
+Hac_6EDED879 
+
+79.124.66.148 
+
+1177  Bulgaria 
+
+SGFjXzZFREVEODc5 
+
+Hac_6EDED879 
+
+79.124.66.177 
+
+1177  Bulgaria 
+
+SGFjXzZFREVEODc5 
+
+Hac_6EDED879 
+
+79.124.66.197 
+
+1177  Bulgaria 
+
+SGFjXzZFREVEODc5 
+
+Hac_6EDED879 
+
+79.124.66.200 
+
+1177  Bulgaria 
+
+SGFjXzZFREVEODc5 
+
+Hac_6EDED879 
+
+79.124.66.205 
+
+1177  Bulgaria 
+
+SGFjXzZFREVEODc5 
+
+Hac_6EDED879 
+
+0.6.4 
+
+0.6.4 
+
+0.6.4 
+
+0.6.4 
+
+0.6.4 
+
+0.6.4 
+
+90.148.71.207 
+
+1177  Mecca, Saudi 
+
+Arabia 
+
+90.153.166.68 
+
+90.153.204.11 
+
+90.153.205.21 
+
+1177  Syrian Arab 
+
+Republic 
+
+1177  Syrian Arab 
+
+Republic 
+
+1177  Syrian Arab 
+
+Republic 
+
+91.140.142.16 
+
+1177  Kuwait, Kuwait 
+
+94.203.114.61 
+
+1177  Dubai, United Arab 
+
+Emirates 
+
+94.249.67.47 
+
+1177  Amman, Jordan 
+
+94.249.69.118 
+
+1177  Amman, Jordan 
+
+NjRfNkMyRUJEMkY= 
+
+64_6C2EBD2F 
+
+0.5.0E 
+
+SGFjS2VkX0FFNTE5N
+UVB 
+
+HacKed_AE5195E
+A 
+
+SGFjS2VkX0FFNTE5N
+UVB 
+
+HacKed_AE5195E
+A 
+
+0.3.6 
+
+0.3.6 
+
+SGFjS2VkXzU0OTQ2O
+TJB 
+
+SGFjS2VkXzg4NzQ4O
+Tgz 
+TWF2ZVJpY2tfRUNEO
+TRBNUI= 
+
+HacKed_5494692A  0.3.6 
+
+HacKed_88748983  0.6.4 
+
+MaveRick_ECD94
+A5B 
+
+SGFjS2VkX0RFNkEyM
+ENB 
+SGFjS2VkXzI0MzMzR
+DZC 
+
+HacKed_DE6A20C
+A 
+HacKed_24333D6
+B 
+
+0.6.4 
+
+0.6.4 
+
+0.6.4 
+
+* The Base64 encoded data can be observed in the network traffic  
+
+The Fidelis Take 
+It’s clear from this paper that there continues to be considerable global activity involving threat 
+actors using njRAT and associated tools. We’re publishing these indicators so that others in the 
+security research community can monitor for this activity and potentially correlate against other 
+campaigns and tools that are being investigated.  
+
+ 
+Copyright © 2013 General Dynamics Fidelis Cybersecurity Solutions 
+Threat Advisory #1010 
+
+Page 5 of 6 
+
+Rev. 2013-12-02 
+“njRAT”, The Saga Continues 
+
+ 
+
+ 
+
+ 
+www.fidelissecurity.com 
+www.threatgeek.com 
+ @FidSecSys 
++1800.652.4020 
+
+Fidelis XPS™ detects all of the activity documented in this paper. The Fidelis Threat Research 
+Team will continue to actively monitor the ever-evolving threat landscape for the latest threats to 
+our customers’ security. 
+ 
+
+ 
+Copyright © 2013 General Dynamics Fidelis Cybersecurity Solutions 
+Threat Advisory #1010 
+
+Page 6 of 6 
+
+Rev. 2013-12-02 
+“njRAT”, The Saga Continues 
+
+

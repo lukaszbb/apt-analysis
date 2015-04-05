@@ -1,0 +1,357 @@
+Hun$ng	  the	  Shadows:	  
+
+In	  Depth	  Analysis	  of	  Escalated	  APT	  A=acks	  
+
+Fyodor	  Yarochkin,	  Academia	  Sinica	  
+Pei	  Kan	  PK	  Tsung,	  Academia	  Sinica	  
+Ming-­‐Chang	  Jeremy	  Chiu,	  Xecure	  Lab	  
+Ming-­‐Wei	  Benson	  Wu,	  Xecure	  Lab	  
+
+1 
+
+Agenda 
+
+•  Why	  Taiwan?	  
+•  The	  “Lstudio”	  player…	  fun	  J	  
+•  Taking	  a	  peek	  at	  Weaponry	  	  
+•  APT	  in	  a	  Cloud	  	  
+•  VicLmology	  or	  …	  chicken-­‐logy?	  	  	  
+
+2 
+
+whoweare	  
+
+@bensonwu 
+
+[secret] 
+
+@fygrave 
+
+Based in Taiwan 
+Interests in Computer Forensics 
+Access to some raw network traffic data (fun!) 
+Get to fish interesting things (PROFFFIIITT!) 
+
+  [censored] 
+
+3 
+
+Disclaimer	  
+
+A	  few	  words	  before	  we	  move	  on.	  
+
+-­‐	  With	  this	  research	  we	  are	  primarily	  interested	  in	  
+understanding	  the	  Ops	  and	  vicLms	  of	  discussed	  
+targeted	  aPacks.	  We	  DO	  NOT	  aPempt	  to	  
+perform	  any	  aPribuLon	  of	  potenLal	  aPackers.	  
+
+4 
+
+Taiwan	  has	  been	  a	  frontline	  of	  
+APT	  ba=leﬁeld	  for	  some	  $me	  
+
+5 
+
+Many	  interes$ng	  things	  could	  be	  observed	  
+
+(though	  this	  is	  not	  “Lstudio”	  group)	  
+
+6 
+
+Elirks:	  earlier	  campaign	  
+
+l  Reported	  by	  Dell/Secureworks	  as	  Elirks	  hPp://
+
+www.secureworks.com/cyber-­‐threat-­‐intelligence/threats/
+chasing_apt/	  
+
+7 
+
+Elirks	  evolu$on	  	  
+
+hPp://tw.myblog.yahoo.com/jw!uzrxZwSGHxowPMGZAaj4I5	  
+hPp://blog.yam.com/minzhu0906/arLcle/54726977	  
+hPp://diary.blog.yam.com/bigtree20130514/arLcle/10173342	  
+hPp://tw.myblog.yahoo.com/jw!
+uzrxZwSGHxowPMGZAaj4I50-­‐	  
+
+	  hPp://blogs.yahoo.co.jp/sakasesi2013/31805794.html	  
+hPp://www.plurk.com/mdbmdb	  
+	  
+
+8 
+
+Elirks	  2.0	  –	  silly	  to	  reuse	  the	  
+
+address-­‐space	  
+
+Managed by the same 
+IP addresses 
+(easy to cross-correlate) 
+
+9 
+
+Another	  on-­‐going	  Campaign	  
+
+l  On-­‐going:	  
+
+10 
+
+On	  average,	  48	  APT	  emails	  a	  
+
+week! 
+
+11 
+
+The “Lstudio” group: 
+ 
+Exploring fun things in a 
+greater detail :) 
+
+12 
+
+They	  start	  with	  a	  boring	  
+
+spearphhiiissh	  
+
+13 
+
+Almost	  clean	  :)	  
+
+14 
+
+The	  APT	  Landscape	  in	  Taiwan	  
+
+ 
+
+15 
+
+We’ll	  examine	  the	  “LStudio”	  
+
+group	  today 
+
+•  Unique	  indicators	  of	  the	  “LStudio”	  group:	  
+
+•  Debug	  symbols	  (.pdb)	  
+•  “horse”	  label	  and	  generator	  tag	  
+
+•  Some	  curious	  discoveries	  from	  the	  “Lstudio”	  
+
+backend	  data	  center	  …	  ;-­‐) 
+
+16 
+
+LStudio	  binaries	  have	  cute	  things	   
+
+h=p://scan.xecure-­‐lab.com 
+
+17 
+
+CSJ-­‐Elise	  .. 
+
+18 
+
+They love fast 
+cars J 
+
+19 
+
+FASST	  CARS	  J 
+
+Evora 
+
+20 
+
+Lstudio	  Opera$ons	  and	  C2	   
+
+21 
+
+“Lstudio” payload Generator 
+
+Horse	  Label	  
+
+Generator-­‐Tag	  
+
+Owner	  
+
+Generator	  
+
+APT	  Exploit	  delivery	  via	  email	  
+
+22 
+
+We don’t say victim 
+
+肉雞	 =	 G 
+
+23 
+
+The	  typical	  botnet	  model 
+
+24 
+
+Very	  advanced	  Zoo-­‐management	  
+
+skills	  :) 
+
+25 
+
+APT advanced farming :) 
+
+  Operated by roughly 25 “farmers” 
+  Has controlled over 5,884 machines 
+  International coverage over 30 countries 
+  Utilizes 4 different Botnet software families 
+  Active since 2007 
+
+26 
+
+The	  “Lstudio”	  Chicken	  Cloud	  J 
+
+APT Botnet A 
+
+Data Channel 
+(First phase backdoor) 
+
+APT Cloud 
+
+Backend Data Center 
+
+Command Channel 
+(Second phase backdoor) 
+
+Configurable Bounce 
+
+APT Botnet B 
+
+Farmer Group A 
+
+Farmer 
+Boss? 
+
+Farmer Group B 
+
+27 
+
+..	  And	  who	  are	  the	  Chicken	  ?!	  J 
+
+28 
+
+Interna$onal	  Chicken	  Farm	  Corp.	  
+
+29 
+
+chicken	  farms	  went	  interna$onal	  
+
+2% 
+
+30 
+
+Share	  some	  Chicken	  J 
+
+31 
+
+When	  you	  travel,	  your	  chicken	  
+
+travel	  too…	  J	   
+
+32 
+
+Lets	  look	  at	  some	  travelers	  J 
+
+US 
+
+England 
+
+Canada 
+
+France 
+
+Taiwan 
+
+33 
+
+ANOTHER	  DISCOVERY!! 
+
+34 
+
+..	  do	  have	  9	  to	  5	  job	  ;)… 
+
+35 
+
+Just	  like	  some	  security	  researchers	  
+
+do	  J 
+
+36 
+
+AND	  THE	  LAST	  ..	  SOME	  HANDY	  
+TOOLS	  TO	  SHARE	  J 
+
+37 
+
+XecScan:	  Free	  API	  
+
+ 
+
+38 
+
+Yara:	  a	  swiss-­‐knife	  of	  sta$c	  sigs	  ;)	  
+
+39 
+
+Yara	  use	  
+
+Easy	  to	  integrate	  with	  your	  scripts	  
+IntegraLon	  with	  a	  proxy	  server	  is	  possible	  via	  
+icap	  yara	  plugin:	  hPps://github.com/fygrave/
+c_icap_yara	  
+Raw	  network	  traﬃc	  monitoring	  project	  (and	  
+hPp/DNS	  indexing):	  
+hPps://github.com/fygrave/eyepkﬂow	  
+	  
+	  
+
+40 
+
+More	  cool	  tools 
+
+	  Moloch	  hPps://github.com/aol/moloch	  
+	  
+	  Yara	  mail	  
+
+hPps://github.com/kevthehermit/yaraMail	  
+
+	  
+Yara	  pcap	  	  
+
+hPps://github.com/kevthehermit/YaraPcap	  
+
+ 
+
+41 
+
+Conclusions 
+
+Complex	  infrastructure	  
+Operates	  since	  2007	  
+MulLple	  soqware	  versions	  
+MulLple	  back-­‐ends	  
+VicLms	  –	  government	  and	  private	  sector	  
+Mainly	  Taiwan	  but	  also	  seen	  world-­‐wide 
+
+42 
+
+Questions? 
+
+benson.wu@xecure-lab.com 
+jeremy.chiu@xecure-lab.com 
+
+pk@hitcon.org 
+f@plurk.com 
+
+ 
+
+43 
+
+

@@ -1,0 +1,728 @@
+ScanBox framework – who’s affected, and who’s using it?
+
+By Chris Doman and Tom Lancaster
+
+Earlier this year the Japanese language website of one of the world’s largest suppliers of industrial
+equipment was compromised by a sophisticated threat actor. Usually in such cases an attacker will use
+their access to place an exploit kit on the compromised website, delivering malware to visitors - a
+technique commonly referred to as setting up a ‘watering hole’ or ‘strategic web compromise’. In this case
+however, rather than relying on malware, the exploit kit was a self-contained key logger that recorded all
+keystrokes the user performed while on the website. AlienVault[1]  produced an excellent write-up on this
+framework, which the developers named ScanBox.
+
+ScanBox is particularly dangerous as it doesn't require malware to be successfully deployed to disk in
+order to steal information - the keylogging functionality simply requires the JavaScript code to be
+executed by a web browser. The framework also facilitates reconnaissance, enabling attackers to exploit
+vulnerabilities in visitors systems in a more traditional fashion, by pushing & executing malware.
+
+Since the initial post made by AlienVault, we have been actively scouring the web for new instances of the
+framework. In this blog, we’re going to discuss four other watering holes which use ScanBox:
+
+Month   Identified Country
+August 2014
+September   2014
+October 2014
+October 2014
+
+JP
+CN
+US
+KR
+
+Sector /   type
+Industrial sector
+Uyghur
+Think tank
+Hospitality
+
+ScanBox   domain
+js.webmailgoogle[.]com
+code.googlecaches[.]com
+news.foundationssl[.]com
+qoog1e[.]com
+
+Table 1 – Selected ScanBox compromises
+
+Looking at who was being targeted, we noticed a reasonable variation, including targeting of the Uyghur
+population in China, US Think Tanks, the Japanese Industrial sector & Korean hospitality. This variation
+was our first clue that more than one actor may be using the framework (although on its own this would
+not be enough - some actors do target a wide range of organisations, some also focus on specific
+geographies or sectors).
+
+To check if this was the case, we took a deeper dive into each version of the code.
+
+The Framework
+
+Whilst all four implementations share the same codebase, there are some minor differences in their
+implementations.  These differences may show that different attackers are using the ScanBox framework.
+
+We’ve outlined a few key differences we identified below:
+
+Malicious code was delivered in a single block of JavaScript on both webmailgoogle[.]com and
+foundationssl[.]com. The domains qoog1e[.]com and googlecaches[.]com selectively loaded extra plugins
+from separate files:
+
+ 
+
+Figure 1 – The JavaScript function to load additional plugins
+
+We can see how these differ by comparing two exploit kits side by side:
+
+                       
+
+Figure 2 – foundationssl[.]com on the left loads JavaScript inline. qoog1e.com on the right loads
+JavaScript from separate files
+
+A motivation for selectively loading plugins is likely to be to prevent crashes or any errors appearing
+(which may alert the compromised site’s owner) when the page is loaded – as some of the plugins are only
+compatible with specific browsers. Selectively loading plugins has the added bonus of slightly reducing
+access to the attacker’s code to researchers. Browsers the attackers are not interested in will be served the
+following placeholder instead of the malicious function:
+
+ 
+
+Figure 3 – The empty JavaScript function that the exploit kit delivers when a browser doesn’t match a
+targeted browser
+
+The following ScanBox plugins are deployed on code.googlecaches[.]com, dependent upon the users
+browser:
+
+Plugin
+ID
+1
+2
+3
+4
+5
+6
+
+7
+8
+9
+
+Description
+
+Software reconnaissance
+Browser plugin
+Flash recon
+SharePoint recon
+Adobe PDF reader recon
+Chrome security plugins
+recon[2]
+Java recon
+Internal IP recon[3]
+JavaScript keylogger[4]
+
+Internet
+Explorer
+Y
+N
+Y
+Y
+Y
+N
+
+Y
+N
+Y
+
+Chrome
+
+Firefox
+
+Safari
+
+N
+Y
+Y
+N
+N
+N
+
+Y
+Y
+Y
+
+N
+Y
+Y
+N
+N
+Y*
+
+Y
+N
+Y
+
+N
+Y
+Y
+N
+N
+N
+
+Y
+N
+Y
+
+Table 2 – A table of plugins loaded per browser on code.googlecaches[.]com.
+
+There are further code differences too. Take for example the different implementations of software
+enumeration, by identifying whether certain files exist:
+
+ 
+
+Figure 4 – Software enumeration on googlecaches[.]com (left) and foundationssl[.]com (right)
+
+From a developer’s perspective, I know it’s always a good idea to check the details of any exceptions that
+occur when writing code in order to create more stable applications. It’s pleasing to see the ScanBox
+developers using good coding practices, though only if they’re in the office!
+
+ 
+
+Figure 5 – Highlighted section of code from Figure 3 (Plugin 1 on code.googlecaches[.]com)
+
+When identifying the security software, only the implementation found on foundationssl[.]com employs
+the full version of some publicly available code[5] (the section of code with informational messages such
+as “"Folder was found!"”). In all other versions only a subsection of the same code is used.
+
+At this point we’ve established that there are subtle variations between the ScanBox code deployed on
+different websites, however this could be due to differences in the expected environment of the targets the
+attackers wish to infect in each case, or upgrades to the framework.
+
+Analysis of associated attacker infrastructure
+
+In order to potentially group the activity observed together, we analysed network infrastructure associated
+with the domains used by the attacker(s) deploying the ScanBox framework. Our analysis showed that
+there was little overlap both in terms of associated infrastructure and in terms of the malware families
+associated with that infrastructure.
+
+Summaries of each cluster are given below, whilst full details of the components which made up each are
+available in the Appendix.
+
+Cluster
+
+Starting point
+
+Malware
+families
+Briba, Zegost
+
+*.googlecaches[.]com
+*.foundationssl[.]com Unknown
+*.qoog1e[.]com
+Unknown
+*.webmailgoogle[.]com Jolob
+
+Nameservers used
+
+Domain Registrars
+used
+PublicDomainRegistry.com *.cloudns.net
+GoDaddy
+HiChina
+GoDaddy
+
+*.cloudflare.com
+*.hichina.com
+*.domaincontrol.com
+
+1
+2
+3
+4
+
+ 
+
+We have been unable to identify any direct overlaps between the clusters, i.e. shared domains or IP
+addresses, neither have we been able to determine any softer linkages beyond the reuse of the GoDaddy
+registrar.
+
+Of course this could be due to lack of data points available to us – we welcome any additional data points
+the community are available to provide which show linkages between the clusters shown below.
+
+Visualisations of each cluster can be seen in the Maltego graphs below:
+
+Cluster 1
+
+ 
+
+Cluster 2
+
+ 
+
+Cluster 3
+
+ 
+
+Cluster 4
+
+ 
+
+Conclusions
+
+In this post we’ve identified four affected websites, each of which would draw distinct audiences who
+would be valuable to different actors. We’ve also taken a look at the variations in how the framework was
+implemented, and found a few subtle differences in the implementations. Finally, we analysed the
+associated infrastructure with the attacker domains used in each case, and found no overlap between the
+clusters of activity.
+
+In a similar fashion to our previous blog entry on potential overlap between APT1 and Putter Panda[6] ,
+we can attempt to explain these differences with several hypotheses:
+
+1.  The framework is used by a single group that target widely and upgrade or adapt their code for
+
+different targets, and are careful to avoid any overlap in infrastructure or in services used.
+
+2.  Selections of actors share some resources, as per previous observations with similar kits by some
+
+security vendors[7].
+
+3.  The exploit kits have been used by one group, and taken from public watering holes for their own
+
+use by other unrelated persons
+
+In our experience, very few attackers have the patience to maintain completely distinct infrastructure with
+multiple registrars, name servers and hosting providers at the same time, therefore we have a low
+
+confidence in hypothesis 1. In our view, the hypothesis with the highest probability is that groups of
+attackers share resources leading to overlaps – this appears to be an ever more common feature – with
+malware families, builders, and even sometimes hosting infrastructure being shared between disparate
+actors with a common goal. Sharing frameworks like ScanBox or other exploit kits allows less
+sophisticated actors (who were themselves unable to develop a tool like ScanBox) to conduct better
+attacks.
+
+Appendix - Snort Rules
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"ScanBox Framework Plugin used in
+WateringHole Attacks"; flow:from_server,established; file_data; content:"=scanbox.info.";
+reference:url,pwc.blogs.com/cyber_security_updates/2014/10/scanbox-framework-whos-affected-and-
+whos-using-it-1.html; classtype:trojan-activity; sid:xxx; rev:1;)
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"ScanBox Framework Java Detection used in
+WateringHole Attacks"; flow:from_server,established; file_data; content:"\"No Java or Disable";
+reference:url,pwc.blogs.com/cyber_security_updates/2014/10/scanbox-framework-whos-affected-and-
+whos-using-it-1.html; classtype:trojan-activity; sid:xxx; rev:1;)
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"ScanBox Framework AV Detection used in
+WateringHole Attacks"; flow:from_server,established; file_data; content:"avg2012check()";
+reference:url,pwc.blogs.com/cyber_security_updates/2014/10/scanbox-framework-whos-affected-and-
+whos-using-it-1.html; classtype:trojan-activity; sid:xxx; rev:1;)
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"ScanBox Framework  and legitimate
+websites Flash Detection"; flow:from_server,established; file_data; content:"var flash=function()
+{}\;flash.prototype.controlVersion=function";
+reference:url,pwc.blogs.com/cyber_security_updates/2014/10/scanbox-framework-whos-affected-and-
+whos-using-it-1.html; classtype:trojan-activity; sid:xxx; rev:1;)
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"ScanBox Framework Local IP Detection";
+flow:from_server,established; file_data; content:"if (evt.candidate) grepSDP(evt.candidate.candidate)";
+reference:url,pwc.blogs.com/cyber_security_updates/2014/10/scanbox-framework-whos-affected-and-
+whos-using-it-1.html; classtype:trojan-activity; sid:xxx; rev:1;)
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"ScanBox Framework Javscript Keylogging";
+flow:from_server,established; file_data; content:"CapsLock=currKey>=65&&currKey<=90";
+reference:url,pwc.blogs.com/cyber_security_updates/2014/10/scanbox-framework-whos-affected-and-
+whos-using-it-1.html; classtype:trojan-activity; sid:xxx; rev:1;)
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"ScanBox Framework Navigator Plugin
+Detection"; flow:from_server,established; file_data;
+content:"navigator.plugins[x].filename.replace(/,/g,";
+reference:url,pwc.blogs.com/cyber_security_updates/2014/10/scanbox-framework-whos-affected-and-
+whos-using-it-1.html; classtype:trojan-activity; sid:xxx; rev:1;)
+
+Appendix – IoCs
+
+Cluster
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+
+IP Address
+IP Address
+IP Address
+IP Address
+IP Address
+IP Address
+IP Address
+IP Address
+IP Address
+IP Address
+IP Address
+IP Address
+IP Address
+IP Address
+IP Address
+IP Address
+MD5
+MD5
+IP Address
+IP Address
+IP Address
+IP Address
+IP Address
+IP Address
+
+Artefact
+103.246.247[.]246
+103.255.61[.]114
+103.255.61[.]39
+118.193.153[.]201
+123.108.111[.]209
+176.53.22[.]143
+184.22.163[.]121
+184.82.123[.]222
+184.82.46[.]5
+210.0.176[.]21
+210.0.176[.]23
+210.209.127[.]114
+210.209.127[.]32
+210.209.127[.]39
+210.209.127[.]53
+409ae279d7c44b11156318848ddb4a3f
+9cf5523da799277a4d40881199eb8325
+66.197.231[.]62
+69.197.146[.]80
+69.197.183[.]142
+69.197.183[.]152
+69.197.183[.]159
+69.197.183[.]189
+9D1F8822B92AD3224DB1C9EC89B529CA MD5
+blog.msdnblog[.]com
+blogs.msdnblog[.]com
+ccac.dyndns-web[.]com
+code.googlecaches[.]com
+dns.symantec-sync[.]com
+download.msdnblog[.]com
+download.symantec-sync[.]com
+
+Hostname
+Hostname
+Hostname
+Hostname
+Hostname
+Hostname
+Hostname
+
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+Cluster 1
+
+Cluster 1
+Cluster 2
+Cluster 2
+Cluster 2
+Cluster 2
+Cluster 2
+Cluster 2
+
+ef498ea09bf51b002fc7eb3dfd0d19d3
+googlebot1.dyndns-office[.]com
+googlebot5.dyndns-office[.]com
+Googlecaches[.]com
+Googlewebcache[.]com
+image.googlecaches[.]com
+image.symantec-sync[.]com
+images.googlewebcache[.]com
+james_boodle@yahoo[.]com
+
+lenovocn.dyndns[.]org
+Lifewalden[.]com
+Msdnblog[.]com
+news.googlecaches[.]com
+news.msdnblog[.]com
+Outlookssl[.]com
+remote.googlewebcache[.]com
+shared.images.googlewebcache[.]com
+smtp.outlookssl[.]com
+smtp.windowsautoupdate[.]com
+some.trouble@yahoo[.]com
+
+symantec-sync[.]com
+tem.dyndns[.]tv
+test.googlecaches[.]com
+update.windowsautoupdate[.]com
+upload.msdnblog[.]com
+web.windowsautoupdate[.]com
+Windowsautoupdate[.]com
+www.msdnblog[.]com
+www.windowsautoupdate[.]com
+xingyadi2008@gmail[.]com
+
+zhfdc.dyndns[.]org
+180.210.206[.]225
+192.161.61[.]10
+198.96.92[.]108
+204.152.198[.]100
+210.209.86[.]145
+9aaa[.]info
+
+MD5
+Hostname
+Hostname
+Hostname
+Hostname
+Hostname
+Hostname
+Hostname
+Domain registration
+address
+Hostname
+Hostname
+Hostname
+Hostname
+Hostname
+Hostname
+Hostname
+Hostname
+Hostname
+Hostname
+Domain registration
+address
+Hostname
+Hostname
+Hostname
+Hostname
+Hostname
+Hostname
+Hostname
+Hostname
+Hostname
+Domain registration
+address
+Hostname
+IP Address
+IP Address
+IP Address
+IP Address
+IP Address
+Hostname
+
+Cluster 2
+Cluster 2
+Cluster 2
+Cluster 2
+Cluster 2
+Cluster 2
+
+Cluster 2
+Cluster 2
+Cluster 2
+Cluster 2
+
+Cluster 2
+Cluster 2
+Cluster 2
+Cluster 2
+
+Cluster 2
+Cluster 2
+Cluster 2
+Cluster 3
+Cluster 3
+Cluster 3
+Cluster 3
+
+Cluster 4
+Cluster 4
+Cluster 4
+Cluster 4
+Cluster 4
+Cluster 4
+Cluster 4
+Cluster 4
+Cluster 4
+Cluster 4
+Cluster 4
+Cluster 4
+Cluster 4
+Cluster 4
+Cluster 4
+Cluster 4
+
+Educational[.]com
+flash0day.4pu[.]com
+flashplayer.proxydns[.]com
+Foundationssl[.]com
+Hudsononlinenews[.]com
+li2384826402@yahoo[.]com
+
+news.educationel[.]com
+news.foundationssl[.]com
+proxy.otzo[.]com
+qinyz001@163[.]com
+
+socks5.proxydns[.]com
+vpn.foundationssl[.]com
+vpn.ssl443[.]org
+wangsongxu@gmail[.]com
+
+www.educationel[.]com
+www.foundationssl[.]com
+www.hudsononlinenews[.]com
+58.96.172[.]209
+qoog1e[.]com
+www.qoog1e[.]com
+yuming@yinsibaohu.aliyun[.]com
+
+113.10.201[.]124
+122.10.10[.]210
+122.10.9[.]109
+blog.mailaunch[.]com
+boxun.mailaunch[.]com
+email.webmailgoogle[.]com
+be3a3daa7d0d11df2380d3401696624a
+files.mailaunch[.]com
+ftp.webmailgoogle[.]com
+imap.mailaunch[.]com
+inbox.mailaunch[.]com
+inbox.webmailgoogle[.]com
+js.webmailgoogle[.]com
+mail.webmailgoogle[.]com
+Mailaunch[.]com
+networkedu@hotmail[.]com
+
+Hostname
+Hostname
+Hostname
+Hostname
+Hostname
+Domain registration
+address
+Hostname
+Hostname
+Hostname
+Domain registration
+address
+Hostname
+Hostname
+Hostname
+Domain registration
+address
+Hostname
+Hostname
+Hostname
+IP Address
+Hostname
+Hostname
+Domain registration
+address
+IP Address
+IP Address
+IP Address
+Hostname
+Hostname
+Hostname
+MD5
+Hostname
+Hostname
+Hostname
+Hostname
+Hostname
+Hostname
+Hostname
+Hostname
+Domain registration
+
+Cluster 4
+Cluster 4
+Cluster 4
+Cluster 4
+Cluster 4
+Cluster 4
+Cluster 4
+
+news.mailaunch[.]com
+pop.mailaunch[.]com
+smtp.mailaunch[.]com
+Webmailgoogle[.]com
+www.mailaunch[.]com
+www.webmailgoogle[.]com
+yahoo.mailaunch[.]com
+
+address
+Hostname
+Hostname
+Hostname
+Hostname
+Hostname
+Hostname
+Hostname
+
+[1] https://www.alienvault.com/open-threat-exchange/blog/scanbox-a-reconnaissance-framework-used-
+on-watering-hole-attacks
+
+[2] This appears to be a misconfiguration, as the attackers are looking for Chrome plugins on Firefox
+
+[3] This employs code from “The Browser Hackers handbook” The plugins deployed on “qoogle.com” are
+the same, though they utilise different plugin IDs – this may indicate that the framework allows you to
+select which plugins you wish to deploy, and then the entire framework is ‘built’ by a builder.
+
+[4] This is the key logger described by AlienVault, and using code previously published on sites such as
+CSDN
+
+[5] http://sc.mac.gd/vuldb/ssvid-60783
+
+[6] http://pwc.blogs.com/cyber_security_updates/2014/07/apt1-putter-panda-collaboration-or-a-
+shared-contractor.html
+
+[7] www.symantec.com/connect/blogs/how-elderwood-platform-fueling-2014-s-zero-day-attacks
+
+

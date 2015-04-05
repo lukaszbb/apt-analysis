@@ -1,0 +1,1090 @@
+AdvancedPersistentThreats:
+ADecadeinReview
+
+CommandFivePtyLtd
+
+June2011
+
+ABSTRACT
+
+This	document	definestheterm	Advanced	Persistent	Threat	(APT)in
+thecontextofcyberthreatsandcyberattack.It	presentsatimelineand
+summary	of	prominent	cyberattackslikely	attributableto	APTsover
+thepastdecade.	Commonalitiesareidentifiedandassessed	inthe
+contextofthecurrent	cyberthreat	environment.	Trends	areusedto
+predict	futureAPTtargeting.	APTattackmethodology	is	discussed,and,
+inconclusion,aset	ofsecurity	practicesandpoliciesareprovidedthat	
+could	help	many	organisationsincreasetheirresiliencetoAPTattack.
+
+Advanced
+
+DEFINITION
+
+Whentheterm	Advanced	Persistent	Threat	(APT)is	
+used	inthecontext	ofcyberthreats(orcyberattack)	
+each	componentof	thetermis	relevant.
+Thehackerhastheabilitytoevadedetectionandthe
+capability	to	gain and	maintain access to	well
+protected	 networks and sensitive information
+contained	within them. The hacker is	generally	
+adaptiveand	wellresourced.
+Thepersistentnatureofthethreat	makesitdifficult	
+to	preventaccessto	yourcomputernetworkand,	
+oncethethreat	actorhassuccessfully	gained	access
+to	yournetwork,very	difficult	to	remove.
+Thehackerhasnot	only	theintentbut	also	the
+capability	togainaccessto	sensitiveinformation
+stored	electronically.
+
+Persistent
+
+Threat
+
+ADVANCED PERSISTENT	THREATS
+
+Advanced Persistent	Threats (APTs) are a well­
+resourced,	highly	capable and	relentless class of
+hackerincreasingly	referred	to	inthemedia,	by	IT	
+security	companies,	victims,	and	law	enforcement.
+Most	hackerstargetindiscriminately	andinsteadof	
+persisting	with	aparticulartarget	draw	theirfocus
+to	morevulnerabletargets.	APTsontheotherhand
+are not	 only	 well resourced	 and	 capable but
+persistent	
+to access
+in their covert	 attempts
+sensitiveinformation,such	asintellectualproperty,
+negotiationstrategiesorpoliticaldynamite,	from
+theirchosentargets.
+ThesophisticationofAPTintrusionattempts
+varies and	
+likely	 depends	 on the attacker’s
+objectives,	the tools and	techniques available to	
+them,	and	theanticipated	ability	oftheirtarget	both	
+to	detect	anddefendagainst	anattack.	Theactivity	
+conducted	byAPTsisnot	necessarily	sophisticated	
+but	theattackerhastheability	to	upgradetheir
+sophisticationinordertogainormaintainaccessto	
+computer
+level of	
+covertnessemployed	may	depend	onfactorssuch	as
+theanticipatedabilityof	thetargettodetectthe
+
+interest.	 The
+
+systems of	
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+PAGE1OF	13
+
+VICTIM REPORTING
+
+oftenusedtoincreasetheeffectivenessofexploits
+that	target	known,	but	unpatched,	vulnerabilities.
+Many	of the organisations targeted	by APTs are
+likely	unawarethey	areamong	thevictims.	Those
+that	areawareof	attacksagainstthemmay	not
+publicly	disclosethefact	dueto	concernsabout	their
+reputationor share price. Publicreports of	APT	
+attacks date back to	at	least	1998,	when the
+National
+Pentagon,
+Space
+Aeronautics
+and
+Administration (NASA),
+the United States (US)
+laboratories and	
+Energy	 Department,	 research	
+privateuniversitiesweretargeted.Thepastyear
+(2010/2011)hasseenanincreaseinthenumberof	
+organisationscoming	forward,	admitting	they	have
+beentargeted.It	hasalsoseenanincreaseinUS	
+SecuritiesandExchangeCommissionfilingswarning	
+shareholdersabout	therisksof	cyberattack.	
+The majority of companies that have come
+forward	and	admittedtheyareamongthevictims	
+havenot	beenforthcomingwith	thedetails.	Thisis	
+presumably	becausethey	donot	want	to	providethe
+or
+feedback,
+hackers with	
+cause
+further
+to
+embarrassment
+It
+is
+their
+organisation.	
+that	
+unfortunate
+negative
+such
+potential
+ramificationsof	detailed	reporting	areoftenseento	
+outweighthecommunity	benefitofsharing	lessons
+learned.
+
+as
+
+activity,
+the anticipated response of	the target	
+should	thetargetingbedetected,	thelevelofriskthe
+hackeris	willing	to	accept,	theirtimeframetoobtain
+the desired	information and	the effects on their
+longerterm	goals.
+ThetermAPTis	commonly	used	inreferenceto
+the cyber threat	posed	by	foreign intelligence
+services, or hackers working	on behalf	of such	
+entities,	but	is	not	limited	just	to	thisand	canequally
+beappliedtootherthreat	actorssuchasorganised	
+crimesyndicatesand	thoseinvolved	intraditional
+espionage. Even though some organised	 crime
+syndicatesarevery	wellresourced	and	capable,	they	
+arenot	usually	classed	asanAPTsincethey	areless
+likely	 to	 persist	 with attempted	 access
+to a
+particulartarget.	Thetermis	not	usually	used	to	
+referto	thethreat	posed	byanindividualhackeras
+they	rarely	haveasufficient	levelofresourcing.
+APTsoftentargetunpublicisedvulnerabilitiesin
+computer programs or operating systems using	
+‘zero	day’	exploits1.	Typically	only	well­resourced	
+hackers develop such	 exploits
+they	 are
+expensive2,	time­consuming3,	and	thevulnerabilities
+they	target	may	bepatched	priorto	deployment	
+affecting	thevalueof	theinvestment.	Inaddition,
+zero	day	exploits	areexposed	thefirst	timethey	are
+used	and,ifdetected,maybelesseffectiveinfuture
+attacks.	Assuch,	zeroday	exploits	areusually	only	
+deployed	when the hacker has determined that	
+other exploits (that	take advantage of	publicly	
+knownvulnerabilities)willnot	workonthetarget,	
+orarenot	expected	to	workwithinanacceptable
+timeframe.	Increased	useofazero	day	exploit	may	
+also	beobservedifthehackerbelievestheirexploit	
+hasbeendetected	orthevulnerability	it	exposeshas
+becomeknown.	This	behaviourreflectsadesireto	
+maximisethereturnontheirinvestment	beforethe
+relevant	vulnerability	is	patched.	Zero	day	exploits
+are commonly	used	in combination with	social
+engineering	techniques,to	exploit	vulnerabilitiesin
+human nature and	 make the targeting more
+effective.	Social engineering	techniques are also	
+																																																																			
+1A	‘zeroday’exploitis	acomputerattackcapabilitythattakes
+advantageofa	softwareflawbeforeitisknowntothepublicor
+patchedbythevendor,thatis,	beforethefirstdayofpublic
+awarenessoftheflaw;onthezerothday.
+2Ontheblack	marketzerodayexploits	canbeworth	hundreds	of
+thousandsorpossiblyevenmillionsofdollars.(Moyanhan,2011)
+3Developingazerodayexploitcantakeuptoseveral	months
+evenfromthemostexperthackers.(Borders,2007)
+
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+PAGE2OF	13
+
+TIMELINE OF	SIGNIFICANT	ATTACKS
+
+Throughexaminationof	mediareportsand	public
+announcements a timeline of	 significant	 cyber
+attackslikely	attributableto	APTscanbedrawnas
+inFigure1.Inseveralcasesasingleoperationis	
+namedto	referto	asetof	similarintrusions,	or
+intrusionattempts,	affectingnumeroustargets.
+
+1998-2000 
+
+Moonlight Maze
+
+2006
+
+US Congressmen
+
+2007
+
+US Congressmen (contd.)
+
+Oak Ridge National Laboratory
+Los Alamos National Laboratory
+
+2008
+
+US Department of Defense
+
+Office of His Holiness the Dalai Lama
+
+2009
+
+GhostNet
+Stuxnet
+
+Night Dragon
+
+Operation Aurora
+
+2010
+
+Stuxnet (contd.)
+
+Australian Resource Sector
+
+French Government
+
+French Government (contd.)
+
+Canadian Government
+Australian Government
+
+Comodo Affiliated Root Authority
+
+2011
+
+RSA
+
+Oak Ridge National Laboratory
+
+L­3 Communications
+
+Lockheed Martin
+Northrop Grumman
+
+International Monetary Fund
+
+FIGURE1­TIMELINEOFAPTATTACKS
+
+SUMMARY OF	SIGNIFICANT	ATTACKS
+
+March	1998­2000 – Moonlight Maze
+
+August 2006­2007 – US	Congressmen
+
+29 October 2007 ­ Oak Ridge	National	Laboratory
+
+Cyber attacks dubbed ‘Moonlight Maze’ targeted	
+computersat	thePentagon,	NASA,	theUS	Energy
+Department,	 research	
+laboratories and	 private
+universities.	 The attackers
+successfully	 gained
+accessto	tensof	thousandsof	files.	(Arquila,	2003)
+(CentralIntelligenceAgency,2007)
+Theofficecomputernetworksof	two	congressmen
+reportedly	 compromised.	
+were
+Information is	
+believed	to	havebeenstolenabout	dissidentscritical
+of	theBeijing	regime.	(TheWashingtonTimes,	2008)
+Oak Ridge National Laboratory was successfully
+targetedusing	emailsthat	weresocially	engineered
+to	appearasthoughthey	werelegitimateofficial
+communications.	Computerswerecompromised,	as
+wasadatabasewhich	contained	informationabout	
+visitorsto	thefacility.	Thehackersarebelieved	to	
+have stolen data from the database. (Oak Ridge
+NationalLaboratory,	2007)
+Los	 Alamos	 National Laboratory
+advised all
+employeesofarecentmalicioushacking	eventthat	
+affected	a small number of computers on the
+‘Yellow’
+laboratory’s
+network.	 A
+significantamount	of	unclassified	datawasstolen.	
+Theattackis	believedtohavebeenpartofabroader,	
+coordinatedattackagainstUS	laboratoriesand	other
+institutions. (Anastasio,	2007) (Snodgrass,	2007)
+(Goodin,2007)
+TheUSDepartmentofDefensesufferedasignificant	
+compromise of	both unclassified	and classified	
+after
+military	 computer networks
+foreign
+intelligenceagency	placedmalicioussoftwareona
+USBflash	drive.	Thedeviceinfected	aUS	military	
+laptop	upon insertion.	The malicious code then
+networks
+US
+propagated	
+infecting	
+numerouscomputers.(LynnIII,	2010)
+
+9	November	2007 – Los	Alamos	National Laboratory
+
+unclassified
+
+Early 2008 – US Department of Defense
+
+through
+
+a
+
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+PAGE3OF	13
+
+June 2009 – Stuxnet
+
+29 March	2009 – GhostNet
+
+September 2008 – Office of His Holiness the	Dalai
+
+LamaA	legitimateemailwasinterceptedintransit	to	the
+Officeof	His	HolinesstheDalai	Lama(OHHDL)and
+the attachment	replaced	with	a file containing
+maliciouscontent.Thisattackappearedtobepartof
+a concerted effort	in which	hackers used	social
+engineering	techniquesto	gainaccessto	theOHHDL
+computer network. The hackers appear to have
+obtained	userpasswords	throughtheintrusionand
+laterused	theseto	remotelyaccesstheOHHDLmail
+server.(Nagaraja&Anderson,	2009)
+Researchers released	a report	detailing	a cyber
+espionage operation dubbed ‘GhostNet’ which	
+infiltratedat	least	1295	computersin103	countries,	
+includingthosebelonging	toembassies,SouthAsian
+governmentsandtheDalai	Lama.	(Secdev,	2009)
+First	knowntargetingofanunnamedorganisation
+occurred	using	theStuxnet4worm.	Theorganisation
+was again targeted	in March	and	April 2010.
+Numerous other organisations,	primarily	in Iran,	
+werealso	targeted.Theworm	appearstohavebeen
+part	of	acoordinated	effortto	reprogram	aspecific
+industrialcontrolsystem,	such	asagaspipelineor
+power plant,	likely	located	in Iran. (Farlliere, O
+Muchu,	 &	
+of
+(U.S	 Office
+2011)
+Chien,	
+Counterintelligence,	2011)
+in November,	 coordinated	 covert	 and
+Starting	
+targeted	cyberattackswereobserved	against	global
+oil and petrochemical companies.	These attacks,	
+labelled	as‘Night	Dragon’,	used	socially	engineered
+emails along with	Microsoft Windows	operating	
+system	vulnerabilitiesto	gainaccessto	computers.
+Using the access obtained the hackers accessed	
+field	
+information on operational oil and	 gas
+production systems
+and financial documents
+relatingto	fieldexplorationand	bidding.(McAfee
+FoundationProfessionalServicesandMcAfeeLabs,	
+2011)
+																																																																			
+4TheStuxnetwormis	amaliciouscomputerprogramcapableof
+replicating	itselftoinfectmultiplelinked	computersystems.
+
+November	2009	– Night Dragon
+
+2010	– Australian Resource	Sector
+
+Services
+
+Mid December	2009 – Operation Aurora
+
+December 2010­March 2011 – French	Government
+
+Googledetected	ahighly	sophisticatedand	targeted	
+attack on Google corporate infrastructure that	
+resulted	inthetheftofintellectualproperty.This
+event	is	believed	to	havebeenpart	of	acoordinated
+attack,	known as ‘Operation Aurora’,	in which	
+hackers sought source code from Google,	Adobe
+Systemsand	dozensof	otherhighprofilecompanies.
+(Drummond,2010)(Zetter,2010)
+ThreemajorAustralianresourcesectorcompanies
+(BHP	Billiton,FortescueMetalsGroup	and	RioTinto)	
+weretargeted	by	cyberattacks.	Targeting	of	Rio
+Tinto’scomputernetworkoccurred	around	thetime
+of	thearrestof	SternHuinJuly	2010.(AAP,	2010)
+TheFrench	Government	wassuccessfullytargeted	
+by	asocially	engineeredemailcampaign.Over150	
+computersintheFrench	Ministry	of	Economy	and	
+Finance’s
+were
+Central
+division
+compromised.	Thehackerswereabletoremotely	
+the ministry’s computers and	 retrieve
+control
+documents for over three months.	The hackers
+sought	documentsrelated	to	theFrench	presidency
+of	theG20and	internationaleconomicaffairs.(Walid
+Berissoulet	agencies,	2011)(AFP,	2011)
+CanadianGovernment	departmentsweretargeted
+using	emailssocially	engineeredtoappearasthough
+they	weresentfromseniorstaffmemberswithinthe
+emails
+departments. The
+contained malicious
+attachments
+Canadian
+that
+compromised	
+Governmentcomputersandresulted	inthetheft	of
+classified	information.(PostmediaNews,2011)
+Australianparliamentarycomputerswereaccessed
+overaperiod	of	at	leastonemonth.Duringthat	time
+severalthousandemailsmay	havebeenaccessed	
+includingthoseof	theAustralianPrimeMinister,
+Foreign Minister and	Defence Minister. (Benson,	
+2011)
+
+February­March	2011 – Australian Government
+
+January	2011 – Canadian Government
+
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+PAGE4OF	13
+
+17 March	2011 – RSA
+
+to	
+
+26 May	2011 – Northrop Grumman
+
+May­June	2011 – International	Monetary Fund
+
+Northrop	Grummanreportedly	shutdownremote
+access
+its	 network without warning	 and
+conducted	an organisation wide password reset,	
+raising	speculationthat	ithad	also	beentargeted	
+using	informationstolenfrom	RSA.(Kaplan,2011)
+At	least	one International Monetary	Fund	(IMF)
+computer was
+in a large and	
+compromised	
+sophisticatedcyberattackthat	involved	significant
+reconnaissance
+and	 utilised	 software written
+specifically	to	target	the IMF.	The compromised	
+computerwasusedtoaccessinternalsystemsand	
+files.	Thehackers’accesscould	havegiventhem
+visibility of
+and political
+economic
+sensitive
+information.(Reddy,	Gorman,	&	Perez,	2011;	Sanger
+&	Markoff,2011)(TheGuardian,	2011)
+
+Mid April 2011 – Oak Ridge	National	Laboratory
+
+15 March	2011 – Comodo Affiliated Root	Authority
+
+AComodoaffiliated	digitalcertificateRoot	Authority
+(RA) was compromised	resulting	in the issue of
+fraudulent	SSLcertificatesforthepopulardomains:	
+mail.google.com,	www.google.com,	login.yahoo.com,	
+login.skype.com,	addons.mozilla.org,	login.live.com
+and	globaltrustee.(Comodo,2011)
+RSA	released	apublicstatementadvisingthatthey	
+were recently targeted via socially	 engineered	
+emails
+that	
+attachments
+containing	 malicious
+exploited a zero day	Adobe Flash	vulnerability.
+Hackerssuccessfully	gained	accessto	thenetwork
+and	exfiltrated	informationincluding	that	related	to
+RSA’s	SecurID	two­factorauthenticationproducts.	
+Thestoleninformationwas laterused	to	enable
+targeting	of	defence contractors. (Coviello,	Open
+Letterto	RSA	Customers,	2011)
+OakRidgeNationalLaboratory	wastargeted	with	
+socially	engineered	emails tailored to	appear as
+though they	were from	the laboratory’s	Human
+Resourcesdepartment.Theemailstrickedrecipients
+into	downloadingmalicioussoftwarethat	exploited	
+azerodayvulnerabilityinInternet	Explorer.The
+laboratoryshutdownallinternet	accessandemail
+systemsfrom	April15to	April17	to	ensureno	data
+wasexfiltratedbeforetheinfectioncould	becleaned
+up.	Nolargescaleexfiltrationof	datais	knownto
+haveoccurred.(Munger,2011)
+An
+L­3	 Communications
+notified	
+executive
+employees that	the company	had	been actively	
+targetedleveraginginformationstolenfromRSA	the
+monthprior.(gHale,	2011)(Poulsen,2011)
+Lockheed	Martin detected a cyber attack on its
+computer network.	 The company’s	
+information
+security	teamtookaggressiveactionsto	protectthe
+systems.	No	exfiltrationofdatais	knownto	have
+occurred.RSA	haspubliclystated	that	information
+stolenfrom	it	inMarch	wasused	asanelement	of	
+theattackonLockheed	Martin.(Lockheed	Martin
+Corporation,	2011)(Coviello,	OpenLettertoRSA	
+SecurIDCustomers,2011)
+
+6	April	2011 – L­3	Communications
+
+21 May	2011 – Lockheed Martin
+
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+PAGE5OF	13
+
+also	
+
+THE CURRENT	CYBER THREAT ENVIRONMENT
+
+APTshavetargeted	governmentsaroundtheworld,
+globaloil,	energy,	and	petrochemicalcompanies,the
+mining	
+institutions,	 military	
+sector,	
+financial
+contractors,	the science and	technology	sector,	
+dissidents,	criticalinfrastructureandlikelymany
+have
+additional
+targeted	
+sectors.	 They
+technology companies that	could	enable future
+targeting.TheOperationAuroraattacks,	theComodo	
+affiliated	RAcompromiseand	theRSA	attackseta
+precedentforsuch	targeting.	
+TheAuroraattacksappearto	havebeencarried
+out	to	providetheattackerwith	sourcecodeand
+otherinformationthat	mayallowthem	to	develop	
+zero day	exploits and	rootkits5for use on their
+targets.	The certificates generated	in the Root
+Authority	attackwould	likely	beof	useforfuture
+a
+lone
+state­driven attacks
+Iranian
+(despite
+individualclaimingfullresponsibilityfortheattack,	
+that	
+there was no	 government	
+and	 stating	
+involvement(Kobie,2011)).Theattackagainst	RSA
+appearstohavebeenconducted	to	gathersensitive
+information
+against	
+attacks
+facilitate
+to
+organisationsthat	useRSA	security	tokensfortwo	
+factor
+including	 US	 defence
+authentication;	
+contractorswhoworkonclassified	projects.
+Based	on the trend toward the targeting of
+enablingcompaniesandtheincreasingpopularityof
+virtualisation,VMwareInc.and	othervirtualisation
+companies seem likely	to be among	companies
+targeted by APTs in the future.
+If unknown
+vulnerabilitiesinVMwaresoftwarewerediscovered	
+it	could	havefarreachingramifications,affectingthe	
+securityofothercompanies.	Especially	giventhe
+increased	popularity	of	cloud	computing	which	often
+uses virtualisation to	separate data belonging	to	
+differentcustomers.	Itcould	also	makeit	easierfor
+malicious software to	 escape from	 virtualised	
+analysis	platformsandinfectconnected	systems.
+Eventhoughdetailsof	APTattacksarescarcein
+the media,	 the released information is	 quite
+informative.	Firstly,	it	tellsusthat	humansareoften
+theweakestlinkinthesecurity	chainandthat	users
+needtobebettereducated	onthethreatfromsocial
+engineering. Socially	engineered	email campaigns
+																																																																			
+5Rootkits	consist of software designed	to hide an attacker’s
+presence on a computer system. They can change the way
+malicious	programsareseenbytheoperatingsystem,making	it
+blind	tothepresenceofthemaliciousprograms.
+
+arethemost	commonsocialengineering	technique
+used	but	not	the only	one.	Secondly,
+it	tells us
+technologycompaniesneedto	bebetterpreparedto	
+protectsensitiveinformationthat	canbeusedto
+negatively	affect	thesecurity	of	theircustomersand
+business partners, and undermine the security	
+safeguards	put	inplace.
+
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+PAGE6OF	13
+
+TARGET
+OAK	RIDGE	NATIONAL	
+LABORATORY
+LOSALAMOSNATIONAL	
+LABORATORIES
+GHOSTNET
+(VARIOUS	TARGETS)
+USDEPARTMENT	OF	
+DEFENSE
+STUXNET
+NIGHT	DRAGON
+(VARIOUS	TARGETS)
+GOOGLE
+OPERATIONAURORA
+(VARIOUS	TARGETS)
+THE	FRENCH	FINANCE	
+MINISTRY
+CANADIAN
+GOVERNMENT
+AUSTRALIAN
+GOVERNMENT
+COMODO	AFFILIATE	
+ROOT	AUTHORITY
+RSA
+LOCKHEEDMARTIN
+L­3COMMUNICATIONS
+NORTHROPGRUMMAN
+INTERNATIONAL	
+MONETARYFUND
+
+TARGETING	METHODS
+Sociallyengineered	emails
+Sociallyengineered	emails
+Sociallyengineered	emails
+(primarily)
+Infected	USBdrive
+Infected	USBdrive
+Network	shares
+SQL	databases
+Sociallyengineered	emails
+(primarily)
+Sociallyengineered	emails
+Sociallyengineered	emails
+Sociallyengineered	emails
+Sociallyengineered	emails
+
+Sociallyengineered	emails
+VPN?
+VPN?
+VPN?
+
+SOCIAL	
+ENGINEERING?
+Yes
+Yes
+Yes
+
+Yes
+Yes
+Yes
+Yes
+Yes
+
+Yes
+
+ZERO	DAYS?
+Yes(2011)
+
+Yes(multiple)
+Yes
+Yes
+
+Yes
+No
+No
+No
+
+DATA	STOLEN?
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+No
+Yes
+
+CONFIRMED	BY	TARGET?
+Yes
+Yes
+Sometargets
+Yes
+Sometargets
+Sometargets
+Yes
+Sometargets
+Yes
+Yes
+No
+Yes
+Yes
+Yes
+No
+No
+Yes
+
+FIGURE2­COMMONALITIESBETWEENREPORTEDATTACKS
+
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+PAGE7OF	13
+
+ANATOMY OF AN ATTACK
+
+Figure2shows	usthat	themost	commonattack
+vector observed	
+is	 socially	 engineered	 emails
+frequently,	but	not	always,	used	incombinationwith	
+zeroday	exploits.	Whilemost	victims	do	notprovide
+manydetailsabout	theattacksagainst	them,	RSA6is	
+one of	the few that has provided quite detailed	
+information.	Theattackmethodology	observed	in
+thecaseof	RSA	appearsto	bequitetypical.	The
+distinct	attackphasesareshowninsimplified	form	
+inFigure3.(Rivner,	2011)
+
+Reconnaisance
+
+Maintenance
+
+Preparation
+
+Data Gathering
+
+Targeting
+
+Targeting
+
+scanning	
+
+techniquesto	target	theirintendedvictim.	This	may	
+include
+to determine vulnerabilities,	
+writing	maliciouscodeoracquiring	code,	drafting
+socially	engineered	emails,	determining	which	email
+accounttosendsocially	engineeredemailsfrom,
+acquiring	necessary	hardware(such	asUSBflash
+drives),	determining	what	infrastructureto	useto	
+launch	the attack and	for command	and	control
+communications,	registering	for and	setting	up	
+(email addresses,	 callback
+necessary	 accounts
+domainsetc.)and	conducting	testing.
+Theattackerlaunchestheirattackand	monitorsfor
+signsof	compromiseorfailure.	Thesender may	
+attempt	to	connect	remotely	to	aserverto	exploit	a
+vulnerability,strategically	placeaUSBflashdriveor
+giveonetoatarget,sendsocially	engineeredemails
+and	if	possible,checkforbouncebacknotifications,
+monitor command	and	control
+infrastructure for
+beaconing	activity	from	thevictim,try	to	connect
+inboundto	thepotentially	compromised	computer,	
+orawaitfeedbackfrom	aninsider.
+Onceanattackerhassuccessfully	gained	accessto	a
+computernetworktheywillusually	try	to	identify	
+whereinthenetworktheyareandmovelaterally	
+withinthenetworkto	accessdataof	interest	and	to
+install additional backdoors.	 This	 will usually
+requireareturnto	step2(Preparation)and	step3
+(Targeting),	the upload	of	tools and malicious
+software,	privilegeescalation,	networkenumeration
+and	identificationofvulnerablehostsonwhichto
+installbackdoors.	It	may	also	involvegaining	access
+to	thedomaincontrollerto	obtainpasswordhashes,	
+covering	tracksbyalteringlogs,	and	accessing	mail
+orfileserversto	enabledatagathering.
+Once an attacker has identified	information of
+interest	theywilltry	to	gatherthisinformationand
+exfiltrateit.Theymaydothisusinga‘smash	and	
+grab’approach,	trying	to	exfiltratethedesired	data
+beforeit	isdetected,orthey	may	opt	fora‘low	and	
+slow’approach	inwhich	they	exfiltratethedatain
+smallquantitiesoveralongerperiod.
+
+Data	Gathering
+
+Further Access
+
+Further Access
+
+Reconnaissance
+
+FIGURE3­BASICAPTATTACKMETHODOLOGY
+Theattackerpassively	gathersinformationabout
+theirtarget	to	identify	thebest	targeting	method.
+This	may	includeresearch	into	thelocationof	the
+target’s offices,	the location of their computers,	
+technologies used by the company, how they	
+communicate	 (between offices,	 with	 customers,
+suppliersand	shareholders),	theiremployees,	their
+employees’contact	details,	interestsand	contacts.
+The attacker actively	 prepares for the attack,	
+developing	 and	
+testing	 appropriate tools and
+																																																																			
+6Theattack	onRSAis	described	inablog	postontheofficial	RSA
+blog	site;seehttp://blogs.rsa.com/rivner/anatomy­of­an­attack/
+
+Preparation
+
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+PAGE8OF	13
+
+USB Drive	Control
+
+Known Network Topology
+
+Network	Access Restrictions
+
+Restrict which computers can be placed on the
+corporatenetworkviawired,	wireless,andremote
+accessmethods.
+Ensure system administrators are aware of	the
+locationof	allcomputers,	computerequipment	and
+Internetgatewayssothey	cansecurethenetwork
+(including	 wireless access points and	 3G USB
+modems).
+RestrictwhichUSBdrivescanbeusedoncorporate
+networksanddeveloppoliciesonpermittedusage
+and	minimum	encryptionrequirements.
+Conduct	intrusion analysis	(both	host­based	and
+networkbased)	todetectanomalousactivity.	
+Employ	two­factorauthenticationwherepossible,	
+particularly	onVirtualPrivateNetworks.Restrict
+user access using	
+least	 privilege methodology,
+encouragegoodpasswordcontrol,regularly	audit	
+accesslogs,	and	reviewaccesslevels.
+Employ	the Sender Policy	Framework7to	help
+protect	againstspoofed	emails.
+
+Sender Policy	Framework
+
+Intrusion Analysis
+
+Access Control
+
+Maintenance
+
+IMPROVING ORGANISATIONAL RESILIENCE
+
+Onceanattackerhasgainedaccessto	anetworkfor
+information gathering purposes they will usually
+attempt	to	maintaintheiraccess.	This	may	involve
+minimising	theamount	ofmaliciousactivity	they	
+generate on the network to	 avoid	 detection,	
+periodically	communicatingwithbackdoorsonthe
+networkto	ensurethey	areworking	asintended,	
+and	making	changesasappropriate.	If	automated	
+datagatheringtoolsareinuse,	itmayalso	involve
+modifying	search	terms or the exfiltration path,	
+volume or frequency.	Maintenance also	requires
+maintainingcallbackdomainsand	any	intermediary	
+infrastructure used to	 communicate with	
+the
+backdoors.	If	accessis	lost,	theattackermay	return
+to	step1(Reconnaissance)orstep2(Preparation)
+inanattemptto	regainaccess.
+Toimproveresilienceto	APTs	organisationsshould
+good	 security	 practices
+employ
+and policies
+including	thosedescribedbelow.
+Adopt	aninformationcentricapproach	to	security
+by	applying	multiplelayersofsecurity,	affording	the
+most	sensitiveinformationthemostprotection.	If	
+possiblestoresensitiveinformationoffline,	orona
+separaterestrictedaccessnetwork.
+Regularly	patch	operating	systemsand	applications
+includingdocumentviewers(e.g.MicrosoftOffice,	
+AdobeAcrobat)	andwebbrowserplugins.
+Minimiseadministrativeaccessand	restrict	access
+so	usersdo	not	possessboth	‘write’and	‘execute’
+privilegesforthesamefolder.
+Educateusersonthethreat	fromsocially	engineered	
+emails and	 other forms of	 social engineering.
+Encourage users to	notify IT	staff	of	suspicious
+events.
+
+Computer Administration Restrictions
+
+Information Centric	Security
+
+Regular Patching
+
+User Education
+
+																																																																			
+7TheSenderPolicyFrameworkis	anopenstandard	specifying	a
+technical	methodtopreventsenderaddressforgery.(Mehnle,
+2010)
+PAGE9OF	13
+
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+REFERENCES
+
+AAP.	(2010,	April19).	Mining firms hit by China cyber	attack.	Retrieved	June13,2011,	from	TheSydneyMorning	
+Herald:	http://www.news.smh.com.au/breaking­news­national/mining­firms­hit­by­china­cyber­
+attacks­20100419­spc9.html
+AFP.	(2011,	March	07).	French	government comes under cyber attack.Retrieved	June13,	2011,from	TheAge:	
+http://news.theage.com.au/breaking­news­world/french­government­comes­under­cyber­attack­
+20110307­1bl8z.html
+Anastasio,	M.	(2007,December06). Los Alamos	also	hacked.Retrieved	June13,	2011,	from	FrankMunger'sAtomic
+City	Underground:	http://blogs.knoxnews.com/munger/2007/12/los_alamos_also_hacked.html
+Arquila,	J.	(2003,March	04). Interviews ­ John Arquilla.RetrievedJune13,2011,from	CyberWar!|Frontline|	PBS:
+http://www.pbs.org/wgbh/pages/frontline/shows/cyberwar/interviews/arquilla.html
+Benson,	S.	(2011,March	29). Hackers log in to	federal	MPs' emails.Retrieved	June13,2011,	fromTheDaily	
+Telegraph:	http://www.dailytelegraph.com.au/news/national/hackers­log­in­to­federal­mps­
+emails/story­e6freuzr­1226029677394
+Borders,	K.	(2007,	July	19).	Building a Threat Model: Hackenomics (Part 2	– The Cost of	Hacking).	Retrieved	June
+13,	2011,from	StraightSecTalk:	http://www.straightsectalk.com/?p=16
+CentralIntelligenceAgency.	(2007,	May	02).	Annual Report 1999 Counterintelligence.Retrieved	June13,	2011,	
+fromCentralIntellgenceAgency:https://www.cia.gov/library/reports/archived­reports­
+1/ann_rpt_1999/dci_annual_report_99_16.html
+Comodo.(2011,	March	31).	Comodo	Report of Incident.	Retrieved	June13,	2011,	fromComodo	Group	Inc.:	
+http://www.comodo.com/Comodo­Fraud­Incident­2011­03­23.html
+Coviello,	A.	(2011,	March	17).	Open Letter to	RSA Customers.	Retrieved	June13,	2011,from	RSA:	
+http://www.rsa.com/node.aspx?id=3872
+Coviello,	A.	(2011,	June).	Open Letter to	RSA SecurID Customers.	Retrieved	June13,2011,	from	RSA:
+http://www.rsa.com/node.aspx?id=3891
+Drummond,D.	(2010,	January	01).	A	new approach	to China.	Retrieved	June13,2011,fromTheOfficialGoogle
+Blog:	http://googleblog.blogspot.com/2010/01/new­approach­to­china.html
+Farlliere,N.,	OMuchu,	L.,	&Chien,E.	(2011,	February).	W32.Stuxnet Dossier.RetrievedJune13,	2011,	from
+Symantec:	
+http://www.symantec.com/content/en/us/enterprise/media/security_response/whitepapers/w32_stux
+net_dossier.pdf
+gHale.	(2011,June03).	Second Defense	Contractor	Targeted.	Retrieved	June13,	2011,from	IndustrialSafetyand	
+Security	Source:htp://www.isssource.com/second­defense­contractor­targeted/
+Goodin,D.	(2007,	December07).	Top­secret US	labs	penetrated by phishers.Retrieved	June13,2011,	from	The
+Register:	http://www.channelregister.co.uk/2007/12/07/national_labs_breached/
+Kaplan,	J.(2011,June01).	Exclusive: Northrop Grumman May	Have	Been Hit by Cyberattack, Source	says.Retrieved	
+June13,2011,	from	Fox	News	Network:	http://www.foxnews.com/scitech/2011/05/31/northrop­
+grumman­hit­cyber­attack­source­says/
+
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+PAGE10OF	13
+
+Kobie,N.	(2011,March	29).	Lone	Iranian claims credit for	Comodo certificate	hack.RetrievedJune13,2011,from	
+PC	&Tech	Authority:	http://www.pcauthority.com.au/News/252662,lone­iranian­claims­credit­for­
+comodo­certificate­hack.aspx
+Lockheed	MartinCorporation.	(2011,May	28).	Lockheed Martin Customer, Program and Employee Data Secure.	
+Retrieved	June13,	2011,	from	Lockheed	Martin:	
+http://www.lockheedmartin.com/news/press_releases/2011/0528hq­secuirty.html[sic]
+LynnIII,W.J.(2010,October04).	Defending a New Domain: The	Pentagon's Cyberstrategy.RetrievedJune13,	
+2011,	fromU.S.Department	of	Defense:http://defense.gov/home/features/2010/0410_cybersec/lynn­
+article1.aspx
+McAfeeFoundationProfessionalServicesand	McAfeeLabs.	(2011,February10).	Global	Energy	Cyberattacks:
+"Night Dragon".RetrievedJune13,	2011,	from	McAfee:	http://www.mcafee.com/us/resources/white­
+papers/wp­global­energy­cyberattacks­night­dragon.pdf
+Mehnle,J.(2010,April17).	Sender Policy Framework: Introduction.Retrieved	June13,2011,	fromTheSender
+Policy	FrameworkProject:http://www.openspf.org/Introduction
+Moyanhan,	M.	(2011,	February	14).	The Price	of	a Zero Day	Exploit.RetrievedJune15,2011,	fromVeracode,	Inc.	
+TheStateofSoftwareSecurity:	http://www.veracode.com/ceo­blog/2011/02/the­price­of­a­zero­day­
+exploit/
+Munger,	F.	(2011,	April19). Lab	halts Web	access after cyber	attack.	Retrieved	June13,	2011,from	KnoxvilleNews
+SentinelCo.:http://www.knoxnews.com/news/2011/apr/19/lab­halts­web­access­after­cyber­attack
+Nagaraja,	S.,	&	Anderson,	R.	(2009,	March).	The snooping dragon:social­malware surveillance	of	the	Tibetan
+movement.Retrieved	June13,	2011,from	Universityof	Cambridge:
+http://www.cl.cam.ac.uk/techreports/UCAM­CL­TR­746.htmlShishirNagaraja,	RossAndersonMarch	
+2009
+OakRidgeNationalLaboratory.	(2007). Potential	Identity	Theft.	RetrievedJune13,2011,	from	OakRidgeNational
+Laboratory:http://www.ornl.gov/identitytheft/
+PostmediaNews.	(2011,	June03). Classified infromation accessed during cyber attacks on federal	departments:
+Report.Retrieved	June13,	2011,	fromPostmediaNetworkInc:
+http://www.canada.com/news/Classified+information+accessed+during+cyber+attacks+federal+depart
+ments+Report/4888892/story.html
+Poulsen,K.(2011,	May	31).	Second Defense	Contractor	L­3	'Actively Targeted' With	RSA	SecurID Hacks.Retrieved
+June13,2011,	from	Wired:	http://www.wired.com/threatlevel/2011/05/l­3/
+Reddy,	S.,	Gorman,S.,&	Perez,	E.	(2011,June13).	IMF Mum on Details of Network Cyberattack.RetrievedJune13,
+2011,	fromTheWallStreet	Journal:	
+http://online.wsj.com/article/SB10001424052702304665904576381973865291928.html
+Rivner,	U.	(2011,	April01). Anatomy of an Attack.Retrieved	June13,	2011,	fromSpeaking	ofSecurity:TheOfficial
+RSA	Blog	andPodcast:	http://blogs.rsa.com/rivner/anatomy­of­an­attack/
+Sanger,	D.,	&Markoff,J.(2011,	June11).	I.M.F Reports Cyberattack	Led to	'Very	Major	Breach'.RetrievedJune13,
+2011,	fromTheNew	YorkTimes:	http://www.nytimes.com/2011/06/12/world/12imf.html
+Secdev.	(2009,	March	29). Tracking GhostNet: Investigating a Cyber	Espionage Network.Retrieved	June13,	2011,	
+fromInformationWarfareMonitor:	http://www.scribd.com/doc/13731776/Tracking­GhostNet­
+Investigating­a­Cyber­Espionage­Network
+
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+PAGE11OF	13
+
+Snodgrass,	R.	(2007,December14). Cyber attack	on LANL outs personal info.Retrieved	June13,	2011,	from	LANL:	
+TheRest	of	theStory:http://lanl­the­rest­of­the­story.blogspot.com/2007/12/cyber­attack­on­lanl­outs­
+personal­info.html
+TheGuardian.(2011,	June13).	IMF hit with serious state­sponsored cyber	attack.Retrieved	June13,2011,from	
+TheSydney	MorningHerald:http://www.smh.com.au/technology/security/imf­hit­with­serious­
+statesponsored­cyber­attack­20110613­lfzm0.html
+TheWashingtonTimes.(2008,	June12).	Hacking on Hill	traced to	China.Retrieved	June13,	2011,	from	The
+WashingtonTimes:	http://www.washingtontimes.com/news/2008/jun/12/hacking­on­hill­traced­to­
+china/
+U.S	Officeof	Counterintelligence.	(2011,	June14).	Stuxnet Worm.	Retrieved	June13,	2011,	fromSpyand	Terrorist
+BriefingCenter:	http://www.hanford.gov/oci/ci_spy.cfm?dossier=138
+Walid	Berissoulet	agencies.	(2011,	March	07). Bercy: la	cyber­attaque	visait le	G20.	RetrievedJune13,2011,from	
+Europe1:	http://www.europe1.fr/France/Cyber­attaque­le­G20­vise­selon­Bercy­442555/
+Zetter,	K.	(2010,	January	14).	Google	Hack	Attack Was Ultra Sophisticated, New Details Show.	Retrieved	June13,	
+2011,	fromWired:	http://www.wired.com/threatlevel/2010/01/operation­aurora/
+
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+PAGE12OF	13
+
+COPYRIGHT	NOTICE
+
+Copyright©CommandFivePty	Ltd.Allrightsreserved.
+
+This	document	is	providedby	thecopyrightholdersunderthelicence
+that	follows.	Byobtaining,using,	and/ordistributingthisdocumentyou
+agreethat	youhaveread,understood,	and	agreetothetermsand
+conditionsthatfollow.
+ThenamesandtrademarksofCommandFivePtyLtdmay	notbe
+used	inadvertisingorpublicity	relatingtothisdocumentorits	contents
+withoutspecific,	prior,	writtenpermission.
+No	permissionisgivenforthisdocumenttobeused	forcommercial
+purposes or as part	of	any	commercial activity	or undertaking,	
+including,	but	not	limited to,	use in or relating	to advertising	or
+publicity,	and/oruseinsupportof,oraspartof,any	pre­salesorsales
+activities.
+No	permissionisgiventocreatemodifiedorderivativeworks.	You
+may	distributethis	document	initsoriginalformfornon­commercial
+purposesinaccordancewith	theothertermsand	conditionsstated	
+herein.Copyrighttitle willatalltimesremain withthecopyright
+holders.Allreferencedtrademarksremaintheproperty	of	theirrespective
+owners.THIS DOCUMENT	IS	PROVIDED	‘AS	IS’ FOR INFORMATIONAL
+PURPOSESONLYWITHNOREPRESENTATIONSORWARRANTIES	OF
+ANY KIND,
+INCLUDING BUT	NOT	LIMITED TO	ANY WARRANTY,
+EXPRESSORIMPLIED,OFMERCHANTABILITYORFITNESSFORA
+PARTICULAR PURPOSE; WARRANTY OF	NON­INFRINGEMENT,	OR
+TITLE;	NORANYWARRANTIES	PERTAININGTO	THEACCURACYOR
+COMPLETENESSOF	CONTENT.
+ANYOPINIONS	EXPRESSED	INTHISDOCUMENTMAYCHANGE
+WITHOUTNOTICEAND	ARENOTNECESSARILYTHECONSIDERED
+OPINIONS	OF	COMMAND	FIVE	PTYLTD,ITSPARTNERS,	EMPLOYEES,
+OR AFFILIATE	ORGANISATIONS.	ANY ADVICE OFFERED	IN THIS
+DOCUMENT	ISOFFERED	WITHOUTWARRANTYOFANYKIND.
+
+CommandFivePty	Ltd
+ABN:	49	149	576	670
+http://www.commandfive.com
+info@commandfive.com
+PAGE13OF	13
+
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+

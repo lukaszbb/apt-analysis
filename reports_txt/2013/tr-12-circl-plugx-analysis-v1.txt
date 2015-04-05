@@ -1,0 +1,1910 @@
+Analysis Report (TLP:WHITE)
+
+Analysis of a PlugX variant (PlugX version 7.0)
+
+Conducted by CIRCL - Computer Incident Response Center Luxembourg
+
+Team CIRCL
+March 29, 2013
+
+Document version: 1.0
+
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+
+March 29, 2013
+March 29, 2013
+March 29, 2013
+
+Contents
+1 Scope of work
+
+2 Analyzed samples
+
+2.1 Limitations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.2 Sharing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+3 Executive summary
+
+4 Analysis
+
+4.1 Techniques used . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.2 Execution process . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.2.1 Diagram . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.2.2 Explanation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.3
+Implemented commands . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.4 Command details . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.4.1 Option . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.4.2 Disk . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.4.3
+Screen . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.4.4 Process
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Service . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.4.5
+4.4.6
+Shell . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.4.7 Telnet . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.4.8 RegEdit . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.4.9 Nethood . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.4.10 Portmap . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.4.11 SQL . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.4.12 Netstat
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.4.13 Keylogger . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . . . .
+log . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.6 Persistency . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.7 Control
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.8 Network and domain information . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.8.1 Network . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.8.2 Domain . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.9 Current version and history of PlugX . . . . . . . . . . . . . . . . . . . . . . . . .
+
+4.5 Other notable commands and functions
+
+4.5.1
+
+A Appendix
+
+A.1 Indicators of Compromise (IOC)
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . .
+A.1.1 Pipes
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+A.1.2 Files and directories . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+A.1.3 Registry . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+A.1.4 Network (hostname and destination IP addresses)
+. . . . . . . . . . . . .
+A.2 References . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+A.3 VirusTotal results . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+3
+
+3
+6
+6
+
+6
+
+6
+6
+7
+7
+7
+10
+12
+12
+12
+12
+12
+12
+12
+13
+13
+13
+13
+13
+13
+13
+13
+13
+15
+15
+16
+16
+17
+18
+
+18
+18
+18
+18
+19
+19
+19
+20
+
+Page 2 of 21
+
+CIRCL - Computer Incident Response Center Luxembourg
+c/o smile - ”security made in Lëtzebuerg” GIE
+41, avenue de la gare, L-1611 Luxembourg
+(+352) 247 88444 - info@circl.lu – www.circl.lu
+
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+
+March 29, 2013
+March 29, 2013
+March 29, 2013
+
+1 Scope of work
+This report is the analysis of a Remote Access Tool (RAT) which we call a variant of Plugx1.
+Plugx is an interesting piece of malware for several reasons:
+
+• It demonstrates the attack principle of the fastest/cheapest path of attack2 by abusing
+
+perfectly valid signed binaries to perform the attack
+
+• It features ways to defeat other protection mechanisms like UAC3
+• In contrast to many other pieces of malware, the author4 shows the ability to write good
+
+code, especially doing logging the right way to improve the piece of software
+
+• It appears to be modularized and easily extensible
+
+2 Analyzed samples
+
+• Sample A - Stage 1 of Malware
+
+– Description
+
+* Hash found in a malware database
+
+– Original ﬁlename
+
+* update.exe
+
+– Hashes
+
+* MD5: f1f48360f95e1b43e9fba0fec5a2afb8
+* SHA1: 70ceb467db7b0161d22e4545479f747417b9705a
+* SHA-256: 2bc5ce39dd9afe2157448d3f6d8cb9c549ed39543d159616e38480b9e6c11c49
+
+– Filetype
+
+* PE32 executable (GUI) Intel 80386, for MS Windows, RAR self-extracting archive
+
+– Filesize
+
+* 370702 Bytes (326KB)
+
+– Compile time
+
+* Sat Jun 9 15:19:49 2012
+
+• Sample B - Valid, signed McAfee binary
+
+– Description
+
+* File dropped by Sample A
+
+– Original ﬁlename
+* mcvsmap.exe
+
+– Hashes
+
+1Known variant names: Gulpix, Korplug
+2http://satoss.uni.lu/seminars/srm/pdfs/2012-Alexandre-Dulaunoy.pdf
+3http://msdn.microsoft.com/en-us/library/windows/desktop/bb756996.aspx
+4For better readability we do not distinguish between a single author or a group of authors. Hence the
+
+expression is a synonym for ”the authors”
+
+Page 3 of 21
+
+CIRCL - Computer Incident Response Center Luxembourg
+c/o smile - ”security made in Lëtzebuerg” GIE
+41, avenue de la gare, L-1611 Luxembourg
+(+352) 247 88444 - info@circl.lu – www.circl.lu
+
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+
+March 29, 2013
+March 29, 2013
+March 29, 2013
+
+* MD5: 4e1e0b8b0673937415599bf2f24c44ad
+* SHA1: 9224de3af2a246011c6294f64f27206d165317ba
+* SHA-256: ae16e10e621d6610a3f7f2c7122f9d1263700ba02d1b90e42798decb2fe84096
+
+– Filetype
+
+* PE32 executable (GUI) Intel 80386, for MS Windows
+
+– Filesize
+
+* 262672 Bytes (257K)
+
+– Compile time
+
+* Fri May 8 17:59:52 2009
+
+Verified : Signed
+Signers :
+McAfee ,
+VeriSign Class 3 Code Signing 2004 CA
+Class 3 Public Primary C e r t i f ic a t i o n Authority
+
+Inc .
+
+– Authenticode5 veriﬁcation
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17 MD5:
+18
+19
+
+Inc .
+
+13 ,11 ,0 ,0
+
+Signing date : 5:24 PM 5/8/2009
+Publisher : McAfee ,
+Description : McAfee VirusMap Reporting module
+Product : McAfee VirusScan API
+Version :
+File version : 13 ,11 ,102 ,0
+Strong Name: Unsigned
+Original Name: McVsMap.EXE
+Internal Name: McVsMap
+Copyright : Copyright ￿ 2008 McAfee ,
+Comments: n/a
+
+Inc .
+
+4e1e0b8b0673937415599bf2f24c44ad
+
+SHA1: 9224de3af2a246011c6294f64f27206d165317ba
+SHA256: ae16e10e621d6610a3f7f2c7122f9d1263700ba02d1b90e42798decb2fe84096
+
+• Sample C - DLL to be loaded by Sample B, loads Sample D
+
+– Description
+
+* File dropped by Sample A
+
+– Original ﬁlename
+* McUtil.DLL
+
+– Hashes
+
+* MD5: ad4a646b38a482cc07d5b09b4ﬀfd3b3
+* SHA1: ae0f9bf2740d00c5d485827eb32aca33feaa3a90
+* SHA-256: 0a99238e1ebebc47d7a89b2ccddfae537479f7f77322b5d4941315d3f7e5ca48
+
+– Filetype
+
+* PE32 executable (DLL) (GUI) Intel 80386, for MS Windows
+
+– Filesize
+
+* 49152 Bytes (48K)
+
+5http://msdn.microsoft.com/en-us/library/ms537359%28v=vs.85%29.aspx
+
+Page 4 of 21
+
+CIRCL - Computer Incident Response Center Luxembourg
+c/o smile - ”security made in Lëtzebuerg” GIE
+41, avenue de la gare, L-1611 Luxembourg
+(+352) 247 88444 - info@circl.lu – www.circl.lu
+
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+
+March 29, 2013
+March 29, 2013
+March 29, 2013
+
+– Compile time
+
+* Wed Mar 13 02:52:28 2013
+
+• Sample D - Malicious payload to be loaded by Sample C
+
+– Description
+
+* File dropped by Sample A
+
+– Original ﬁlename
+
+* McUtil.DLL.PPT
+
+– Hashes
+
+* MD5: 545bb4365a9b7cdb6d22844ebeedda93
+* SHA1: a267f1183b4ﬀ843d68a63264846abf78cc71d1f
+* SHA-256: d4fe890a08d4dd44b58a3b85b2a7e89536338099c1c42a9b7e85f4007b0a37b7
+
+– Filetype
+
+* pure code (IA32) without headers
+
+– Filesize
+
+* 124820 Bytes (122K)
+
+– Compile time
+
+* unknown (pure code)
+
+• Sample E - Stage 2 of Malware
+
+– Description
+
+* Extracted malware from memory
+
+– Original ﬁlename
+
+* dump00C60000.bin
+
+– Hashes
+
+* MD5: 65ceb039e7b4731a165cfee081e220af
+* SHA1: b49766187971e3070644a9de2054bc93241b2263
+* SHA-256: deeac56026f3804968348c8afa5b7aba10900aeabee05751c0fcac2b88cﬀ71e
+
+– Filetype
+
+* PE32 executable (DLL) (GUI) Intel 80386, for MS Windows
+
+– Filesize
+
+* 176128 Bytes (172K)
+
+– Compile time
+
+* Mon Nov 26 04:46:01 2012
+
+• Sample F - UAC circumvention
+
+– Description
+
+* File temporarily created on ﬁlesystem
+
+– Original ﬁlename
+
+Page 5 of 21
+
+CIRCL - Computer Incident Response Center Luxembourg
+c/o smile - ”security made in Lëtzebuerg” GIE
+41, avenue de la gare, L-1611 Luxembourg
+(+352) 247 88444 - info@circl.lu – www.circl.lu
+
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+
+March 29, 2013
+March 29, 2013
+March 29, 2013
+
+* UAC.TMP
+
+– Hashes
+
+* MD5: 52df5c2c07433e2a8f054c2347acb3b4
+* SHA1: 8051474c1fc0d8f404a42ea32eca1699e54f02e1
+* SHA-256: dc09091e5d0ce03c6144748f17bd636f2f0b2ca56f88b550c1d48860596dbdb1
+
+– Filetype
+
+* PE32 executable (DLL) (GUI) Intel 80386, for MS Windows
+
+– Filesize
+
+* 2560 Bytes (2.5K)
+
+– Compile time
+
+* Thu Mar 29 08:03:43 2012
+
+2.1 Limitations
+This work has been done with utmost care, following best practices in software reversing, forensic
+investigations and/or information gathering. However, the work is only covering small aspects
+(based on the indicators given, lacking full context) and not an exhaustive analysis, and hence
+the report is as-is, not giving any guarantees of completeness or claiming absolute accuracy.
+This work is provided for information only.
+
+2.2 Sharing
+The document is classiﬁed as TLP:WHITE, CIRCL authorizes everyone to share this analysis
+report as-is without modiﬁcation.
+
+3 Executive summary
+The analyzed malicious software is an exhaustive Remote Access Tool (RAT) that defeats several
+protection methods of modern Windows operating systems, including execution of signed code
+and defeating UAC in Windows 7. It comes with a multitude of functionalities that are well
+implemented.
+
+4 Analysis
+4.1 Techniques used
+The analysis has been done using a mixed-approach of dynamic analysis and static analysis in
+order to overcome some of the obfuscation and encryptions used by the malware. Some of the
+techniques might have also an impact on the interpretation of the malware. Unfortunately, when
+we started this investigation, the IP address is no longer accepting connections on the given ports
+when tested on 2013-03-26. An interaction following the protocol of this malware is therefore no
+longer possible.
+
+Page 6 of 21
+
+CIRCL - Computer Incident Response Center Luxembourg
+c/o smile - ”security made in Lëtzebuerg” GIE
+41, avenue de la gare, L-1611 Luxembourg
+(+352) 247 88444 - info@circl.lu – www.circl.lu
+
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+
+March 29, 2013
+March 29, 2013
+March 29, 2013
+
+4.2 Execution process
+4.2.1 Diagram
+
+.
+
+Sample A
+
+.
+
+.drops
+
+.drops
+
+.drops
+
+.Sample B
+
+.loads
+.into
+
+.Sample C
+
+.loads
+.into
+
+.Sample D
+
+.execution
+
+.Sample E
+
+.execution
+
+.inject
+
+.decryption
+
+.W indows 7 : def eat U AC
+
+.kill
+
+.svchost.exe
+
+.inject
+
+. Sample F
+
+.execution
+
+.msiexec.exe
+
+.
+
+.Legend
+. Signed
+code
+. Neutral
+code
+
+. Malicious
+
+code
+
+4.2.2 Explanation
+Sample A is a self-extracting archive which contains three ﬁles, Sample B, Sample C and Sample
+D. It is assumed that Sample A is a part of another attack vector, like PDF or Oﬃce document
+attacks where the user just opens a crafted document which exploits the document reader, drops
+and opens both a readable document and a malicious ﬁle like Sample A.
+
+1 Type = Rar
+2 Solid = (cid:0)
+
+Page 7 of 21
+
+CIRCL - Computer Incident Response Center Luxembourg
+c/o smile - ”security made in Lëtzebuerg” GIE
+41, avenue de la gare, L-1611 Luxembourg
+(+352) 247 88444 - info@circl.lu – www.circl.lu
+
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+
+March 29, 2013
+March 29, 2013
+March 29, 2013
+
+Date
+
+Time
+
+3 Blocks = 3
+4 Multivolume = (cid:0)
+5 Volumes = 1
+6
+7
+Attr
+8 (cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0) (cid:0)(cid:0)(cid:0)(cid:0)(cid:0) (cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0) (cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0) (cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)
+9 2009(cid:0)05(cid:0)14 00:56:12 . . . . A
+10 2013(cid:0)03(cid:0)13 09:52:28 . . . . A
+11 2013(cid:0)03(cid:0)13 14:56:12 . . . . A
+12 (cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0) (cid:0)(cid:0)(cid:0)(cid:0)(cid:0) (cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0) (cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0) (cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)(cid:0)
+13
+
+119784 mcvsmap. exe
+20285 McUtil .DLL
+124820 McUtil .DLL.PPT
+
+3 f i l e s , 0 f o l d e r s
+
+262672
+49152
+124820
+
+Size
+
+Compressed Name
+
+436644
+
+264889
+
+Executing the self-extracting archive extracts the ﬁles and runs mcvsmap.exe (Sample B). Sample
+B is a valid signed ﬁle that the author of the malware took from a software bundle from McAfee.
+Sample B, when executed, attempts to load a ﬁle McUtil.DLL from the same directory, which
+usually is another component of McAfee. The malware author instead bundled the valid McAfee
+ﬁle Sample B with a custom DLL (Sample C). Since the ﬁle will be loaded without hesitation
+(there are no protection mechanisms implemented; neither does McAfee check if the imported
+ﬁle meets any conditions nor is any protection implemented for loading unsigned libraries in
+signed code), the signed Sample B jumps into the beginning of the code section of Sample C (via
+Push/Return):
+
+At the target location the following code is executed:
+
+1 read_execute_file ()
+2 {
+3
+4
+5
+
+NumberOfBytesRead = GetModuleFileNameW(hModule , &filename , 0x2000u) ;
+lstrcatW(&filename , L".PPT") ;
+hFile_mcutil . d l l . ppt = CreateFileW(&filename , GENERIC_READ, 1u , 0 , OPEN_EXISTING, 0 ,
+if ( hFile_mcutil . d l l . ppt == (cid:0)1 )
+{
+
+0) ;
+
+re s u l t = GetLastError () ;
+
+buffer = VirtualAlloc (0 , 0x100000u , MEM_COMMIT, PAGE_EXECUTE_READWRITE) ;
+if ( buffer && ReadFile ( hFile_mcutil . d l l . ppt , buffer , 0x100000u , &NumberOfBytesRead
+
+6
+7
+8
+9
+10
+11
+12
+13
+
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+
+}
+else
+{
+
+, 0) )
+
+{
+
+CloseHandle ( hFile_mcutil . d l l . ppt ) ;
+buffer () ;
+Sleep (0xFFFFFFFF) ;
+Sleep (0xFFFFFFFF) ;
+Sleep (0xFFFFFFFF) ;
+r e s u l t = 0;
+
+}
+else
+{
+
+r e s u l t = GetLastError () ;
+
+Page 8 of 21
+
+CIRCL - Computer Incident Response Center Luxembourg
+c/o smile - ”security made in Lëtzebuerg” GIE
+41, avenue de la gare, L-1611 Luxembourg
+(+352) 247 88444 - info@circl.lu – www.circl.lu
+
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+
+March 29, 2013
+March 29, 2013
+March 29, 2013
+
+}
+
+}
+return re s u l t ;
+
+25
+26
+27
+28 }
+
+The code retrieves the ﬁlename of itself (line 3), which is McUtil.DLL, and appends .PPT (line
+4). A handle to the ﬁlename McUtil.DLL.PPT is created in line 5. In line 12 an exectuable
+memory region is created, which is ﬁlled with the content of the ﬁle McUtil.DLL.PPT (line 13).
+After closing the handle to the ﬁle (line 15), the memory region is called (line 16). The next
+screenshot shows that the memory contains only pure code without any overhead like MZ/PE
+headers. The entropy of this ﬁle is 7.997904 bits per byte:
+
+The code, when executed, reveals the ﬁrst hint about what we found:
+
+It decompresses and decrypts itself, using the Microsoft API call RtlDecompressBuﬀer and the
+custom decryption routine:
+
+Page 9 of 21
+
+CIRCL - Computer Incident Response Center Luxembourg
+c/o smile - ”security made in Lëtzebuerg” GIE
+41, avenue de la gare, L-1611 Luxembourg
+(+352) 247 88444 - info@circl.lu – www.circl.lu
+
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+
+March 29, 2013
+March 29, 2013
+March 29, 2013
+
+int crypt ( unsigned int a1 ,
+
+int a2 ,
+
+int a3 ,
+
+int a4)
+
+if ( a4 > 0 )
+{
+
+v10 = a3 (cid:0) a2 ;
+do
+{
+
+a1 = a1 + (a1 >> 3) (cid:0) 0x11111111 ;
+a1 = a1 + (a1 >> 5) (cid:0) 0x22222222 ;
+a1 += 0x44444444 (cid:0) (a1 << 9) ;
+a1 += 0x33333333 (cid:0) (a1 << 7) ;
+v7 = *(v10 + a2++) ^ (a1 + a1 + a1 + a1) ;
+v8 = a4(cid:0)(cid:0) == 1;
+*(a2 (cid:0) 1) = v7 ;
+
+}
+while (
+
+}
+return 0;
+
+! v8 ) ;
+
+1
+2 {
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19 }
+
+The decrypted and decompressed ﬁle is not written onto disk, it always remains in memory.
+Sample E is the extracted version of this memory segment. At this point it can be mentioned
+that neither the encrypted Sample D nor the decrypted memory segment Sample E are detected
+by Virus scanners.
+After some initialisation work like adjusting tokens (SeDebugPrivilege, SeTcbPrivileg6 , to act as
+part of the operating system), a new process is started, the original svchost.exe from Microsoft,
+and the code from Sample E is injected into the memory of that process.
+In a next step,
+svchost.exe is instructed to execute the original msiexec.exe from Microsoft, where also memory
+is injected like it has been done for svchost.exe. Special conditions apply when run under Window
+7, which is protected by User Account Control (UAC). UAC is supposed to protect the user better
+from running malware by requesting the administator for approval before running a potentially
+dangerous application. In the environment of Windows 7, the malware drops temporarily ﬁle
+Sample F, which it uses to evade or defeat the UAC mechanism. After killing the parent processes,
+only two processes are left: svchost and msiexec. Both are veriﬁed binaries, none of the includes
+a malicious DLL.
+
+Nevertheless, they both contain the malicious code. At this point in time the malware is already
+talking to the C&C, no user interaction was required, all standard security mechanisms were
+defeated.
+
+4.3 Implemented commands
+The analysis of Sample B revealed the commands as shown in the table below:
+
+6http://technet.microsoft.com/en-us/library/bb457125.aspx
+
+Page 10 of 21
+
+CIRCL - Computer Incident Response Center Luxembourg
+c/o smile - ”security made in Lëtzebuerg” GIE
+41, avenue de la gare, L-1611 Luxembourg
+(+352) 247 88444 - info@circl.lu – www.circl.lu
+
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+
+March 29, 2013
+March 29, 2013
+March 29, 2013
+
+Source ﬁle
+
+Table 1: Implemented commands
+
+Internal command
+
+subcommand Description
+
+XPlugOption.cpp
+
+Option
+
+XPlugDisk.cpp
+
+Disk
+
+XPlugScreen.cpp
+
+Screen
+
+XPlugProcess.cpp
+
+Process
+
+XPlugService.cpp
+
+Service
+
+XPlugShell.cpp
+XPlugTelnet.cpp
+
+Shell
+Telnet
+
+XPlugRegedit.cpp
+
+RegEdit
+
+XPlugNethood.cpp
+XPlugPortMap.cpp
+
+XPlugSQL.cpp
+
+Nethood
+Portmap
+
+SQL
+
+XPlugNetstat.cpp
+
+Netstat
+
+XPlugKeyLogger.cpp
+
+Keylogger
+
+0x2000
+0x2001
+0x2002
+0x2003
+0x2005
+0x3000
+0x3001
+0x3002
+0x300A
+0x3004
+0x3007
+0x300D
+0x300C
+0x300E
+0x4000
+0x4004
+0x4005
+0x4006
+0x4100
+0x5000
+0x5001
+0x5002
+0x6000
+0x6001
+0x6002
+0x6003
+0x6004
+0x7002
+0x7100
+0x9000
+0x9001
+0x9002
+0x9003
+0x9004
+0x9005
+0x9006
+0x9007
+0xA000
+0xB000
+0xC000
+0xC001
+0xC002
+0xD000
+0xD001
+0xD002
+0xE000
+
+lock workstation
+shutdown workstation (forced)
+reboot workstation
+shutdown workstation (graceful)
+show messagebox
+enumerate drives
+ﬁnd ﬁle
+ﬁnd ﬁle recursively
+create directory
+read ﬁle
+write ﬁle
+ﬁle copy/rename/delete/move
+create process on hidden desktop
+get expanded environment string
+Remote Desktop capabilities
+send mouse event
+send keyboard event
+send CTRL-Alt-Delete
+take screenshot
+create process
+enumerate processes
+kill process
+query service conﬁg
+change service conﬁg (forced)
+start service
+control service
+delete service
+start a cmd shell
+start telnet server
+enumerate keys
+create key
+delete key
+copy key
+enumerate values
+set value
+delete value
+get value
+enumerate network resources
+starts port mapping
+get data source information
+get driver description
+execute statement
+get TCP table
+get UDP table
+set TCP entry
+starts key logger thread
+
+Page 11 of 21
+
+CIRCL - Computer Incident Response Center Luxembourg
+c/o smile - ”security made in Lëtzebuerg” GIE
+41, avenue de la gare, L-1611 Luxembourg
+(+352) 247 88444 - info@circl.lu – www.circl.lu
+
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+
+March 29, 2013
+March 29, 2013
+March 29, 2013
+
+4.4 Command details
+4.4.1 Option
+XPlugOption implements commands to lock the workstation, shut it down or reboot it.
+In
+addition, XPlugOption can create a thread that calls MessageBoxW() in order to present a
+message box to the user.
+
+4.4.2 Disk
+XPlugDisk is used to enumerate connected disk drives and can be used to ﬁnd and manipulate
+ﬁles and directories. In addition, XPlugDisk can be used to create a process, optionally on a
+hidden Windows desktop with the name ”HH”, as the code below illustrates:
+if ( a1(cid:0)>hidden )
+{
+
+hDesktop = CreateDesktopW(L"HH" , 0 , 0 , 0 , 0x10000000u , 0) ;
+if (
+
+! hDesktop )
+
+log ("XPlugDisk.cpp" , 665 , 0) ;
+
+}
+hidden = a1(cid:0)>hidden ;
+StartupInfo . lpDesktop = ( hidden != 0 ? L"HH" : 0) ;
+StartupInfo . cb = 68;
+StartupInfo . dwFlags = 1;
+StartupInfo .wShowWindow = hidden == 0;
+if ( CreateProcessW (0 , &a1(cid:0)>commandline , 0 , 0 , 0 , 0 , 0 , 0 , &StartupInfo , &
+{
+. . .
+}
+
+ProcessInformation ) )
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+
+13
+14
+15
+
+4.4.3 Screen
+XPlugScreen is not only taking screenshots, it is also implementing remote desktop capabilities.
+It is able to capture the screen (internal command: ScreenT1) and can send mouse and keyboard
+events (internal command: ScreenT2).
+
+4.4.4 Process
+XPlugProcess implements three commands and is able to enumerate, create and kill processes.
+
+4.4.5 Service
+In the module XPlugService commands are available related to Windows services. Code is
+implemented to query service conﬁgurations, change service conﬁguration, start, control and
+delete services.
+
+4.4.6 Shell
+A remote shell for the attacker is created in the module XPlugShell, by creating an asynchronous
+set of pipes (\pipe\a and \pipe\b) for cmd.exe and the console attached to it (AttachConsole()).
+
+Page 12 of 21
+
+CIRCL - Computer Incident Response Center Luxembourg
+c/o smile - ”security made in Lëtzebuerg” GIE
+41, avenue de la gare, L-1611 Luxembourg
+(+352) 247 88444 - info@circl.lu – www.circl.lu
+
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+
+March 29, 2013
+March 29, 2013
+March 29, 2013
+
+4.4.7 Telnet
+cmd.exe /Q is executed in the module XPlugTelnet in order to start a telnet server on the
+attacked machine.
+
+4.4.8 RegEdit
+XPlugRegedit implements a set of commands to process the Windows registry.
+It is able to
+enumerate, create, delete and copy keys. It is also able to enumerate, set, delete and get values
+from the registry.
+
+4.4.9 Nethood
+XPlugNethood is the module to enumerate network resources like network shares.
+
+4.4.10 Portmap
+XPlugPortMap indicates that it performs some port mapping, however, the code is not under-
+stood, yet.
+
+4.4.11 SQL
+XPlugSQL implements three functions to query SQL servers: a function to get data source
+information, a function to get the driver description and a function to execute SQL statements.
+
+4.4.12 Netstat
+XPlugNetstat gets the TCP and UDP connection table and is able to set TCP table entries.
+
+4.4.13 Keylogger
+The keylogger implemented in XPlugKeyLogger catches Window titles, date, time and logs
+entered keys into the ﬁle
+
+1 C:\ Documents and Settings \All Users\VirusMap\NvSmart . hlp
+
+It has the format following the example below:
+
+1 2013(cid:0)03(cid:0)26 09:40:57 | C:\ Program Files \Mozilla Firefox \ f i r e f o x . exe (cid:0) Mozilla Firefox
+2 www. google .com
+3
+4 2013(cid:0)03(cid:0)26 09:47:49 | C:\WINDOWS\system32\notepad . exe | Untitled (cid:0) Notepad
+5 This i s not a password
+6
+7 2013(cid:0)03(cid:0)26 09:48:06 | C:\WINDOWS\Explorer .EXE | C:\ Documents and Settings \All Users\
+
+VirusMap
+
+4.5 Other notable commands and functions
+4.5.1 log
+This function is called almost everywhere when the author expects that a functions returns an
+error, at 1036 places. This is obviously done to ensure code quality.
+
+Page 13 of 21
+
+CIRCL - Computer Incident Response Center Luxembourg
+c/o smile - ”security made in Lëtzebuerg” GIE
+41, avenue de la gare, L-1611 Luxembourg
+(+352) 247 88444 - info@circl.lu – www.circl.lu
+
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+
+March 29, 2013
+March 29, 2013
+March 29, 2013
+
+r e s u l t != (cid:0)1 )
+
+1 write_log (LPCWSTR lpBuffer )
+2 {
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+
+0) )
+
+ExpandEnvironmentStringsW(L"%ALLUSERSPROFILE%" , &path_to_bug . log , 0x800u) ;
+// %ALLUSERSPROFILE%\SxS\bug . log
+lstrcatW(&path_to_bug . log , L"\\SxS") ;
+CreateDirectoryW(&path_to_bug . log , 0) ;
+SetFileAttributesW(&path_to_bug . log , 6u) ;
+lstrcatW(&path_to_bug . log , L"\\bug.log") ;
+r e s u l t = CreateFileW(&path_to_bug . log , 0x40000000u , 1u , 0 , 4u , 2u , 0) ;
+if (
+{
+
+if ( SetFilePointer ( result , 0 , 0 , 2u) != (cid:0)1 )
+{
+
+GetLocalTime(&SystemTime) ;
+NumberOfBytesWritten = wsprintfW (
+&Buffer ,
+L"%4.4d-%2.2d-%2.2d %2.2d:%2.2d:%2.2d: " ,
+SystemTime . wYear ,
+SystemTime .wMonth,
+SystemTime .wDay,
+SystemTime .wHour,
+SystemTime . wMinute ,
+SystemTime . wSecond) ;
+
+len = lstrlenW ( lpBuffer ) ;
+WriteFile ( result ,
+
+lpBuffer , 2 * len , &len , 0) ;
+
+if ( WriteFile ( result , &Buffer , 2 * NumberOfBytesWritten , &NumberOfBytesWritten ,
+
+{
+
+}
+
+25
+26
+27
+28
+29
+30
+31
+32
+33 }
+
+}
+re s u l t = CloseHandle ( r e s u l t ) ;
+
+}
+return re s u l t ;
+
+Example log ﬁle entries from ﬁle
+1 %ALLUSERSPROFILE%\SxS\bug . log
+
+1 2013(cid:0)03(cid:0)25 11:43:28:
+2 2013(cid:0)03(cid:0)25 11:51:12:
+3 2013(cid:0)03(cid:0)25 13:59:45:
+4 2013(cid:0)03(cid:0)25 14:07:12:
+5 2013(cid:0)03(cid:0)25 14:07:12:
+path s p e c i f i e d .
+6 2013(cid:0)03(cid:0)25 14:21:12:
+7 2013(cid:0)03(cid:0)25 17:31:58:
+8 2013(cid:0)03(cid:0)25 17:37:00:
+
+f i l e : XSetting . h ,
+
+l i n e : 57 , error :
+
+[1300] Not a l l p r i v i l e g e s
+
+referenced are assigned to the c a l l e r .
+f i l e : XInstallUAC . cpp ,
+f i l e : XRTL. cpp ,
+
+referenced are assigned to the c a l l e r .
+
+l i n e : 162 , error :
+
+[ 5 ] Access
+
+i s denied .
+
+l i n e : 186 , error :
+
+[1300] Not a l l p r i v i l e g e s
+
+f i l e : XRTL. cpp ,
+name, or volume label syntax i s
+
+l i n e : 186 , error :
+incorrect .
+
+f i l e : XSetting . h ,
+
+l i n e : 58 , error :
+
+[123]The filename , directory
+
+[ 3 ] The system cannot find the
+
+referenced are assigned to the c a l l e r .
+
+f i l e : dllmain . cpp ,
+
+l i n e : 47 , error :
+
+[1300] Not a l l p r i v i l e g e s
+
+f i l e : XInstall . cpp ,
+f i l e : XSoTcpHttp . cpp ,
+
+l i n e : 451 , error :
+
+l i n e : 646 , error :
+
+[ 5 ] Access
+[12029]*
+
+i s denied .
+
+In addition an exception ﬁlter is installed to fetch the circumstances of otherwise not caught
+errors:
+
+1 TopLevelExceptionFilter ( struct_a1_30 *a1)
+2 {
+3 . . .
+4
+5
+
+if ( wsprintfA (
+
+&OutputString ,
+
+Page 14 of 21
+
+CIRCL - Computer Incident Response Center Luxembourg
+c/o smile - ”security made in Lëtzebuerg” GIE
+41, avenue de la gare, L-1611 Luxembourg
+(+352) 247 88444 - info@circl.lu – www.circl.lu
+
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+
+March 29, 2013
+March 29, 2013
+March 29, 2013
+
+"EName:%s,EAddr:0x%p,ECode:0x%p,EAX:%p,EBX:%p,ECX:%p,EDX:%p,ESI:%p,EDI:%p,EBP
+
+:%p,ESP:%p,EIP:%p\r\n" ,
+
+6
+
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22 . . .
+23 }
+
+&String1 ,
+a1(cid:0)>ECode [ 3 ] ,
+*a1(cid:0)>ECode,
+v6(cid:0)>reg_eax ,
+v6(cid:0)>reg_ebx ,
+v6(cid:0)>reg_ecx ,
+v6(cid:0)>reg_edx ,
+v6(cid:0)>reg_esi ,
+v6(cid:0)>reg_edi ,
+v6(cid:0)>reg_ebp ,
+v6(cid:0)>reg_esp ,
+v6(cid:0)>reg_eip ) >= 256 )
+
+log ("XException.cpp" , 39 , 0) ;
+call_write_log(&OutputString ) ;
+call_OutputDebugStringA(&OutputString ) ;
+
+4.6 Persistency
+The three ﬁles Sample B, C and D are copied into the directory
+
+1 C:\ Documents and Settings \All Users\VirusMap
+
+respectively in
+
+1 C:\ ProgramData\VirusMap (C:\ Users\All Users\VirusMap)
+
+After that, a new registry entry is set:
+
+1 HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run
+
+which calls mcvsmap.exe (Sample B) after login.
+
+Another option is the installation as a service in
+
+1 HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\ Services \VirusMap
+
+The key ”Imagepath” calls the same binary mcvsmap.exe (Sample B).
+
+4.7 Control
+The attacked computer uses TCP and UDP to connect to port 443 on help.yahoo-upgrade.com
+(122.199.194.197). Unfortunately, the machine at that IP address doesn’t seem to reply to our
+requests anymore on 2013-03-26.
+The Passive DNS showed some other associated domains and hostnames with this IP address:
+help . yahoo(cid:0)upgrade .com
+support . yahoo(cid:0)upgrade .com
+update . ayuisyahooapis .com
+support . ayuisyahooapis .com
+update . trendmicrosoft . co . in
+It’s highly probable that theses hostnames were also used for other campaigns. You might use
+these as additional indicators for the detection of potential infections.
+
+1
+2
+3
+4
+5
+
+Page 15 of 21
+
+CIRCL - Computer Incident Response Center Luxembourg
+c/o smile - ”security made in Lëtzebuerg” GIE
+41, avenue de la gare, L-1611 Luxembourg
+(+352) 247 88444 - info@circl.lu – www.circl.lu
+
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+
+March 29, 2013
+March 29, 2013
+March 29, 2013
+
+4.8 Network and domain information
+4.8.1 Network
+The IP address is located in the ASN 17877 and the ISP is not a known bulletproof hoster as
+you can see on its historical7 BGP ranking evolution.
+
+1 inetnum :
+2 netname :
+3 descr :
+4 descr :
+5 descr :
+6 descr :
+7 descr :
+8 descr :
+9 descr :
+10 descr :
+11 descr :
+12 country :
+13 admin(cid:0)c :
+14 tech(cid:0)c :
+15 remarks :
+16 status :
+17 mnt(cid:0)by :
+18 mnt(cid:0)lower :
+19 changed :
+20 source :
+21
+22 person :
+23 nic(cid:0)hdl :
+24 e(cid:0)mail :
+25 address :
+26 phone :
+27 fax(cid:0)no :
+28 country :
+29 changed :
+
+122.199.128.0 (cid:0) 122.199.255.255
+VAAN
+NexG
+5F SeoulAcademy B/D, 967(cid:0)6 Daechi(cid:0)Dong, Gangnam(cid:0)Gu, 135(cid:0)280
+************************************************
+Allocated to KRNIC Member.
+I f you would l i k e to find assignment
+information in d e t a i l please r e f e r
+to
+the KRNIC Whois Database at :
+"http://whois.nic.or.kr/english/index.html"
+************************************************
+KR
+SL1625(cid:0)AP
+SL1625(cid:0)AP
+www. nexg . net
+ALLOCATED PORTABLE
+MNT(cid:0)KRNIC(cid:0)AP
+MNT(cid:0)KRNIC(cid:0)AP
+hm(cid:0)changed@apnic . net 20060606
+APNIC
+
+Sanguk Lee
+SL1625(cid:0)AP
+ip@nexg . net
+5F SeoulAcademy B/D, 967(cid:0)6 Daechi(cid:0)Dong, Gangnam(cid:0)Gu, 135(cid:0)280
++82(cid:0)2(cid:0)538(cid:0)7060
++82(cid:0)2(cid:0)571(cid:0)8998
+KR
+hostmaster@nida . or . kr 20050105
+
+7http://bgpranking.circl.lu/asn_details?asn=17877
+
+Page 16 of 21
+
+CIRCL - Computer Incident Response Center Luxembourg
+c/o smile - ”security made in Lëtzebuerg” GIE
+41, avenue de la gare, L-1611 Luxembourg
+(+352) 247 88444 - info@circl.lu – www.circl.lu
+
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+
+March 29, 2013
+March 29, 2013
+March 29, 2013
+
+30 mnt(cid:0)by :
+31 source :
+32
+33 inetnum :
+34 netname :
+35 descr :
+36 country :
+37 admin(cid:0)c :
+38 tech(cid:0)c :
+39 status :
+40 mnt(cid:0)by :
+41 mnt(cid:0)i r t :
+42 remarks :
+43 remarks :
+44 remarks :
+45 changed :
+46 source :
+
+MNT(cid:0)KRNIC(cid:0)AP
+APNIC
+122.199.128.0 (cid:0) 122.199.255.255
+VAAN(cid:0)KR
+NexG
+KR
+LS151(cid:0)KR
+LS151(cid:0)KR
+ALLOCATED PORTABLE
+MNT(cid:0)KRNIC(cid:0)AP
+IRT(cid:0)KRNIC(cid:0)KR
+This information has been p a r t i a l l y mirrored by APNIC from
+KRNIC. To obtain more s p e c i f i c information , please use the
+KRNIC whois server at whois . krnic . net .
+hostmaster@nic . or . kr
+KRNIC
+
+4.8.2 Domain
+
+Domain Name: YAHOO(cid:0)UPGRADE.COM
+Registrar : JIANGSU BANGNING SCIENCE & TECHNOLOGY CO. LTD
+Whois Server : whois .55 hl .com
+Referral URL: http ://www.55 hl .com
+Name Server : DNS5.4CUN.COM
+Name Server : DNS6.4CUN.COM
+Status : ok
+Updated Date : 08(cid:0)aug(cid:0)2012
+Creation Date : 18(cid:0)jul (cid:0)2011
+Expiration Date : 18(cid:0)jul (cid:0)2013
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12 >>> Last update of whois database : Wed, 27 Mar 2013 22:36:13 UTC <<<
+13
+14 Domain Name: yahoo(cid:0)upgrade .com
+15
+16 Registrant Contact :
+17 yahoo
+18 yahoo yahoo whiteyoo_123@yahoo .com
+19 telephone : +48.56756756756
+20 fax : +48.56732453453
+21 yahoo yahoo yahoo 345345
+22 CA
+23
+24 Administrative Contact :
+25 yahoo yahoo whiteyoo_123@yahoo .com
+26 telephone : +48.56756756756
+27 fax : +48.56732453453
+28 yahoo yahoo yahoo 345345
+29 CA
+30
+31 Technical Contact :
+32 yahoo yahoo whiteyoo_123@yahoo .com
+33 telephone : +48.56756756756
+34 fax : +48.56732453453
+35 yahoo yahoo yahoo 345345
+36 CA
+37
+38 B i l l i n g Contact :
+39 yahoo yahoo whiteyoo_123@yahoo .com
+40 telephone : +48.56756756756
+
+Page 17 of 21
+
+CIRCL - Computer Incident Response Center Luxembourg
+c/o smile - ”security made in Lëtzebuerg” GIE
+41, avenue de la gare, L-1611 Luxembourg
+(+352) 247 88444 - info@circl.lu – www.circl.lu
+
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+
+March 29, 2013
+March 29, 2013
+March 29, 2013
+
+41 fax : +48.56732453453
+42 yahoo yahoo yahoo 345345
+43 CA
+
+4.9 Current version and history of PlugX
+A version string can be found in this binary:
+
+1 d:\ work\plug7 .0(mcvsmap) ( fking )ǰ() \ shellcode \ shellcode \XPlug . h
+
+This could mean PlugX, version 7.0 codename fking, build for mcvsmap. References can be
+found on the internet for previous versions of this malware family:
+
+1 d:\ work\plug4 .0( nvsmart ) ( sxl )\ shellcode \ shellcode \XPlug . h
+2 d:\ work\plug3 .1( icesword )\ shellcode \ shellcode \XPlug . h
+3 d:\ work\Plug3 .0( Gf)UDP\ Shell6 \Release\ Shell6 . pdb
+4 i :\ work\plug2 . 0 ( ) \ shellcode \ shellcode \XPlug . h
+
+A Appendix
+A.1 Indicators of Compromise (IOC)
+This section summarizes the known indicators of compromise. The list might not be exhaustive,
+but the existence of any or all of the following indicators might help to discover an infection.
+
+A.1.1 Pipes
+
+1
+2
+3
+
+\PIPE\a$PID
+\PIPE\b$PID
+\PIPE\RUN_AS_USER($PID)
+
+(where $PID is the process ID of the active malicious process)
+
+A.1.2 Files and directories
+• Static ﬁles (dropped ﬁles)
+
+– update.exe
+1 MD5:
+2 SHA1:
+3 SHA(cid:0)256:
+
+f1f48360f95e1b43e9fba0fec5a2afb8
+70ceb467db7b0161d22e4545479f747417b9705a
+2bc5ce39dd9afe2157448d3f6d8cb9c549ed39543d159616e38480b9e6c11c49
+
+– mcvsmap.exe
+1 MD5:
+2 SHA1:
+3 SHA(cid:0)256:
+
+4e1e0b8b0673937415599bf2f24c44ad
+9224de3af2a246011c6294f64f27206d165317ba
+ae16e10e621d6610a3f7f2c7122f9d1263700ba02d1b90e42798decb2fe84096
+
+– McUtil.DLL
+1 MD5:
+2 SHA1:
+3 SHA(cid:0)256:
+
+ad4a646b38a482cc07d5b09b4fffd3b3
+ae0f9bf2740d00c5d485827eb32aca33feaa3a90
+0a99238e1ebebc47d7a89b2ccddfae537479f7f77322b5d4941315d3f7e5ca48
+
+Page 18 of 21
+
+CIRCL - Computer Incident Response Center Luxembourg
+c/o smile - ”security made in Lëtzebuerg” GIE
+41, avenue de la gare, L-1611 Luxembourg
+(+352) 247 88444 - info@circl.lu – www.circl.lu
+
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+
+March 29, 2013
+March 29, 2013
+March 29, 2013
+
+– McUtil.DLL.PPT
+1 MD5:
+2 SHA1:
+3 SHA(cid:0)256:
+
+545bb4365a9b7cdb6d22844ebeedda93
+a267f1183b4ff843d68a63264846abf78cc71d1f
+d4fe890a08d4dd44b58a3b85b2a7e89536338099c1c42a9b7e85f4007b0a37b7
+
+– UAC.TMP
+1 MD5:
+2 SHA1:
+3 SHA(cid:0)256:
+
+52df5c2c07433e2a8f054c2347acb3b4
+8051474 c1fc0d8f404a42ea32eca1699e54f02e1
+dc09091e5d0ce03c6144748f17bd636f2f0b2ca56f88b550c1d48860596dbdb1
+
+Files and/or directories might be hidden and carry the system ﬂag
+
+1 C:\ ProgramData\VirusMap (Windows 7)
+2 C:\ Users\All Users\VirusMap (Windows 7)
+3 C:\ Documents and Settings \All Users\VirusMap (Windows XP)
+4 %ALLUSERSPROFILE%\SxS\bug . log
+5 C:\ Documents and Settings \All Users\VirusMap\NvSmart . hlp
+
+A.1.3 Registry
+
+1 HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\ Services \VirusMap and a key referencing Sample
+
+2 HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run and a key referencing
+
+B
+
+Sample B
+
+A.1.4 Network (hostname and destination IP addresses)
+
+1 help . yahoo(cid:0)upgrade .com
+2 122.199.194.197
+
+A.2 References
+
+• WHITE PAPER: PLUG X - PAYLOAD EXTRACTION
+
+– http://www.contextis.com/files/PlugX_-_Payload_Extraction_March_2013_1.
+
+pdf
+
+– Context Information Security - http://www.contextis.com/
+– Published 2013-03-22
+
+• An Analysis of PlugX
+
+– http://lastline.com/blog.php
+– Lastline - http://www.lastline.com/
+– no publication date found
+
+• PlugX is becoming mature
+
+– http://www.securelist.com/en/blog/208193974/PlugX_is_becoming_mature
+– Kaspersky Lab - http://www.kaspersky.com/
+
+Page 19 of 21
+
+CIRCL - Computer Incident Response Center Luxembourg
+c/o smile - ”security made in Lëtzebuerg” GIE
+41, avenue de la gare, L-1611 Luxembourg
+(+352) 247 88444 - info@circl.lu – www.circl.lu
+
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+
+March 29, 2013
+March 29, 2013
+March 29, 2013
+
+– Published 2012-11-27
+
+• Unplugging PlugX Capabilities
+
+– http://blog.trendmicro.com/trendlabs-security-intelligence/unplugging-plugx-capabilities/
+– TrendMicro - http://www.trendmicro.eu/
+– Published 2012-09-17
+
+• Tracking down the author of the PlugX RAT
+
+– http://labs.alienvault.com/labs/index.php/2012/tracking-down-the-author-of-the-plugx-rat/
+– AlienVault - http://labs.alienvault.com
+– Published 2012-09-13
+
+A.3 VirusTotal results
+
+• Sample A
+1 MicroWorld(cid:0)eScan :
+Trojan . Agent .AZDK
+Trojan . Agent .AZDK
+2 nProtect :
+RDN/Generic BackDoor ! gq
+3 McAfee :
+Trojan . Dropper .CH
+4 Malwarebytes :
+5 Symantec :
+WS. Reputation .1
+Agent .APIJH
+6 Norman:
+7 TrendMicro(cid:0)HouseCall : BKDR_POISON.PQ
+Win32 : Gulpix(cid:0)B [ Trj ]
+8 Avast :
+Backdoor . Win32 . Gulpix . bo
+9 Kaspersky :
+Trojan . Agent .AZDK
+10 BitDefender :
+Backdoor . Gulpix ! EFaRR6zLtc4
+11 Agnitum :
+Backdoor . Win32 .A. Gulpix .370702.B
+12 ViRobot :
+13 Comodo:
+UnclassifiedMalware
+14 F(cid:0)Secure :
+Trojan . Agent .AZDK
+Trojan . Click2 .52215
+15 DrWeb:
+Trojan . Win32 . Generic !BT
+16 VIPRE:
+TR/Agent . azdk .3
+17 AntiVir :
+18 TrendMicro :
+BKDR_POISON.PQ
+19 McAfee(cid:0)GW(cid:0)Edition :
+RDN/Generic BackDoor ! gq
+Troj/Agent(cid:0)AATT
+20 Sophos :
+Win32 . Hack . Gulpix . ( kcloud )
+21 Kingsoft :
+Backdoor : Win32/Plugx .A
+22 Microsoft :
+23 GData:
+Trojan . Agent .AZDK
+24 AhnLab(cid:0)V3:
+Backdoor/Win32 . Gulpix
+Backdoor . Win32 . Gulpix
+25 Ikarus :
+W32/Gulpix .BO! tr . bdr
+26 Fortinet :
+27 AVG:
+Agent4 .AKAP
+28 Panda :
+Trj/CI .A
+29 Scanned : 2013(cid:0)03(cid:0)21 04:01:12 (cid:0) 45 scans (cid:0) 28 detections (62.0%)
+
+• Sample B (mcvsmap.exe)
+1 Scanned : 2013(cid:0)03(cid:0)21 13:29:45 (cid:0) 44 scans (cid:0) 0 detections (0.0%)
+
+• Sample C (McUtil.DLL)
+
+Page 20 of 21
+
+CIRCL - Computer Incident Response Center Luxembourg
+c/o smile - ”security made in Lëtzebuerg” GIE
+41, avenue de la gare, L-1611 Luxembourg
+(+352) 247 88444 - info@circl.lu – www.circl.lu
+
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+CIRCL - Computer Incident Response Center Luxembourg
+
+March 29, 2013
+March 29, 2013
+March 29, 2013
+
+1 MicroWorld(cid:0)eScan :
+Trojan . Agent .AZDK
+2 nProtect :
+Trojan . Agent .AZDK
+3 McAfee :
+RDN/Generic BackDoor ! gt
+4 Malwarebytes :
+Backdoor . Gulpix
+5 Symantec :
+WS. Reputation .1
+Agent .APIJH
+6 Norman:
+7 TrendMicro(cid:0)HouseCall : TROJ_GEN.RCBCRCJ
+Win32 : Gulpix(cid:0)B [ Trj ]
+8 Avast :
+Backdoor . Win32 . Gulpix . bo
+9 Kaspersky :
+Trojan . Agent .AZDK
+10 BitDefender :
+11 Agnitum :
+Backdoor . Gulpix ! EFaRR6zLtc4
+UnclassifiedMalware
+12 Comodo:
+13 F(cid:0)Secure :
+Trojan . Agent .AZDK
+Trojan . Click2 .52215
+14 DrWeb:
+Trojan . Win32 . Generic !BT
+15 VIPRE:
+16 AntiVir :
+TR/Agent . azdk .2
+TROJ_GEN.RCBCRCJ
+17 TrendMicro :
+18 McAfee(cid:0)GW(cid:0)Edition :
+RDN/Generic BackDoor ! gt
+Troj/Agent(cid:0)AATT
+19 Sophos :
+Backdoor : Win32/Plugx .A
+20 Microsoft :
+21 GData:
+Trojan . Agent .AZDK
+W32/Backdoor .IYCB(cid:0)5867
+22 Commtouch:
+Backdoor . Win32 . Gulpix
+23 Ikarus :
+W32/Gulpix .BO! tr . bdr
+24 Fortinet :
+25 AVG:
+Agent4 .AKAP
+26 Panda :
+Trj/CI .A
+27 Scanned : 2013(cid:0)03(cid:0)21 13:46:10 (cid:0) 44 scans (cid:0) 26 detections (59.0%)
+
+• Sample D (McUtil.DLL.PPT)
+1 Not uploaded to VirusTotal .
+
+• Sample E
+1 Not uploaded to VirusTotal .
+
+• Sample F (UAC.TMP)
+1 Panda :
+2 Scanned : 2012(cid:0)09(cid:0)20 02:33:55 (cid:0) 43 scans (cid:0) 1 detections (2.0%)
+
+Suspicious
+
+f i l e
+
+Page 21 of 21
+
+CIRCL - Computer Incident Response Center Luxembourg
+c/o smile - ”security made in Lëtzebuerg” GIE
+41, avenue de la gare, L-1611 Luxembourg
+(+352) 247 88444 - info@circl.lu – www.circl.lu
+
+

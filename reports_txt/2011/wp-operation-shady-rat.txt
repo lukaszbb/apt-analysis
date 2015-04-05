@@ -1,0 +1,1113 @@
+White Paper
+
+Revealed: Operation Shady RAT
+By Dmitri Alperovitch, Vice President, Threat Research, McAfee
+
+An investigation of targeted intrusions into 
+more than 70 global companies, governments, 
+and non-profit organizations during the last 
+five years
+
+Version 1.1
+
+White Paper 
+
+Revealed: Operation Shady RAT
+
+For the last few years, especially since the public revelation of Operation Aurora, the targeted successful 
+intrusion into Google and two dozen other companies, I have often been asked by our worldwide 
+customers if they should worry about such sophisticated penetrations themselves or if that is a concern 
+only for government agencies, defense contractors, and perhaps Google. My answer in almost all cases 
+has been unequivocal: absolutely. 
+
+Having investigated intrusions such as Operation Aurora and NightDragon (the systemic long-term 
+compromise of Western oil and gas industry), as well as numerous others that have not been disclosed 
+publicly, I am convinced that every company in every conceivable industry with significant size and 
+valuable intellectual property and trade secrets has been compromised (or will be shortly), with the great 
+majority of the victims rarely discovering the intrusion or its impact. In fact, I divide the entire set of 
+Fortune Global 2,000 firms into two categories: those that know they’ve been compromised and those 
+that don’t yet know.
+
+Lately, with the rash of revelations about attacks on organizations such as RSA, Lockheed Martin, 
+Sony, PBS, and others, I have been asked by surprised reporters and customers whether the rate 
+of intrusions is increasing and if it is a new phenomenon. I find the question ironic because these 
+types of exploitations have occurred relentlessly for at least a half decade, and the majority of the 
+recent disclosures in the last six months have, in fact, been a result of relatively unsophisticated and 
+opportunistic exploitations for the sake of notoriety by loosely organized political hacktivist groups 
+such as Anonymous and Lulzsec. On the other hand, the targeted compromises we are focused 
+on — known as advanced persistent threats (APTs) — are much more insidious and occur largely without 
+public disclosures. They present a far greater threat to companies and governments, as the adversary 
+is tenaciously persistent in achieving their objectives. The key to these intrusions is that the adversary is 
+motivated by a massive hunger for secrets and intellectual property; this is different from the immediate 
+financial gratification that drives much of cybercrime, another serious but more manageable threat.
+
+What we have witnessed over the past five to six years has been nothing short of a historically 
+unprecedented transfer of wealth — closely guarded national secrets (including those from classified 
+government networks), source code, bug databases, email archives, negotiation plans and exploration 
+details for new oil and gas field auctions, document stores, legal contracts, supervisory control and 
+data acquisition (SCADA) configurations, design schematics, and much more has “fallen off the truck” 
+of numerous, mostly Western companies and disappeared in the ever-growing electronic archives of 
+dogged adversaries. 
+
+2
+
+White Paper 
+
+Revealed: Operation Shady RAT
+
+What is happening to all this data — by now reaching petabytes as a whole — is still largely an open 
+question. However, if even a fraction of it is used to build better competing products or beat a competitor  
+at a key negotiation (due to having stolen the other team’s playbook), the loss represents a massive 
+economic threat not just to individual companies and industries but to entire countries that face the 
+prospect of decreased economic growth in a suddenly more competitive landscape and the loss of 
+jobs in industries that lose out to unscrupulous competitors in another part of the world. And let’s not 
+forget the national security impact of the loss of sensitive intelligence or defense information.
+
+Yet, the public (and often the industry) understanding of this significant national security threat is 
+largely minimal due to the very limited number of voluntary disclosures by victims of intrusion activity 
+compared to the actual number of compromises that take place. With the goal of raising the level  
+of public awareness today, we are publishing the most comprehensive analysis ever revealed of victim 
+profiles from a five-year targeted operation by one specific actor — “Operation Shady RAT,” as I have 
+named it at McAfee (RAT is a common acronym in the industry that stands for remote access tool).
+
+This is not a new attack, and the vast majority of the victims have long since remediated these specific 
+infections (although whether most realized the seriousness of the intrusion or simply cleaned up the 
+infected machine without further analysis into the data loss is an open question). McAfee has detected 
+the malware variants and other relevant indicators for years with Generic Downloader.x and Generic 
+BackDoor.t heuristic signatures (those who have had prior experience with this specific adversary may 
+recognize it by the use of encrypted HTML comments in web pages that serve as a command channel  
+to the infected machine). 
+
+McAfee has gained access to one specific command and control (C&C) server used by the intruders.  
+We have collected logs that reveal the full extent of the victim population since mid-2006 when the log 
+collection began. Note that the actual intrusion activity may have begun well before that time, but that 
+is the earliest evidence we have for the start of the compromises. The compromises themselves were 
+standard procedure for these types of targeted intrusions: a spear-phishing email containing an exploit 
+is sent to an individual with the right level of access at the company, and the exploit, when opened, 
+on an unpatched system will trigger a download of the implant malware. That malware will execute 
+and initiate a backdoor communication channel to the C&C web server and interpret the instructions 
+encoded in the hidden comments embedded in the webpage code. This will be quickly followed by 
+live intruders jumping on to the infected machine and proceeding to quickly escalate privileges and 
+move laterally within the organization to establish new persistent footholds via additional compromised 
+machines running implant malware, as well as targeting for quick exfiltration the key data they came for.
+
+After painstaking analysis of the logs, even we were surprised by the enormous diversity of the victim 
+organizations and were taken aback by the audacity of the perpetrators. Although we will refrain from 
+explicitly identifying most of the victims, describing only their general industry, we feel that naming names 
+is warranted in certain cases, not with the goal of attracting attention to a specific victim organization,  
+but to reinforce the fact that virtually everyone is falling prey to these intrusions, regardless of whether they  
+are the United Nations, a multinational Fortune 100 company, a small, non-profit think tank, a national 
+Olympic team, or even an unfortunate computer security firm.
+
+3
+
+White Paper 
+
+Revealed: Operation Shady RAT
+
+In all, we identified 71 compromised parties (many more were present in the logs but without 
+sufficient information to accurately identify them). Of these, the breakdown of 32 unique 
+organization categories follows: 
+
+21
+
+6
+
+13
+
+13
+
+6
+
+12
+
+Construction/
+Heavy 
+Industry
+
+Steel 
+Industry
+
+Energy
+
+Solar Power
+
+3
+
+1
+
+1
+
+1
+
+Electronics 
+Industry
+
+Computer 
+Security
+
+Information 
+Technology
+
+Satellite 
+Communica- 
+tions
+
+News Media
+
+Information 
+Services
+
+Communica- 
+tions 
+Technology
+
+3
+
+2
+
+2
+
+2
+
+2
+
+1
+
+1
+
+Defense 
+Contractor
+
+13
+
+Real Estate
+
+Accounting 
+Industry
+
+Agriculture
+
+Insurance
+
+2
+
+2
+
+1
+
+1
+
+International 
+Sports
+
+Economics/
+Trade
+
+Think Tanks
+
+International 
+Government/
+Economics/
+Trade
+
+Political  
+Non-Profit
+
+US National 
+Security  
+Non-Profit
+
+5
+
+2
+
+2
+
+1
+
+1
+
+1
+
+6
+
+5
+
+3
+
+2
+
+1
+
+1
+
+1
+
+1
+
+1
+
+US Federal 
+Government
+
+US State 
+Government
+
+US County 
+Government
+
+Canadian 
+Government
+
+Vietnam 
+Government
+
+Taiwan 
+Government
+
+US 
+Government 
+Contractor
+
+United 
+Nations
+
+Indian 
+Government
+
+Source: McAfee 
+
+4
+
+White Paper 
+
+Revealed: Operation Shady RAT
+
+And for those who believe these compromises occur only in the United States, Canada, and Europe, 
+allow me to change that perception with the following statistics on 14 geographic locations of the targets:
+
+ 
+
+Victim’s Country of Origin
+
+Victim Count
+
+Victim’s Country of Origin
+
+Victim Count
+
+USA
+
+Canada
+
+South Korea
+
+Taiwan
+
+Japan
+
+Switzerland
+
+United Kingdom
+
+Source: McAfee 
+
+49
+
+4
+
+2
+
+3
+
+2
+
+2
+
+2
+
+Indonesia
+
+Vietnam
+
+Denmark
+
+Singapore
+
+Hong Kong
+
+Germany
+
+India
+
+1
+
+1
+
+1
+
+1
+
+1
+
+1
+
+1
+
+5
+
+White Paper 
+
+Revealed: Operation Shady RAT
+
+The interest in the information held at the Asian and Western national Olympic Committees, as well 
+as the International Olympic Committee (IOC) and the World Anti-Doping Agency in the lead-up and 
+immediate follow-up to the 2008 Olympics was particularly intriguing and potentially pointed a finger 
+at a state actor behind the intrusions, because there is likely no commercial benefit to be earned from 
+such hacks. The presence of political non-profits, such as a private western organization focused on 
+promotion of democracy around the globe or a US national security think tank is also quite illuminating. 
+Hacking the United Nations or the Association of Southeast Asian Nations (ASEAN) Secretariat is also not 
+likely a motivation of a group interested only in economic gains.
+
+Another fascinating aspect that the logs have revealed to us is the changing tasking orders of the 
+perpetrators as the years have gone by. In 2006, the year that the logs begin, we saw only eight 
+intrusions: two on South Korean steel and construction companies and one each on a Department 
+of Energy Research Laboratory, a US real estate firm, international trade organizations of Asian and 
+Western nations and the ASEAN Secretariat. (That last intrusion began in October, a month prior to the 
+organization’s annual summit in Singapore, and continued for another 10 months.) In 2007, the pace 
+of activity jumped by a whopping 260 percent to a total of 29 victim organizations. That year we began 
+to see new compromises of no fewer than four US defense contractors, Vietnam’s government-owned 
+technology company, US federal government agency, several US state and county governments, and 
+one computer network security company. The compromises of the Olympic Committees of two nations 
+in Asia and one Western country began that year as well. In 2008, the count went up further to 36 
+victims, including the United Nations and the World Anti-Doping Agency, and to 38 in 2009. Then the 
+number of intrusions fell to 17 in 2010 and to 9 in 2011, likely due to the widespread availability of the 
+countermeasures for the specific intrusion indicators used by this specific actor. These measures caused 
+the perpetrator to adapt and increasingly employ a new set of implant families and C&C infrastructure 
+(causing activity to disappear from the logs we analyzed). Even news media was not immune to the 
+targeting, with one major US news organization compromised at its New York headquarters and Hong 
+Kong bureau for more than 21 months.
+
+The shortest time that an organization remained compromised was less than a single month; nine 
+share that honor: International Olympic Committee (IOC), Vietnam’s government-owned technology 
+company, a trade organization of a nation in Asia, one Canadian government agency, one US defense 
+contractor, one US general government contractor, one US state and one county government, and 
+a US accounting firm. I must, however, caution that this may not necessarily be an indication of the 
+rapid reaction of information security teams in those organizations, but perhaps merely evidence that 
+the actor was interested only in a quick smash and grab operation that did not require a persistent 
+compromise of the victim. The longest compromise was recorded at an Olympic Committee of a nation  
+in Asia; it lasted on and off for 28 months, finally terminating in January 2010. 
+
+6
+
+White Paper 
+
+Revealed: Operation Shady RAT
+
+Below is the complete list of all 71 targets, with country of origin, start date of the initial compromise 
+and duration of the intrusions:
+
+Victim
+
+South Korean Construction Company
+
+South Korean Steel Company
+
+Country 
+Intrusion
+
+South Korea
+
+South Korea
+
+Department of Energy Research Laboratory
+
+USA
+
+Start Date
+
+July 2006
+
+July 2006
+
+July 2006
+
+Trade Organization
+
+Country in Asia
+
+July 2006
+
+US International Trade Organization
+
+ASEAN (Association of Southeast Asian Nations) 
+Secretariat
+
+USA
+
+Indonesia
+
+September 2006
+
+October 2006
+
+US Real-Estate Firm #1
+
+USA
+
+November 2006
+
+Vietnam’s Government-owned Technology Company
+
+Vietnam
+
+March 2007
+
+US Real-Estate Firm #2
+
+US Defense Contractor #1
+
+US Defense Contractor #2
+
+US Northern California County Government
+
+US Southern California County Government
+
+US State Government #1
+
+US Federal Government Agency #1
+
+USA
+
+USA
+
+USA
+
+USA
+
+USA
+
+USA
+
+USA
+
+April 2007
+
+May 2007
+
+May 2007
+
+June 2007
+
+June 2007
+
+July 2007
+
+July 2007
+
+Olympic Committee of Asian Country #1
+
+Country in Asia
+
+July 2007
+
+US State Government #2
+
+US State Government #3
+
+US Federal Government Agency #2
+
+USA
+
+USA
+
+USA
+
+August 2007
+
+August 2007
+
+August 2007
+
+Olympic Committee of Western Country
+
+Western Country
+
+August 2007
+
+Taiwanese Electronics Company
+
+US Federal Government Agency #3
+
+US Federal Government Agency #4
+
+Taiwan
+
+USA
+
+USA
+
+September 2007
+
+September 2007
+
+September 2007
+
+Western Non-Profit, Democracy-Promoting 
+Organization
+
+Western Country
+
+September 2007
+
+Olympic Committee of Asian Country #2
+
+Country in Asia
+
+September 2007
+
+International Olympic Committee
+
+Switzerland
+
+November 2007
+
+US Defense Contractor #3
+
+US Network Security Company
+
+US Defense Contractor #4
+
+USA
+
+USA
+
+USA
+
+November 2007
+
+December 2007
+
+December 2007
+
+Intrusion 
+Duration 
+(Months)
+
+17
+
+11
+
+3
+
+1
+
+12
+
+10
+
+8
+
+1
+
+17
+
+21
+
+20
+
+7
+
+24
+
+6
+
+8
+
+28
+
+1
+
+25
+
+7
+
+7
+
+8
+
+4
+
+8
+
+4
+
+7
+
+1
+
+7
+
+3
+
+7
+
+7
+
+White Paper 
+
+Revealed: Operation Shady RAT
+
+Victim
+
+US Accounting Firm
+
+US Electronics Company
+
+Country 
+Intrusion
+
+USA
+
+USA
+
+Start Date
+
+January 2008
+
+February 2008
+
+UK Computer Security Company
+
+United Kingdom
+
+February 2008
+
+US National Security Think Tank
+
+US Defense Contractor #5
+
+US Defense Contractor #6
+
+US State Government #4
+
+Taiwan Government Agency
+
+US Government Contractor #1
+
+US Information Technology Company
+
+US Defense Contractor #7
+
+US Construction Company #1
+
+US Information Services Company
+
+Canadian Information Technology Company
+
+US National Security Non-Profit
+
+USA
+
+USA
+
+USA
+
+USA
+
+Taiwan
+
+USA
+
+USA
+
+USA
+
+USA
+
+USA
+
+Canada
+
+USA
+
+February 2008
+
+February 2008
+
+February 2008
+
+April 2008
+
+April 2008
+
+April 2008
+
+April 2008
+
+April 2008
+
+May 2008
+
+May 2008
+
+July 2008
+
+July 2008
+
+Denmark Satellite Communications Company
+
+Denmark
+
+August 2008
+
+United Nations
+
+Switzerland
+
+September 2008
+
+Singapore Electronics Company
+
+Singapore
+
+November 2008
+
+UK Defense Contractor
+
+United Kingdom
+
+January 2009
+
+US Satellite Communications Company
+
+US Natural Gas Wholesale Company
+
+US Nevada County Government
+
+US State Government #5
+
+US Agricultural Trade Organization 
+
+US Construction Company #2
+
+US Communications Technology Company
+
+US Defense Contractor #8
+
+US Defense Contractor #9
+
+US Defense Contractor #10
+
+US News Organization, Headquarters
+
+USA
+
+USA
+
+USA
+
+USA
+
+USA
+
+USA
+
+USA
+
+USA
+
+USA
+
+USA
+
+USA
+
+US News Organization, Hong Kong Bureau
+
+Hong Kong
+
+US Insurance Association
+
+World Anti-Doping Agency
+
+German Accounting Firm
+
+USA
+
+Canada
+
+Germany
+
+February 2009
+
+March 2009
+
+April 2009
+
+April 2009
+
+May 2009
+
+May 2009
+
+May 2009
+
+May 2009
+
+May 2009
+
+June 2009
+
+August 2009
+
+August 2009
+
+August 2009
+
+August 2009
+
+September 2009
+
+Intrusion 
+Duration 
+(Months)
+
+1
+
+13
+
+6
+
+20
+
+9
+
+2
+
+2
+
+8
+
+1
+
+7
+
+16
+
+19
+
+6
+
+4
+
+8
+
+6
+
+20
+
+4
+
+12
+
+25
+
+7
+
+1
+
+3
+
+3
+
+4
+
+7
+
+4
+
+3
+
+11
+
+8
+
+21
+
+3
+
+14
+
+10
+
+8
+
+White Paper 
+
+Revealed: Operation Shady RAT
+
+Victim
+
+US Solar Power Energy Company
+
+Canadian Government Agency #1
+
+US Government Organization #5
+
+US Defense Contractor #11
+
+US Defense Contractor #12
+
+Canadian Government Agency #2
+
+US Think Tank
+
+Indian Government Agency
+
+Country 
+Intrusion
+
+Start Date
+
+Intrusion 
+Duration 
+(Months)
+
+USA
+
+Canada
+
+USA
+
+USA
+
+USA
+
+Canada
+
+USA
+
+India
+
+September 2009
+
+October 2009
+
+November 2009
+
+December 2009
+
+December 2009
+
+January 2010
+
+April 2010
+
+September 2010
+
+4
+
+6
+
+2
+
+2
+
+1
+
+1
+
+13
+
+2
+
+Below are the complete timelines for each year of intrusion activity. It could be an interesting exercise to 
+map some of these specific compromises to various geopolitical events that occurred around these times. 
+(The gaps in the timelines for continuous infections aimed at specific victims may not necessarily be an 
+indication of a successful cleanup before a new reinfection, but rather an artifact of our log collection 
+process that did not mark every activity that occurred on the adversary’s infrastructure, potentially 
+leading to these gaps in the data)
+
+Source: McAfee 
+
+9
+
+White Paper 
+
+Revealed: Operation Shady RAT
+
+Source: McAfee 
+
+10
+
+White Paper 
+
+Revealed: Operation Shady RAT
+
+Source: McAfee 
+
+11
+
+White Paper 
+
+Revealed: Operation Shady RAT
+
+Source: McAfee 
+
+12
+
+White Paper 
+
+Revealed: Operation Shady RAT
+
+Source: McAfee 
+
+Source: McAfee 
+
+13
+
+White Paper 
+
+Revealed: Operation Shady RAT
+
+Although Shady RAT’s scope and duration may shock those who have not been as intimately involved in 
+the investigations into these targeted espionage operations as we have been, I would like to caution you 
+that what I have described here has been one specific operation conducted by a single actor/group. We 
+know of many other successful targeted intrusions (not counting cybercrime-related ones) that we are 
+called in to investigate almost weekly, which impact other companies and industries. This is a problem  
+of massive scale that affects nearly every industry and sector of the economies of numerous countries, 
+and the only organizations that are exempt from this threat are those that don’t have anything valuable 
+or interesting worth stealing.
+
+You can follow Dmitri Alperovitch, vice president of threat research, McAfee, on Twitter  
+at http://twitter.com/DmitriCyber.
+
+Revision history
+Update: As we’ve worked further with the Korean Government on this investigation, we have come 
+to a conclusion that a Korean Government agency was most likely not a victim of these intrusions.  
+We are still working to determine the identity of the victim organization
+
+About McAfee
+McAfee, a wholly owned subsidiary of Intel Corporation (NASDAQ:INTC), is the world’s largest dedicated 
+security technology company. McAfee delivers proactive and proven solutions and services that help 
+secure systems, networks, and mobile devices around the world, allowing users to safely connect to the 
+Internet, browse, and shop the web more securely. Backed by its unrivaled global threat intelligence, 
+McAfee creates innovative products that empower home users, businesses, the public sector, and service 
+providers by enabling them to prove compliance with regulations, protect data, prevent disruptions, 
+identify vulnerabilities, and continuously monitor and improve their security. McAfee is relentlessly focused  
+on constantly finding new ways to keep our customers safe. http://www.mcafee.com
+
+McAfee 
+2821 Mission College Boulevard 
+Santa Clara, CA 95054 
+888 847 8766 
+www.mcafee.com
+
+McAfee and the McAfee logo are registered trademarks or trademarks of McAfee, Inc. or its subsidiaries in the United States and other countries.  
+Other marks and brands may be claimed as the property of others. The product plans, specifications and descriptions herein are provided for information 
+only and subject to change without notice, and are provided without warranty of any kind, express or implied. Copyright © 2011 McAfee, Inc. 
+33000wp_shady-rat_0811
+
+

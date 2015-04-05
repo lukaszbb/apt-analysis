@@ -1,0 +1,654 @@
+Russian Cyber Espionage Campaign - SandwormTeam 
+
+Microsoft Windows Zero-day – Targeting NATO, EU, Telecom and Energy Sectors 
+
+CVE – 2014 - 4114 
+
+An iSIGHT Partners Overview
+
+Proprietary and Confidential Information. © Copyright 2014, iSIGHT Partners, Inc. All Rights Reserved     www.isightpartners.com 
+
+Key Points – SandwormCampaign 
+
+
+
+Cyber Espionage Campaign attributed to Russia 
+
+–
+
+–
+–
+
+Targeting includes 
+• NATO 
+• Ukraine 
+• Poland 
+
+• European Union 
+• European Telecommunications 
+• Energy Sector
+
+Attribution to one of 5 active Russian intrusion teams monitored by iSIGHT Partners 
+“Sandworm Team” 
+
+ Named for its affinity for/coded references to science fiction series Dune 
+
+
+Campaign partially detailed by researchers at F-Secure and ESET – captured only a small 
+component of targeting and missed critical elements 
+
+ Utilizing Zero-day flaw in Microsoft Windows (CVE-2014-4114) 
+
+–
+
+–
+
+–
+
+–
+
+Spear-phishing campaign using weaponized Microsoft Office documents 
+
+
+
+Visibility into multiple PowerPoint lures 
+
+Impacts allversions of Windows from Vista to 8.1 
+
+ Windows Server 2008, 2012 
+
+
+Flaw has existed for years 
+
+Zero-day nature of vulnerability leads to conclusion that intrusion
+efforts were highly effective
+Close collaboration between iSIGHT Partners and Microsoft - patch is being released on 
+Tuesday, October 14th
+
+Proprietary and Confidential Information. © Copyright 2014, iSIGHT Partners, Inc. All Rights Reserved     www.isightpartners.com 
+
+2
+
+SandwormCampaign  - Timeline of Events
+
+
+
+
+
+
+
+
+
+
+
+Monitoring Sandworm Team from late 2013 and throughout 2014 
+
+–
+–
+
+Genesis of team dates to  as early as 2009
+Increased activity throughout 2014 
+
+Visibility into this specific campaign began in December of 2013 
+
+–
+–
+–
+
+–
+
+NATO alliance targeted as early as December 2013 
+GlobeSec attendees targeted in May 2014
+June 2014 
+
+
+
+
+
+
+
+Western European government agency 
+Polish energy firm targeted using CVE-2013-3906 
+BlackEnergy variant configured with Base64-encoded reference to French telecommunications firm 
+
+Zero-day artifacts captured late August/early September (CVE-2014-4114) 
+
+
+
+
+
+
+
+Spear-phishing email and exploit targeting Ukranian government 
+Coinciding with NATO summit on Ukraine in Wales 
+At least one US organization fell victim – think tank/academia 
+
+iSIGHT Partners labs team discovered use of zero-day vulnerability on September 3, 2014 
+
+Immediately notified targeted parties, clients across multiple government and private sector domains 
+
+Began working with Microsoft on September 5, 2014 
+
+–
+–
+
+Provided technical analysis of vulnerability and the malware used to exploit it 
+Coordinated tracking of campaign
+
+
+
+
+
+Monitoring for broader targeting and victimization 
+Monitoring for broader use of zero-day exploit in the wild 
+
+
+
+Purposely timing disclosure to coincide with the release of the patch 
+
+–
+–
+
+Minimizes potential for copy-cat exploit creation 
+Limits exposure to a broad reaching, severe vulnerability 
+
+Proprietary and Confidential Information. © Copyright 2014, iSIGHT Partners, Inc. All Rights Reserved     www.isightpartners.com 
+
+3
+
+SandwormCampaign  - Timeline of Events
+
+2009
+
+2013
+
+2014
+
+Genesis of Sand 
+Worm Team dates to  
+as early as 2009
+
+Late 2013 and 
+throughout 2014
+• Monitoring of Sand 
+Worm Team
+• Traced to 2009
+Increased activity 
+throughout 2014
+
+•
+
+May 2014
+GlobeSec
+attendees 
+targeted
+
+June 2014 
+• Western European government agency 
+• Polish energy firm targeted (CVE-2013-3906)
+• BlackEnergy variant w/Base64-encoded 
+
+reference to French telecomm firm 
+
+Timeline
+
+Purposely timed disclosure to 
+coincide w/MSFT patch release
+• Minimizes potential for copy-cat 
+
+exploit creation 
+
+• Limits exposure to a broad 
+
+reaching, severe vulnerability
+
+September 2014 
+• Zero-day artifacts captured (CVE-2014-4114)
+• Spear-phishing email/exploit targeting Ukrainian government 
+• Coinciding with NATO summit on Ukraine in Wales 
+• At least one US org fell victim (think tank/academia
+
+September 5, 2014
+• Began working with Microsoft
+• Provided technical analysis of vulnerability and malware used in exploit 
+• Coordinated tracking of campaign
+
+– Monitoring for broader targeting and victimization 
+– Monitoring for broader use of zero-day exploit in the wild
+
+September 3, 2014
+•
+
+•
+
+iSIGHT Partners labs discovers
+zero-day vulnerability
+Immediately notified targeted parties 
+and clients across government and 
+private sector domains
+
+Proprietary and Confidential Information. © Copyright 2014, iSIGHT Partners, Inc. All Rights Reserved     www.isightpartners.com 
+
+4
+
+SandwormCampaign  - Visible Targets
+
+Poland
+
+Ukraine
+
+NATO
+
+France
+
+Sand Worm Team
+
+Known Targets
+
+Government
+
+Academic
+
+NATO
+
+Energy
+
+Telecom
+
+Proprietary and Confidential Information. © Copyright 2014, iSIGHT Partners, Inc. All Rights Reserved     www.isightpartners.com 
+
+5
+
+SandwormCampaign  - Spearfishing Lures
+
+Spear-phishing attachment
+GlobeSec Forum on Russia  
+
+Diplomacy spear-phishing 
+
+attachment 
+
+Energy spear-phishing 
+attachment, specifically 
+crafted for Polish audience
+
+Zero-day spear-phishing 
+
+attachment, purported list of 
+
+Russian sympathizers/
+
+”terrorist” actors
+
+Proprietary and Confidential Information. © Copyright 2014, iSIGHT Partners, Inc. All Rights Reserved     www.isightpartners.com 
+
+6
+
+SandwormCampaign  - Attribution
+Russian Cyber Espionage
+
+
+
+Marked increase in cyber espionage activities linked to Russia 
+
+–
+
+–
+
+Russia is increasing its cyber-espionage focus and the volume is up in 
+2014 
+
+iSIGHT recently detailed activities of Tsar Team 
+
+ Mobile malware targeting multiple platforms 
+
+–
+
+Android, Windows, IOS 
+
+
+
+Targets include
+
+Foreign militaries
+Defense contractors
+
+–
+–
+– Ministries of foreign affairs
+–
+–
+–
+
+News organizations
+NGOs and multilaterals
+Jihadists  
+
+1
+
+iSIGHT Partners believes 
+Sandworm Team has Russian 
+origins based on several 
+factors:
+Files retrieved from an open directory on 
+a command and control server included 
+a directory listing in Russian and a help 
+file for the BlackEnergy Trojan also 
+written in Russian
+
+2
+
+Known targeting is consistent with 
+antagonists to NATO as well as Ukrainian 
+and European Union governments.
+
+
+
+Sandworm is one of 5 active cyber intrusion teams linked to Russia 
+being monitored by iSIGHT Partners
+
+–
+
+–
+
+–
+
+Activities date back as far as 2009 
+
+Identified through overlapping infrastructure, use of traditional 
+crimeware, unique references to Dune 
+
+Team has an affinity for using traditional cyber crime tools as a 
+component of its activities  
+
+
+
+BlackEnergy malware 
+
+–
+
+Used at least 2 versions of BlackEnergy 
+
+»
+»
+
+BlackEnergy 2 – traditional crimeware 
+BlackEnergy 3 (Lite) 
+
+•
+
+No documented use in crime – may have been 
+purpose built for Sandworm 
+
+–
+
+Samples tied on basis of configuration to same combination of internal 
+proxies 
+
+•
+
+Up to 7 proxies in common 
+
+3
+
+4
+
+Social engineering is designed to appeal to 
+personnel involved in military and intelligence 
+operations against Russia such as a list of pro-
+Russian “terrorists” sent in an email.
+
+BlackEnergy source code was released
+through Russian e-crime channels.
+
+Proprietary and Confidential Information. © Copyright 2014, iSIGHT Partners, Inc. All Rights Reserved     www.isightpartners.com 
+
+List of Purported
+pro-Russian 
+“Terrorists”
+
+7
+
+Cyber Espionage, Cyber Crime and Hacktivism…
+Blurring of Lines in Russia 
+
+
+
+
+
+Growing trend of blurred lines across cyber threat domains 
+
+–
+
+Not just in Russia but more pronounced here recently 
+
+Russian overlap 
+
+–
+
+–
+
+Links between criminal activity and cyber espionage activity is not uncommon
+
+
+
+
+
+Tools 
+Talent  
+
+Some examples…  
+
+
+
+
+
+
+
+Zeus used in massive espionage campaign against US Government in 2008 
+and again in 2012  
+Pro-Russian hacktivism used BlackEnergy in the past during Georgian 
+conflict 
+Russians allegedly contracted a cyber crime actor in Georbot campaign 
+against Georgia 
+
+– Attributed to Eshkinkot – Russian national named Vladimir A. 
+
+Lenskij
+
+– Georgie CERT claimed to have captured e-mail messages and docs 
+
+from Russian handlers 
+
+»
+»
+»
+
+Instructing on how to use malware to record audio 
+Capture screen shots 
+Exfiltrate data
+
+
+
+TEMP.Noble (another Russian intrusion actor monitored by iSIGHT) 
+
+–
+
+Sensitive source indicates that malware components were developed through for 
+hire cyber crime forum 
+
+–
+
+BlackEnergy
+
+
+
+
+
+Criminal actors 
+Sandworm Team 
+
+Proprietary and Confidential Information. © Copyright 2014, iSIGHT Partners, Inc. All Rights Reserved     www.isightpartners.com 
+
+8
+
+Details - Microsoft Windows Zero Day 
+CVE – 2014 – 4114 
+
+
+
+Affects all supported versions of Microsoft 
+Windows
+
+– Windows Vista x64 Service Pack 2 
+– Windows Vista Service Pack 2 
+– Windows Server 2008 R2 x6 Service pack 1 
+– Windows Server 2008 Services Pack 2 
+– Windows Sever 2008 x64 Service Pack 2 
+– Windows Server 2012
+– Windows Server 2012 R2 
+– Windows 7 Service pack 1 
+– Windows 7 x64 Service Pack 1 
+– Windows 8 x64 
+– Windows 8 
+– Windows 8.1 x64 
+– Windows 8.1 
+– Windows RT 
+– Windows RT 8.1 
+
+
+
+Does not appear to affect Windows XP 
+
+ Exposed, dangerous method 
+
+vulnerability 
+– OLE package manager in Microsoft Windows and 
+
+–
+
+Server 
+Vulnerability allows an attacker to remotely execute 
+arbitrary code 
+
+– Windows allows OLE packager (packager .dll) to 
+
+–
+
+download and execute INF files 
+In case of observed exploit, specifically when 
+handling Microsoft PowerPoint files: 
+
+
+
+
+
+
+
+Packager allows a Package OLE object to reference 
+arbitrary external files (such as INF) from untrusted 
+sources 
+Causes referenced files to be downloaded and 
+executed with specific commands 
+Attacker can exploit to execute arbitrary code 
+
+ Needs specifically crafted file and social engineering 
+
+methods to convince user to open 
+
+Proprietary and Confidential Information. © Copyright 2014, iSIGHT Partners, Inc. All Rights Reserved     www.isightpartners.com 
+
+9
+
+Collaboration with Microsoft 
+
+
+
+iSIGHT Partners follows Responsible disclosure procedures 
+
+Targeted entities 
+
+–
+– Government and Law Enforcement 
+–
+
+Impacted Software vendor(s) 
+
+ Microsoft 
+
+
+
+Disclosed identification of zero-day 2 days after analysis 
+
+–
+
+Began immediate collaboration with Microsoft 
+
+
+
+
+
+Supporting development of a patch 
+Tracking utilization of the vulnerability in the wild 
+
+
+
+Timed disclosure to minimize the potential for broader 
+victimization 
+
+–
+–
+
+Patch ready for release Tuesday, October 14th
+“Break in case of emergency” plan in place for past 5 weeks 
+Trigger: Broader propagation of malware targeting vulnerability 
+Trigger: Evidence of broader victimization 
+
+
+
+
+
+Proprietary and Confidential Information. © Copyright 2014, iSIGHT Partners, Inc. All Rights Reserved     www.isightpartners.com 
+
+10
+
+Workarounds - Microsoft Windows Zero Day 
+CVE – 2014 – 4114 
+
+ Disable the WebClient Service 
+
+– Impact
+
+ Web Disributed Authoring and Versioning (WebDAV) requests are not 
+
+transmitted 
+
+ Any service depending on Web Client service will not start 
+
+
+
+Block TCP ports 139 and 445 
+
+– Impact
+
+ Ports 139 and 445 are used for additional services including Common Internet 
+File System (CIFS), DNS Administration, NetBT service sessions, printer sharing 
+sessions and more 
+
+ Disabling could affect functionality of those services   
+
+
+
+Block launching of Executables via Setup Information Files 
+
+– Impact 
+
+ Applications that rely on the use of .INF file to execute an installer application 
+
+may not automatically execute 
+
+Proprietary and Confidential Information. © Copyright 2014, iSIGHT Partners, Inc. All Rights Reserved     www.isightpartners.com 
+
+11
+
+

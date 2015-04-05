@@ -1,0 +1,73 @@
+Scanbox: A Reconnaissance Framework Used with Watering Hole
+Attacks
+
+A few days ago we detected a watering hole campaign in a website owned by one big industrial company.
+
+The website is related to software used for simulation and system engineering in a wide range of
+industries, including automotive, aerospace, and manufacturing.
+
+The attackers were able to compromise the website and include code that loaded a malicious Javascript
+file from a remote server. This Javascript file is a framework for reconnaissance that the attackers call
+"Scanbox" and includes some of the techniques we described in a previous blog post: Attackers abusing
+Internet Explorer to enumerate software and detect security products  
+
+The Scanbox framework first configures the remote C&C server that it will use and collects a small amount
+of information about the victim that is visiting the compromised website including:
+
+Referer
+User-Agent
+Location
+Cookie
+Title (To identify specific content that the victim is visiting)
+Domain
+Charset
+Screen width and height
+Operating System
+Language
+
+Resulting in something like this:
+
+Before sending the information to the C&C server, Scanbox encodes and encrypts the data with the
+following function:
+
+Producing the following request:
+
+If we decrypt the data it translates to:
+
+After the first request, the framework contains several plugins to extract different information from the
+victim.
+
+Pluginid 1: Enumerates software installed in the system using the technique we explained before that
+affects Internet Explorer. It also checks if the system is running different versions of EMET (Enhanced
+Mitigation Experience Toolkit):
+
+Producing the list of security software on the target
+
+Pluginid 2: Enumerates Adobe Flash versions
+
+Pluginid 5: Enumerates Microsoft Office versions
+
+Pluginid 6: Enumerates Acrobat Reader versions
+
+Pluginid 8: Enumerates Java versions
+
+Pluginid 21: Implements a “keylogger” functionality trough Javascript that logs all the keystrokes the
+victim is typing inside the compromised website.
+
+While the user is browsing the compromised website, all keystrokes are being recorded and sent to the
+C&C periodically. It will also send keystrokes when the user submits web forms that can potentially
+include passwords and other sensitive data.
+
+As we have seen, this is a very powerful framework that gives attackers a lot of insight into the potential
+targets that will help them launching future attacks against them.
+
+We have also seen several Metasploit-produced exploits that target different versions of Java in the same
+IP address that hosts the Scanbox framework (122.10.9[.]109).
+
+We recommend you look for this type of activity against the following machines in your network:
+
+mail[.]webmailgoogle.com
+js[.]webmailgoogle.com
+122[.]10.9.109
+
+

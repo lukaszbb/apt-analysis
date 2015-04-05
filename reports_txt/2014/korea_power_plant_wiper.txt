@@ -1,0 +1,174 @@
+Vulnerability, malicious code appeared in the MBR destruction
+function using Hangul file
+Malware Information 2014/12/10 18:12
+Vulnerabilities  recently  received  a  file  with  the  destruction  and  MBR  destruction  capabilities  for  major
+extension to the existing file in addition to the backdoor functionality that existed in Hangul document file is
+received attention is required.
+December 9, 2014 received the first vulnerability Hangul document files were used for both groups known
+vulnerabilities, patching does not work on the latest products. Total of 9 document file has been received, and
+all of the same malicious file therein.
+ 
+1. The files and services that generate
+% System% registered the generated DLL as a service to the folder / drive upon, information that is used has
+a list on the inside of malicious code, and select one of the items below at random.
+ 
+[Service name]
+- BitLocker Drive Decryption Service 
+- Internet Connection Service 
+- Media Center Service 
+- Network Storage Service 
+- Peer Networking Address 
+- PNRP Machine Name 
+- Power Policy 
+- Program Compatibility Service 
+- Remote Registry Configuration 
+- Smart Card Management Service 
+- Tablet PC Management Service 
+- Task Schedule Manager 
+- Thread Ordering Service 
+- WebClient Manage Service 
+- Windows Color Adjustment 
+- Windows Modules Management 
+- Windows Time Synchronization 
+- Wired Config Service 
+- WLAN Config Service 
+- Workstation Management
+ 
+[Create file]
+- Bddsvc.dll 
+
+- iconsvc.dll 
+- ehressvc.dll 
+- netstsvc.dll 
+- pnas.dll 
+- pnrpmchname.dll 
+- pwpsvc.dll 
+- pcssvc.dll 
+- rregconf.dll 
+- scardmngsvc.dll 
+- tcpmsvc.dll 
+- tschmng.dll 
+- mmthread .dll 
+- wcmngsvc.dll 
+- coladj.dll 
+- wndmodmng.dll 
+- timesyncsvc.dll 
+- wiredconfsvc.dll 
+- wlanconf.dll 
+- wstmng.dll
+ 
+Service Description
+- BDESVC hosts the BitLocker Drive Decryption service. 
+- Provides network address Translation, Addressing, name resolution and / or Intrusion Prevention Services
+for a home or Small Office network. 
+- Allows Media Center to Locate and Connect to the Computer. 
+- This service Delivers network Notifications (E. 
+- Enables Multi-party using Peer-to-Peer Communication Connecting. 
+- This service publishes a machine name using the Peer Name Resolution Protocol.
+- MANAGES power policy and power policy Delivery Notification. 
+- This service Provides Support for the Program Compatibility Assistant (PCA). 
+- Enables remote users to modify Registry configurations on this Computer. 
+- Access to Smart Cards MANAGES read by this Computer. 
+- Enables Tablet PC Ink PEN and functionality 
+- Enables a user to Configure and Schedule Automated tasks on this Computer. 
+- Provides Execution ordered for a Group of threads within a specific period of time. 
+- Enables Windows-based Programs to create, Access, and modify Internet- Files based. 
+- The service hosts third-party WcasPlugInService Windows Color System color and gamut map Device
+Model Model Plug-in modules. 
+- Enables Installation, modification, and Removal of Windows updates and Optional Components. 
+- Maintains date and time Synchronization on all clients and Servers in the network. 
+- The Wired AutoConfig (dot3svc) service is responsible for Performing IEEE 802.1X 
+- The WLANSVC service Logic Provides the Required to Configure, Discover, Connect to, and disconnect
+from a Wireless local Area network. 
+- Creates and maintains client network connections to remote server using the SMB protocol
+ 
+2. MBR destruction time
+
+MBR destruction is done through a 'number' value of the registry key value of the items checked below ("0"
+if  the  destructive  behavior  than  the  largest  value)  is  set  to  '0'  value  at  the  time  of  initial  infection.  The
+following [Figure 1] shows the contents of the registry key 'PcaSvcc' items registered by the malware. MBR
+destruction operations to determine the value of number entry through the time information of the user's
+system after December 10, 2014 11:00 a.m. when a, is set to non-zero value is, the MBR is destroyed
+feature to work .
+
+Figure -1] MBR destruction upon reference to the registry value
+
+In [Figure 2] shows a code section that compares the time information for determining a destruction inside
+MBR infection. Malicious code stored in the internal "0x780D0C33" value and the operation to compare the
+time information through a specific operation of the system time obtained by the GetLocalTime function call
+can be seen that true.
+
+Figure -2] MBR destruction timecode to compare
+
+ 
+3. MBR destruction techniques
+MBR destruction is overwritten for the 0x200 (512 bytes), it can be seen the data filled in as shown in [Figure
+3] below. Infection, 'A' ~ 'Z', the same process is repeated for all the drives.
+
+The following [Figure 4] is overwritten with the contents of the MBR code, and has the ability to output the
+
+Figure -3] MBR data
+
+string during boot "Who Am I?".
+
+The following [Figure 5] After MBR infection, a screen visible to the user reboots.
+
+Figure -4] MBR code
+
+[Figure 5] boot screen
+
+ 
+4. File destructive features
+Malicious code can destroy the functionality of a file having a particular extension in addition to destruction
+together also has functions for the MBR. Destroy the target file identified to date are:
+- HWP 
+- doc 
+
+- PDF 
+- docx 
+- ALZ 
+- ZIP 
+- RAR 
+- egg 
+- iso 
+- EXE 
+- dll 
+- sys
+Locate the files with the extension of the above 'A' ~ 'Z' drive changes and performs a process to fill a NULL
+value to 4096 bytes (4K) size.
+ 
+5. Hangul vulnerability information
+Received nine vulnerabilities Hangul document and the contents hereof are both used the same vulnerability
+varies. In [Figure 6] shows the portion of the shell part and the operation code for generating a vulnerability.
+The layout of paragraphs in Hangul document and vulnerability occurs in the course of processing the part
+that  is  responsible  ('HWPTAG_PARA_LINE_SEG')  and,  shellcode  (ShellCode)  and  heap  spray  insert  a
+paragraph of text for (Heap Spray) ('HWPTAG_PARA_TEXT') is used was.
+
+[Figure 6] vulnerability occurs Hangul part
+
+ 
+
+6. Related Files
+MD5 and V3 diagnostic information on malicious files identified vulnerability Hangul file and generated by
+the current is as follows.
+- 54783422cfd7029a26a3f3f5e9087d8a (V3: HWP / Exploit, 2014.12.10.06) 
+- b5b6e93ab27cec75f07af2a3a6a40926 (V3: HWP / Exploit, 2014.12.10.02) 
+- 800866bbab514657969996210bcf727b (V3: HWP / Exploit, 2014.12.10.02) 
+- ead682b889218979b1f2f1527227af9b (V3: HWP / Exploit, 2014.12. 10.02) 
+- f09ea2a841114121f32211faac553e1b (V3: HWP / Exploit, 2014.12.09.06) 
+- 9daf088fe4c9a9580216e98dbb7d1fca (V3: HWP / Exploit, 2014.12.09.06) 
+- 3ec69ee7135272e5bed3ea5378ade6ee (V3: HWP / Exploit, 2014.12.11.05) 
+- 33874577bf54d3c209925c9def880eb9 (V3: HWP / Exploit, 2014.12.11.05) 
+- af792a34548a2038f034ea9a6ff0639a (V3: HWP / Exploit, 2014.12.11.05) 
+- 3BA8A6815F828DFC518A0BDBD27BBA5B (V3: Trojan / Win32.Destroyer,
+2014.12.10.00)
+ 
+7. Countermeasures
+In order to prevent a malware infection is necessary to always maintain a
+Hangul program, and program-to-date antivirus update state. In addition,
+the  vulnerability  has  been  identified  as  Hangul  document  files  are
+disseminated  in  the  form  of  a  person  to  e-mail  attachments.  For
+unascertained  sender  or  unresolved  attachment,  the  procedure  to  ensure
+that there is no problem in security is required before execution.
+
+
