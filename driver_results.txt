@@ -1,0 +1,3867 @@
+*************************** Top 20 Topics ****************************************
+[u'0.123*"figur" ', u' 0.100*"modul" ', u' 0.092*"campaign" ', u' 0.087*"driver" ', u' 0.084*"rat" ', u' 0.082*"stuxnet" ', u' 0.078*"backdoor" ', u' 0.078*"exploit" ', u' 0.072*"attack" ', u' 0.072*"fireey"']
+[u'0.293*"regin" ', u' 0.266*"driver" ', u' 0.215*"stuxnet" ', u' 0.198*"modul" ', u' 0.127*"mov" ', u' 0.120*"stage" ', u' 0.118*"turla" ', u' 0.117*"plugin" ', u' 0.112*"duqu" ', u' 0.111*"dword"']
+[u'0.580*"fide" ', u' 0.302*"cybersecur" ', u' 0.289*"rev" ', u' 0.286*"advisori" ', u' 0.176*"copyright" ', u' 0.136*"solut" ', u' 0.126*"intrud" ', u' 0.115*"unrecom" ', u' 0.114*"dynam" ', u' 0.111*"bot"']
+[u'-0.261*"stuxnet" ', u' 0.199*"deputydog" ', u' 0.194*"cluster" ', u' 0.166*"flash" ', u' 0.162*"hydra" ', u' -0.150*"duqu" ', u' 0.146*"aslr" ', u' 0.143*"shellcod" ', u' 0.139*"plugx" ', u' 0.136*"emet"']
+[u'0.716*"cluster" ', u' 0.267*"scanbox" ', u' -0.247*"mcafe" ', u' -0.158*"aurora" ', u' 0.115*"stuxnet" ', u' 0.112*"hostnam" ', u' 0.098*"panda" ', u' 0.097*"driver" ', u' 0.091*"crowdstrik" ', u' -0.082*"shellcod"']
+[u'0.500*"stuxnet" ', u' 0.274*"duqu" ', u' 0.191*"mcafe" ', u' -0.154*"turla" ', u' 0.147*"driver" ', u' 0.146*"aurora" ', u' -0.143*"regin" ', u' -0.119*"epic" ', u' -0.115*"tlp" ', u' 0.107*"valv"']
+[u'-0.493*"mcafe" ', u' -0.319*"cluster" ', u' -0.294*"aurora" ', u' 0.150*"stuxnet" ', u' -0.121*"scanbox" ', u' -0.113*"coverag" ', u' -0.106*"white" ', u' -0.105*"tlp" ', u' 0.104*"deputydog" ', u' -0.103*"var"']
+[u'-0.306*"regin" ', u' -0.269*"plugx" ', u' -0.262*"panda" ', u' -0.239*"crowdstrik" ', u' 0.182*"utc" ', u' 0.176*"havex" ', u' 0.172*"uroburo" ', u' 0.171*"tlp" ', u' 0.157*"turla" ', u' 0.143*"epic"']
+[u'-0.466*"regin" ', u' -0.249*"hangov" ', u' 0.231*"panda" ', u' 0.211*"crowdstrik" ', u' -0.181*"indian" ', u' -0.154*"cyberattack" ', u' -0.147*"unveil" ', u' -0.127*"telenor" ', u' 0.121*"deep" ', u' 0.114*"adversari"']
+[u'0.377*"regin" ', u' -0.369*"hangov" ', u' -0.279*"plugx" ', u' -0.253*"indian" ', u' -0.234*"unveil" ', u' -0.203*"cyberattack" ', u' -0.166*"telenor" ', u' -0.147*"registr" ', u' -0.107*"cluster" ', u' -0.097*"turla"']
+[u'0.313*"panda" ', u' 0.284*"crowdstrik" ', u' 0.203*"uroburo" ', u' -0.167*"cluster" ', u' 0.147*"adversari" ', u' -0.145*"micro" ', u' -0.141*"figur" ', u' 0.131*"tlp" ', u' -0.128*"miniduk" ', u' 0.121*"sakula"']
+[u'-0.373*"plugx" ', u' -0.371*"tlp" ', u' 0.269*"uroburo" ', u' -0.213*"havex" ', u' -0.170*"registr" ', u' 0.160*"hangov" ', u' -0.153*"white" ', u' 0.144*"turla" ', u' -0.115*"green" ', u' 0.109*"indian"']
+[u'0.754*"xfish" ', u' 0.304*"uroburo" ', u' 0.126*"plugx" ', u' -0.123*"tlp" ', u' 0.115*"yanf" ', u' -0.115*"endobj" ', u' -0.099*"obj" ', u' -0.095*"hangov" ', u' 0.080*"maudi" ', u' -0.071*"mov"']
+[u'0.701*"endobj" ', u' 0.600*"obj" ', u' 0.250*"endstream" ', u' 0.107*"stream" ', u' 0.084*"xfish" ', u' -0.061*"hangov" ', u' 0.051*"uroburo" ', u' 0.041*"turla" ', u' -0.036*"unveil" ', u' 0.035*"plugx"']
+[u'0.564*"xfish" ', u' -0.338*"uroburo" ', u' -0.264*"plugx" ', u' 0.162*"tlp" ', u' 0.129*"hangov" ', u' 0.118*"havex" ', u' 0.104*"panda" ', u' -0.098*"registr" ', u' 0.095*"crowdstrik" ', u' -0.088*"tibetan"']
+[u'0.346*"luxembourg" ', u' 0.324*"circl" ', u' 0.233*"mov" ', u' 0.219*"turla" ', u' 0.136*"center" ', u' 0.135*"eax" ', u' -0.127*"uroburo" ', u' 0.118*"epic" ', u' -0.117*"hangov" ', u' 0.110*"gare"']
+[u'-0.260*"utc" ', u' -0.247*"uroburo" ', u' 0.244*"turla" ', u' 0.230*"epic" ', u' 0.159*"micro" ', u' -0.159*"havex" ', u' -0.152*"luxembourg" ', u' -0.137*"figur" ', u' -0.133*"fireey" ', u' -0.122*"circl"']
+[u'-0.235*"syrian" ', u' 0.210*"uroburo" ', u' 0.201*"micro" ', u' 0.193*"luxembourg" ', u' -0.159*"finspi" ', u' 0.153*"circl" ', u' 0.152*"trend" ', u' 0.151*"regin" ', u' -0.120*"aurora" ', u' 0.114*"ghole"']
+[u'0.244*"uroburo" ', u' 0.235*"syrian" ', u' -0.173*"turla" ', u' -0.159*"fireey" ', u' 0.151*"finspi" ', u' -0.150*"epic" ', u' -0.130*"skeleton" ', u' 0.103*"mov" ', u' 0.098*"bahrain" ', u' 0.097*"rat"']
+[u'0.276*"luxembourg" ', u' 0.233*"miniduk" ', u' -0.190*"mov" ', u' 0.190*"circl" ', u' -0.177*"skeleton" ', u' -0.144*"tlp" ', u' -0.136*"eax" ', u' 0.130*"cnc" ', u' 0.107*"duqu" ', u' 0.103*"center"']
+**********************************************************************************
+
+
+*************************** 2010/Aurora_Botnet_Command_Structure.txt ****************************************
+Similarity 	Report
+1.0 		2010/Aurora_Botnet_Command_Structure.txt
+0.934512 	2010/Case_Study_Operation_Aurora_V11.txt
+0.925881 	2010/WhitePaper HBGary Threat Report, Operation Aurora.txt
+0.918388 	2010/Aurora_HBGARY_DRAFT.txt
+0.913021 	2015/Carbanak_APT_eng.txt
+0.891793 	2013/Operation_Molerats.txt
+0.889443 	2013/US-13-Yarochkin-In-Depth-Analysis-of-Escalated-APT-Attacks-Slides.txt
+0.888687 	2013/dissecting-operation-troy.txt
+0.888004 	2013/fireeye-operation-ke3chang.txt
+0.85815 	2013/fireeye-poison-ivy-report.txt
+None
+***********************************************************************************************
+
+
+*************************** 2010/WhitePaper HBGary Threat Report, Operation Aurora.txt ****************************************
+Similarity 	Report
+1.0 		2010/WhitePaper HBGary Threat Report, Operation Aurora.txt
+0.998037 	2010/Aurora_HBGARY_DRAFT.txt
+0.959263 	2010/Case_Study_Operation_Aurora_V11.txt
+0.925881 	2010/Aurora_Botnet_Command_Structure.txt
+0.882626 	2012/IEXPL0RE_RAT.txt
+0.877647 	2014/korea_power_plant_wiper.txt
+0.860868 	2010/in-depth_analysis_of_hydraq_final_231538.txt
+0.859938 	2013/McAfee_Labs_Threat_Advisory_Exploit_Operation_Red_Oct.txt
+0.848665 	2014/Wiper_Malware.txt
+0.833221 	2011/wp-global-energy-cyberattacks-night-dragon.txt
+None
+***********************************************************************************************
+
+
+*************************** 2010/shadows-in-the-cloud.txt ****************************************
+Similarity 	Report
+1.0 		2010/shadows-in-the-cloud.txt
+0.98834 	2009/ghostnet.txt
+0.972005 	2014/Anunak_APT_against_financial_institutions.txt
+0.967856 	2013/Mandiant_APT1_Report.txt
+0.964897 	2012/WickedRose_andNCPH.txt
+0.964145 	2014/sec14-paper-hardy.txt
+0.955181 	2015/Scarab_Russian.txt
+0.95342 	2012/The_Sin_Digoo_Affair.txt
+0.953326 	2011/the_nitro_attacks.txt
+0.953295 	2013/Inside_Report_by_Infosec_Consortium.txt
+None
+***********************************************************************************************
+
+
+*************************** 2010/MSUpdaterTrojanWhitepaper.txt ****************************************
+Similarity 	Report
+1.0 		2010/MSUpdaterTrojanWhitepaper.txt
+0.941083 	2013/FireEye-Terminator_RAT.txt
+0.939399 	2013/C5_APT_C2InTheFifthDomain.txt
+0.925417 	2013/Trojan.APT.Seinup.txt
+0.91825 	2014/fireeye-operation-quantum-entanglement.txt
+0.916957 	2011/C5_APT_SKHack.txt
+0.914186 	2013/Trojan.APT.BaneChant.txt
+0.914044 	2012/The_Mirage_Campaign.txt
+0.902859 	2013/fireeye-china-chopper-report.txt
+0.884803 	2015/PawnStorm_iOS.txt
+None
+***********************************************************************************************
+
+
+*************************** 2010/Aurora_HBGARY_DRAFT.txt ****************************************
+Similarity 	Report
+1.0 		2010/Aurora_HBGARY_DRAFT.txt
+0.998037 	2010/WhitePaper HBGary Threat Report, Operation Aurora.txt
+0.95773 	2010/Case_Study_Operation_Aurora_V11.txt
+0.918388 	2010/Aurora_Botnet_Command_Structure.txt
+0.904162 	2012/IEXPL0RE_RAT.txt
+0.896569 	2014/korea_power_plant_wiper.txt
+0.882636 	2010/in-depth_analysis_of_hydraq_final_231538.txt
+0.869071 	2013/McAfee_Labs_Threat_Advisory_Exploit_Operation_Red_Oct.txt
+0.85879 	2014/Wiper_Malware.txt
+0.847375 	2015/DTL-12012015-01.txt
+None
+***********************************************************************************************
+
+
+*************************** 2010/Combating Threats - Operation Aurora.txt ****************************************
+Similarity 	Report
+1.0 		2010/Combating Threats - Operation Aurora.txt
+0.987506 	2010/how_can_u_tell_Aurora.txt
+0.881878 	2011/wp-global-energy-cyberattacks-night-dragon.txt
+0.784642 	2013/McAfee_Labs_Threat_Advisory_Exploit_Operation_Red_Oct.txt
+0.781089 	2010/WhitePaper HBGary Threat Report, Operation Aurora.txt
+0.768757 	2010/Case_Study_Operation_Aurora_V11.txt
+0.765876 	2010/Aurora_HBGARY_DRAFT.txt
+0.748912 	2011/shady_rat_vanity.txt
+0.707263 	2011/wp-operation-shady-rat.txt
+0.655731 	2010/Aurora_Botnet_Command_Structure.txt
+None
+***********************************************************************************************
+
+
+*************************** 2010/Case_Study_Operation_Aurora_V11.txt ****************************************
+Similarity 	Report
+1.0 		2010/Case_Study_Operation_Aurora_V11.txt
+0.959263 	2010/WhitePaper HBGary Threat Report, Operation Aurora.txt
+0.95773 	2010/Aurora_HBGARY_DRAFT.txt
+0.934512 	2010/Aurora_Botnet_Command_Structure.txt
+0.916397 	2013/dissecting-operation-troy.txt
+0.90566 	2014/korea_power_plant_wiper.txt
+0.905355 	2011/wp-global-energy-cyberattacks-night-dragon.txt
+0.904448 	2013/McAfee_Labs_Threat_Advisory_Exploit_Operation_Red_Oct.txt
+0.890817 	2014/Wiper_Malware.txt
+0.889467 	2010/in-depth_analysis_of_hydraq_final_231538.txt
+None
+***********************************************************************************************
+
+
+*************************** 2010/how_can_u_tell_Aurora.txt ****************************************
+Similarity 	Report
+1.0 		2010/how_can_u_tell_Aurora.txt
+0.987506 	2010/Combating Threats - Operation Aurora.txt
+0.85795 	2011/wp-global-energy-cyberattacks-night-dragon.txt
+0.763717 	2011/shady_rat_vanity.txt
+0.722312 	2011/wp-operation-shady-rat.txt
+0.719278 	2013/McAfee_Labs_Threat_Advisory_Exploit_Operation_Red_Oct.txt
+0.714997 	2010/WhitePaper HBGary Threat Report, Operation Aurora.txt
+0.710563 	2010/Case_Study_Operation_Aurora_V11.txt
+0.695945 	2010/Aurora_HBGARY_DRAFT.txt
+0.598493 	2010/Aurora_Botnet_Command_Structure.txt
+None
+***********************************************************************************************
+
+
+*************************** 2010/in-depth_analysis_of_hydraq_final_231538.txt ****************************************
+Similarity 	Report
+1.0 		2010/in-depth_analysis_of_hydraq_final_231538.txt
+0.971474 	2014/korea_power_plant_wiper.txt
+0.967398 	2014/EvilBunny_Suspect4_v1.0.txt
+0.966853 	2012/w32_flamer_newsforyou.txt
+0.965434 	2015/volatile-cedar-technical-report.txt
+0.965081 	2014/Sayad_Flying_Kitten_analysis.txt
+0.964849 	2012/IEXPL0RE_RAT.txt
+0.963108 	2015/Elephantosis.txt
+0.952669 	2012/The_Madi_Infostealers.txt
+0.949713 	2014/Modified_Binaries_Tor.txt
+None
+***********************************************************************************************
+
+
+*************************** 2012/FTA 1007 - Shamoon.txt ****************************************
+Similarity 	Report
+1.0 		2012/FTA 1007 - Shamoon.txt
+0.978615 	2014/FTA 1011 Follow UP.txt
+0.972198 	2014/FTA_1014_Bots_Machines_and_the_Matrix.txt
+0.968018 	2013/fta-1009---njrat-uncovered-1.txt
+0.924031 	2014/FTA_1013_RAT_in_a_jar.txt
+0.906544 	2014/FTA 1012 STTEAM Final.txt
+0.897692 	2014/FTA 1001 FINAL 1.15.14.txt
+0.841487 	2013/FTA 1010 - njRAT The Saga Continues.txt
+0.701627 	2013/winnti-more-than-just-a-game-130410.txt
+0.699696 	2014/Pitty_Tiger_Final_Report.txt
+None
+***********************************************************************************************
+
+
+*************************** 2012/Faces_Ghost_RAT.txt ****************************************
+Similarity 	Report
+1.0 		2012/Faces_Ghost_RAT.txt
+0.993566 	2014/pwc_ScanBox_framework.txt
+0.939607 	2015/cto-tib-20150223-01a.txt
+0.654264 	2013/fireeye-malware-supply-chain.txt
+0.538453 	2014/XtremeRAT_fireeye.txt
+0.518351 	2014/Alienvault_Scanbox.txt
+0.43872 	2014/Targeted_Attacks_Lense_NGO.txt
+0.4022 	2015/Anthem_hack_all_roads_lead_to_China.txt
+0.384193 	2013/fireeye-poison-ivy-report.txt
+0.360904 	2013/wp-fakem-rat.txt
+None
+***********************************************************************************************
+
+
+*************************** 2012/Crouching_tiger_hidden_dragon.txt ****************************************
+Similarity 	Report
+1.0 		2012/Crouching_tiger_hidden_dragon.txt
+0.986771 	2013/2013-9.txt
+0.957483 	2011/C5_APT_ADecadeInReview.txt
+0.946385 	2014/HPSR SecurityBriefing_Episode16_NorthKorea.txt
+0.945718 	2015/rpt-southeast-asia-threat-landscape.txt
+0.944345 	2008/556_10535_798405_Annex87_CyberAttacks.txt
+0.94077 	2010/shadows-in-the-cloud.txt
+0.937864 	2013/fireeye-wwc-report.txt
+0.929721 	2012/WickedRose_andNCPH.txt
+0.924301 	2013/Mandiant_APT1_Report.txt
+None
+***********************************************************************************************
+
+
+*************************** 2012/wp_ixeshe.txt ****************************************
+Similarity 	Report
+1.0 		2012/wp_ixeshe.txt
+0.992505 	2014/The_Siesta_Campaign.txt
+0.990409 	2012/wp_the-heartbeat-apt-campaign.txt
+0.988127 	2012/wp_luckycat_redux.txt
+0.975561 	2014/wp-operation-pawn-storm.txt
+0.974872 	2015/wp-operation-woolen-goldfish.txt
+0.973779 	2013/Safe-a-targeted-threat.txt
+0.96899 	2013/2q-report-on-targeted-attack-campaigns.txt
+0.961647 	2015/operation-arid-viper-whitepaper-en.txt
+0.954826 	2014/Gholee_Protective_Edge_themed_spear_phishing_campaign.txt
+None
+***********************************************************************************************
+
+
+*************************** 2012/NormanShark-MaudiOperation.txt ****************************************
+Similarity 	Report
+1.0 		2012/NormanShark-MaudiOperation.txt
+1.0 	2013/NormanShark-MaudiOperation.txt
+0.19992 	2012/Cyberattack_against_Israeli_and_Palestinian_targets.txt
+0.198192 	2014/Chinese_MITM_Google.txt
+0.197745 	2011/Palebot_Palestinian_credentials.txt
+0.194669 	2014/Operation_Poisoned_Hurricane.txt
+0.190783 	2013/fireeye-malware-supply-chain.txt
+0.180671 	2014/darkhotelappendixindicators_kl.txt
+0.170893 	2014/Pitty_Tiger_Final_Report.txt
+0.167346 	2014/Operation_Poisoned_Handover.txt
+None
+***********************************************************************************************
+
+
+*************************** 2012/trojan_taidoor-targeting_think_tanks.txt ****************************************
+Similarity 	Report
+1.0 		2012/trojan_taidoor-targeting_think_tanks.txt
+0.977625 	2011/the_nitro_attacks.txt
+0.976514 	2015/Scarab_Russian.txt
+0.968184 	2014/Anunak_APT_against_financial_institutions.txt
+0.968036 	2014/Micro-Targeted-Malvertising-WP-10-27-14-1.txt
+0.966852 	2013/ETSO_APT_Attacks_Analysis.txt
+0.96255 	2012/WickedRose_andNCPH.txt
+0.962182 	2013/hidden_lynx.txt
+0.961473 	2012/The_Sin_Digoo_Affair.txt
+0.960376 	2013/Safe-a-targeted-threat.txt
+None
+***********************************************************************************************
+
+
+*************************** 2012/kaspersky-lab-gauss.txt ****************************************
+Similarity 	Report
+1.0 		2012/kaspersky-lab-gauss.txt
+0.966259 	2013/kaspersky-the-net-traveler-part1-final.txt
+0.957067 	2014/unveilingthemask_v1.0.txt
+0.956483 	2015/Inside_EquationDrug_Espionage_Platform.txt
+0.949048 	2013/theteamspystory_final_t2.txt
+0.943309 	2015/Elephantosis.txt
+0.927099 	2014/BlackEnergy2_Plugins_Router.txt
+0.926986 	2013/winnti-more-than-just-a-game-130410.txt
+0.92519 	2015/Equation_group_questions_and_answers.txt
+0.924688 	2014/Sayad_Flying_Kitten_analysis.txt
+None
+***********************************************************************************************
+
+
+*************************** 2012/Tibet_Lurk.txt ****************************************
+Similarity 	Report
+1.0 		2012/Tibet_Lurk.txt
+0.977465 	2013/Surtr_Malware_Tibetan.txt
+0.971661 	2015/Tibetan-Uprising-Day-Malware-Attacks_websitepdf.txt
+0.957958 	2015/Scarab_Russian.txt
+0.957389 	2014/sec14-paper-hardy.txt
+0.956242 	2014/Targeted_Attacks_Lense_NGO.txt
+0.954014 	2013/Safe-a-targeted-threat.txt
+0.952863 	2012/The_Sin_Digoo_Affair.txt
+0.95267 	2012/trojan_taidoor-targeting_think_tanks.txt
+0.946061 	2012/wp_luckycat_redux.txt
+None
+***********************************************************************************************
+
+
+*************************** 2012/OSX_SabPub.txt ****************************************
+Similarity 	Report
+1.0 		2012/OSX_SabPub.txt
+0.971306 	2014/darkhotel_kl_07.11.txt
+0.971292 	2013/ETSO_APT_Attacks_Analysis.txt
+0.969433 	2014/bcs_wp_InceptionReport_EN_v12914.txt
+0.961217 	2012/The_Mirage_Campaign.txt
+0.958252 	2012/w32_flamer_newsforyou.txt
+0.958246 	2014/ASERT-Threat-Intelligence-Brief-2014-07-Illuminating-Etumbot-APT.txt
+0.955542 	2013/Kimsuky.txt
+0.953104 	2013/ByeBye_Shell_target.txt
+0.951483 	2014/GDATA_TooHash_CaseStudy_102014_EN_v1.txt
+None
+***********************************************************************************************
+
+
+*************************** 2012/the-elderwood-project.txt ****************************************
+Similarity 	Report
+1.0 		2012/the-elderwood-project.txt
+0.973306 	2014/Operation_CloudyOmega_Ichitaro.txt
+0.965736 	2013/hidden_lynx.txt
+0.952155 	2012/VOHO_WP_FINAL_READY-FOR-Publication-09242012_AC.txt
+0.942947 	2012/WickedRose_andNCPH.txt
+0.932514 	2014/Micro-Targeted-Malvertising-WP-10-27-14-1.txt
+0.931771 	2011/the_nitro_attacks.txt
+0.921917 	2014/Dragonfly_Threat_Against_Western_Energy_Suppliers.txt
+0.920504 	2015/Scarab_Russian.txt
+0.915748 	2014/targeted_attacks_against_the_energy_sector.txt
+None
+***********************************************************************************************
+
+
+*************************** 2012/IEXPL0RE_RAT.txt ****************************************
+Similarity 	Report
+1.0 		2012/IEXPL0RE_RAT.txt
+0.969519 	2014/EvilBunny_Suspect4_v1.0.txt
+0.964849 	2010/in-depth_analysis_of_hydraq_final_231538.txt
+0.955099 	2014/Sayad_Flying_Kitten_analysis.txt
+0.950204 	2014/korea_power_plant_wiper.txt
+0.948704 	2014/ZoxPNG_Full_Analysis-Final.txt
+0.94718 	2015/Elephantosis.txt
+0.935435 	2012/The_Madi_Infostealers.txt
+0.934957 	2014/Vinself_steganography.txt
+0.934769 	2015/volatile-cedar-technical-report.txt
+None
+***********************************************************************************************
+
+
+*************************** 2012/wp_luckycat_redux.txt ****************************************
+Similarity 	Report
+1.0 		2012/wp_luckycat_redux.txt
+0.990302 	2012/wp_the-heartbeat-apt-campaign.txt
+0.988127 	2012/wp_ixeshe.txt
+0.98801 	2013/Safe-a-targeted-threat.txt
+0.982982 	2014/The_Siesta_Campaign.txt
+0.976174 	2014/wp-operation-pawn-storm.txt
+0.966502 	2015/wp-operation-woolen-goldfish.txt
+0.963251 	2014/Gholee_Protective_Edge_themed_spear_phishing_campaign.txt
+0.959496 	2013/2q-report-on-targeted-attack-campaigns.txt
+0.955956 	2015/operation-arid-viper-whitepaper-en.txt
+None
+***********************************************************************************************
+
+
+*************************** 2012/skywiper.txt ****************************************
+Similarity 	Report
+1.0 		2012/skywiper.txt
+0.928835 	2011/Stuxnet_Under_the_Microscope.txt
+0.913897 	2013/miniduke_indicators_public.txt
+0.896834 	2014/Vinself_steganography.txt
+0.89391 	2011/w32_stuxnet_dossier.txt
+0.891213 	2014/korea_power_plant_wiper.txt
+0.886886 	2014/Modified_Binaries_Tor.txt
+0.884948 	2013/winnti-more-than-just-a-game-130410.txt
+0.880048 	2014/Sayad_Flying_Kitten_analysis.txt
+0.878871 	2013/Presentation_Targeted-Attacks_EN.txt
+None
+***********************************************************************************************
+
+
+*************************** 2012/Crypto-DarkComet-Report.txt ****************************************
+Similarity 	Report
+1.0 		2012/Crypto-DarkComet-Report.txt
+0.959798 	2014/Vinself_steganography.txt
+0.950744 	2014/ZoxPNG_Full_Analysis-Final.txt
+0.92313 	2013/Trojan.APT.Seinup.txt
+0.914119 	2012/PEST-CONTROL.txt
+0.910739 	2013/Trojan.APT.BaneChant.txt
+0.909621 	2015/Inception_APT_Analysis_Bluecoat.txt
+0.908114 	2014/Derusbi_Server_Analysis-Final.txt
+0.907687 	2012/IEXPL0RE_RAT.txt
+0.898936 	2014/Compromise_Greece_Beijing.txt
+None
+***********************************************************************************************
+
+
+*************************** 2012/The_Sin_Digoo_Affair.txt ****************************************
+Similarity 	Report
+1.0 		2012/The_Sin_Digoo_Affair.txt
+0.964998 	2013/Mandiant_APT1_Report.txt
+0.96459 	2014/Targeted_Attacks_Lense_NGO.txt
+0.962976 	2013/ETSO_APT_Attacks_Analysis.txt
+0.962492 	2013/Surtr_Malware_Tibetan.txt
+0.961979 	2011/tb_advanced_persistent_threats.txt
+0.961473 	2012/trojan_taidoor-targeting_think_tanks.txt
+0.959502 	2012/The_Mirage_Campaign.txt
+0.958001 	2011/C5_APT_SKHack.txt
+0.954447 	2014/fireeye-operation-saffron-rose.txt
+None
+***********************************************************************************************
+
+
+*************************** 2012/Cyberattack_against_Israeli_and_Palestinian_targets.txt ****************************************
+Similarity 	Report
+1.0 		2012/Cyberattack_against_Israeli_and_Palestinian_targets.txt
+0.955618 	2014/bcs_wp_InceptionReport_EN_v12914.txt
+0.941928 	2011/Palebot_Palestinian_credentials.txt
+0.941555 	2014/El_Machete.txt
+0.935796 	2013/ByeBye_Shell_target.txt
+0.932231 	2014/fireeye-sidewinder-targeted-attack.txt
+0.931809 	2014/apt28.txt
+0.929583 	2012/OSX_SabPub.txt
+0.927839 	2011/wp_dissecting-lurid-apt.txt
+0.927064 	2013/Surtr_Malware_Tibetan.txt
+None
+***********************************************************************************************
+
+
+*************************** 2012/PEST-CONTROL.txt ****************************************
+Similarity 	Report
+1.0 		2012/PEST-CONTROL.txt
+0.925786 	2014/Wiper_Malware.txt
+0.922298 	2015/rpt-behind-the-syria-conflict.txt
+0.921141 	2013/Trojan.APT.Seinup.txt
+0.919736 	2012/w32_flamer_newsforyou.txt
+0.918198 	2010/in-depth_analysis_of_hydraq_final_231538.txt
+0.91519 	2014/Vinself_steganography.txt
+0.915031 	2015/PawnStorm_iOS.txt
+0.914119 	2012/Crypto-DarkComet-Report.txt
+0.912708 	2014/Sayad_Flying_Kitten_analysis.txt
+None
+***********************************************************************************************
+
+
+*************************** 2012/The_Madi_Infostealers.txt ****************************************
+Similarity 	Report
+1.0 		2012/The_Madi_Infostealers.txt
+0.969908 	2014/EvilBunny_Suspect4_v1.0.txt
+0.964382 	2015/Elephantosis.txt
+0.964018 	2014/Sayad_Flying_Kitten_analysis.txt
+0.962197 	2015/volatile-cedar-technical-report.txt
+0.952669 	2010/in-depth_analysis_of_hydraq_final_231538.txt
+0.948976 	2014/Modified_Binaries_Tor.txt
+0.937101 	2013/winnti-more-than-just-a-game-130410.txt
+0.936363 	2013/kaspersky-the-net-traveler-part1-final.txt
+0.935793 	2014/korea_power_plant_wiper.txt
+None
+***********************************************************************************************
+
+
+*************************** 2012/The_Mirage_Campaign.txt ****************************************
+Similarity 	Report
+1.0 		2012/The_Mirage_Campaign.txt
+0.985702 	2014/fireeye-operation-quantum-entanglement.txt
+0.984559 	2013/ETSO_APT_Attacks_Analysis.txt
+0.974668 	2014/ASERT-Threat-Intelligence-Brief-2014-07-Illuminating-Etumbot-APT.txt
+0.972132 	2014/Pitty_Tiger_Final_Report.txt
+0.966623 	2011/C5_APT_SKHack.txt
+0.965387 	2013/C5_APT_C2InTheFifthDomain.txt
+0.965225 	2013/fireeye-poison-ivy-report.txt
+0.961217 	2012/OSX_SabPub.txt
+0.961081 	2012/VOHO_WP_FINAL_READY-FOR-Publication-09242012_AC.txt
+None
+***********************************************************************************************
+
+
+*************************** 2012/WickedRose_andNCPH.txt ****************************************
+Similarity 	Report
+1.0 		2012/WickedRose_andNCPH.txt
+0.976516 	2013/hidden_lynx.txt
+0.964897 	2010/shadows-in-the-cloud.txt
+0.964385 	2011/the_nitro_attacks.txt
+0.962975 	2014/Anunak_APT_against_financial_institutions.txt
+0.96255 	2012/trojan_taidoor-targeting_think_tanks.txt
+0.960179 	2015/Scarab_Russian.txt
+0.953759 	2014/targeted_attacks_against_the_energy_sector.txt
+0.952072 	2013/Mandiant_APT1_Report.txt
+0.951687 	2012/VOHO_WP_FINAL_READY-FOR-Publication-09242012_AC.txt
+None
+***********************************************************************************************
+
+
+*************************** 2012/VOHO_WP_FINAL_READY-FOR-Publication-09242012_AC.txt ****************************************
+Similarity 	Report
+1.0 		2012/VOHO_WP_FINAL_READY-FOR-Publication-09242012_AC.txt
+0.978601 	2014/Micro-Targeted-Malvertising-WP-10-27-14-1.txt
+0.973517 	2014/Operation_CloudyOmega_Ichitaro.txt
+0.967358 	2013/hidden_lynx.txt
+0.962399 	2013/ETSO_APT_Attacks_Analysis.txt
+0.961081 	2012/The_Mirage_Campaign.txt
+0.959544 	2012/trojan_taidoor-targeting_think_tanks.txt
+0.955942 	2011/the_nitro_attacks.txt
+0.954956 	2014/Pitty_Tiger_Final_Report.txt
+0.954307 	2011/tb_advanced_persistent_threats.txt
+None
+***********************************************************************************************
+
+
+*************************** 2012/wp_the-heartbeat-apt-campaign.txt ****************************************
+Similarity 	Report
+1.0 		2012/wp_the-heartbeat-apt-campaign.txt
+0.990408 	2012/wp_ixeshe.txt
+0.990302 	2012/wp_luckycat_redux.txt
+0.989883 	2014/The_Siesta_Campaign.txt
+0.979842 	2015/wp-operation-woolen-goldfish.txt
+0.97838 	2014/wp-operation-pawn-storm.txt
+0.977889 	2013/Safe-a-targeted-threat.txt
+0.962061 	2015/operation-arid-viper-whitepaper-en.txt
+0.960359 	2014/Gholee_Protective_Edge_themed_spear_phishing_campaign.txt
+0.958048 	2013/2q-report-on-targeted-attack-campaigns.txt
+None
+***********************************************************************************************
+
+
+*************************** 2012/w32_flamer_newsforyou.txt ****************************************
+Similarity 	Report
+1.0 		2012/w32_flamer_newsforyou.txt
+0.978204 	2013/winnti-more-than-just-a-game-130410.txt
+0.974945 	2014/bcs_wp_InceptionReport_EN_v12914.txt
+0.972405 	2015/volatile-cedar-technical-report.txt
+0.97023 	2014/darkhotel_kl_07.11.txt
+0.970051 	2013/Kimsuky.txt
+0.967919 	2014/korea_power_plant_wiper.txt
+0.966853 	2010/in-depth_analysis_of_hydraq_final_231538.txt
+0.966311 	2014/TA14-353A_wiper.txt
+0.964992 	2014/Modified_Binaries_Tor.txt
+None
+***********************************************************************************************
+
+
+*************************** 2008/556_10535_798405_Annex87_CyberAttacks.txt ****************************************
+Similarity 	Report
+1.0 		2008/556_10535_798405_Annex87_CyberAttacks.txt
+0.983417 	2013/fireeye-wwc-report.txt
+0.97113 	2014/HPSR SecurityBriefing_Episode16_NorthKorea.txt
+0.960311 	2013/2013-9.txt
+0.95685 	2014/Reuters_Turla.txt
+0.944345 	2012/Crouching_tiger_hidden_dragon.txt
+0.932169 	2014/Sandworm_briefing2.txt
+0.931916 	2015/rpt-southeast-asia-threat-landscape.txt
+0.925738 	2010/shadows-in-the-cloud.txt
+0.918242 	2009/ghostnet.txt
+None
+***********************************************************************************************
+
+
+*************************** 2015/Scarab_Russian.txt ****************************************
+Similarity 	Report
+1.0 		2015/Scarab_Russian.txt
+0.983261 	2011/the_nitro_attacks.txt
+0.976514 	2012/trojan_taidoor-targeting_think_tanks.txt
+0.960179 	2012/WickedRose_andNCPH.txt
+0.960152 	2014/Anunak_APT_against_financial_institutions.txt
+0.957958 	2012/Tibet_Lurk.txt
+0.955181 	2010/shadows-in-the-cloud.txt
+0.954496 	2013/hidden_lynx.txt
+0.94941 	2014/rpt-fin4.txt
+0.94915 	2009/ghostnet.txt
+None
+***********************************************************************************************
+
+
+*************************** 2015/Elephantosis.txt ****************************************
+Similarity 	Report
+1.0 		2015/Elephantosis.txt
+0.985065 	2014/EvilBunny_Suspect4_v1.0.txt
+0.983724 	2014/Sayad_Flying_Kitten_analysis.txt
+0.970804 	2013/kaspersky-the-net-traveler-part1-final.txt
+0.96509 	2015/volatile-cedar-technical-report.txt
+0.964382 	2012/The_Madi_Infostealers.txt
+0.963714 	2013/winnti-more-than-just-a-game-130410.txt
+0.963108 	2010/in-depth_analysis_of_hydraq_final_231538.txt
+0.962955 	2014/Group72_Opening_ZxShell.txt
+0.961376 	2014/Modified_Binaries_Tor.txt
+None
+***********************************************************************************************
+
+
+*************************** 2015/plugx-goes-to-the-registry-and-india.txt ****************************************
+Similarity 	Report
+1.0 		2015/plugx-goes-to-the-registry-and-india.txt
+0.995614 	2014/sophos-rotten-tomato-campaign.txt
+0.975276 	2015/P2P_PlugX_Analysis.txt
+0.964987 	2013/Plugx_Smoaler.txt
+0.906567 	2014/Korplug_Afghanistan_Tajikistan.txt
+0.873559 	2014/roaming_tiger_zeronights_2014.txt
+0.602717 	2014/NetTraveler_Makeover_10th_Birthday.txt
+0.56966 	2015/Inception_APT_Analysis_Bluecoat.txt
+0.56027 	2015/Tibetan-Uprising-Day-Malware-Attacks_websitepdf.txt
+0.553489 	2014/Democracy_HongKong_Under_Attack.txt
+None
+***********************************************************************************************
+
+
+*************************** 2015/waterbug-attack-group.txt ****************************************
+Similarity 	Report
+1.0 		2015/waterbug-attack-group.txt
+0.917124 	2013/RAP002_APT1_Technical_backstage.1.0.txt
+0.851766 	2014/OperationCleaver_The_Notepad_Files.txt
+0.843349 	2015/Inception_APT_Analysis_Bluecoat.txt
+0.83758 	2014/Wiper_Malware.txt
+0.835302 	2014/circl-tr25-analysis-turla-pfinet-snake-uroburos.txt
+0.832905 	2014/w64_regin_stage_1.txt
+0.829925 	2014/w32_regin_stage_1.txt
+0.823504 	2010/in-depth_analysis_of_hydraq_final_231538.txt
+0.821149 	2014/korea_power_plant_wiper.txt
+None
+***********************************************************************************************
+
+
+*************************** 2015/Inside_EquationDrug_Espionage_Platform.txt ****************************************
+Similarity 	Report
+1.0 		2015/Inside_EquationDrug_Espionage_Platform.txt
+0.956483 	2012/kaspersky-lab-gauss.txt
+0.952879 	2014/snake_whitepaper.txt
+0.934704 	2014/Hikit_Analysis-Final.txt
+0.933232 	2015/Elephantosis.txt
+0.925133 	2014/Group72_Opening_ZxShell.txt
+0.916635 	2014/blackenergy_whitepaper.txt
+0.915633 	2013/kaspersky-the-net-traveler-part1-final.txt
+0.908278 	2014/unveilingthemask_v1.0.txt
+0.90707 	2014/BlackEnergy2_Plugins_Router.txt
+None
+***********************************************************************************************
+
+
+*************************** 2015/Project_Cobra_Analysis.txt ****************************************
+Similarity 	Report
+1.0 		2015/Project_Cobra_Analysis.txt
+0.921078 	2014/GData_Uroburos_RedPaper_EN_v1.txt
+0.892461 	2014/The_Uroburos_case.txt
+0.872997 	2014/snake_whitepaper.txt
+0.858487 	2014/blackenergy_whitepaper.txt
+0.853182 	2015/Elephantosis.txt
+0.852426 	2014/EvilBunny_Suspect4_v1.0.txt
+0.851531 	2014/GDATA_TooHash_CaseStudy_102014_EN_v1.txt
+0.846188 	2014/Group72_Opening_ZxShell.txt
+0.845363 	2015/Inside_EquationDrug_Espionage_Platform.txt
+None
+***********************************************************************************************
+
+
+*************************** 2015/wp-operation-woolen-goldfish.txt ****************************************
+Similarity 	Report
+1.0 		2015/wp-operation-woolen-goldfish.txt
+0.989195 	2015/operation-arid-viper-whitepaper-en.txt
+0.980447 	2014/The_Siesta_Campaign.txt
+0.979842 	2012/wp_the-heartbeat-apt-campaign.txt
+0.976893 	2014/wp-operation-pawn-storm.txt
+0.974872 	2012/wp_ixeshe.txt
+0.966964 	2014/Gholee_Protective_Edge_themed_spear_phishing_campaign.txt
+0.966502 	2012/wp_luckycat_redux.txt
+0.960575 	2013/2q-report-on-targeted-attack-campaigns.txt
+0.950999 	2013/Safe-a-targeted-threat.txt
+None
+***********************************************************************************************
+
+
+*************************** 2015/Regin_Hopscotch_Legspin.txt ****************************************
+Similarity 	Report
+1.0 		2015/Regin_Hopscotch_Legspin.txt
+0.970324 	2014/Kaspersky_Lab_whitepaper_Regin_platform_eng.txt
+0.934052 	2014/regin-analysis.txt
+0.901836 	2015/Inside_EquationDrug_Espionage_Platform.txt
+0.900553 	2015/Equation_group_questions_and_answers.txt
+0.879086 	2012/kaspersky-lab-gauss.txt
+0.8707 	2014/Regis_The_Intercept.txt
+0.868377 	2014/BlackEnergy2_Plugins_Router.txt
+0.85748 	2013/kaspersky-the-net-traveler-part1-final.txt
+0.854302 	2015/Elephantosis.txt
+None
+***********************************************************************************************
+
+
+*************************** 2015/volatile-cedar-technical-report.txt ****************************************
+Similarity 	Report
+1.0 		2015/volatile-cedar-technical-report.txt
+0.98206 	2014/Sayad_Flying_Kitten_analysis.txt
+0.975405 	2013/winnti-more-than-just-a-game-130410.txt
+0.972405 	2012/w32_flamer_newsforyou.txt
+0.97203 	2014/EvilBunny_Suspect4_v1.0.txt
+0.970826 	2014/TA14-353A_wiper.txt
+0.970608 	2014/Modified_Binaries_Tor.txt
+0.970478 	2014/bcs_wp_InceptionReport_EN_v12914.txt
+0.965434 	2010/in-depth_analysis_of_hydraq_final_231538.txt
+0.96509 	2015/Elephantosis.txt
+None
+***********************************************************************************************
+
+
+*************************** 2015/operation-arid-viper-whitepaper-en.txt ****************************************
+Similarity 	Report
+1.0 		2015/operation-arid-viper-whitepaper-en.txt
+0.989195 	2015/wp-operation-woolen-goldfish.txt
+0.972112 	2014/Gholee_Protective_Edge_themed_spear_phishing_campaign.txt
+0.971381 	2013/2q-report-on-targeted-attack-campaigns.txt
+0.969643 	2014/The_Siesta_Campaign.txt
+0.968295 	2014/wp-operation-pawn-storm.txt
+0.962061 	2012/wp_the-heartbeat-apt-campaign.txt
+0.961647 	2012/wp_ixeshe.txt
+0.955956 	2012/wp_luckycat_redux.txt
+0.946375 	2013/Safe-a-targeted-threat.txt
+None
+***********************************************************************************************
+
+
+*************************** 2015/Equation_group_questions_and_answers.txt ****************************************
+Similarity 	Report
+1.0 		2015/Equation_group_questions_and_answers.txt
+0.955393 	2014/BlackEnergy2_Plugins_Router.txt
+0.938566 	2013/Securelist_RedOctober.txt
+0.93085 	2014/CloudAtlas_RedOctober_APT.txt
+0.926254 	2014/blackenergy_whitepaper.txt
+0.92519 	2012/kaspersky-lab-gauss.txt
+0.924702 	2013/theteamspystory_final_t2.txt
+0.917993 	2013/winnti-more-than-just-a-game-130410.txt
+0.915974 	2013/Kimsuky.txt
+0.915813 	2014/darkhotel_kl_07.11.txt
+None
+***********************************************************************************************
+
+
+*************************** 2015/NanoCore.txt ****************************************
+Similarity 	Report
+1.0 		2015/NanoCore.txt
+0.922297 	2013/C5_APT_C2InTheFifthDomain.txt
+0.919489 	2014/Pitty_Tiger_Final_Report.txt
+0.905512 	2011/C5_APT_SKHack.txt
+0.904059 	2012/The_Sin_Digoo_Affair.txt
+0.898946 	2012/PEST-CONTROL.txt
+0.895727 	2012/The_Mirage_Campaign.txt
+0.895421 	2012/trojan_taidoor-targeting_think_tanks.txt
+0.890034 	2014/fireeye-operation-quantum-entanglement.txt
+0.888111 	2013/ETSO_APT_Attacks_Analysis.txt
+None
+***********************************************************************************************
+
+
+*************************** 2015/Agent.BTZ_to_ComRAT.txt ****************************************
+Similarity 	Report
+1.0 		2015/Agent.BTZ_to_ComRAT.txt
+0.860985 	2014/Kaspersky_Lab_crouching_yeti_appendixes_eng_final.txt
+0.806477 	2014/The_Uroburos_case.txt
+0.743987 	2014/GData_Uroburos_RedPaper_EN_v1.txt
+0.716062 	2014/ICS_Havex_backdoors.txt
+0.698057 	2015/Project_Cobra_Analysis.txt
+0.697479 	2014/Compromise_Greece_Beijing.txt
+0.680985 	2014/cosmicduke_whitepaper.txt
+0.659646 	2014/EB-YetiJuly2014-Public.txt
+0.646914 	2013/Secrets_of_the_Comfoo_Masters.txt
+None
+***********************************************************************************************
+
+
+*************************** 2015/rpt-behind-the-syria-conflict.txt ****************************************
+Similarity 	Report
+1.0 		2015/rpt-behind-the-syria-conflict.txt
+0.977753 	2014/KL_report_syrian_malware.txt
+0.967505 	2013/19-2013-acalltoharm.txt
+0.963749 	2014/Targeting_Syrian_ISIS_Critics.txt
+0.960386 	2014/sec14-paper-marczak.txt
+0.942893 	2014/Syrian_Malware_Team_BlackWorm.txt
+0.940437 	2013/15-2013-youonlyclicktwice.txt
+0.922298 	2012/PEST-CONTROL.txt
+0.921964 	2012/Cyberattack_against_Israeli_and_Palestinian_targets.txt
+0.919335 	2014/fireeye-sidewinder-targeted-attack.txt
+None
+***********************************************************************************************
+
+
+*************************** 2015/DTL-12012015-01.txt ****************************************
+Similarity 	Report
+1.0 		2015/DTL-12012015-01.txt
+0.956396 	2014/korea_power_plant_wiper.txt
+0.946875 	2015/volatile-cedar-technical-report.txt
+0.944217 	2014/Wiper_Malware.txt
+0.941537 	2014/OperationDoubleTap.txt
+0.940054 	2014/OrcaRAT.txt
+0.939153 	2012/w32_flamer_newsforyou.txt
+0.938924 	2014/ASERT-Threat-Intelligence-Brief-2014-07-Illuminating-Etumbot-APT.txt
+0.936491 	2014/XSLCmd_OSX.txt
+0.935407 	2013/KeyBoy_Vietnam_India.txt
+None
+***********************************************************************************************
+
+
+*************************** 2015/cto-tib-20150223-01a.txt ****************************************
+Similarity 	Report
+1.0 		2015/cto-tib-20150223-01a.txt
+0.939607 	2012/Faces_Ghost_RAT.txt
+0.932745 	2014/pwc_ScanBox_framework.txt
+0.768702 	2013/fireeye-malware-supply-chain.txt
+0.735493 	2014/Alienvault_Scanbox.txt
+0.70182 	2014/XtremeRAT_fireeye.txt
+0.643176 	2015/Anthem_hack_all_roads_lead_to_China.txt
+0.631453 	2014/Targeted_Attacks_Lense_NGO.txt
+0.597139 	2014/tactical-intelligence-bulletin---sofacy-phishing-.txt
+0.594605 	2014/fireeye-operation-saffron-rose.txt
+None
+***********************************************************************************************
+
+
+*************************** 2015/P2P_PlugX_Analysis.txt ****************************************
+Similarity 	Report
+1.0 		2015/P2P_PlugX_Analysis.txt
+0.975276 	2015/plugx-goes-to-the-registry-and-india.txt
+0.97428 	2013/Plugx_Smoaler.txt
+0.967026 	2014/sophos-rotten-tomato-campaign.txt
+0.915192 	2014/Korplug_Afghanistan_Tajikistan.txt
+0.911228 	2014/roaming_tiger_zeronights_2014.txt
+0.708945 	2014/NetTraveler_Makeover_10th_Birthday.txt
+0.646027 	2014/Operation_Poisoned_Handover.txt
+0.630721 	2014/blackenergy_whitepaper.txt
+0.629133 	2014/Democracy_HongKong_Under_Attack.txt
+None
+***********************************************************************************************
+
+
+*************************** 2015/GlobalThreatIntelReport.txt ****************************************
+Similarity 	Report
+1.0 		2015/GlobalThreatIntelReport.txt
+0.95828 	2014/putter-panda.txt
+0.956428 	2014/CrowdStrike_Flying_Kitten.txt
+0.919414 	2014/DEEP_PANDA_Sakula.txt
+0.903035 	2015/Anthem_hack_all_roads_lead_to_China.txt
+0.836515 	2013/Mandiant_APT1_Report.txt
+0.829395 	2014/fireeye-operation-saffron-rose.txt
+0.814549 	2011/tb_advanced_persistent_threats.txt
+0.813466 	2014/Cylance_Operation_Cleaver_Report.txt
+0.812306 	2014/deep-panda-webshells.txt
+None
+***********************************************************************************************
+
+
+*************************** 2015/Carbanak_APT_eng.txt ****************************************
+Similarity 	Report
+1.0 		2015/Carbanak_APT_eng.txt
+0.953059 	2014/fireeye-sidewinder-targeted-attack.txt
+0.943204 	2014/CloudAtlas_RedOctober_APT.txt
+0.942864 	2014/XSLCmd_OSX.txt
+0.941056 	2014/darkhotel_kl_07.11.txt
+0.937057 	2014/bcs_wp_InceptionReport_EN_v12914.txt
+0.935378 	2013/Operation_Molerats.txt
+0.927467 	2014/apt28.txt
+0.92568 	2014/OnionDuke_Tor.txt
+0.924181 	2013/fireeye-operation-ke3chang.txt
+None
+***********************************************************************************************
+
+
+*************************** 2015/Tibetan-Uprising-Day-Malware-Attacks_websitepdf.txt ****************************************
+Similarity 	Report
+1.0 		2015/Tibetan-Uprising-Day-Malware-Attacks_websitepdf.txt
+0.971661 	2012/Tibet_Lurk.txt
+0.949558 	2013/Surtr_Malware_Tibetan.txt
+0.940234 	2014/sec14-paper-hardy.txt
+0.936409 	2009/ghostnet.txt
+0.92826 	2015/Scarab_Russian.txt
+0.927109 	2014/Targeted_Attacks_Lense_NGO.txt
+0.918316 	2012/The_Sin_Digoo_Affair.txt
+0.916187 	2010/shadows-in-the-cloud.txt
+0.906815 	2012/trojan_taidoor-targeting_think_tanks.txt
+None
+***********************************************************************************************
+
+
+*************************** 2015/Skeleton_Key_Analysis.txt ****************************************
+Similarity 	Report
+1.0 		2015/Skeleton_Key_Analysis.txt
+0.938601 	2012/The_Mirage_Campaign.txt
+0.926381 	2013/C5_APT_C2InTheFifthDomain.txt
+0.920817 	2014/fireeye-operation-quantum-entanglement.txt
+0.920357 	2013/ETSO_APT_Attacks_Analysis.txt
+0.919658 	2014/ASERT-Threat-Intelligence-Brief-2014-07-Illuminating-Etumbot-APT.txt
+0.9178 	2011/C5_APT_SKHack.txt
+0.916332 	2015/DTL-12012015-01.txt
+0.915658 	2012/w32_flamer_newsforyou.txt
+0.913986 	2015/Backdoor.Winnti_Trojan.Skelky.txt
+None
+***********************************************************************************************
+
+
+*************************** 2015/Backdoor.Winnti_Trojan.Skelky.txt ****************************************
+Similarity 	Report
+1.0 		2015/Backdoor.Winnti_Trojan.Skelky.txt
+0.963702 	2011/the_nitro_attacks.txt
+0.941714 	2013/hidden_lynx.txt
+0.936553 	2015/Scarab_Russian.txt
+0.932126 	2014/Operation_CloudyOmega_Ichitaro.txt
+0.929836 	2012/VOHO_WP_FINAL_READY-FOR-Publication-09242012_AC.txt
+0.926259 	2011/tb_advanced_persistent_threats.txt
+0.925057 	2014/rpt-fin4.txt
+0.917215 	2013/ETSO_APT_Attacks_Analysis.txt
+0.917108 	2014/PAN_Nitro.txt
+None
+***********************************************************************************************
+
+
+*************************** 2015/PawnStorm_iOS.txt ****************************************
+Similarity 	Report
+1.0 		2015/PawnStorm_iOS.txt
+0.954252 	2013/FireEye-Terminator_RAT.txt
+0.951655 	2013/Trojan.APT.Seinup.txt
+0.945232 	2012/The_Mirage_Campaign.txt
+0.940157 	2013/ETSO_APT_Attacks_Analysis.txt
+0.937829 	2014/fireeye-operation-quantum-entanglement.txt
+0.936467 	2014/ASERT-Threat-Intelligence-Brief-2014-07-Illuminating-Etumbot-APT.txt
+0.93609 	2012/w32_flamer_newsforyou.txt
+0.935173 	2015/volatile-cedar-technical-report.txt
+0.929624 	2014/Gholee_Protective_Edge_themed_spear_phishing_campaign.txt
+None
+***********************************************************************************************
+
+
+*************************** 2015/The-Desert-Falcons-targeted-attacks.txt ****************************************
+Similarity 	Report
+1.0 		2015/The-Desert-Falcons-targeted-attacks.txt
+0.935712 	2014/tactical-intelligence-bulletin---sofacy-phishing-.txt
+0.887232 	2014/The_Monju_Incident.txt
+0.885154 	2014/EB-YetiJuly2014-Public.txt
+0.882361 	2014/El_Machete.txt
+0.866865 	2013/Securelist_RedOctober.txt
+0.846851 	2013/Securelist_RedOctober_Detail.txt
+0.842607 	2014/Micro-Targeted-Malvertising-WP-10-27-14-1.txt
+0.838542 	2014/Cylance_Operation_Cleaver_Report.txt
+0.837231 	2014/Dragonfly_Threat_Against_Western_Energy_Suppliers.txt
+None
+***********************************************************************************************
+
+
+*************************** 2015/rpt-southeast-asia-threat-landscape.txt ****************************************
+Similarity 	Report
+1.0 		2015/rpt-southeast-asia-threat-landscape.txt
+0.954925 	2013/fireeye-wwc-report.txt
+0.945718 	2012/Crouching_tiger_hidden_dragon.txt
+0.943646 	2013/2013-9.txt
+0.942892 	2014/HPSR SecurityBriefing_Episode16_NorthKorea.txt
+0.931916 	2008/556_10535_798405_Annex87_CyberAttacks.txt
+0.911112 	2015/Anthem_hack_all_roads_lead_to_China.txt
+0.899881 	2011/C5_APT_ADecadeInReview.txt
+0.888225 	2010/shadows-in-the-cloud.txt
+0.88312 	2012/WickedRose_andNCPH.txt
+None
+***********************************************************************************************
+
+
+*************************** 2015/Anthem_hack_all_roads_lead_to_China.txt ****************************************
+Similarity 	Report
+1.0 		2015/Anthem_hack_all_roads_lead_to_China.txt
+0.929918 	2014/fireeye-operation-saffron-rose.txt
+0.920416 	2013/Mandiant_APT1_Report.txt
+0.919387 	2011/tb_advanced_persistent_threats.txt
+0.912759 	2013/2013-9.txt
+0.911112 	2015/rpt-southeast-asia-threat-landscape.txt
+0.904487 	2012/Crouching_tiger_hidden_dragon.txt
+0.903381 	2012/WickedRose_andNCPH.txt
+0.903035 	2015/GlobalThreatIntelReport.txt
+0.898199 	2010/shadows-in-the-cloud.txt
+None
+***********************************************************************************************
+
+
+*************************** 2015/Inception_APT_Analysis_Bluecoat.txt ****************************************
+Similarity 	Report
+1.0 		2015/Inception_APT_Analysis_Bluecoat.txt
+0.936961 	2014/ZoxPNG_Full_Analysis-Final.txt
+0.927688 	2014/w64_regin_stage_1.txt
+0.917033 	2014/Derusbi_Server_Analysis-Final.txt
+0.909621 	2012/Crypto-DarkComet-Report.txt
+0.896299 	2014/w32_regin_stage_1.txt
+0.8888 	2013/RAP002_APT1_Technical_backstage.1.0.txt
+0.885961 	2012/IEXPL0RE_RAT.txt
+0.879909 	2014/Vinself_steganography.txt
+0.875328 	2012/The_Madi_Infostealers.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/Hikit_Analysis-Final.txt ****************************************
+Similarity 	Report
+1.0 		2014/Hikit_Analysis-Final.txt
+0.970127 	2014/snake_whitepaper.txt
+0.950283 	2014/Derusbi_Server_Analysis-Final.txt
+0.934704 	2015/Inside_EquationDrug_Espionage_Platform.txt
+0.912098 	2014/Group72_Opening_ZxShell.txt
+0.896274 	2015/Elephantosis.txt
+0.893044 	2011/Stuxnet_Under_the_Microscope.txt
+0.886108 	2014/ZoxPNG_Full_Analysis-Final.txt
+0.879777 	2014/Sayad_Flying_Kitten_analysis.txt
+0.866756 	2014/blackenergy_whitepaper.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/Reuters_Turla.txt ****************************************
+Similarity 	Report
+1.0 		2014/Reuters_Turla.txt
+0.95685 	2008/556_10535_798405_Annex87_CyberAttacks.txt
+0.930561 	2014/Sandworm_briefing2.txt
+0.912113 	2013/2013-9.txt
+0.909908 	2013/fireeye-wwc-report.txt
+0.909883 	2012/Crouching_tiger_hidden_dragon.txt
+0.903206 	2009/ghostnet.txt
+0.898548 	2010/shadows-in-the-cloud.txt
+0.895665 	2014/HPSR SecurityBriefing_Episode16_NorthKorea.txt
+0.872209 	2012/WickedRose_andNCPH.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/Group72_Opening_ZxShell.txt ****************************************
+Similarity 	Report
+1.0 		2014/Group72_Opening_ZxShell.txt
+0.962955 	2015/Elephantosis.txt
+0.937941 	2014/EvilBunny_Suspect4_v1.0.txt
+0.934407 	2014/Sayad_Flying_Kitten_analysis.txt
+0.934252 	2010/in-depth_analysis_of_hydraq_final_231538.txt
+0.928372 	2014/korea_power_plant_wiper.txt
+0.925664 	2015/volatile-cedar-technical-report.txt
+0.925431 	2014/Derusbi_Server_Analysis-Final.txt
+0.925133 	2015/Inside_EquationDrug_Espionage_Platform.txt
+0.92236 	2014/snake_whitepaper.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/XtremeRAT_fireeye.txt ****************************************
+Similarity 	Report
+1.0 		2014/XtremeRAT_fireeye.txt
+0.953568 	2013/fireeye-poison-ivy-report.txt
+0.940385 	2014/fireeye-operation-quantum-entanglement.txt
+0.937299 	2014/fireeye-operation-saffron-rose.txt
+0.930418 	2012/The_Mirage_Campaign.txt
+0.926758 	2012/The_Sin_Digoo_Affair.txt
+0.922656 	2013/fireeye-malware-supply-chain.txt
+0.921493 	2013/ETSO_APT_Attacks_Analysis.txt
+0.919347 	2012/Cyberattack_against_Israeli_and_Palestinian_targets.txt
+0.916028 	2014/Targeted_Attacks_Lense_NGO.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/fireeye-operation-quantum-entanglement.txt ****************************************
+Similarity 	Report
+1.0 		2014/fireeye-operation-quantum-entanglement.txt
+0.985702 	2012/The_Mirage_Campaign.txt
+0.981892 	2013/fireeye-poison-ivy-report.txt
+0.965046 	2014/NYTimes_Attackers_Evolve_Quickly.txt
+0.962835 	2013/C5_APT_C2InTheFifthDomain.txt
+0.960386 	2013/ETSO_APT_Attacks_Analysis.txt
+0.958898 	2014/ASERT-Threat-Intelligence-Brief-2014-07-Illuminating-Etumbot-APT.txt
+0.951175 	2013/FireEye-Terminator_RAT.txt
+0.950754 	2014/Darwin_fav_APT_Group.txt
+0.949759 	2011/C5_APT_SKHack.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/apt28.txt ****************************************
+Similarity 	Report
+1.0 		2014/apt28.txt
+0.976834 	2014/Cylance_Operation_Cleaver_Report.txt
+0.967742 	2013/Mandiant_APT1_Report.txt
+0.967181 	2014/fireeye-operation-saffron-rose.txt
+0.96695 	2014/Anunak_APT_against_financial_institutions.txt
+0.961441 	2013/ETSO_APT_Attacks_Analysis.txt
+0.961054 	2014/darkhotel_kl_07.11.txt
+0.958486 	2014/fireeye-sidewinder-targeted-attack.txt
+0.957125 	2014/bcs_wp_InceptionReport_EN_v12914.txt
+0.951758 	2013/Kimsuky.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/TrapX_ZOMBIE_Report_Final.txt ****************************************
+Similarity 	Report
+1.0 		2014/TrapX_ZOMBIE_Report_Final.txt
+0.906413 	2015/Backdoor.Winnti_Trojan.Skelky.txt
+0.877646 	2013/hidden_lynx.txt
+0.869952 	2011/the_nitro_attacks.txt
+0.867186 	2014/th3bug_Watering_Hole_PoisonIvy.txt
+0.860871 	2014/PAN_Nitro.txt
+0.8453 	2011/C5_APT_ADecadeInReview.txt
+0.844592 	2014/rpt-fin4.txt
+0.833143 	2012/the-elderwood-project.txt
+0.832841 	2014/Operation_CloudyOmega_Ichitaro.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/OperationDoubleTap.txt ****************************************
+Similarity 	Report
+1.0 		2014/OperationDoubleTap.txt
+0.951295 	2014/XSLCmd_OSX.txt
+0.941537 	2015/DTL-12012015-01.txt
+0.935289 	2014/darkhotel_kl_07.11.txt
+0.935217 	2013/ByeBye_Shell_target.txt
+0.931705 	2013/KeyBoy_Vietnam_India.txt
+0.931201 	2014/bcs_wp_InceptionReport_EN_v12914.txt
+0.930902 	2012/The_Mirage_Campaign.txt
+0.929508 	2015/volatile-cedar-technical-report.txt
+0.929366 	2012/VOHO_WP_FINAL_READY-FOR-Publication-09242012_AC.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/Korplug_Afghanistan_Tajikistan.txt ****************************************
+Similarity 	Report
+1.0 		2014/Korplug_Afghanistan_Tajikistan.txt
+0.955014 	2013/Plugx_Smoaler.txt
+0.925194 	2014/sophos-rotten-tomato-campaign.txt
+0.915192 	2015/P2P_PlugX_Analysis.txt
+0.906567 	2015/plugx-goes-to-the-registry-and-india.txt
+0.876033 	2014/roaming_tiger_zeronights_2014.txt
+0.812701 	2015/Tibetan-Uprising-Day-Malware-Attacks_websitepdf.txt
+0.782414 	2014/NetTraveler_Makeover_10th_Birthday.txt
+0.778992 	2014/bcs_wp_InceptionReport_EN_v12914.txt
+0.778405 	2012/Tibet_Lurk.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/tactical-intelligence-bulletin---sofacy-phishing-.txt ****************************************
+Similarity 	Report
+1.0 		2014/tactical-intelligence-bulletin---sofacy-phishing-.txt
+0.935712 	2015/The-Desert-Falcons-targeted-attacks.txt
+0.887367 	2014/The_Monju_Incident.txt
+0.878999 	2014/Micro-Targeted-Malvertising-WP-10-27-14-1.txt
+0.854052 	2014/rpt-fin4.txt
+0.85248 	2014/Dragonfly_Threat_Against_Western_Energy_Suppliers.txt
+0.849682 	2013/hidden_lynx.txt
+0.83324 	2012/VOHO_WP_FINAL_READY-FOR-Publication-09242012_AC.txt
+0.830046 	2012/WickedRose_andNCPH.txt
+0.829946 	2012/the-elderwood-project.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/Op_SnowMan_DeputyDog.txt ****************************************
+Similarity 	Report
+1.0 		2014/Op_SnowMan_DeputyDog.txt
+1.0 	2014/Operation_SnowMan.txt
+0.922946 	2014/Operation_GreedyWonk.txt
+0.894444 	2014/Op_Clandestine_Fox.txt
+0.760261 	2012/the-elderwood-project.txt
+0.757417 	2013/Operation_EphemeralHydra.txt
+0.719843 	2014/OperationDoubleTap.txt
+0.715703 	2014/Operation_CloudyOmega_Ichitaro.txt
+0.714964 	2014/Group_72.txt
+0.69273 	2014/th3bug_Watering_Hole_PoisonIvy.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/darkhotelappendixindicators_kl.txt ****************************************
+Similarity 	Report
+1.0 		2014/darkhotelappendixindicators_kl.txt
+0.909773 	2014/Sayad_Flying_Kitten_analysis.txt
+0.909513 	2014/Vinself_steganography.txt
+0.898978 	2012/kaspersky-lab-gauss.txt
+0.889684 	2014/TA14-353A_wiper.txt
+0.88958 	2014/EvilBunny_Suspect4_v1.0.txt
+0.888711 	2013/kaspersky-the-net-traveler-part1-final.txt
+0.884776 	2014/XSLCmd_OSX.txt
+0.883685 	2014/Modified_Binaries_Tor.txt
+0.883615 	2014/OrcaRAT.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/Chinese_MITM_Google.txt ****************************************
+Similarity 	Report
+1.0 		2014/Chinese_MITM_Google.txt
+0.944451 	2014/ASERT-Threat-Intelligence-Brief-2014-07-Illuminating-Etumbot-APT.txt
+0.939803 	2014/fireeye-operation-quantum-entanglement.txt
+0.937854 	2011/HTran_and_the_Advanced_Persistent_Threat.txt
+0.936313 	2012/The_Mirage_Campaign.txt
+0.930999 	2014/XSLCmd_OSX.txt
+0.924373 	2013/ETSO_APT_Attacks_Analysis.txt
+0.921494 	2013/fireeye-china-chopper-report.txt
+0.920929 	2014/apt28.txt
+0.920584 	2014/darkhotel_kl_07.11.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/ASERT-Threat-Intelligence-Brief-2014-07-Illuminating-Etumbot-APT.txt ****************************************
+Similarity 	Report
+1.0 		2014/ASERT-Threat-Intelligence-Brief-2014-07-Illuminating-Etumbot-APT.txt
+0.974668 	2012/The_Mirage_Campaign.txt
+0.958975 	2013/KeyBoy_Vietnam_India.txt
+0.958898 	2014/fireeye-operation-quantum-entanglement.txt
+0.958246 	2012/OSX_SabPub.txt
+0.956414 	2013/ETSO_APT_Attacks_Analysis.txt
+0.954881 	2014/XSLCmd_OSX.txt
+0.954722 	2014/Pitty_Tiger_Final_Report.txt
+0.953129 	2012/w32_flamer_newsforyou.txt
+0.953088 	2014/darkhotel_kl_07.11.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/targeted_attacks_against_the_energy_sector.txt ****************************************
+Similarity 	Report
+1.0 		2014/targeted_attacks_against_the_energy_sector.txt
+0.963959 	2011/the_nitro_attacks.txt
+0.962848 	2011/C5_APT_ADecadeInReview.txt
+0.953759 	2012/WickedRose_andNCPH.txt
+0.950174 	2013/hidden_lynx.txt
+0.945819 	2015/Scarab_Russian.txt
+0.945717 	2012/trojan_taidoor-targeting_think_tanks.txt
+0.943008 	2014/Anunak_APT_against_financial_institutions.txt
+0.934544 	2014/rpt-fin4.txt
+0.930114 	2014/Micro-Targeted-Malvertising-WP-10-27-14-1.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/Miniduke_twitter.txt ****************************************
+Similarity 	Report
+1.0 		2014/Miniduke_twitter.txt
+0.949192 	2014/cosmicduke_whitepaper.txt
+0.948536 	2013/themysteryofthepdf0-dayassemblermicrobackdoor.txt
+0.942989 	2013/miniduke_indicators_public.txt
+0.930396 	2014/EvilBunny_Suspect4_v1.0.txt
+0.928402 	2013/kaspersky-the-net-traveler-part1-final.txt
+0.926588 	2012/The_Madi_Infostealers.txt
+0.925917 	2014/OnionDuke_Tor.txt
+0.923775 	2013/theteamspystory_final_t2.txt
+0.915808 	2015/Elephantosis.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/Anunak_APT_against_financial_institutions.txt ****************************************
+Similarity 	Report
+1.0 		2014/Anunak_APT_against_financial_institutions.txt
+0.989891 	2013/Mandiant_APT1_Report.txt
+0.989566 	2014/Cylance_Operation_Cleaver_Report.txt
+0.972005 	2010/shadows-in-the-cloud.txt
+0.968183 	2012/trojan_taidoor-targeting_think_tanks.txt
+0.96695 	2014/apt28.txt
+0.9661 	2013/ETSO_APT_Attacks_Analysis.txt
+0.962975 	2012/WickedRose_andNCPH.txt
+0.961887 	2009/ghostnet.txt
+0.961545 	2011/the_nitro_attacks.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/w64_regin_stage_1.txt ****************************************
+Similarity 	Report
+1.0 		2014/w64_regin_stage_1.txt
+0.987787 	2014/w32_regin_stage_1.txt
+0.927688 	2015/Inception_APT_Analysis_Bluecoat.txt
+0.906844 	2014/ZoxPNG_Full_Analysis-Final.txt
+0.902382 	2014/Derusbi_Server_Analysis-Final.txt
+0.894309 	2012/Crypto-DarkComet-Report.txt
+0.888977 	2013/RAP002_APT1_Technical_backstage.1.0.txt
+0.881495 	2014/Vinself_steganography.txt
+0.872142 	2014/Wiper_Malware.txt
+0.861866 	2015/Elephantosis.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/Darwin_fav_APT_Group.txt ****************************************
+Similarity 	Report
+1.0 		2014/Darwin_fav_APT_Group.txt
+0.972138 	2014/NYTimes_Attackers_Evolve_Quickly.txt
+0.955566 	2013/fireeye-poison-ivy-report.txt
+0.951438 	2012/The_Mirage_Campaign.txt
+0.950754 	2014/fireeye-operation-quantum-entanglement.txt
+0.947012 	2013/fireeye-operation-ke3chang.txt
+0.941086 	2014/PAN_Nitro.txt
+0.938986 	2014/operation-poisoned-helmand.txt
+0.938581 	2013/Operation_DeputyDog.txt
+0.936276 	2014/th3bug_Watering_Hole_PoisonIvy.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/FTA_1014_Bots_Machines_and_the_Matrix.txt ****************************************
+Similarity 	Report
+1.0 		2014/FTA_1014_Bots_Machines_and_the_Matrix.txt
+0.991355 	2013/fta-1009---njrat-uncovered-1.txt
+0.988778 	2014/FTA 1011 Follow UP.txt
+0.972198 	2012/FTA 1007 - Shamoon.txt
+0.953459 	2014/FTA 1012 STTEAM Final.txt
+0.953209 	2014/FTA_1013_RAT_in_a_jar.txt
+0.897671 	2014/FTA 1001 FINAL 1.15.14.txt
+0.878324 	2013/FTA 1010 - njRAT The Saga Continues.txt
+0.725778 	2014/Pitty_Tiger_Final_Report.txt
+0.714426 	2014/ASERT-Threat-Intelligence-Brief-2014-07-Illuminating-Etumbot-APT.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/Arachnophobia.md ****************************************
+Similarity 	Report
+1.0 		2014/Arachnophobia.md
+0.953645 	2014/KL_report_syrian_malware.md
+0.789397 	2013/15-2013-youonlyclicktwice.txt
+0.723323 	2014/sec14-paper-marczak.txt
+0.722017 	2014/Syrian_Malware_Team_BlackWorm.txt
+0.719721 	2014/Targeting_Syrian_ISIS_Critics.txt
+0.71071 	2014/KL_report_syrian_malware.txt
+0.657032 	2013/19-2013-acalltoharm.txt
+0.640773 	2014/Reuters_Turla.txt
+0.609775 	2015/rpt-behind-the-syria-conflict.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/darkhotel_kl_07.11.txt ****************************************
+Similarity 	Report
+1.0 		2014/darkhotel_kl_07.11.txt
+0.980284 	2014/XSLCmd_OSX.txt
+0.976587 	2014/bcs_wp_InceptionReport_EN_v12914.txt
+0.974576 	2014/TA14-353A_wiper.txt
+0.971306 	2012/OSX_SabPub.txt
+0.97023 	2012/w32_flamer_newsforyou.txt
+0.970034 	2013/winnti-more-than-just-a-game-130410.txt
+0.969792 	2013/Kimsuky.txt
+0.964164 	2014/CloudAtlas_RedOctober_APT.txt
+0.962936 	2013/KeyBoy_Vietnam_India.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/deep-panda-webshells.txt ****************************************
+Similarity 	Report
+1.0 		2014/deep-panda-webshells.txt
+0.962092 	2014/AdversaryIntelligenceReport_DeepPanda_0 (1).txt
+0.91793 	2014/putter-panda.txt
+0.868951 	2014/DEEP_PANDA_Sakula.txt
+0.837415 	2013/KeyBoy_Vietnam_India.txt
+0.827746 	2014/Sayad_Flying_Kitten_analysis.txt
+0.82586 	2015/Elephantosis.txt
+0.823403 	2014/Wiper_Malware.txt
+0.813931 	2014/TA14-353A_wiper.txt
+0.812358 	2014/ZoxPNG_Full_Analysis-Final.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/The_Epic_Turla_Operation.txt ****************************************
+Similarity 	Report
+1.0 		2014/The_Epic_Turla_Operation.txt
+0.935484 	2014/Turla_2_Penquin.txt
+0.925785 	2014/KL_Epic_Turla_Technical_Appendix_20140806.txt
+0.871664 	2013/icefog.txt
+0.846445 	2014/El_Machete.txt
+0.841095 	2014/BlackEnergy2_Plugins_Router.txt
+0.835485 	2013/Securelist_RedOctober_Detail.txt
+0.834231 	2013/theteamspystory_final_t2.txt
+0.831975 	2013/Securelist_RedOctober.txt
+0.830072 	2013/kaspersky-the-net-traveler-part1-final.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/TA14-353A_wiper.txt ****************************************
+Similarity 	Report
+1.0 		2014/TA14-353A_wiper.txt
+0.974576 	2014/darkhotel_kl_07.11.txt
+0.971804 	2014/XSLCmd_OSX.txt
+0.970826 	2015/volatile-cedar-technical-report.txt
+0.966311 	2012/w32_flamer_newsforyou.txt
+0.962956 	2013/winnti-more-than-just-a-game-130410.txt
+0.961704 	2014/Modified_Binaries_Tor.txt
+0.961164 	2014/Sayad_Flying_Kitten_analysis.txt
+0.960806 	2013/KeyBoy_Vietnam_India.txt
+0.959307 	2013/icefog.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/DEEP_PANDA_Sakula.txt ****************************************
+Similarity 	Report
+1.0 		2014/DEEP_PANDA_Sakula.txt
+0.929508 	2014/CrowdStrike_Flying_Kitten.txt
+0.922049 	2014/putter-panda.txt
+0.919414 	2015/GlobalThreatIntelReport.txt
+0.868951 	2014/deep-panda-webshells.txt
+0.84762 	2014/AdversaryIntelligenceReport_DeepPanda_0 (1).txt
+0.758203 	2015/Anthem_hack_all_roads_lead_to_China.txt
+0.667919 	2014/NYTimes_Attackers_Evolve_Quickly.txt
+0.666873 	2011/tb_advanced_persistent_threats.txt
+0.664762 	2014/fireeye-operation-saffron-rose.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/FTA 1011 Follow UP.txt ****************************************
+Similarity 	Report
+1.0 		2014/FTA 1011 Follow UP.txt
+0.991213 	2013/fta-1009---njrat-uncovered-1.txt
+0.988778 	2014/FTA_1014_Bots_Machines_and_the_Matrix.txt
+0.978615 	2012/FTA 1007 - Shamoon.txt
+0.958004 	2014/FTA 1012 STTEAM Final.txt
+0.924567 	2014/FTA_1013_RAT_in_a_jar.txt
+0.905049 	2014/FTA 1001 FINAL 1.15.14.txt
+0.875619 	2013/FTA 1010 - njRAT The Saga Continues.txt
+0.668278 	2012/The_Madi_Infostealers.txt
+0.661046 	2014/Modified_Binaries_Tor.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/Sayad_Flying_Kitten_analysis.txt ****************************************
+Similarity 	Report
+1.0 		2014/Sayad_Flying_Kitten_analysis.txt
+0.988101 	2014/EvilBunny_Suspect4_v1.0.txt
+0.983724 	2015/Elephantosis.txt
+0.98206 	2015/volatile-cedar-technical-report.txt
+0.967719 	2014/Modified_Binaries_Tor.txt
+0.965081 	2010/in-depth_analysis_of_hydraq_final_231538.txt
+0.964018 	2012/The_Madi_Infostealers.txt
+0.961402 	2013/kaspersky-the-net-traveler-part1-final.txt
+0.961164 	2014/TA14-353A_wiper.txt
+0.95842 	2013/winnti-more-than-just-a-game-130410.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/Compromise_Greece_Beijing.txt ****************************************
+Similarity 	Report
+1.0 		2014/Compromise_Greece_Beijing.txt
+0.93486 	2014/Vinself_steganography.txt
+0.931257 	2014/EvilBunny_Suspect4_v1.0.txt
+0.917759 	2014/Sayad_Flying_Kitten_analysis.txt
+0.907804 	2013/Trojan.APT.Seinup.txt
+0.907366 	2012/PEST-CONTROL.txt
+0.898936 	2012/Crypto-DarkComet-Report.txt
+0.897454 	2012/IEXPL0RE_RAT.txt
+0.892113 	2015/volatile-cedar-technical-report.txt
+0.890361 	2015/DTL-12012015-01.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/XSLCmd_OSX.txt ****************************************
+Similarity 	Report
+1.0 		2014/XSLCmd_OSX.txt
+0.980284 	2014/darkhotel_kl_07.11.txt
+0.971804 	2014/TA14-353A_wiper.txt
+0.968669 	2014/bcs_wp_InceptionReport_EN_v12914.txt
+0.965624 	2014/CloudAtlas_RedOctober_APT.txt
+0.963166 	2013/KeyBoy_Vietnam_India.txt
+0.96132 	2015/volatile-cedar-technical-report.txt
+0.96032 	2014/Modified_Binaries_Tor.txt
+0.960279 	2013/winnti-more-than-just-a-game-130410.txt
+0.956748 	2012/w32_flamer_newsforyou.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/The_Monju_Incident.txt ****************************************
+Similarity 	Report
+1.0 		2014/The_Monju_Incident.txt
+0.941971 	2014/ICS_Havex_backdoors.txt
+0.912228 	2014/EB-YetiJuly2014-Public.txt
+0.887367 	2014/tactical-intelligence-bulletin---sofacy-phishing-.txt
+0.887232 	2015/The-Desert-Falcons-targeted-attacks.txt
+0.784098 	2014/Kaspersky_Lab_crouching_yeti_appendixes_eng_final.txt
+0.776699 	2014/Dragonfly_Threat_Against_Western_Energy_Suppliers.txt
+0.747917 	2014/unveilingthemask_v1.0.txt
+0.707947 	2014/Micro-Targeted-Malvertising-WP-10-27-14-1.txt
+0.6992 	2011/Palebot_Palestinian_credentials.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/The_Uroburos_case.txt ****************************************
+Similarity 	Report
+1.0 		2014/The_Uroburos_case.txt
+0.970619 	2014/GData_Uroburos_RedPaper_EN_v1.txt
+0.892461 	2015/Project_Cobra_Analysis.txt
+0.806477 	2015/Agent.BTZ_to_ComRAT.txt
+0.749311 	2014/Compromise_Greece_Beijing.txt
+0.710399 	2014/GDATA_TooHash_CaseStudy_102014_EN_v1.txt
+0.679363 	2014/snake_whitepaper.txt
+0.643624 	2012/PEST-CONTROL.txt
+0.641897 	2014/NetTraveler_Makeover_10th_Birthday.txt
+0.639892 	2014/Hikit_Analysis-Final.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/AdversaryIntelligenceReport_DeepPanda_0 (1).txt ****************************************
+Similarity 	Report
+1.0 		2014/AdversaryIntelligenceReport_DeepPanda_0 (1).txt
+0.962092 	2014/deep-panda-webshells.txt
+0.874301 	2014/putter-panda.txt
+0.855062 	2014/Derusbi_Server_Analysis-Final.txt
+0.84762 	2014/DEEP_PANDA_Sakula.txt
+0.846409 	2014/snake_whitepaper.txt
+0.8461 	2015/Elephantosis.txt
+0.841339 	2014/Group72_Opening_ZxShell.txt
+0.835097 	2014/Hikit_Analysis-Final.txt
+0.824725 	2014/Sayad_Flying_Kitten_analysis.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/circl-tr25-analysis-turla-pfinet-snake-uroburos.txt ****************************************
+Similarity 	Report
+1.0 		2014/circl-tr25-analysis-turla-pfinet-snake-uroburos.txt
+0.84016 	2014/OperationCleaver_The_Notepad_Files.txt
+0.835302 	2015/waterbug-attack-group.txt
+0.803123 	2013/RAP002_APT1_Technical_backstage.1.0.txt
+0.782213 	2014/w32_regin_stage_1.txt
+0.767876 	2014/w64_regin_stage_1.txt
+0.764244 	2015/Inception_APT_Analysis_Bluecoat.txt
+0.73228 	2014/Turla_2_Penquin.txt
+0.716195 	2014/ZoxPNG_Full_Analysis-Final.txt
+0.689936 	2014/KL_Epic_Turla_Technical_Appendix_20140806.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/BlackEnergy2_Plugins_Router.txt ****************************************
+Similarity 	Report
+1.0 		2014/BlackEnergy2_Plugins_Router.txt
+0.955393 	2015/Equation_group_questions_and_answers.txt
+0.944703 	2014/blackenergy_whitepaper.txt
+0.935082 	2013/theteamspystory_final_t2.txt
+0.934796 	2014/CloudAtlas_RedOctober_APT.txt
+0.927099 	2012/kaspersky-lab-gauss.txt
+0.925971 	2013/kaspersky-the-net-traveler-part1-final.txt
+0.925196 	2013/icefog.txt
+0.915166 	2013/Kimsuky.txt
+0.910461 	2013/Securelist_RedOctober.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/wp-operation-pawn-storm.txt ****************************************
+Similarity 	Report
+1.0 		2014/wp-operation-pawn-storm.txt
+0.97838 	2012/wp_the-heartbeat-apt-campaign.txt
+0.976893 	2015/wp-operation-woolen-goldfish.txt
+0.976174 	2012/wp_luckycat_redux.txt
+0.975561 	2012/wp_ixeshe.txt
+0.9696 	2014/The_Siesta_Campaign.txt
+0.968295 	2015/operation-arid-viper-whitepaper-en.txt
+0.947787 	2013/Safe-a-targeted-threat.txt
+0.938682 	2014/Gholee_Protective_Edge_themed_spear_phishing_campaign.txt
+0.937554 	2013/2q-report-on-targeted-attack-campaigns.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/Targeting_Syrian_ISIS_Critics.txt ****************************************
+Similarity 	Report
+1.0 		2014/Targeting_Syrian_ISIS_Critics.txt
+0.988188 	2014/sec14-paper-marczak.txt
+0.974224 	2014/KL_report_syrian_malware.txt
+0.973816 	2013/15-2013-youonlyclicktwice.txt
+0.963749 	2015/rpt-behind-the-syria-conflict.txt
+0.955954 	2013/19-2013-acalltoharm.txt
+0.938709 	2014/Syrian_Malware_Team_BlackWorm.txt
+0.906546 	2014/sec14-paper-hardy.txt
+0.899597 	2012/Cyberattack_against_Israeli_and_Palestinian_targets.txt
+0.896776 	2009/ghostnet.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/Operation_Poisoned_Hurricane.txt ****************************************
+Similarity 	Report
+1.0 		2014/Operation_Poisoned_Hurricane.txt
+0.9708 	2014/Operation_Poisoned_Handover.txt
+0.946556 	2013/Operation_DeputyDog.txt
+0.937794 	2014/fireeye-operation-quantum-entanglement.txt
+0.934107 	2013/fireeye-poison-ivy-report.txt
+0.933937 	2013/fireeye-operation-ke3chang.txt
+0.923953 	2013/fireeye-china-chopper-report.txt
+0.916996 	2014/Aided_Frame_Aided_Direction.txt
+0.916951 	2012/The_Mirage_Campaign.txt
+0.916904 	2014/NYTimes_Attackers_Evolve_Quickly.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/NYTimes_Attackers_Evolve_Quickly.txt ****************************************
+Similarity 	Report
+1.0 		2014/NYTimes_Attackers_Evolve_Quickly.txt
+0.972138 	2014/Darwin_fav_APT_Group.txt
+0.965046 	2014/fireeye-operation-quantum-entanglement.txt
+0.960671 	2013/fireeye-poison-ivy-report.txt
+0.958915 	2012/The_Mirage_Campaign.txt
+0.944715 	2013/fireeye-operation-ke3chang.txt
+0.944572 	2013/Operation_DeputyDog.txt
+0.93923 	2011/tb_advanced_persistent_threats.txt
+0.936665 	2012/The_Sin_Digoo_Affair.txt
+0.93254 	2013/Safe-a-targeted-threat.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/Operation_Poisoned_Handover.txt ****************************************
+Similarity 	Report
+1.0 		2014/Operation_Poisoned_Handover.txt
+0.9708 	2014/Operation_Poisoned_Hurricane.txt
+0.954318 	2014/Democracy_HongKong_Under_Attack.txt
+0.933993 	2014/operation-poisoned-helmand.txt
+0.911464 	2013/fireeye-poison-ivy-report.txt
+0.911331 	2013/fireeye-operation-ke3chang.txt
+0.911074 	2014/Aided_Frame_Aided_Direction.txt
+0.909576 	2014/PAN_Nitro.txt
+0.902343 	2014/th3bug_Watering_Hole_PoisonIvy.txt
+0.900836 	2013/Operation_DeputyDog.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/CloudAtlas_RedOctober_APT.txt ****************************************
+Similarity 	Report
+1.0 		2014/CloudAtlas_RedOctober_APT.txt
+0.980971 	2014/bcs_wp_InceptionReport_EN_v12914.txt
+0.974322 	2013/Kimsuky.txt
+0.971309 	2013/icefog.txt
+0.965624 	2014/XSLCmd_OSX.txt
+0.964164 	2014/darkhotel_kl_07.11.txt
+0.96237 	2013/theteamspystory_final_t2.txt
+0.960251 	2013/winnti-more-than-just-a-game-130410.txt
+0.959575 	2015/volatile-cedar-technical-report.txt
+0.956588 	2014/OnionDuke_Tor.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/Kaspersky_Lab_crouching_yeti_appendixes_eng_final.txt ****************************************
+Similarity 	Report
+1.0 		2014/Kaspersky_Lab_crouching_yeti_appendixes_eng_final.txt
+0.92371 	2014/EB-YetiJuly2014-Public.txt
+0.884259 	2014/ICS_Havex_backdoors.txt
+0.860985 	2015/Agent.BTZ_to_ComRAT.txt
+0.859905 	2014/unveilingthemask_v1.0.txt
+0.852352 	2014/cosmicduke_whitepaper.txt
+0.83224 	2013/theteamspystory_final_t2.txt
+0.819386 	2014/TA14-353A_wiper.txt
+0.814404 	2014/Sayad_Flying_Kitten_analysis.txt
+0.805648 	2015/volatile-cedar-technical-report.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/Turla_2_Penquin.txt ****************************************
+Similarity 	Report
+1.0 		2014/Turla_2_Penquin.txt
+0.968202 	2014/KL_Epic_Turla_Technical_Appendix_20140806.txt
+0.935484 	2014/The_Epic_Turla_Operation.txt
+0.839057 	2013/kaspersky-the-net-traveler-part1-final.txt
+0.815062 	2013/icefog.txt
+0.81155 	2014/BlackEnergy2_Plugins_Router.txt
+0.79233 	2015/Elephantosis.txt
+0.791349 	2013/theteamspystory_final_t2.txt
+0.788349 	2014/EvilBunny_Suspect4_v1.0.txt
+0.764911 	2014/XSLCmd_OSX.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/Targeted_Attacks_Lense_NGO.txt ****************************************
+Similarity 	Report
+1.0 		2014/Targeted_Attacks_Lense_NGO.txt
+0.971807 	2014/sec14-paper-hardy.txt
+0.96459 	2012/The_Sin_Digoo_Affair.txt
+0.956242 	2012/Tibet_Lurk.txt
+0.94867 	2015/Scarab_Russian.txt
+0.945924 	2010/shadows-in-the-cloud.txt
+0.945291 	2011/the_nitro_attacks.txt
+0.943693 	2012/trojan_taidoor-targeting_think_tanks.txt
+0.942779 	2013/Surtr_Malware_Tibetan.txt
+0.938377 	2009/ghostnet.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/OrcaRAT.txt ****************************************
+Similarity 	Report
+1.0 		2014/OrcaRAT.txt
+0.956037 	2013/Trojan.APT.Seinup.txt
+0.953988 	2014/Vinself_steganography.txt
+0.95308 	2014/LeoUncia_OrcaRat.txt
+0.942184 	2013/fireeye-china-chopper-report.txt
+0.940054 	2015/DTL-12012015-01.txt
+0.939989 	2014/ASERT-Threat-Intelligence-Brief-2014-07-Illuminating-Etumbot-APT.txt
+0.93334 	2014/fireeye-operation-quantum-entanglement.txt
+0.92148 	2013/Trojan.APT.BaneChant.txt
+0.919997 	2014/Chinese_MITM_Google.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/putter-panda.txt ****************************************
+Similarity 	Report
+1.0 		2014/putter-panda.txt
+0.95828 	2015/GlobalThreatIntelReport.txt
+0.932197 	2014/CrowdStrike_Flying_Kitten.txt
+0.922049 	2014/DEEP_PANDA_Sakula.txt
+0.91793 	2014/deep-panda-webshells.txt
+0.874301 	2014/AdversaryIntelligenceReport_DeepPanda_0 (1).txt
+0.856901 	2015/Anthem_hack_all_roads_lead_to_China.txt
+0.839823 	2013/Mandiant_APT1_Report.txt
+0.837692 	2014/Cylance_Operation_Cleaver_Report.txt
+0.837295 	2014/fireeye-operation-saffron-rose.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/KL_report_syrian_malware.md ****************************************
+Similarity 	Report
+1.0 		2014/KL_report_syrian_malware.md
+0.953645 	2014/Arachnophobia.md
+0.700941 	2014/Syrian_Malware_Team_BlackWorm.txt
+0.700194 	2013/15-2013-youonlyclicktwice.txt
+0.625953 	2014/KL_report_syrian_malware.txt
+0.615007 	2014/Targeting_Syrian_ISIS_Critics.txt
+0.608223 	2014/sec14-paper-marczak.txt
+0.576005 	2013/19-2013-acalltoharm.txt
+0.539611 	2013/FTA 1010 - njRAT The Saga Continues.txt
+0.51809 	2015/rpt-behind-the-syria-conflict.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/Democracy_HongKong_Under_Attack.txt ****************************************
+Similarity 	Report
+1.0 		2014/Democracy_HongKong_Under_Attack.txt
+0.956597 	2014/operation-poisoned-helmand.txt
+0.954318 	2014/Operation_Poisoned_Handover.txt
+0.94908 	2014/th3bug_Watering_Hole_PoisonIvy.txt
+0.934585 	2014/PAN_Nitro.txt
+0.913202 	2014/Operation_Poisoned_Hurricane.txt
+0.907407 	2014/Darwin_fav_APT_Group.txt
+0.897993 	2013/fireeye-poison-ivy-report.txt
+0.893976 	2014/Aided_Frame_Aided_Direction.txt
+0.888692 	2013/Operation_DeputyDog.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/FTA_1013_RAT_in_a_jar.pdf.1 ****************************************
+Similarity 	Report
+1.0 		2014/FTA_1013_RAT_in_a_jar.pdf.1
+0.999998 	2013/RAP002_APT1_Technical_backstage.1.0.pdf.1
+0.0631226 	2013/US-13-Yarochkin-In-Depth-Analysis-of-Escalated-APT-Attacks-Slides.txt
+0.0373715 	2012/OSX_SabPub.txt
+0.0347126 	2014/OnionDuke_Tor.txt
+0.0341258 	2014/circl-tr25-analysis-turla-pfinet-snake-uroburos.txt
+0.0317583 	2014/CrowdStrike_Flying_Kitten.txt
+0.0307226 	2013/Trojan.APT.BaneChant.txt
+0.0305418 	2012/Crypto-DarkComet-Report.txt
+0.0302281 	2015/Equation_group_questions_and_answers.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/Operation_SnowMan.txt ****************************************
+Similarity 	Report
+1.0 		2014/Op_SnowMan_DeputyDog.txt
+1.0 	2014/Operation_SnowMan.txt
+0.922946 	2014/Operation_GreedyWonk.txt
+0.894444 	2014/Op_Clandestine_Fox.txt
+0.760261 	2012/the-elderwood-project.txt
+0.757417 	2013/Operation_EphemeralHydra.txt
+0.719843 	2014/OperationDoubleTap.txt
+0.715703 	2014/Operation_CloudyOmega_Ichitaro.txt
+0.714964 	2014/Group_72.txt
+0.69273 	2014/th3bug_Watering_Hole_PoisonIvy.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/Alienvault_Scanbox.txt ****************************************
+Similarity 	Report
+1.0 		2014/Alienvault_Scanbox.txt
+0.888207 	2014/Dragonfly_Threat_Against_Western_Energy_Suppliers.txt
+0.87207 	2012/the-elderwood-project.txt
+0.868057 	2012/VOHO_WP_FINAL_READY-FOR-Publication-09242012_AC.txt
+0.848163 	2014/El_Machete.txt
+0.84029 	2014/Operation_CloudyOmega_Ichitaro.txt
+0.836365 	2014/darkhotel_kl_07.11.txt
+0.831786 	2014/XSLCmd_OSX.txt
+0.830545 	2014/XtremeRAT_fireeye.txt
+0.830539 	2014/operation-poisoned-helmand.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/GDATA_TooHash_CaseStudy_102014_EN_v1.txt ****************************************
+Similarity 	Report
+1.0 		2014/GDATA_TooHash_CaseStudy_102014_EN_v1.txt
+0.96049 	2013/winnti-more-than-just-a-game-130410.txt
+0.956047 	2012/The_Mirage_Campaign.txt
+0.954624 	2014/bcs_wp_InceptionReport_EN_v12914.txt
+0.954472 	2013/ETSO_APT_Attacks_Analysis.txt
+0.952489 	2012/w32_flamer_newsforyou.txt
+0.951483 	2012/OSX_SabPub.txt
+0.948374 	2014/Pitty_Tiger_Final_Report.txt
+0.944405 	2015/volatile-cedar-technical-report.txt
+0.943523 	2014/darkhotel_kl_07.11.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/cosmicduke_whitepaper.txt ****************************************
+Similarity 	Report
+1.0 		2014/cosmicduke_whitepaper.txt
+0.963735 	2014/OnionDuke_Tor.txt
+0.949192 	2014/Miniduke_twitter.txt
+0.937093 	2013/themysteryofthepdf0-dayassemblermicrobackdoor.txt
+0.931764 	2013/theteamspystory_final_t2.txt
+0.9311 	2014/CloudAtlas_RedOctober_APT.txt
+0.927785 	2013/miniduke_indicators_public.txt
+0.927563 	2015/volatile-cedar-technical-report.txt
+0.91648 	2013/icefog.txt
+0.909831 	2014/bcs_wp_InceptionReport_EN_v12914.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/Derusbi_Server_Analysis-Final.txt ****************************************
+Similarity 	Report
+1.0 		2014/Derusbi_Server_Analysis-Final.txt
+0.970931 	2014/ZoxPNG_Full_Analysis-Final.txt
+0.950283 	2014/Hikit_Analysis-Final.txt
+0.928695 	2015/Elephantosis.txt
+0.925431 	2014/Group72_Opening_ZxShell.txt
+0.920315 	2012/IEXPL0RE_RAT.txt
+0.918876 	2014/snake_whitepaper.txt
+0.917033 	2015/Inception_APT_Analysis_Bluecoat.txt
+0.908332 	2014/EvilBunny_Suspect4_v1.0.txt
+0.908114 	2012/Crypto-DarkComet-Report.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/Modified_Binaries_Tor.txt ****************************************
+Similarity 	Report
+1.0 		2014/Modified_Binaries_Tor.txt
+0.981535 	2013/winnti-more-than-just-a-game-130410.txt
+0.970608 	2015/volatile-cedar-technical-report.txt
+0.970367 	2013/Kimsuky.txt
+0.967719 	2014/Sayad_Flying_Kitten_analysis.txt
+0.964992 	2012/w32_flamer_newsforyou.txt
+0.964948 	2014/bcs_wp_InceptionReport_EN_v12914.txt
+0.962779 	2014/EvilBunny_Suspect4_v1.0.txt
+0.961704 	2014/TA14-353A_wiper.txt
+0.961376 	2015/Elephantosis.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/Gholee_Protective_Edge_themed_spear_phishing_campaign.txt ****************************************
+Similarity 	Report
+1.0 		2014/Gholee_Protective_Edge_themed_spear_phishing_campaign.txt
+0.978532 	2013/Safe-a-targeted-threat.txt
+0.972112 	2015/operation-arid-viper-whitepaper-en.txt
+0.970665 	2013/2q-report-on-targeted-attack-campaigns.txt
+0.966964 	2015/wp-operation-woolen-goldfish.txt
+0.963251 	2012/wp_luckycat_redux.txt
+0.960359 	2012/wp_the-heartbeat-apt-campaign.txt
+0.957666 	2014/The_Siesta_Campaign.txt
+0.954826 	2012/wp_ixeshe.txt
+0.945734 	2011/wp_dissecting-lurid-apt.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/Syrian_Malware_Team_BlackWorm.txt ****************************************
+Similarity 	Report
+1.0 		2014/Syrian_Malware_Team_BlackWorm.txt
+0.951266 	2014/KL_report_syrian_malware.txt
+0.946918 	2013/19-2013-acalltoharm.txt
+0.942893 	2015/rpt-behind-the-syria-conflict.txt
+0.93871 	2014/Targeting_Syrian_ISIS_Critics.txt
+0.931831 	2013/15-2013-youonlyclicktwice.txt
+0.916238 	2014/sec14-paper-marczak.txt
+0.820877 	2012/PEST-CONTROL.txt
+0.802991 	2012/Cyberattack_against_Israeli_and_Palestinian_targets.txt
+0.782389 	2015/NanoCore.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/Vinself_steganography.txt ****************************************
+Similarity 	Report
+1.0 		2014/Vinself_steganography.txt
+0.961478 	2013/Trojan.APT.Seinup.txt
+0.959798 	2012/Crypto-DarkComet-Report.txt
+0.955782 	2013/miniduke_indicators_public.txt
+0.953988 	2014/OrcaRAT.txt
+0.94966 	2014/Sayad_Flying_Kitten_analysis.txt
+0.938662 	2014/EvilBunny_Suspect4_v1.0.txt
+0.934957 	2012/IEXPL0RE_RAT.txt
+0.93486 	2014/Compromise_Greece_Beijing.txt
+0.934642 	2014/ZoxPNG_Full_Analysis-Final.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/Operation_GreedyWonk.txt ****************************************
+Similarity 	Report
+1.0 		2014/Operation_GreedyWonk.txt
+0.922946 	2014/Op_SnowMan_DeputyDog.txt
+0.922946 	2014/Operation_SnowMan.txt
+0.8814 	2014/Democracy_HongKong_Under_Attack.txt
+0.86562 	2014/th3bug_Watering_Hole_PoisonIvy.txt
+0.854927 	2012/the-elderwood-project.txt
+0.832941 	2014/operation-poisoned-helmand.txt
+0.815474 	2014/Op_Clandestine_Fox.txt
+0.815402 	2014/Aided_Frame_Aided_Direction.txt
+0.812493 	2014/Operation_CloudyOmega_Ichitaro.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/NetTraveler_Makeover_10th_Birthday.txt ****************************************
+Similarity 	Report
+1.0 		2014/NetTraveler_Makeover_10th_Birthday.txt
+0.894758 	2012/OSX_SabPub.txt
+0.890302 	2014/XSLCmd_OSX.txt
+0.890266 	2013/Kimsuky.txt
+0.888231 	2014/GDATA_TooHash_CaseStudy_102014_EN_v1.txt
+0.88694 	2014/ASERT-Threat-Intelligence-Brief-2014-07-Illuminating-Etumbot-APT.txt
+0.885465 	2014/CloudAtlas_RedOctober_APT.txt
+0.882547 	2014/darkhotel_kl_07.11.txt
+0.879153 	2013/winnti-more-than-just-a-game-130410.txt
+0.874803 	2012/The_Mirage_Campaign.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/korea_power_plant_wiper.txt ****************************************
+Similarity 	Report
+1.0 		2014/korea_power_plant_wiper.txt
+0.971474 	2010/in-depth_analysis_of_hydraq_final_231538.txt
+0.967919 	2012/w32_flamer_newsforyou.txt
+0.961177 	2015/volatile-cedar-technical-report.txt
+0.956396 	2015/DTL-12012015-01.txt
+0.951672 	2013/winnti-more-than-just-a-game-130410.txt
+0.950382 	2014/Wiper_Malware.txt
+0.950204 	2012/IEXPL0RE_RAT.txt
+0.94867 	2014/EvilBunny_Suspect4_v1.0.txt
+0.948094 	2014/Modified_Binaries_Tor.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/FTA 1001 FINAL 1.15.14.txt ****************************************
+Similarity 	Report
+1.0 		2014/FTA 1001 FINAL 1.15.14.txt
+0.905049 	2014/FTA 1011 Follow UP.txt
+0.897692 	2012/FTA 1007 - Shamoon.txt
+0.897671 	2014/FTA_1014_Bots_Machines_and_the_Matrix.txt
+0.875842 	2013/kaspersky-the-net-traveler-part1-final.txt
+0.873603 	2013/theteamspystory_final_t2.txt
+0.867135 	2014/Modified_Binaries_Tor.txt
+0.866196 	2013/fta-1009---njrat-uncovered-1.txt
+0.860072 	2014/EvilBunny_Suspect4_v1.0.txt
+0.855579 	2012/The_Madi_Infostealers.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/ThreatConnect_Operation_Arachnophobia_Report.txt ****************************************
+Similarity 	Report
+1.0 		2014/ThreatConnect_Operation_Arachnophobia_Report.txt
+0.955703 	2013/Inside_Report_by_Infosec_Consortium.txt
+0.942143 	2012/The_Sin_Digoo_Affair.txt
+0.937642 	2013/India_Pak_Tranchulas.txt
+0.92857 	2014/apt28.txt
+0.928426 	2013/Mandiant_APT1_Report.txt
+0.928319 	2013/ByeBye_Shell_target.txt
+0.926057 	2012/The_Mirage_Campaign.txt
+0.92292 	2014/fireeye-operation-saffron-rose.txt
+0.919459 	2014/Cylance_Operation_Cleaver_Report.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/Sandworm_briefing2.txt ****************************************
+Similarity 	Report
+1.0 		2014/Sandworm_briefing2.txt
+0.943312 	2014/Anunak_APT_against_financial_institutions.txt
+0.935509 	2012/WickedRose_andNCPH.txt
+0.932169 	2008/556_10535_798405_Annex87_CyberAttacks.txt
+0.930745 	2010/shadows-in-the-cloud.txt
+0.930561 	2014/Reuters_Turla.txt
+0.924836 	2013/Mandiant_APT1_Report.txt
+0.918683 	2015/Scarab_Russian.txt
+0.918173 	2014/Cylance_Operation_Cleaver_Report.txt
+0.916438 	2013/2013-9.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/El_Machete.txt ****************************************
+Similarity 	Report
+1.0 		2014/El_Machete.txt
+0.97096 	2013/Securelist_RedOctober.txt
+0.964664 	2013/Securelist_RedOctober_Detail.txt
+0.953832 	2011/wp_dissecting-lurid-apt.txt
+0.952356 	2014/bcs_wp_InceptionReport_EN_v12914.txt
+0.952256 	2014/fireeye-sidewinder-targeted-attack.txt
+0.942093 	2014/darkhotel_kl_07.11.txt
+0.941555 	2012/Cyberattack_against_Israeli_and_Palestinian_targets.txt
+0.938789 	2012/OSX_SabPub.txt
+0.934915 	2013/icefog.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/roaming_tiger_zeronights_2014.txt ****************************************
+Similarity 	Report
+1.0 		2014/roaming_tiger_zeronights_2014.txt
+0.911228 	2015/P2P_PlugX_Analysis.txt
+0.886404 	2014/sophos-rotten-tomato-campaign.txt
+0.878483 	2013/Plugx_Smoaler.txt
+0.876033 	2014/Korplug_Afghanistan_Tajikistan.txt
+0.873559 	2015/plugx-goes-to-the-registry-and-india.txt
+0.791163 	2014/NetTraveler_Makeover_10th_Birthday.txt
+0.789186 	2014/Operation_Poisoned_Handover.txt
+0.781923 	2014/Democracy_HongKong_Under_Attack.txt
+0.70729 	2014/Operation_Poisoned_Hurricane.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/EvilBunny_Suspect4_v1.0.txt ****************************************
+Similarity 	Report
+1.0 		2014/EvilBunny_Suspect4_v1.0.txt
+0.988101 	2014/Sayad_Flying_Kitten_analysis.txt
+0.985065 	2015/Elephantosis.txt
+0.97203 	2015/volatile-cedar-technical-report.txt
+0.969908 	2012/The_Madi_Infostealers.txt
+0.969519 	2012/IEXPL0RE_RAT.txt
+0.96873 	2013/kaspersky-the-net-traveler-part1-final.txt
+0.967398 	2010/in-depth_analysis_of_hydraq_final_231538.txt
+0.962779 	2014/Modified_Binaries_Tor.txt
+0.94867 	2014/korea_power_plant_wiper.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/rpt-fin4.txt ****************************************
+Similarity 	Report
+1.0 		2014/rpt-fin4.txt
+0.970778 	2011/the_nitro_attacks.txt
+0.962822 	2013/hidden_lynx.txt
+0.960319 	2012/trojan_taidoor-targeting_think_tanks.txt
+0.95445 	2014/Micro-Targeted-Malvertising-WP-10-27-14-1.txt
+0.950545 	2011/tb_advanced_persistent_threats.txt
+0.94941 	2015/Scarab_Russian.txt
+0.944261 	2012/The_Sin_Digoo_Affair.txt
+0.941916 	2013/Mandiant_APT1_Report.txt
+0.94153 	2014/Anunak_APT_against_financial_institutions.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/HPSR SecurityBriefing_Episode16_NorthKorea.txt ****************************************
+Similarity 	Report
+1.0 		2014/HPSR SecurityBriefing_Episode16_NorthKorea.txt
+0.978419 	2013/fireeye-wwc-report.txt
+0.97113 	2008/556_10535_798405_Annex87_CyberAttacks.txt
+0.962554 	2013/2013-9.txt
+0.946385 	2012/Crouching_tiger_hidden_dragon.txt
+0.942892 	2015/rpt-southeast-asia-threat-landscape.txt
+0.896443 	2009/ghostnet.txt
+0.895665 	2014/Reuters_Turla.txt
+0.891982 	2010/shadows-in-the-cloud.txt
+0.886202 	2015/Anthem_hack_all_roads_lead_to_China.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/snake_whitepaper.txt ****************************************
+Similarity 	Report
+1.0 		2014/snake_whitepaper.txt
+0.970127 	2014/Hikit_Analysis-Final.txt
+0.952879 	2015/Inside_EquationDrug_Espionage_Platform.txt
+0.92236 	2014/Group72_Opening_ZxShell.txt
+0.918876 	2014/Derusbi_Server_Analysis-Final.txt
+0.914346 	2014/blackenergy_whitepaper.txt
+0.911563 	2015/Elephantosis.txt
+0.90665 	2011/Stuxnet_Under_the_Microscope.txt
+0.881478 	2012/kaspersky-lab-gauss.txt
+0.872997 	2015/Project_Cobra_Analysis.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/Regis_The_Intercept.txt ****************************************
+Similarity 	Report
+1.0 		2014/Regis_The_Intercept.txt
+0.966312 	2014/regin-analysis.txt
+0.941518 	2014/Kaspersky_Lab_whitepaper_Regin_platform_eng.txt
+0.8707 	2015/Regin_Hopscotch_Legspin.txt
+0.802759 	2015/Equation_group_questions_and_answers.txt
+0.741503 	2014/w32_regin_stage_1.txt
+0.715205 	2014/w64_regin_stage_1.txt
+0.683035 	2015/Inside_EquationDrug_Espionage_Platform.txt
+0.680539 	2014/BlackEnergy2_Plugins_Router.txt
+0.672503 	2013/winnti-more-than-just-a-game-130410.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/sec14-paper-hardy.txt ****************************************
+Similarity 	Report
+1.0 		2014/sec14-paper-hardy.txt
+0.971807 	2014/Targeted_Attacks_Lense_NGO.txt
+0.970019 	2009/ghostnet.txt
+0.964145 	2010/shadows-in-the-cloud.txt
+0.957389 	2012/Tibet_Lurk.txt
+0.951048 	2012/The_Sin_Digoo_Affair.txt
+0.941366 	2015/Scarab_Russian.txt
+0.940234 	2015/Tibetan-Uprising-Day-Malware-Attacks_websitepdf.txt
+0.935498 	2012/trojan_taidoor-targeting_think_tanks.txt
+0.9325 	2012/WickedRose_andNCPH.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/regin-analysis.txt ****************************************
+Similarity 	Report
+1.0 		2014/regin-analysis.txt
+0.976746 	2014/Kaspersky_Lab_whitepaper_Regin_platform_eng.txt
+0.966312 	2014/Regis_The_Intercept.txt
+0.934052 	2015/Regin_Hopscotch_Legspin.txt
+0.835961 	2014/w32_regin_stage_1.txt
+0.824401 	2014/w64_regin_stage_1.txt
+0.817773 	2015/Equation_group_questions_and_answers.txt
+0.792864 	2015/Inside_EquationDrug_Espionage_Platform.txt
+0.73638 	2012/kaspersky-lab-gauss.txt
+0.734201 	2014/snake_whitepaper.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/fireeye-operation-saffron-rose.txt ****************************************
+Similarity 	Report
+1.0 		2014/fireeye-operation-saffron-rose.txt
+0.970881 	2014/Cylance_Operation_Cleaver_Report.txt
+0.967181 	2014/apt28.txt
+0.965336 	2013/Mandiant_APT1_Report.txt
+0.961078 	2014/Anunak_APT_against_financial_institutions.txt
+0.954447 	2012/The_Sin_Digoo_Affair.txt
+0.950854 	2012/WickedRose_andNCPH.txt
+0.946454 	2011/tb_advanced_persistent_threats.txt
+0.941524 	2010/shadows-in-the-cloud.txt
+0.939498 	2013/ETSO_APT_Attacks_Analysis.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/fireeye-sidewinder-targeted-attack.txt ****************************************
+Similarity 	Report
+1.0 		2014/fireeye-sidewinder-targeted-attack.txt
+0.970184 	2014/bcs_wp_InceptionReport_EN_v12914.txt
+0.961639 	2014/darkhotel_kl_07.11.txt
+0.958486 	2014/apt28.txt
+0.957991 	2014/Cylance_Operation_Cleaver_Report.txt
+0.955461 	2013/ETSO_APT_Attacks_Analysis.txt
+0.953059 	2015/Carbanak_APT_eng.txt
+0.952256 	2014/El_Machete.txt
+0.951801 	2014/XSLCmd_OSX.txt
+0.949365 	2013/Kimsuky.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/FTA_1013_RAT_in_a_jar.txt ****************************************
+Similarity 	Report
+1.0 		2014/FTA_1013_RAT_in_a_jar.txt
+0.953209 	2014/FTA_1014_Bots_Machines_and_the_Matrix.txt
+0.95107 	2013/fta-1009---njrat-uncovered-1.txt
+0.924567 	2014/FTA 1011 Follow UP.txt
+0.924031 	2012/FTA 1007 - Shamoon.txt
+0.899928 	2013/FTA 1010 - njRAT The Saga Continues.txt
+0.878488 	2014/FTA 1012 STTEAM Final.txt
+0.784647 	2014/FTA 1001 FINAL 1.15.14.txt
+0.76109 	2014/Pitty_Tiger_Final_Report.txt
+0.757969 	2013/comment_crew_indicators_of_compromise.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/ICS_Havex_backdoors.txt ****************************************
+Similarity 	Report
+1.0 		2014/ICS_Havex_backdoors.txt
+0.941971 	2014/The_Monju_Incident.txt
+0.913102 	2014/EB-YetiJuly2014-Public.txt
+0.884259 	2014/Kaspersky_Lab_crouching_yeti_appendixes_eng_final.txt
+0.835885 	2014/Dragonfly_Threat_Against_Western_Energy_Suppliers.txt
+0.827276 	2014/tactical-intelligence-bulletin---sofacy-phishing-.txt
+0.817207 	2015/The-Desert-Falcons-targeted-attacks.txt
+0.733941 	2014/Micro-Targeted-Malvertising-WP-10-27-14-1.txt
+0.727898 	2014/unveilingthemask_v1.0.txt
+0.726968 	2014/TA14-353A_wiper.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/Group_72.txt ****************************************
+Similarity 	Report
+1.0 		2014/Group_72.txt
+0.956143 	2013/hidden_lynx.txt
+0.937404 	2012/WickedRose_andNCPH.txt
+0.934956 	2011/tb_advanced_persistent_threats.txt
+0.934946 	2012/VOHO_WP_FINAL_READY-FOR-Publication-09242012_AC.txt
+0.932323 	2014/NYTimes_Attackers_Evolve_Quickly.txt
+0.931884 	2014/Operation_CloudyOmega_Ichitaro.txt
+0.921623 	2014/Pitty_Tiger_Final_Report.txt
+0.920692 	2013/fireeye-poison-ivy-report.txt
+0.918899 	2014/rpt-fin4.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/KL_report_syrian_malware.txt ****************************************
+Similarity 	Report
+1.0 		2014/KL_report_syrian_malware.txt
+0.985294 	2013/19-2013-acalltoharm.txt
+0.977753 	2015/rpt-behind-the-syria-conflict.txt
+0.974224 	2014/Targeting_Syrian_ISIS_Critics.txt
+0.971995 	2014/sec14-paper-marczak.txt
+0.959934 	2013/15-2013-youonlyclicktwice.txt
+0.951266 	2014/Syrian_Malware_Team_BlackWorm.txt
+0.920658 	2012/Cyberattack_against_Israeli_and_Palestinian_targets.txt
+0.898206 	2014/fireeye-sidewinder-targeted-attack.txt
+0.893425 	2011/Palebot_Palestinian_credentials.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/FTA 1012 STTEAM Final.txt ****************************************
+Similarity 	Report
+1.0 		2014/FTA 1012 STTEAM Final.txt
+0.969871 	2013/fta-1009---njrat-uncovered-1.txt
+0.958004 	2014/FTA 1011 Follow UP.txt
+0.953459 	2014/FTA_1014_Bots_Machines_and_the_Matrix.txt
+0.906544 	2012/FTA 1007 - Shamoon.txt
+0.878488 	2014/FTA_1013_RAT_in_a_jar.txt
+0.870622 	2013/FTA 1010 - njRAT The Saga Continues.txt
+0.819171 	2014/FTA 1001 FINAL 1.15.14.txt
+0.558696 	2014/ASERT-Threat-Intelligence-Brief-2014-07-Illuminating-Etumbot-APT.txt
+0.552885 	2013/KeyBoy_Vietnam_India.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/Kaspersky_Lab_whitepaper_Regin_platform_eng.txt ****************************************
+Similarity 	Report
+1.0 		2014/Kaspersky_Lab_whitepaper_Regin_platform_eng.txt
+0.976746 	2014/regin-analysis.txt
+0.970324 	2015/Regin_Hopscotch_Legspin.txt
+0.941518 	2014/Regis_The_Intercept.txt
+0.883449 	2015/Equation_group_questions_and_answers.txt
+0.856461 	2015/Inside_EquationDrug_Espionage_Platform.txt
+0.832017 	2014/BlackEnergy2_Plugins_Router.txt
+0.813168 	2012/kaspersky-lab-gauss.txt
+0.805727 	2014/w32_regin_stage_1.txt
+0.799365 	2014/w64_regin_stage_1.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/Cylance_Operation_Cleaver_Report.txt ****************************************
+Similarity 	Report
+1.0 		2014/Cylance_Operation_Cleaver_Report.txt
+0.989566 	2014/Anunak_APT_against_financial_institutions.txt
+0.98193 	2013/Mandiant_APT1_Report.txt
+0.976834 	2014/apt28.txt
+0.970881 	2014/fireeye-operation-saffron-rose.txt
+0.968066 	2013/dissecting-operation-troy.txt
+0.966233 	2013/ETSO_APT_Attacks_Analysis.txt
+0.957991 	2014/fireeye-sidewinder-targeted-attack.txt
+0.957886 	2012/trojan_taidoor-targeting_think_tanks.txt
+0.957321 	2014/Micro-Targeted-Malvertising-WP-10-27-14-1.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/sophos-rotten-tomato-campaign.txt ****************************************
+Similarity 	Report
+1.0 		2014/sophos-rotten-tomato-campaign.txt
+0.995614 	2015/plugx-goes-to-the-registry-and-india.txt
+0.967026 	2015/P2P_PlugX_Analysis.txt
+0.964279 	2013/Plugx_Smoaler.txt
+0.925194 	2014/Korplug_Afghanistan_Tajikistan.txt
+0.886404 	2014/roaming_tiger_zeronights_2014.txt
+0.614042 	2014/NetTraveler_Makeover_10th_Birthday.txt
+0.596724 	2015/Tibetan-Uprising-Day-Malware-Attacks_websitepdf.txt
+0.583601 	2014/Democracy_HongKong_Under_Attack.txt
+0.560903 	2014/Operation_Poisoned_Handover.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/Aided_Frame_Aided_Direction.txt ****************************************
+Similarity 	Report
+1.0 		2014/Aided_Frame_Aided_Direction.txt
+0.93616 	2013/fireeye-operation-ke3chang.txt
+0.921235 	2013/Operation_DeputyDog.txt
+0.917398 	2014/th3bug_Watering_Hole_PoisonIvy.txt
+0.916996 	2014/Operation_Poisoned_Hurricane.txt
+0.911074 	2014/Operation_Poisoned_Handover.txt
+0.909979 	2013/fireeye-poison-ivy-report.txt
+0.90798 	2014/PAN_Nitro.txt
+0.893976 	2014/Democracy_HongKong_Under_Attack.txt
+0.891115 	2014/Darwin_fav_APT_Group.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/Wiper_Malware.txt ****************************************
+Similarity 	Report
+1.0 		2014/Wiper_Malware.txt
+0.950382 	2014/korea_power_plant_wiper.txt
+0.944217 	2015/DTL-12012015-01.txt
+0.93618 	2013/Trojan.APT.Seinup.txt
+0.934698 	2010/in-depth_analysis_of_hydraq_final_231538.txt
+0.930423 	2012/w32_flamer_newsforyou.txt
+0.927399 	2014/Vinself_steganography.txt
+0.925786 	2012/PEST-CONTROL.txt
+0.914625 	2014/Sayad_Flying_Kitten_analysis.txt
+0.914536 	2015/volatile-cedar-technical-report.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/unveilingthemask_v1.0.txt ****************************************
+Similarity 	Report
+1.0 		2014/unveilingthemask_v1.0.txt
+0.957067 	2012/kaspersky-lab-gauss.txt
+0.930097 	2013/kaspersky-the-net-traveler-part1-final.txt
+0.923467 	2014/EB-YetiJuly2014-Public.txt
+0.915516 	2013/theteamspystory_final_t2.txt
+0.908278 	2015/Inside_EquationDrug_Espionage_Platform.txt
+0.899911 	2013/icefog.txt
+0.8903 	2014/BlackEnergy2_Plugins_Router.txt
+0.888497 	2015/Equation_group_questions_and_answers.txt
+0.886992 	2015/Elephantosis.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/h12756-wp-shell-crew.txt ****************************************
+/usr/lib/python2.7/dist-packages/scipy/sparse/compressed.py:122: UserWarning: indices array has non-integer dtype (float64)
+  % self.indices.dtype.name )
+Similarity 	Report
+0.0 		2010/Aurora_Botnet_Command_Structure.txt
+0.0 	2010/WhitePaper HBGary Threat Report, Operation Aurora.txt
+0.0 	2010/shadows-in-the-cloud.txt
+0.0 	2010/MSUpdaterTrojanWhitepaper.txt
+0.0 	2010/Aurora_HBGARY_DRAFT.txt
+0.0 	2010/Combating Threats - Operation Aurora.txt
+0.0 	2010/Case_Study_Operation_Aurora_V11.txt
+0.0 	2010/how_can_u_tell_Aurora.txt
+0.0 	2010/in-depth_analysis_of_hydraq_final_231538.txt
+0.0 	2012/FTA 1007 - Shamoon.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/w32_regin_stage_1.txt ****************************************
+Similarity 	Report
+1.0 		2014/w32_regin_stage_1.txt
+0.987787 	2014/w64_regin_stage_1.txt
+0.896299 	2015/Inception_APT_Analysis_Bluecoat.txt
+0.871909 	2013/RAP002_APT1_Technical_backstage.1.0.txt
+0.85628 	2014/OperationCleaver_The_Notepad_Files.txt
+0.849899 	2014/Derusbi_Server_Analysis-Final.txt
+0.849457 	2014/ZoxPNG_Full_Analysis-Final.txt
+0.835961 	2014/regin-analysis.txt
+0.834679 	2012/Crypto-DarkComet-Report.txt
+0.833928 	2015/Regin_Hopscotch_Legspin.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/CrowdStrike_Flying_Kitten.txt ****************************************
+Similarity 	Report
+1.0 		2014/CrowdStrike_Flying_Kitten.txt
+0.956428 	2015/GlobalThreatIntelReport.txt
+0.932197 	2014/putter-panda.txt
+0.929508 	2014/DEEP_PANDA_Sakula.txt
+0.87789 	2015/Anthem_hack_all_roads_lead_to_China.txt
+0.839556 	2014/rpt-fin4.txt
+0.833594 	2014/Group_72.txt
+0.829006 	2011/tb_advanced_persistent_threats.txt
+0.819127 	2014/fireeye-operation-saffron-rose.txt
+0.81609 	2014/NYTimes_Attackers_Evolve_Quickly.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/KL_Epic_Turla_Technical_Appendix_20140806.txt ****************************************
+Similarity 	Report
+1.0 		2014/KL_Epic_Turla_Technical_Appendix_20140806.txt
+0.968202 	2014/Turla_2_Penquin.txt
+0.925785 	2014/The_Epic_Turla_Operation.txt
+0.910784 	2013/kaspersky-the-net-traveler-part1-final.txt
+0.876748 	2013/icefog.txt
+0.865185 	2013/theteamspystory_final_t2.txt
+0.86425 	2014/BlackEnergy2_Plugins_Router.txt
+0.849297 	2012/kaspersky-lab-gauss.txt
+0.846457 	2015/Elephantosis.txt
+0.844668 	2014/EvilBunny_Suspect4_v1.0.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/LeoUncia_OrcaRat.txt ****************************************
+Similarity 	Report
+1.0 		2014/LeoUncia_OrcaRat.txt
+0.95308 	2014/OrcaRAT.txt
+0.925394 	2014/Vinself_steganography.txt
+0.904814 	2013/fireeye-china-chopper-report.txt
+0.903377 	2013/Trojan.APT.Seinup.txt
+0.895661 	2013/Trojan.APT.BaneChant.txt
+0.886572 	2013/miniduke_indicators_public.txt
+0.87359 	2014/darkhotelappendixindicators_kl.txt
+0.873325 	2012/Crypto-DarkComet-Report.txt
+0.859258 	2013/FireEye-Terminator_RAT.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/Micro-Targeted-Malvertising-WP-10-27-14-1.txt ****************************************
+Similarity 	Report
+1.0 		2014/Micro-Targeted-Malvertising-WP-10-27-14-1.txt
+0.978601 	2012/VOHO_WP_FINAL_READY-FOR-Publication-09242012_AC.txt
+0.968125 	2013/hidden_lynx.txt
+0.968036 	2012/trojan_taidoor-targeting_think_tanks.txt
+0.963248 	2011/tb_advanced_persistent_threats.txt
+0.961796 	2011/the_nitro_attacks.txt
+0.957321 	2014/Cylance_Operation_Cleaver_Report.txt
+0.95727 	2013/dissecting-operation-troy.txt
+0.95445 	2014/rpt-fin4.txt
+0.951665 	2014/Anunak_APT_against_financial_institutions.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/OperationCleaver_The_Notepad_Files.txt ****************************************
+Similarity 	Report
+1.0 		2014/OperationCleaver_The_Notepad_Files.txt
+0.953216 	2013/RAP002_APT1_Technical_backstage.1.0.txt
+0.85628 	2014/w32_regin_stage_1.txt
+0.851766 	2015/waterbug-attack-group.txt
+0.851717 	2015/Inception_APT_Analysis_Bluecoat.txt
+0.846752 	2014/w64_regin_stage_1.txt
+0.84016 	2014/circl-tr25-analysis-turla-pfinet-snake-uroburos.txt
+0.803609 	2012/Crypto-DarkComet-Report.txt
+0.754604 	2014/ZoxPNG_Full_Analysis-Final.txt
+0.739579 	2014/Derusbi_Server_Analysis-Final.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/Pitty_Tiger_Final_Report.txt ****************************************
+Similarity 	Report
+1.0 		2014/Pitty_Tiger_Final_Report.txt
+0.972132 	2012/The_Mirage_Campaign.txt
+0.961286 	2013/Mandiant_APT1_Report.txt
+0.958508 	2011/tb_advanced_persistent_threats.txt
+0.957888 	2013/ETSO_APT_Attacks_Analysis.txt
+0.954956 	2012/VOHO_WP_FINAL_READY-FOR-Publication-09242012_AC.txt
+0.954722 	2014/ASERT-Threat-Intelligence-Brief-2014-07-Illuminating-Etumbot-APT.txt
+0.954189 	2011/C5_APT_SKHack.txt
+0.95211 	2014/Anunak_APT_against_financial_institutions.txt
+0.949819 	2011/HTran_and_the_Advanced_Persistent_Threat.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/pwc_ScanBox_framework.txt ****************************************
+Similarity 	Report
+1.0 		2014/pwc_ScanBox_framework.txt
+0.993566 	2012/Faces_Ghost_RAT.txt
+0.932745 	2015/cto-tib-20150223-01a.txt
+0.603976 	2013/fireeye-malware-supply-chain.txt
+0.512744 	2014/Alienvault_Scanbox.txt
+0.476575 	2014/XtremeRAT_fireeye.txt
+0.377395 	2014/Targeted_Attacks_Lense_NGO.txt
+0.357229 	2015/Anthem_hack_all_roads_lead_to_China.txt
+0.325707 	2013/fireeye-poison-ivy-report.txt
+0.306268 	2014/tactical-intelligence-bulletin---sofacy-phishing-.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/Dragonfly_Threat_Against_Western_Energy_Suppliers.txt ****************************************
+Similarity 	Report
+1.0 		2014/Dragonfly_Threat_Against_Western_Energy_Suppliers.txt
+0.953923 	2012/VOHO_WP_FINAL_READY-FOR-Publication-09242012_AC.txt
+0.937427 	2014/Micro-Targeted-Malvertising-WP-10-27-14-1.txt
+0.933769 	2014/darkhotel_kl_07.11.txt
+0.922538 	2014/Operation_CloudyOmega_Ichitaro.txt
+0.921917 	2012/the-elderwood-project.txt
+0.921641 	2014/PAN_Nitro.txt
+0.920155 	2014/th3bug_Watering_Hole_PoisonIvy.txt
+0.919481 	2012/OSX_SabPub.txt
+0.916988 	2014/operation-poisoned-helmand.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/GData_Uroburos_RedPaper_EN_v1.txt ****************************************
+Similarity 	Report
+1.0 		2014/GData_Uroburos_RedPaper_EN_v1.txt
+0.970619 	2014/The_Uroburos_case.txt
+0.921078 	2015/Project_Cobra_Analysis.txt
+0.785312 	2014/GDATA_TooHash_CaseStudy_102014_EN_v1.txt
+0.766568 	2014/snake_whitepaper.txt
+0.743987 	2015/Agent.BTZ_to_ComRAT.txt
+0.726977 	2014/Compromise_Greece_Beijing.txt
+0.717874 	2014/blackenergy_whitepaper.txt
+0.705742 	2013/winnti-more-than-just-a-game-130410.txt
+0.70221 	2014/Hikit_Analysis-Final.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/bcs_wp_InceptionReport_EN_v12914.txt ****************************************
+Similarity 	Report
+1.0 		2014/bcs_wp_InceptionReport_EN_v12914.txt
+0.981107 	2013/Kimsuky.txt
+0.980971 	2014/CloudAtlas_RedOctober_APT.txt
+0.976587 	2014/darkhotel_kl_07.11.txt
+0.975856 	2013/winnti-more-than-just-a-game-130410.txt
+0.974945 	2012/w32_flamer_newsforyou.txt
+0.970478 	2015/volatile-cedar-technical-report.txt
+0.970184 	2014/fireeye-sidewinder-targeted-attack.txt
+0.969433 	2012/OSX_SabPub.txt
+0.968669 	2014/XSLCmd_OSX.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/OnionDuke_Tor.txt ****************************************
+Similarity 	Report
+1.0 		2014/OnionDuke_Tor.txt
+0.963735 	2014/cosmicduke_whitepaper.txt
+0.96266 	2014/bcs_wp_InceptionReport_EN_v12914.txt
+0.957797 	2013/ByeBye_Shell_target.txt
+0.956588 	2014/CloudAtlas_RedOctober_APT.txt
+0.955269 	2015/volatile-cedar-technical-report.txt
+0.948586 	2014/XSLCmd_OSX.txt
+0.946956 	2014/darkhotel_kl_07.11.txt
+0.946158 	2013/Kimsuky.txt
+0.945029 	2013/theteamspystory_final_t2.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/sec14-paper-marczak.txt ****************************************
+Similarity 	Report
+1.0 		2014/sec14-paper-marczak.txt
+0.988188 	2014/Targeting_Syrian_ISIS_Critics.txt
+0.983672 	2013/15-2013-youonlyclicktwice.txt
+0.971995 	2014/KL_report_syrian_malware.txt
+0.960386 	2015/rpt-behind-the-syria-conflict.txt
+0.948358 	2013/19-2013-acalltoharm.txt
+0.92367 	2012/Cyberattack_against_Israeli_and_Palestinian_targets.txt
+0.916238 	2014/Syrian_Malware_Team_BlackWorm.txt
+0.915802 	2014/sec14-paper-hardy.txt
+0.912815 	2009/ghostnet.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/th3bug_Watering_Hole_PoisonIvy.txt ****************************************
+Similarity 	Report
+1.0 		2014/th3bug_Watering_Hole_PoisonIvy.txt
+0.989931 	2014/PAN_Nitro.txt
+0.950681 	2014/operation-poisoned-helmand.txt
+0.94908 	2014/Democracy_HongKong_Under_Attack.txt
+0.948789 	2013/fireeye-poison-ivy-report.txt
+0.936276 	2014/Darwin_fav_APT_Group.txt
+0.935882 	2012/VOHO_WP_FINAL_READY-FOR-Publication-09242012_AC.txt
+0.931665 	2013/hidden_lynx.txt
+0.924528 	2014/Operation_CloudyOmega_Ichitaro.txt
+0.920768 	2011/tb_advanced_persistent_threats.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/PAN_Nitro.txt ****************************************
+Similarity 	Report
+1.0 		2014/PAN_Nitro.txt
+0.989931 	2014/th3bug_Watering_Hole_PoisonIvy.txt
+0.955166 	2013/fireeye-poison-ivy-report.txt
+0.949411 	2014/operation-poisoned-helmand.txt
+0.941086 	2014/Darwin_fav_APT_Group.txt
+0.939854 	2011/tb_advanced_persistent_threats.txt
+0.937057 	2012/The_Mirage_Campaign.txt
+0.935952 	2012/VOHO_WP_FINAL_READY-FOR-Publication-09242012_AC.txt
+0.934585 	2014/Democracy_HongKong_Under_Attack.txt
+0.933102 	2013/hidden_lynx.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/Operation_CloudyOmega_Ichitaro.txt ****************************************
+Similarity 	Report
+1.0 		2014/Operation_CloudyOmega_Ichitaro.txt
+0.973517 	2012/VOHO_WP_FINAL_READY-FOR-Publication-09242012_AC.txt
+0.973306 	2012/the-elderwood-project.txt
+0.972792 	2013/hidden_lynx.txt
+0.955396 	2011/the_nitro_attacks.txt
+0.946997 	2015/Scarab_Russian.txt
+0.946965 	2014/Micro-Targeted-Malvertising-WP-10-27-14-1.txt
+0.946116 	2012/trojan_taidoor-targeting_think_tanks.txt
+0.945743 	2012/wp_luckycat_redux.txt
+0.938334 	2012/WickedRose_andNCPH.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/The_Siesta_Campaign.txt ****************************************
+Similarity 	Report
+1.0 		2014/The_Siesta_Campaign.txt
+0.992505 	2012/wp_ixeshe.txt
+0.989883 	2012/wp_the-heartbeat-apt-campaign.txt
+0.982982 	2012/wp_luckycat_redux.txt
+0.980447 	2015/wp-operation-woolen-goldfish.txt
+0.974137 	2013/2q-report-on-targeted-attack-campaigns.txt
+0.969643 	2015/operation-arid-viper-whitepaper-en.txt
+0.9696 	2014/wp-operation-pawn-storm.txt
+0.969166 	2013/Safe-a-targeted-threat.txt
+0.957666 	2014/Gholee_Protective_Edge_themed_spear_phishing_campaign.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/operation-poisoned-helmand.txt ****************************************
+Similarity 	Report
+1.0 		2014/operation-poisoned-helmand.txt
+0.956597 	2014/Democracy_HongKong_Under_Attack.txt
+0.950681 	2014/th3bug_Watering_Hole_PoisonIvy.txt
+0.949411 	2014/PAN_Nitro.txt
+0.938986 	2014/Darwin_fav_APT_Group.txt
+0.933993 	2014/Operation_Poisoned_Handover.txt
+0.933102 	2012/VOHO_WP_FINAL_READY-FOR-Publication-09242012_AC.txt
+0.932414 	2014/darkhotel_kl_07.11.txt
+0.928898 	2014/XSLCmd_OSX.txt
+0.928102 	2013/fireeye-poison-ivy-report.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/EB-YetiJuly2014-Public.txt ****************************************
+Similarity 	Report
+1.0 		2014/EB-YetiJuly2014-Public.txt
+0.92371 	2014/Kaspersky_Lab_crouching_yeti_appendixes_eng_final.txt
+0.923467 	2014/unveilingthemask_v1.0.txt
+0.913102 	2014/ICS_Havex_backdoors.txt
+0.912228 	2014/The_Monju_Incident.txt
+0.892958 	2014/Dragonfly_Threat_Against_Western_Energy_Suppliers.txt
+0.885155 	2015/The-Desert-Falcons-targeted-attacks.txt
+0.879387 	2013/icefog.txt
+0.876705 	2013/theteamspystory_final_t2.txt
+0.874205 	2014/TA14-353A_wiper.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/Op_Clandestine_Fox.txt ****************************************
+Similarity 	Report
+1.0 		2014/Op_Clandestine_Fox.txt
+0.894444 	2014/Op_SnowMan_DeputyDog.txt
+0.894444 	2014/Operation_SnowMan.txt
+0.815474 	2014/Operation_GreedyWonk.txt
+0.743624 	2015/waterbug-attack-group.txt
+0.712545 	2013/Operation_EphemeralHydra.txt
+0.694918 	2013/RAP002_APT1_Technical_backstage.1.0.txt
+0.692391 	2012/the-elderwood-project.txt
+0.679376 	2014/OperationDoubleTap.txt
+0.657309 	2014/Operation_CloudyOmega_Ichitaro.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/blackenergy_whitepaper.txt ****************************************
+Similarity 	Report
+1.0 		2014/blackenergy_whitepaper.txt
+0.944703 	2014/BlackEnergy2_Plugins_Router.txt
+0.926254 	2015/Equation_group_questions_and_answers.txt
+0.922107 	2013/winnti-more-than-just-a-game-130410.txt
+0.916635 	2015/Inside_EquationDrug_Espionage_Platform.txt
+0.914346 	2014/snake_whitepaper.txt
+0.909865 	2012/kaspersky-lab-gauss.txt
+0.903273 	2014/Group72_Opening_ZxShell.txt
+0.893482 	2014/CloudAtlas_RedOctober_APT.txt
+0.892309 	2014/Modified_Binaries_Tor.txt
+None
+***********************************************************************************************
+
+
+*************************** 2014/ZoxPNG_Full_Analysis-Final.txt ****************************************
+Similarity 	Report
+1.0 		2014/ZoxPNG_Full_Analysis-Final.txt
+0.970931 	2014/Derusbi_Server_Analysis-Final.txt
+0.950744 	2012/Crypto-DarkComet-Report.txt
+0.948704 	2012/IEXPL0RE_RAT.txt
+0.94006 	2014/EvilBunny_Suspect4_v1.0.txt
+0.939075 	2015/Elephantosis.txt
+0.937649 	2014/Sayad_Flying_Kitten_analysis.txt
+0.936961 	2015/Inception_APT_Analysis_Bluecoat.txt
+0.934642 	2014/Vinself_steganography.txt
+0.919504 	2010/in-depth_analysis_of_hydraq_final_231538.txt
+None
+***********************************************************************************************
+
+
+*************************** 2009/ghostnet.txt ****************************************
+Similarity 	Report
+1.0 		2009/ghostnet.txt
+0.98834 	2010/shadows-in-the-cloud.txt
+0.970019 	2014/sec14-paper-hardy.txt
+0.961887 	2014/Anunak_APT_against_financial_institutions.txt
+0.954708 	2013/Mandiant_APT1_Report.txt
+0.94915 	2015/Scarab_Russian.txt
+0.942869 	2012/WickedRose_andNCPH.txt
+0.940119 	2012/The_Sin_Digoo_Affair.txt
+0.939987 	2012/trojan_taidoor-targeting_think_tanks.txt
+0.939257 	2012/Tibet_Lurk.txt
+None
+***********************************************************************************************
+
+
+*************************** 2011/Duqu_Trojan_Questions_and_Answers.txt ****************************************
+Similarity 	Report
+1.0 		2011/Duqu_Trojan_Questions_and_Answers.txt
+0.975891 	2013/stuxnet_0_5_the_missing_link.txt
+0.971398 	2011/Evolution_Drivers_Duqu_Stuxnet.txt
+0.930485 	2011/w32_stuxnet_dossier.txt
+0.890035 	2013/Presentation_Targeted-Attacks_EN.txt
+0.850271 	2011/Stuxnet_Under_the_Microscope.txt
+0.755508 	2012/skywiper.txt
+0.718989 	2014/snake_whitepaper.txt
+0.705086 	2014/blackenergy_whitepaper.txt
+0.69061 	2014/Hikit_Analysis-Final.txt
+None
+***********************************************************************************************
+
+
+*************************** 2011/tb_advanced_persistent_threats.txt ****************************************
+Similarity 	Report
+1.0 		2011/tb_advanced_persistent_threats.txt
+0.963248 	2014/Micro-Targeted-Malvertising-WP-10-27-14-1.txt
+0.961979 	2012/The_Sin_Digoo_Affair.txt
+0.960958 	2013/hidden_lynx.txt
+0.959972 	2012/trojan_taidoor-targeting_think_tanks.txt
+0.958508 	2014/Pitty_Tiger_Final_Report.txt
+0.957935 	2013/Mandiant_APT1_Report.txt
+0.954307 	2012/VOHO_WP_FINAL_READY-FOR-Publication-09242012_AC.txt
+0.953634 	2011/the_nitro_attacks.txt
+0.953548 	2011/C5_APT_SKHack.txt
+None
+***********************************************************************************************
+
+
+*************************** 2011/wp-operation-shady-rat.txt ****************************************
+Similarity 	Report
+1.0 		2011/wp-operation-shady-rat.txt
+0.992392 	2011/shady_rat_vanity.txt
+0.883874 	2013/2013-9.txt
+0.878125 	2011/wp-global-energy-cyberattacks-night-dragon.txt
+0.874548 	2012/Crouching_tiger_hidden_dragon.txt
+0.85039 	2011/C5_APT_ADecadeInReview.txt
+0.807251 	2014/targeted_attacks_against_the_energy_sector.txt
+0.804729 	2008/556_10535_798405_Annex87_CyberAttacks.txt
+0.800721 	2014/HPSR SecurityBriefing_Episode16_NorthKorea.txt
+0.798867 	2015/rpt-southeast-asia-threat-landscape.txt
+None
+***********************************************************************************************
+
+
+*************************** 2011/Evolution_Drivers_Duqu_Stuxnet.txt ****************************************
+Similarity 	Report
+1.0 		2011/Evolution_Drivers_Duqu_Stuxnet.txt
+0.971398 	2011/Duqu_Trojan_Questions_and_Answers.txt
+0.967369 	2013/stuxnet_0_5_the_missing_link.txt
+0.921336 	2011/w32_stuxnet_dossier.txt
+0.844014 	2011/Stuxnet_Under_the_Microscope.txt
+0.802546 	2013/Presentation_Targeted-Attacks_EN.txt
+0.759827 	2014/snake_whitepaper.txt
+0.730888 	2014/Hikit_Analysis-Final.txt
+0.712841 	2012/skywiper.txt
+0.704493 	2014/blackenergy_whitepaper.txt
+None
+***********************************************************************************************
+
+
+*************************** 2011/Stuxnet_Under_the_Microscope.txt ****************************************
+Similarity 	Report
+1.0 		2011/Stuxnet_Under_the_Microscope.txt
+0.977989 	2011/w32_stuxnet_dossier.txt
+0.928835 	2012/skywiper.txt
+0.90665 	2014/snake_whitepaper.txt
+0.898145 	2012/kaspersky-lab-gauss.txt
+0.893044 	2014/Hikit_Analysis-Final.txt
+0.892577 	2013/stuxnet_0_5_the_missing_link.txt
+0.886523 	2014/Group72_Opening_ZxShell.txt
+0.884581 	2014/korea_power_plant_wiper.txt
+0.881468 	2013/winnti-more-than-just-a-game-130410.txt
+None
+***********************************************************************************************
+
+
+*************************** 2011/shady_rat_vanity.txt ****************************************
+Similarity 	Report
+1.0 		2011/shady_rat_vanity.txt
+0.992392 	2011/wp-operation-shady-rat.txt
+0.888503 	2011/wp-global-energy-cyberattacks-night-dragon.txt
+0.866369 	2013/2013-9.txt
+0.845581 	2012/Crouching_tiger_hidden_dragon.txt
+0.827896 	2011/C5_APT_ADecadeInReview.txt
+0.79455 	2008/556_10535_798405_Annex87_CyberAttacks.txt
+0.792288 	2014/Sandworm_briefing2.txt
+0.788438 	2014/HPSR SecurityBriefing_Episode16_NorthKorea.txt
+0.785277 	2014/targeted_attacks_against_the_energy_sector.txt
+None
+***********************************************************************************************
+
+
+*************************** 2011/C5_APT_SKHack.txt ****************************************
+Similarity 	Report
+1.0 		2011/C5_APT_SKHack.txt
+0.988369 	2013/C5_APT_C2InTheFifthDomain.txt
+0.966623 	2012/The_Mirage_Campaign.txt
+0.962507 	2013/ETSO_APT_Attacks_Analysis.txt
+0.958001 	2012/The_Sin_Digoo_Affair.txt
+0.954189 	2014/Pitty_Tiger_Final_Report.txt
+0.953548 	2011/tb_advanced_persistent_threats.txt
+0.949759 	2014/fireeye-operation-quantum-entanglement.txt
+0.942026 	2011/HTran_and_the_Advanced_Persistent_Threat.txt
+0.938786 	2013/dissecting-operation-troy.txt
+None
+***********************************************************************************************
+
+
+*************************** 2011/Palebot_Palestinian_credentials.txt ****************************************
+Similarity 	Report
+1.0 		2011/Palebot_Palestinian_credentials.txt
+0.957352 	2014/bcs_wp_InceptionReport_EN_v12914.txt
+0.954684 	2014/Modified_Binaries_Tor.txt
+0.95408 	2015/volatile-cedar-technical-report.txt
+0.951082 	2012/w32_flamer_newsforyou.txt
+0.947182 	2013/winnti-more-than-just-a-game-130410.txt
+0.944101 	2013/Kimsuky.txt
+0.941928 	2012/Cyberattack_against_Israeli_and_Palestinian_targets.txt
+0.940198 	2014/TA14-353A_wiper.txt
+0.939365 	2014/darkhotel_kl_07.11.txt
+None
+***********************************************************************************************
+
+
+*************************** 2011/wp-global-energy-cyberattacks-night-dragon.txt ****************************************
+Similarity 	Report
+1.0 		2011/wp-global-energy-cyberattacks-night-dragon.txt
+0.923783 	2013/McAfee_Labs_Threat_Advisory_Exploit_Operation_Red_Oct.txt
+0.905355 	2010/Case_Study_Operation_Aurora_V11.txt
+0.888503 	2011/shady_rat_vanity.txt
+0.881878 	2010/Combating Threats - Operation Aurora.txt
+0.878125 	2011/wp-operation-shady-rat.txt
+0.873881 	2013/dissecting-operation-troy.txt
+0.85795 	2010/how_can_u_tell_Aurora.txt
+0.841132 	2014/Micro-Targeted-Malvertising-WP-10-27-14-1.txt
+0.833221 	2010/WhitePaper HBGary Threat Report, Operation Aurora.txt
+None
+***********************************************************************************************
+
+
+*************************** 2011/the_nitro_attacks.txt ****************************************
+Similarity 	Report
+1.0 		2011/the_nitro_attacks.txt
+0.983261 	2015/Scarab_Russian.txt
+0.978971 	2013/hidden_lynx.txt
+0.977625 	2012/trojan_taidoor-targeting_think_tanks.txt
+0.970778 	2014/rpt-fin4.txt
+0.964385 	2012/WickedRose_andNCPH.txt
+0.963959 	2014/targeted_attacks_against_the_energy_sector.txt
+0.963702 	2015/Backdoor.Winnti_Trojan.Skelky.txt
+0.961796 	2014/Micro-Targeted-Malvertising-WP-10-27-14-1.txt
+0.961545 	2014/Anunak_APT_against_financial_institutions.txt
+None
+***********************************************************************************************
+
+
+*************************** 2011/w32_stuxnet_dossier.txt ****************************************
+Similarity 	Report
+1.0 		2011/w32_stuxnet_dossier.txt
+0.97799 	2011/Stuxnet_Under_the_Microscope.txt
+0.963168 	2013/stuxnet_0_5_the_missing_link.txt
+0.930485 	2011/Duqu_Trojan_Questions_and_Answers.txt
+0.921336 	2011/Evolution_Drivers_Duqu_Stuxnet.txt
+0.89391 	2012/skywiper.txt
+0.887022 	2013/Presentation_Targeted-Attacks_EN.txt
+0.854087 	2014/snake_whitepaper.txt
+0.828272 	2014/Hikit_Analysis-Final.txt
+0.827313 	2012/kaspersky-lab-gauss.txt
+None
+***********************************************************************************************
+
+
+*************************** 2011/Alerts DL-2011 Alerts-A-2011-02-18-01 Night Dragon Attachment 1.txt ****************************************
+Similarity 	Report
+0.0 		2010/Aurora_Botnet_Command_Structure.txt
+0.0 	2010/WhitePaper HBGary Threat Report, Operation Aurora.txt
+0.0 	2010/shadows-in-the-cloud.txt
+0.0 	2010/MSUpdaterTrojanWhitepaper.txt
+0.0 	2010/Aurora_HBGARY_DRAFT.txt
+0.0 	2010/Combating Threats - Operation Aurora.txt
+0.0 	2010/Case_Study_Operation_Aurora_V11.txt
+0.0 	2010/how_can_u_tell_Aurora.txt
+0.0 	2010/in-depth_analysis_of_hydraq_final_231538.txt
+0.0 	2012/FTA 1007 - Shamoon.txt
+None
+***********************************************************************************************
+
+
+*************************** 2011/wp_dissecting-lurid-apt.txt ****************************************
+Similarity 	Report
+1.0 		2011/wp_dissecting-lurid-apt.txt
+0.954539 	2013/Safe-a-targeted-threat.txt
+0.953832 	2014/El_Machete.txt
+0.95308 	2012/wp_luckycat_redux.txt
+0.952667 	2012/trojan_taidoor-targeting_think_tanks.txt
+0.95139 	2013/2q-report-on-targeted-attack-campaigns.txt
+0.947995 	2012/wp_ixeshe.txt
+0.945734 	2014/Gholee_Protective_Edge_themed_spear_phishing_campaign.txt
+0.942201 	2014/The_Siesta_Campaign.txt
+0.941811 	2012/wp_the-heartbeat-apt-campaign.txt
+None
+***********************************************************************************************
+
+
+*************************** 2011/HTran_and_the_Advanced_Persistent_Threat.txt ****************************************
+Similarity 	Report
+1.0 		2011/HTran_and_the_Advanced_Persistent_Threat.txt
+0.95247 	2013/Mandiant_APT1_Report.txt
+0.949819 	2014/Pitty_Tiger_Final_Report.txt
+0.944631 	2012/The_Sin_Digoo_Affair.txt
+0.944412 	2012/The_Mirage_Campaign.txt
+0.942096 	2014/fireeye-operation-quantum-entanglement.txt
+0.942026 	2011/C5_APT_SKHack.txt
+0.937854 	2014/Chinese_MITM_Google.txt
+0.936898 	2013/C5_APT_C2InTheFifthDomain.txt
+0.935013 	2014/ASERT-Threat-Intelligence-Brief-2014-07-Illuminating-Etumbot-APT.txt
+None
+***********************************************************************************************
+
+
+*************************** 2011/C5_APT_ADecadeInReview.txt ****************************************
+Similarity 	Report
+1.0 		2011/C5_APT_ADecadeInReview.txt
+0.962848 	2014/targeted_attacks_against_the_energy_sector.txt
+0.957483 	2012/Crouching_tiger_hidden_dragon.txt
+0.952982 	2013/2013-9.txt
+0.945993 	2011/the_nitro_attacks.txt
+0.932227 	2012/WickedRose_andNCPH.txt
+0.930706 	2010/shadows-in-the-cloud.txt
+0.923608 	2013/hidden_lynx.txt
+0.918279 	2009/ghostnet.txt
+0.913767 	2014/Anunak_APT_against_financial_institutions.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/dissecting-operation-troy.txt ****************************************
+Similarity 	Report
+1.0 		2013/dissecting-operation-troy.txt
+0.970775 	2013/ETSO_APT_Attacks_Analysis.txt
+0.968066 	2014/Cylance_Operation_Cleaver_Report.txt
+0.95727 	2014/Micro-Targeted-Malvertising-WP-10-27-14-1.txt
+0.954768 	2014/Anunak_APT_against_financial_institutions.txt
+0.953681 	2012/The_Mirage_Campaign.txt
+0.951857 	2012/VOHO_WP_FINAL_READY-FOR-Publication-09242012_AC.txt
+0.949572 	2014/apt28.txt
+0.947822 	2012/trojan_taidoor-targeting_think_tanks.txt
+0.947493 	2014/darkhotel_kl_07.11.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/fireeye-operation-ke3chang.txt ****************************************
+Similarity 	Report
+1.0 		2013/fireeye-operation-ke3chang.txt
+0.966383 	2013/Operation_Molerats.txt
+0.959281 	2013/fireeye-poison-ivy-report.txt
+0.956037 	2013/Operation_DeputyDog.txt
+0.947012 	2014/Darwin_fav_APT_Group.txt
+0.944715 	2014/NYTimes_Attackers_Evolve_Quickly.txt
+0.942709 	2014/fireeye-operation-quantum-entanglement.txt
+0.93616 	2014/Aided_Frame_Aided_Direction.txt
+0.933937 	2014/Operation_Poisoned_Hurricane.txt
+0.924181 	2015/Carbanak_APT_eng.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/Safe-a-targeted-threat.txt ****************************************
+Similarity 	Report
+1.0 		2013/Safe-a-targeted-threat.txt
+0.98801 	2012/wp_luckycat_redux.txt
+0.978532 	2014/Gholee_Protective_Edge_themed_spear_phishing_campaign.txt
+0.977889 	2012/wp_the-heartbeat-apt-campaign.txt
+0.973779 	2012/wp_ixeshe.txt
+0.969166 	2014/The_Siesta_Campaign.txt
+0.966374 	2013/Surtr_Malware_Tibetan.txt
+0.960721 	2013/2q-report-on-targeted-attack-campaigns.txt
+0.960376 	2012/trojan_taidoor-targeting_think_tanks.txt
+0.954539 	2011/wp_dissecting-lurid-apt.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/Norman_HangOver report_Executive Summary_042513.txt ****************************************
+Similarity 	Report
+1.0 		2013/Norman_HangOver report_Executive Summary_042513.txt
+0.970941 	2013/NS-Unveiling-an-Indian-Cyberattack-Infrastructure_FINAL_Web.txt
+0.942907 	2013/India_Pak_Tranchulas.txt
+0.866527 	2013/Inside_Report_by_Infosec_Consortium.txt
+0.850189 	2013/Unveiling an Indian Cyberattack Infrastructure - appendixes.txt
+0.826196 	2014/ThreatConnect_Operation_Arachnophobia_Report.txt
+0.755019 	2010/shadows-in-the-cloud.txt
+0.733406 	2015/Anthem_hack_all_roads_lead_to_China.txt
+0.709301 	2012/WickedRose_andNCPH.txt
+0.708433 	2013/2013-9.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/theteamspystory_final_t2.txt ****************************************
+Similarity 	Report
+1.0 		2013/theteamspystory_final_t2.txt
+0.986137 	2013/icefog.txt
+0.978248 	2013/kaspersky-the-net-traveler-part1-final.txt
+0.96237 	2014/CloudAtlas_RedOctober_APT.txt
+0.962266 	2015/volatile-cedar-technical-report.txt
+0.962044 	2013/Kimsuky.txt
+0.960067 	2013/winnti-more-than-just-a-game-130410.txt
+0.95536 	2014/TA14-353A_wiper.txt
+0.954954 	2014/darkhotel_kl_07.11.txt
+0.952014 	2015/Elephantosis.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/kaspersky-the-net-traveler-part1-final.txt ****************************************
+Similarity 	Report
+1.0 		2013/kaspersky-the-net-traveler-part1-final.txt
+0.978248 	2013/theteamspystory_final_t2.txt
+0.975543 	2013/icefog.txt
+0.970804 	2015/Elephantosis.txt
+0.96873 	2014/EvilBunny_Suspect4_v1.0.txt
+0.966259 	2012/kaspersky-lab-gauss.txt
+0.961402 	2014/Sayad_Flying_Kitten_analysis.txt
+0.952681 	2015/volatile-cedar-technical-report.txt
+0.949023 	2014/Modified_Binaries_Tor.txt
+0.948032 	2010/in-depth_analysis_of_hydraq_final_231538.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/15-2013-youonlyclicktwice.txt ****************************************
+Similarity 	Report
+1.0 		2013/15-2013-youonlyclicktwice.txt
+0.983672 	2014/sec14-paper-marczak.txt
+0.973816 	2014/Targeting_Syrian_ISIS_Critics.txt
+0.959934 	2014/KL_report_syrian_malware.txt
+0.940437 	2015/rpt-behind-the-syria-conflict.txt
+0.93198 	2013/19-2013-acalltoharm.txt
+0.931831 	2014/Syrian_Malware_Team_BlackWorm.txt
+0.871016 	2012/Cyberattack_against_Israeli_and_Palestinian_targets.txt
+0.863551 	2009/ghostnet.txt
+0.854309 	2014/sec14-paper-hardy.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/Mandiant_APT1_Report.txt ****************************************
+Similarity 	Report
+1.0 		2013/Mandiant_APT1_Report.txt
+0.989891 	2014/Anunak_APT_against_financial_institutions.txt
+0.98193 	2014/Cylance_Operation_Cleaver_Report.txt
+0.967856 	2010/shadows-in-the-cloud.txt
+0.967742 	2014/apt28.txt
+0.965336 	2014/fireeye-operation-saffron-rose.txt
+0.964998 	2012/The_Sin_Digoo_Affair.txt
+0.961286 	2014/Pitty_Tiger_Final_Report.txt
+0.957935 	2011/tb_advanced_persistent_threats.txt
+0.956098 	2013/ETSO_APT_Attacks_Analysis.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/icefog.txt ****************************************
+Similarity 	Report
+1.0 		2013/icefog.txt
+0.986137 	2013/theteamspystory_final_t2.txt
+0.975543 	2013/kaspersky-the-net-traveler-part1-final.txt
+0.971309 	2014/CloudAtlas_RedOctober_APT.txt
+0.962186 	2014/darkhotel_kl_07.11.txt
+0.961769 	2013/Kimsuky.txt
+0.961396 	2015/volatile-cedar-technical-report.txt
+0.959881 	2014/bcs_wp_InceptionReport_EN_v12914.txt
+0.959307 	2014/TA14-353A_wiper.txt
+0.957225 	2012/w32_flamer_newsforyou.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/themysteryofthepdf0-dayassemblermicrobackdoor.txt ****************************************
+Similarity 	Report
+1.0 		2013/themysteryofthepdf0-dayassemblermicrobackdoor.txt
+0.948536 	2014/Miniduke_twitter.txt
+0.937222 	2014/OnionDuke_Tor.txt
+0.937093 	2014/cosmicduke_whitepaper.txt
+0.909346 	2013/theteamspystory_final_t2.txt
+0.904261 	2013/2q-report-on-targeted-attack-campaigns.txt
+0.902666 	2013/icefog.txt
+0.898951 	2013/Securelist_RedOctober_Detail.txt
+0.883087 	2015/volatile-cedar-technical-report.txt
+0.881203 	2013/ByeBye_Shell_target.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/Operation_EphemeralHydra.txt ****************************************
+Similarity 	Report
+1.0 		2013/Operation_EphemeralHydra.txt
+0.923171 	2013/Operation_DeputyDog.txt
+0.909552 	2013/Trojan.APT.Seinup.txt
+0.906839 	2013/Trojan.APT.BaneChant.txt
+0.902383 	2013/FireEye-Terminator_RAT.txt
+0.893672 	2013/fireeye-poison-ivy-report.txt
+0.892055 	2014/fireeye-operation-quantum-entanglement.txt
+0.882119 	2015/DTL-12012015-01.txt
+0.88035 	2014/Operation_Poisoned_Hurricane.txt
+0.874064 	2013/fireeye-china-chopper-report.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/NormanShark-MaudiOperation.txt ****************************************
+Similarity 	Report
+1.0 		2012/NormanShark-MaudiOperation.txt
+1.0 	2013/NormanShark-MaudiOperation.txt
+0.19992 	2012/Cyberattack_against_Israeli_and_Palestinian_targets.txt
+0.198192 	2014/Chinese_MITM_Google.txt
+0.197745 	2011/Palebot_Palestinian_credentials.txt
+0.194669 	2014/Operation_Poisoned_Hurricane.txt
+0.190783 	2013/fireeye-malware-supply-chain.txt
+0.180671 	2014/darkhotelappendixindicators_kl.txt
+0.170893 	2014/Pitty_Tiger_Final_Report.txt
+0.167346 	2014/Operation_Poisoned_Handover.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/Trojan.APT.BaneChant.txt ****************************************
+Similarity 	Report
+1.0 		2013/Trojan.APT.BaneChant.txt
+0.978351 	2013/Trojan.APT.Seinup.txt
+0.959481 	2013/FireEye-Terminator_RAT.txt
+0.931198 	2014/Vinself_steganography.txt
+0.92148 	2014/OrcaRAT.txt
+0.919994 	2015/PawnStorm_iOS.txt
+0.914186 	2010/MSUpdaterTrojanWhitepaper.txt
+0.910739 	2012/Crypto-DarkComet-Report.txt
+0.906839 	2013/Operation_EphemeralHydra.txt
+0.901772 	2013/miniduke_indicators_public.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/Operation_Molerats.txt ****************************************
+Similarity 	Report
+1.0 		2013/Operation_Molerats.txt
+0.966383 	2013/fireeye-operation-ke3chang.txt
+0.935378 	2015/Carbanak_APT_eng.txt
+0.927755 	2013/Operation_DeputyDog.txt
+0.91533 	2013/fireeye-poison-ivy-report.txt
+0.906571 	2014/Operation_Poisoned_Hurricane.txt
+0.897906 	2014/fireeye-operation-quantum-entanglement.txt
+0.891793 	2010/Aurora_Botnet_Command_Structure.txt
+0.890477 	2014/Darwin_fav_APT_Group.txt
+0.882564 	2014/NYTimes_Attackers_Evolve_Quickly.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/FireEye-Terminator_RAT.txt ****************************************
+Similarity 	Report
+1.0 		2013/FireEye-Terminator_RAT.txt
+0.96722 	2013/Trojan.APT.Seinup.txt
+0.959481 	2013/Trojan.APT.BaneChant.txt
+0.954252 	2015/PawnStorm_iOS.txt
+0.951175 	2014/fireeye-operation-quantum-entanglement.txt
+0.941083 	2010/MSUpdaterTrojanWhitepaper.txt
+0.929789 	2013/wp-fakem-rat.txt
+0.92901 	2012/The_Mirage_Campaign.txt
+0.92377 	2013/fireeye-china-chopper-report.txt
+0.922925 	2013/C5_APT_C2InTheFifthDomain.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/tr-12-circl-plugx-analysis-v1.txt ****************************************
+Similarity 	Report
+1.0 		2013/tr-12-circl-plugx-analysis-v1.txt
+0.99092 	2013/circl-analysisreport-miniduke-stage3-public.txt
+0.655271 	2013/Secrets_of_the_Comfoo_Masters.txt
+0.614373 	2014/circl-tr25-analysis-turla-pfinet-snake-uroburos.txt
+0.491318 	2014/cosmicduke_whitepaper.txt
+0.48335 	2014/Miniduke_twitter.txt
+0.47126 	2013/miniduke_indicators_public.txt
+0.439608 	2012/skywiper.txt
+0.437955 	2013/themysteryofthepdf0-dayassemblermicrobackdoor.txt
+0.433849 	2013/Presentation_Targeted-Attacks_EN.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/comment_crew_indicators_of_compromise.txt ****************************************
+Similarity 	Report
+1.0 		2013/comment_crew_indicators_of_compromise.txt
+0.914695 	2011/the_nitro_attacks.txt
+0.906882 	2015/Backdoor.Winnti_Trojan.Skelky.txt
+0.894266 	2015/Scarab_Russian.txt
+0.892551 	2014/targeted_attacks_against_the_energy_sector.txt
+0.890154 	2014/rpt-fin4.txt
+0.888732 	2011/C5_APT_ADecadeInReview.txt
+0.869656 	2013/hidden_lynx.txt
+0.856758 	2012/trojan_taidoor-targeting_think_tanks.txt
+0.848182 	2011/tb_advanced_persistent_threats.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/Securelist_RedOctober.txt ****************************************
+Similarity 	Report
+1.0 		2013/Securelist_RedOctober.txt
+0.97096 	2014/El_Machete.txt
+0.96286 	2013/Securelist_RedOctober_Detail.txt
+0.954315 	2013/Kimsuky.txt
+0.946293 	2014/darkhotel_kl_07.11.txt
+0.945955 	2014/bcs_wp_InceptionReport_EN_v12914.txt
+0.939118 	2014/fireeye-sidewinder-targeted-attack.txt
+0.938566 	2015/Equation_group_questions_and_answers.txt
+0.93635 	2013/icefog.txt
+0.934585 	2014/Cylance_Operation_Cleaver_Report.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/fireeye-poison-ivy-report.txt ****************************************
+Similarity 	Report
+1.0 		2013/fireeye-poison-ivy-report.txt
+0.981892 	2014/fireeye-operation-quantum-entanglement.txt
+0.965225 	2012/The_Mirage_Campaign.txt
+0.960671 	2014/NYTimes_Attackers_Evolve_Quickly.txt
+0.959749 	2013/Operation_DeputyDog.txt
+0.959281 	2013/fireeye-operation-ke3chang.txt
+0.955566 	2014/Darwin_fav_APT_Group.txt
+0.955165 	2014/PAN_Nitro.txt
+0.953568 	2014/XtremeRAT_fireeye.txt
+0.948789 	2014/th3bug_Watering_Hole_PoisonIvy.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/Kimsuky.txt ****************************************
+Similarity 	Report
+1.0 		2013/Kimsuky.txt
+0.981107 	2014/bcs_wp_InceptionReport_EN_v12914.txt
+0.980737 	2013/winnti-more-than-just-a-game-130410.txt
+0.974322 	2014/CloudAtlas_RedOctober_APT.txt
+0.970367 	2014/Modified_Binaries_Tor.txt
+0.970051 	2012/w32_flamer_newsforyou.txt
+0.969792 	2014/darkhotel_kl_07.11.txt
+0.962044 	2013/theteamspystory_final_t2.txt
+0.961769 	2013/icefog.txt
+0.956064 	2014/XSLCmd_OSX.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/C5_APT_C2InTheFifthDomain.txt ****************************************
+Similarity 	Report
+1.0 		2013/C5_APT_C2InTheFifthDomain.txt
+0.988369 	2011/C5_APT_SKHack.txt
+0.965387 	2012/The_Mirage_Campaign.txt
+0.962835 	2014/fireeye-operation-quantum-entanglement.txt
+0.94853 	2014/Pitty_Tiger_Final_Report.txt
+0.94594 	2013/ETSO_APT_Attacks_Analysis.txt
+0.939399 	2010/MSUpdaterTrojanWhitepaper.txt
+0.936898 	2011/HTran_and_the_Advanced_Persistent_Threat.txt
+0.934463 	2012/The_Sin_Digoo_Affair.txt
+0.933916 	2014/ASERT-Threat-Intelligence-Brief-2014-07-Illuminating-Etumbot-APT.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/Trojan.APT.Seinup.txt ****************************************
+Similarity 	Report
+1.0 		2013/Trojan.APT.Seinup.txt
+0.978351 	2013/Trojan.APT.BaneChant.txt
+0.96722 	2013/FireEye-Terminator_RAT.txt
+0.961478 	2014/Vinself_steganography.txt
+0.956037 	2014/OrcaRAT.txt
+0.951655 	2015/PawnStorm_iOS.txt
+0.939405 	2014/fireeye-operation-quantum-entanglement.txt
+0.93618 	2014/Wiper_Malware.txt
+0.933043 	2015/DTL-12012015-01.txt
+0.928935 	2012/The_Mirage_Campaign.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/KeyBoy_Vietnam_India.txt ****************************************
+Similarity 	Report
+1.0 		2013/KeyBoy_Vietnam_India.txt
+0.965647 	2013/ByeBye_Shell_target.txt
+0.963166 	2014/XSLCmd_OSX.txt
+0.962936 	2014/darkhotel_kl_07.11.txt
+0.961702 	2012/w32_flamer_newsforyou.txt
+0.960806 	2014/TA14-353A_wiper.txt
+0.959737 	2014/bcs_wp_InceptionReport_EN_v12914.txt
+0.958975 	2014/ASERT-Threat-Intelligence-Brief-2014-07-Illuminating-Etumbot-APT.txt
+0.956553 	2014/Modified_Binaries_Tor.txt
+0.953569 	2013/icefog.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/Secrets_of_the_Comfoo_Masters.txt ****************************************
+Similarity 	Report
+1.0 		2013/Secrets_of_the_Comfoo_Masters.txt
+0.867986 	2014/OnionDuke_Tor.txt
+0.863726 	2014/cosmicduke_whitepaper.txt
+0.855817 	2013/ByeBye_Shell_target.txt
+0.853206 	2011/wp_dissecting-lurid-apt.txt
+0.847591 	2013/miniduke_indicators_public.txt
+0.844714 	2013/dissecting-operation-troy.txt
+0.844321 	2013/C5_APT_C2InTheFifthDomain.txt
+0.839561 	2011/tb_advanced_persistent_threats.txt
+0.836334 	2014/ASERT-Threat-Intelligence-Brief-2014-07-Illuminating-Etumbot-APT.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/India_Pak_Tranchulas.txt ****************************************
+Similarity 	Report
+1.0 		2013/India_Pak_Tranchulas.txt
+0.959991 	2013/Inside_Report_by_Infosec_Consortium.txt
+0.942907 	2013/Norman_HangOver report_Executive Summary_042513.txt
+0.937642 	2014/ThreatConnect_Operation_Arachnophobia_Report.txt
+0.903008 	2013/NS-Unveiling-an-Indian-Cyberattack-Infrastructure_FINAL_Web.txt
+0.89888 	2010/shadows-in-the-cloud.txt
+0.874517 	2015/Anthem_hack_all_roads_lead_to_China.txt
+0.864749 	2014/fireeye-operation-saffron-rose.txt
+0.864097 	2013/Mandiant_APT1_Report.txt
+0.85612 	2014/Cylance_Operation_Cleaver_Report.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/FTA 1010 - njRAT The Saga Continues.txt ****************************************
+Similarity 	Report
+1.0 		2013/FTA 1010 - njRAT The Saga Continues.txt
+0.911634 	2013/fta-1009---njrat-uncovered-1.txt
+0.899928 	2014/FTA_1013_RAT_in_a_jar.txt
+0.878324 	2014/FTA_1014_Bots_Machines_and_the_Matrix.txt
+0.875619 	2014/FTA 1011 Follow UP.txt
+0.870622 	2014/FTA 1012 STTEAM Final.txt
+0.841487 	2012/FTA 1007 - Shamoon.txt
+0.667039 	2014/FTA 1001 FINAL 1.15.14.txt
+0.577468 	2014/Syrian_Malware_Team_BlackWorm.txt
+0.574292 	2014/KL_report_syrian_malware.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/ETSO_APT_Attacks_Analysis.txt ****************************************
+Similarity 	Report
+1.0 		2013/ETSO_APT_Attacks_Analysis.txt
+0.984559 	2012/The_Mirage_Campaign.txt
+0.971292 	2012/OSX_SabPub.txt
+0.970775 	2013/dissecting-operation-troy.txt
+0.966852 	2012/trojan_taidoor-targeting_think_tanks.txt
+0.966233 	2014/Cylance_Operation_Cleaver_Report.txt
+0.9661 	2014/Anunak_APT_against_financial_institutions.txt
+0.962976 	2012/The_Sin_Digoo_Affair.txt
+0.962669 	2014/darkhotel_kl_07.11.txt
+0.962507 	2011/C5_APT_SKHack.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/US-13-Yarochkin-In-Depth-Analysis-of-Escalated-APT-Attacks-Slides.txt ****************************************
+Similarity 	Report
+1.0 		2013/US-13-Yarochkin-In-Depth-Analysis-of-Escalated-APT-Attacks-Slides.txt
+0.925692 	2011/HTran_and_the_Advanced_Persistent_Threat.txt
+0.921247 	2013/fireeye-operation-ke3chang.txt
+0.920984 	2011/tb_advanced_persistent_threats.txt
+0.915989 	2014/fireeye-operation-quantum-entanglement.txt
+0.914449 	2013/fireeye-poison-ivy-report.txt
+0.909644 	2013/ETSO_APT_Attacks_Analysis.txt
+0.908575 	2012/The_Mirage_Campaign.txt
+0.907259 	2013/Mandiant_APT1_Report.txt
+0.906852 	2014/Darwin_fav_APT_Group.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/RAP002_APT1_Technical_backstage.1.0.txt ****************************************
+Similarity 	Report
+1.0 		2013/RAP002_APT1_Technical_backstage.1.0.txt
+0.953216 	2014/OperationCleaver_The_Notepad_Files.txt
+0.917124 	2015/waterbug-attack-group.txt
+0.888977 	2014/w64_regin_stage_1.txt
+0.8888 	2015/Inception_APT_Analysis_Bluecoat.txt
+0.88616 	2012/Crypto-DarkComet-Report.txt
+0.876252 	2014/Wiper_Malware.txt
+0.871909 	2014/w32_regin_stage_1.txt
+0.845825 	2012/PEST-CONTROL.txt
+0.844888 	2014/ZoxPNG_Full_Analysis-Final.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/circl-analysisreport-miniduke-stage3-public.txt ****************************************
+Similarity 	Report
+1.0 		2013/circl-analysisreport-miniduke-stage3-public.txt
+0.99092 	2013/tr-12-circl-plugx-analysis-v1.txt
+0.612202 	2013/Secrets_of_the_Comfoo_Masters.txt
+0.555646 	2014/circl-tr25-analysis-turla-pfinet-snake-uroburos.txt
+0.417953 	2014/cosmicduke_whitepaper.txt
+0.402454 	2014/Miniduke_twitter.txt
+0.39968 	2013/miniduke_indicators_public.txt
+0.382328 	2013/Presentation_Targeted-Attacks_EN.txt
+0.371814 	2013/themysteryofthepdf0-dayassemblermicrobackdoor.txt
+0.365238 	2012/skywiper.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/stuxnet_0_5_the_missing_link.txt ****************************************
+Similarity 	Report
+1.0 		2013/stuxnet_0_5_the_missing_link.txt
+0.975891 	2011/Duqu_Trojan_Questions_and_Answers.txt
+0.967369 	2011/Evolution_Drivers_Duqu_Stuxnet.txt
+0.963168 	2011/w32_stuxnet_dossier.txt
+0.892577 	2011/Stuxnet_Under_the_Microscope.txt
+0.875325 	2013/Presentation_Targeted-Attacks_EN.txt
+0.781891 	2012/skywiper.txt
+0.739925 	2014/snake_whitepaper.txt
+0.704398 	2014/Hikit_Analysis-Final.txt
+0.702304 	2014/blackenergy_whitepaper.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/Unveiling an Indian Cyberattack Infrastructure - appendixes.txt ****************************************
+Similarity 	Report
+1.0 		2013/Unveiling an Indian Cyberattack Infrastructure - appendixes.txt
+0.920061 	2013/NS-Unveiling-an-Indian-Cyberattack-Infrastructure_FINAL_Web.txt
+0.850189 	2013/Norman_HangOver report_Executive Summary_042513.txt
+0.693911 	2013/India_Pak_Tranchulas.txt
+0.590961 	2014/ThreatConnect_Operation_Arachnophobia_Report.txt
+0.58568 	2013/Inside_Report_by_Infosec_Consortium.txt
+0.535934 	2013/KeyBoy_Vietnam_India.txt
+0.493314 	2013/ByeBye_Shell_target.txt
+0.492837 	2011/Palebot_Palestinian_credentials.txt
+0.48866 	2014/Modified_Binaries_Tor.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/NS-Unveiling-an-Indian-Cyberattack-Infrastructure_FINAL_Web.txt ****************************************
+Similarity 	Report
+1.0 		2013/NS-Unveiling-an-Indian-Cyberattack-Infrastructure_FINAL_Web.txt
+0.970941 	2013/Norman_HangOver report_Executive Summary_042513.txt
+0.920061 	2013/Unveiling an Indian Cyberattack Infrastructure - appendixes.txt
+0.903008 	2013/India_Pak_Tranchulas.txt
+0.836597 	2013/Inside_Report_by_Infosec_Consortium.txt
+0.835149 	2014/ThreatConnect_Operation_Arachnophobia_Report.txt
+0.725612 	2013/KeyBoy_Vietnam_India.txt
+0.713049 	2013/ByeBye_Shell_target.txt
+0.701199 	2012/Cyberattack_against_Israeli_and_Palestinian_targets.txt
+0.692946 	2011/Palebot_Palestinian_credentials.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/2013-9.txt ****************************************
+Similarity 	Report
+1.0 		2013/2013-9.txt
+0.986771 	2012/Crouching_tiger_hidden_dragon.txt
+0.962554 	2014/HPSR SecurityBriefing_Episode16_NorthKorea.txt
+0.960311 	2008/556_10535_798405_Annex87_CyberAttacks.txt
+0.957488 	2013/fireeye-wwc-report.txt
+0.952982 	2011/C5_APT_ADecadeInReview.txt
+0.943646 	2015/rpt-southeast-asia-threat-landscape.txt
+0.935631 	2010/shadows-in-the-cloud.txt
+0.927936 	2012/WickedRose_andNCPH.txt
+0.923698 	2014/Anunak_APT_against_financial_institutions.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/Operation_DeputyDog.txt ****************************************
+Similarity 	Report
+1.0 		2013/Operation_DeputyDog.txt
+0.959749 	2013/fireeye-poison-ivy-report.txt
+0.956037 	2013/fireeye-operation-ke3chang.txt
+0.946556 	2014/Operation_Poisoned_Hurricane.txt
+0.944572 	2014/NYTimes_Attackers_Evolve_Quickly.txt
+0.944219 	2014/fireeye-operation-quantum-entanglement.txt
+0.938581 	2014/Darwin_fav_APT_Group.txt
+0.927755 	2013/Operation_Molerats.txt
+0.923171 	2013/Operation_EphemeralHydra.txt
+0.921235 	2014/Aided_Frame_Aided_Direction.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/hidden_lynx.txt ****************************************
+Similarity 	Report
+1.0 		2013/hidden_lynx.txt
+0.978971 	2011/the_nitro_attacks.txt
+0.976516 	2012/WickedRose_andNCPH.txt
+0.972792 	2014/Operation_CloudyOmega_Ichitaro.txt
+0.968125 	2014/Micro-Targeted-Malvertising-WP-10-27-14-1.txt
+0.967358 	2012/VOHO_WP_FINAL_READY-FOR-Publication-09242012_AC.txt
+0.965737 	2012/the-elderwood-project.txt
+0.962822 	2014/rpt-fin4.txt
+0.962182 	2012/trojan_taidoor-targeting_think_tanks.txt
+0.960959 	2011/tb_advanced_persistent_threats.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/2q-report-on-targeted-attack-campaigns.txt ****************************************
+Similarity 	Report
+1.0 		2013/2q-report-on-targeted-attack-campaigns.txt
+0.974137 	2014/The_Siesta_Campaign.txt
+0.971381 	2015/operation-arid-viper-whitepaper-en.txt
+0.970665 	2014/Gholee_Protective_Edge_themed_spear_phishing_campaign.txt
+0.96899 	2012/wp_ixeshe.txt
+0.960721 	2013/Safe-a-targeted-threat.txt
+0.960575 	2015/wp-operation-woolen-goldfish.txt
+0.959496 	2012/wp_luckycat_redux.txt
+0.958048 	2012/wp_the-heartbeat-apt-campaign.txt
+0.95139 	2011/wp_dissecting-lurid-apt.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/Inside_Report_by_Infosec_Consortium.txt ****************************************
+Similarity 	Report
+1.0 		2013/Inside_Report_by_Infosec_Consortium.txt
+0.959991 	2013/India_Pak_Tranchulas.txt
+0.955703 	2014/ThreatConnect_Operation_Arachnophobia_Report.txt
+0.953295 	2010/shadows-in-the-cloud.txt
+0.938242 	2014/Anunak_APT_against_financial_institutions.txt
+0.937265 	2013/Mandiant_APT1_Report.txt
+0.935402 	2014/Cylance_Operation_Cleaver_Report.txt
+0.927834 	2009/ghostnet.txt
+0.926349 	2012/WickedRose_andNCPH.txt
+0.922137 	2014/apt28.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/miniduke_indicators_public.txt ****************************************
+Similarity 	Report
+1.0 		2013/miniduke_indicators_public.txt
+0.955782 	2014/Vinself_steganography.txt
+0.942989 	2014/Miniduke_twitter.txt
+0.927785 	2014/cosmicduke_whitepaper.txt
+0.918919 	2013/Trojan.APT.Seinup.txt
+0.916368 	2014/EvilBunny_Suspect4_v1.0.txt
+0.91528 	2014/Sayad_Flying_Kitten_analysis.txt
+0.913897 	2012/skywiper.txt
+0.913696 	2014/OnionDuke_Tor.txt
+0.913124 	2015/volatile-cedar-technical-report.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/Plugx_Smoaler.txt ****************************************
+Similarity 	Report
+1.0 		2013/Plugx_Smoaler.txt
+0.97428 	2015/P2P_PlugX_Analysis.txt
+0.964987 	2015/plugx-goes-to-the-registry-and-india.txt
+0.964279 	2014/sophos-rotten-tomato-campaign.txt
+0.955014 	2014/Korplug_Afghanistan_Tajikistan.txt
+0.878483 	2014/roaming_tiger_zeronights_2014.txt
+0.755996 	2014/NetTraveler_Makeover_10th_Birthday.txt
+0.706521 	2015/Inception_APT_Analysis_Bluecoat.txt
+0.698939 	2014/Modified_Binaries_Tor.txt
+0.697456 	2014/korea_power_plant_wiper.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/fireeye-china-chopper-report.txt ****************************************
+Similarity 	Report
+1.0 		2013/fireeye-china-chopper-report.txt
+0.947473 	2014/fireeye-operation-quantum-entanglement.txt
+0.942183 	2014/OrcaRAT.txt
+0.923953 	2014/Operation_Poisoned_Hurricane.txt
+0.92377 	2013/FireEye-Terminator_RAT.txt
+0.921494 	2014/Chinese_MITM_Google.txt
+0.919113 	2013/Trojan.APT.Seinup.txt
+0.910314 	2013/fireeye-operation-ke3chang.txt
+0.910037 	2012/The_Mirage_Campaign.txt
+0.904814 	2014/LeoUncia_OrcaRat.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/McAfee_Labs_Threat_Advisory_Exploit_Operation_Red_Oct.txt ****************************************
+Similarity 	Report
+1.0 		2013/McAfee_Labs_Threat_Advisory_Exploit_Operation_Red_Oct.txt
+0.923783 	2011/wp-global-energy-cyberattacks-night-dragon.txt
+0.904448 	2010/Case_Study_Operation_Aurora_V11.txt
+0.893984 	2014/korea_power_plant_wiper.txt
+0.890685 	2012/VOHO_WP_FINAL_READY-FOR-Publication-09242012_AC.txt
+0.886113 	2013/dissecting-operation-troy.txt
+0.872368 	2014/Dragonfly_Threat_Against_Western_Energy_Suppliers.txt
+0.869763 	2010/in-depth_analysis_of_hydraq_final_231538.txt
+0.869071 	2010/Aurora_HBGARY_DRAFT.txt
+0.862438 	2014/Micro-Targeted-Malvertising-WP-10-27-14-1.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/Presentation_Targeted-Attacks_EN.txt ****************************************
+Similarity 	Report
+1.0 		2013/Presentation_Targeted-Attacks_EN.txt
+0.890035 	2011/Duqu_Trojan_Questions_and_Answers.txt
+0.887022 	2011/w32_stuxnet_dossier.txt
+0.878871 	2012/skywiper.txt
+0.875325 	2013/stuxnet_0_5_the_missing_link.txt
+0.842124 	2011/Stuxnet_Under_the_Microscope.txt
+0.803079 	2014/targeted_attacks_against_the_energy_sector.txt
+0.802546 	2011/Evolution_Drivers_Duqu_Stuxnet.txt
+0.760073 	2013/ETSO_APT_Attacks_Analysis.txt
+0.751533 	2013/dissecting-operation-troy.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/Dark_Seoul_Cyberattack.txt ****************************************
+Similarity 	Report
+0.0 		2010/Aurora_Botnet_Command_Structure.txt
+0.0 	2010/WhitePaper HBGary Threat Report, Operation Aurora.txt
+0.0 	2010/shadows-in-the-cloud.txt
+0.0 	2010/MSUpdaterTrojanWhitepaper.txt
+0.0 	2010/Aurora_HBGARY_DRAFT.txt
+0.0 	2010/Combating Threats - Operation Aurora.txt
+0.0 	2010/Case_Study_Operation_Aurora_V11.txt
+0.0 	2010/how_can_u_tell_Aurora.txt
+0.0 	2010/in-depth_analysis_of_hydraq_final_231538.txt
+0.0 	2012/FTA 1007 - Shamoon.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/fireeye-wwc-report.txt ****************************************
+Similarity 	Report
+1.0 		2013/fireeye-wwc-report.txt
+0.983417 	2008/556_10535_798405_Annex87_CyberAttacks.txt
+0.978419 	2014/HPSR SecurityBriefing_Episode16_NorthKorea.txt
+0.957488 	2013/2013-9.txt
+0.954925 	2015/rpt-southeast-asia-threat-landscape.txt
+0.937864 	2012/Crouching_tiger_hidden_dragon.txt
+0.909908 	2014/Reuters_Turla.txt
+0.894892 	2010/shadows-in-the-cloud.txt
+0.885774 	2011/C5_APT_ADecadeInReview.txt
+0.885193 	2009/ghostnet.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/fireeye-malware-supply-chain.txt ****************************************
+Similarity 	Report
+1.0 		2013/fireeye-malware-supply-chain.txt
+0.922656 	2014/XtremeRAT_fireeye.txt
+0.915467 	2013/Operation_DeputyDog.txt
+0.914737 	2013/fireeye-poison-ivy-report.txt
+0.890334 	2014/Operation_Poisoned_Hurricane.txt
+0.876499 	2014/fireeye-operation-quantum-entanglement.txt
+0.866716 	2013/fireeye-operation-ke3chang.txt
+0.856644 	2013/Operation_Molerats.txt
+0.854617 	2014/NYTimes_Attackers_Evolve_Quickly.txt
+0.849895 	2014/Operation_Poisoned_Handover.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/energy-at-risk.txt ****************************************
+Similarity 	Report
+0.0 		2010/Aurora_Botnet_Command_Structure.txt
+0.0 	2010/WhitePaper HBGary Threat Report, Operation Aurora.txt
+0.0 	2010/shadows-in-the-cloud.txt
+0.0 	2010/MSUpdaterTrojanWhitepaper.txt
+0.0 	2010/Aurora_HBGARY_DRAFT.txt
+0.0 	2010/Combating Threats - Operation Aurora.txt
+0.0 	2010/Case_Study_Operation_Aurora_V11.txt
+0.0 	2010/how_can_u_tell_Aurora.txt
+0.0 	2010/in-depth_analysis_of_hydraq_final_231538.txt
+0.0 	2012/FTA 1007 - Shamoon.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/wp-fakem-rat.txt ****************************************
+Similarity 	Report
+1.0 		2013/wp-fakem-rat.txt
+0.948847 	2013/Safe-a-targeted-threat.txt
+0.941004 	2012/wp_the-heartbeat-apt-campaign.txt
+0.931964 	2014/Gholee_Protective_Edge_themed_spear_phishing_campaign.txt
+0.931923 	2012/wp_luckycat_redux.txt
+0.929789 	2013/FireEye-Terminator_RAT.txt
+0.919774 	2015/PawnStorm_iOS.txt
+0.91755 	2013/Surtr_Malware_Tibetan.txt
+0.917327 	2014/The_Siesta_Campaign.txt
+0.910876 	2012/wp_ixeshe.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/ByeBye_Shell_target.txt ****************************************
+Similarity 	Report
+1.0 		2013/ByeBye_Shell_target.txt
+0.967114 	2014/bcs_wp_InceptionReport_EN_v12914.txt
+0.965647 	2013/KeyBoy_Vietnam_India.txt
+0.957797 	2014/OnionDuke_Tor.txt
+0.953104 	2012/OSX_SabPub.txt
+0.951924 	2014/darkhotel_kl_07.11.txt
+0.951193 	2014/ASERT-Threat-Intelligence-Brief-2014-07-Illuminating-Etumbot-APT.txt
+0.949604 	2014/XSLCmd_OSX.txt
+0.948876 	2013/Kimsuky.txt
+0.945496 	2014/Modified_Binaries_Tor.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/Securelist_RedOctober_Detail.txt ****************************************
+Similarity 	Report
+1.0 		2013/Securelist_RedOctober_Detail.txt
+0.964664 	2014/El_Machete.txt
+0.962861 	2013/Securelist_RedOctober.txt
+0.939986 	2013/icefog.txt
+0.936391 	2014/CloudAtlas_RedOctober_APT.txt
+0.931755 	2013/theteamspystory_final_t2.txt
+0.930242 	2014/bcs_wp_InceptionReport_EN_v12914.txt
+0.927298 	2013/Kimsuky.txt
+0.922504 	2014/OnionDuke_Tor.txt
+0.916878 	2012/Cyberattack_against_Israeli_and_Palestinian_targets.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/RAP002_APT1_Technical_backstage.1.0.pdf.1 ****************************************
+Similarity 	Report
+1.0 		2013/RAP002_APT1_Technical_backstage.1.0.pdf.1
+0.999998 	2014/FTA_1013_RAT_in_a_jar.pdf.1
+0.0623224 	2013/US-13-Yarochkin-In-Depth-Analysis-of-Escalated-APT-Attacks-Slides.txt
+0.0365666 	2012/OSX_SabPub.txt
+0.0341082 	2014/OnionDuke_Tor.txt
+0.0337214 	2014/circl-tr25-analysis-turla-pfinet-snake-uroburos.txt
+0.0305488 	2014/CrowdStrike_Flying_Kitten.txt
+0.0300234 	2013/Trojan.APT.BaneChant.txt
+0.0299585 	2015/Equation_group_questions_and_answers.txt
+0.0298667 	2012/Crypto-DarkComet-Report.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/Surtr_Malware_Tibetan.txt ****************************************
+Similarity 	Report
+1.0 		2013/Surtr_Malware_Tibetan.txt
+0.977465 	2012/Tibet_Lurk.txt
+0.966374 	2013/Safe-a-targeted-threat.txt
+0.962492 	2012/The_Sin_Digoo_Affair.txt
+0.955723 	2013/ETSO_APT_Attacks_Analysis.txt
+0.953216 	2012/wp_luckycat_redux.txt
+0.951843 	2012/The_Mirage_Campaign.txt
+0.949558 	2015/Tibetan-Uprising-Day-Malware-Attacks_websitepdf.txt
+0.948774 	2012/OSX_SabPub.txt
+0.946988 	2012/trojan_taidoor-targeting_think_tanks.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/19-2013-acalltoharm.txt ****************************************
+Similarity 	Report
+1.0 		2013/19-2013-acalltoharm.txt
+0.985294 	2014/KL_report_syrian_malware.txt
+0.967505 	2015/rpt-behind-the-syria-conflict.txt
+0.955954 	2014/Targeting_Syrian_ISIS_Critics.txt
+0.948358 	2014/sec14-paper-marczak.txt
+0.946918 	2014/Syrian_Malware_Team_BlackWorm.txt
+0.93198 	2013/15-2013-youonlyclicktwice.txt
+0.911974 	2012/Cyberattack_against_Israeli_and_Palestinian_targets.txt
+0.897231 	2014/fireeye-sidewinder-targeted-attack.txt
+0.895213 	2014/apt28.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/fta-1009---njrat-uncovered-1.txt ****************************************
+Similarity 	Report
+1.0 		2013/fta-1009---njrat-uncovered-1.txt
+0.991355 	2014/FTA_1014_Bots_Machines_and_the_Matrix.txt
+0.991213 	2014/FTA 1011 Follow UP.txt
+0.969871 	2014/FTA 1012 STTEAM Final.txt
+0.968018 	2012/FTA 1007 - Shamoon.txt
+0.95107 	2014/FTA_1013_RAT_in_a_jar.txt
+0.911634 	2013/FTA 1010 - njRAT The Saga Continues.txt
+0.866196 	2014/FTA 1001 FINAL 1.15.14.txt
+0.649229 	2014/Pitty_Tiger_Final_Report.txt
+0.637639 	2014/ASERT-Threat-Intelligence-Brief-2014-07-Illuminating-Etumbot-APT.txt
+None
+***********************************************************************************************
+
+
+*************************** 2013/winnti-more-than-just-a-game-130410.txt ****************************************
+Similarity 	Report
+1.0 		2013/winnti-more-than-just-a-game-130410.txt
+0.981535 	2014/Modified_Binaries_Tor.txt
+0.980737 	2013/Kimsuky.txt
+0.978204 	2012/w32_flamer_newsforyou.txt
+0.975856 	2014/bcs_wp_InceptionReport_EN_v12914.txt
+0.975405 	2015/volatile-cedar-technical-report.txt
+0.970034 	2014/darkhotel_kl_07.11.txt
+0.963714 	2015/Elephantosis.txt
+0.962956 	2014/TA14-353A_wiper.txt
+0.96049 	2014/GDATA_TooHash_CaseStudy_102014_EN_v1.txt
+None
+***********************************************************************************************
+
+
+
